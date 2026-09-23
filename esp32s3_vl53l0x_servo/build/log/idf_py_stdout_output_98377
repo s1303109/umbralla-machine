@@ -1,0 +1,1060 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+F_RELAY_SERVO: TOF 2 distance: 83 mm | Relay: OFF
+[0;32mI (52819) TOFFF[0m
+[0;32mI (101199) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 16 2026 15:59:01[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0b114h ( 45332) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001b13c vaddr=3fc92800 size=02c00h ( 11264) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001dd44 vaddr=40374000 size=022d4h (  8916) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dd24h (122148) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003dd4c vaddr=403762d4 size=0c444h ( 50244) load[0m
+[0;32mI (142) esp_image: segment 5: paddr=0004a198 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (148) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Multicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (169) app_init: Application information:[0m
+[0;32mI (169) app_init: Project name:     esp32s3_vl53l0x_servo[0m
+[0;32mI (174) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 16 2026 15:58:49[0m
+[0;32mI (182) app_init: ELF file SHA256:  aa4a784d6...[0m
+[0;32mI (186) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (194) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC95CD0 len 00053A40 (334 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (218) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (224) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (230) spi_flash: detected chip: generic[0m
+[0;32mI (233) spi_flash: flash io: dio[0m
+[0;32mI (236) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (242) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (249) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+[0;32mI (259) TOF_RELAY_SERVO: Relay ready: GPIO7, high-level trigger, initial state OFF[0m
+[0;32mI (259) TOF_RELAY_SERVO: Servo ready: GPIO4, PWM stopped until relay power is ON[0m
+[0;32mI (269) TOF_RELAY_SERVO: HC-SR04 ready: TRIG GPIO5, ECHO GPIO6[0m
+[0;32mI (299) TOF_RELAY_SERVO: TOF 1 detected at I2C address 0x29[0m
+[0;32mI (439) TOF_RELAY_SERVO: TOF 2 detected at I2C address 0x29[0m
+[0;32mI (819) TOF_RELAY_SERVO: Both TOF sensors ready; trigger distance is less than 101 mm[0m
+[0;32mI (819) TOF_RELAY_SERVO: HC-SR04 trigger distance is less than 65 mm[0m
+[0;32mI (829) TOF_RELAY_SERVO: Relay and servo sequence starts only when all three sensors are active[0m
+[0;32mI (839) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (879) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (919) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (969) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1009) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (1049) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (1099) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1139) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (1179) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (1179) TOF_RELAY_SERVO: TOF 2 trigger active: 99 mm < 101 mm[0m
+[0;32mI (1229) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1269) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (1309) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (1359) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1399) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (1439) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (1489) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1529) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (1569) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (1619) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1659) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (1699) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (1749) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1789) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (1829) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (1879) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (1919) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (1959) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (2009) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (2049) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (2089) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (2139) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (2179) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (2219) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (2269) TOF_RELAY_SERVO: HC-SR04 distance: 812 mm[0m
+[0;32mI (2309) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (2349) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (2399) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (2439) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (2479) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (2529) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (2569) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (2609) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (2659) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (2699) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (2739) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (2789) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (2829) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (2869) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (2919) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (2959) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (2999) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (3049) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (3089) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (3129) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (3179) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (3219) TOF_RELAY_SERVO: TOF 1 distance: 148 mm | Relay: OFF[0m
+[0;32mI (3259) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (3309) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (3349) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (3389) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (3439) TOF_RELAY_SERVO: HC-SR04 distance: 812 mm[0m
+[0;32mI (3479) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (3519) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (3569) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (3609) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (3649) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (3699) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (3739) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (3779) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (3829) TOF_RELAY_SERVO: HC-SR04 distance: 812 mm[0m
+[0;32mI (3869) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (3909) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (3959) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (3999) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (4039) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (4089) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (4129) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (4169) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (4219) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (4259) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (4299) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (4349) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (4389) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (4429) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (4479) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (4519) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (4559) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (4609) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (4649) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (4689) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (4739) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (4779) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (4819) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (4869) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (4909) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (4949) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (4999) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (5039) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (5079) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (5129) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (5169) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (5209) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (5259) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (5299) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (5339) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (5389) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (5429) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (5469) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (5519) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (5559) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (5599) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (5649) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (5689) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (5729) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (5779) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (5819) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (5859) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (5909) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (5949) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (5989) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (6039) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (6079) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (6119) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (6169) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (6209) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (6249) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (6299) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (6339) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (6379) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (6429) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (6469) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (6509) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (6559) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (6599) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (6639) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (6689) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (6729) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (6769) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (6819) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (6859) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (6899) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (6949) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (6989) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (7029) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (7079) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7119) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (7159) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (7209) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7249) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (7289) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (7339) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7379) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (7419) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (7469) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7509) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (7549) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (7599) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7639) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (7679) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (7729) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7769) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (7809) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (7859) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (7899) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (7939) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (7989) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8029) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (8069) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (8119) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (8159) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (8199) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (8249) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8289) TOF_RELAY_SERVO: TOF 1 distance: 148 mm | Relay: OFF[0m
+[0;32mI (8329) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (8379) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8419) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (8459) TOF_RELAY_SERVO: TOF 2 distance: 101 mm | Relay: OFF[0m
+[0;32mI (8509) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8549) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (8589) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (8639) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8679) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (8719) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (8769) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8809) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (8849) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (8899) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (8939) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (8979) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (9029) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (9069) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (9109) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (9159) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (9199) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (9239) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (9289) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9329) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (9369) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (9419) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9459) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (9499) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (9549) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9589) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (9629) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (9679) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9719) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (9759) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (9809) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9849) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (9889) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (9939) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (9979) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (10019) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (10069) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (10109) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (10149) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (10199) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (10239) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (10279) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (10329) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (10369) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (10409) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (10459) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (10499) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (10539) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (10589) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (10629) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (10669) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (10719) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (10759) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (10799) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (10849) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (10889) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (10929) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (10979) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (11019) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (11059) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (11109) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (11149) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (11189) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (11239) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (11279) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (11319) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (11369) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (11409) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (11449) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (11499) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (11539) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (11579) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (11629) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (11669) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (11709) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (11759) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (11799) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (11839) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (11889) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (11929) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (11969) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (12019) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12059) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (12099) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (12149) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12189) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (12229) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (12279) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12319) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (12359) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (12409) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12449) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (12489) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (12539) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12579) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (12619) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (12669) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (12709) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (12749) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (12799) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12839) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (12879) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (12929) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (12969) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (13009) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (13059) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13099) TOF_RELAY_SERVO: TOF 1 distance: 155 mm | Relay: OFF[0m
+[0;32mI (13139) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (13189) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13229) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (13269) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (13319) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13359) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (13399) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (13449) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (13489) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (13529) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (13579) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13619) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (13659) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (13709) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13749) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (13789) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (13839) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (13879) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (13919) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (13969) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (14009) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (14049) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (14099) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (14139) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (14179) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (14229) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (14269) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (14309) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (14359) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (14399) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (14439) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (14489) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (14529) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (14569) TOF_RELAY_SERVO: TOF 2 distance: 102 mm | Relay: OFF[0m
+[0;32mI (14619) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (14659) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (14699) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (14749) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (14789) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (14829) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (14879) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (14919) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (14959) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (15009) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (15049) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (15089) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (15139) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (15179) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (15219) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (15269) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (15309) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (15349) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (15399) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (15439) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (15479) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (15529) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (15569) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (15609) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (15659) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (15699) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (15739) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (15789) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (15829) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (15869) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (15919) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (15959) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (15999) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (16049) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (16089) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (16129) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (16179) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (16219) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (16259) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (16309) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (16349) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (16389) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (16439) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (16479) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (16519) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (16569) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (16609) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (16649) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (16699) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (16739) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (16779) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (16829) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (16869) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (16909) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (16959) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (16999) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (17039) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (17089) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17129) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (17169) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (17219) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (17259) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (17299) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (17349) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17389) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (17429) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (17479) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17519) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (17559) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (17609) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17649) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (17689) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (17739) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17779) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (17819) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (17869) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (17909) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (17949) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (17999) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (18039) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (18079) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (18129) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (18169) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (18209) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (18259) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (18299) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (18339) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (18389) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (18429) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (18469) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (18519) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (18559) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (18599) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (18649) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (18689) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (18729) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (18779) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (18819) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (18859) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (18909) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (18949) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (18989) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (19039) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (19079) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (19119) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (19169) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (19209) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (19249) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (19299) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (19339) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (19379) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (19429) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (19469) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (19509) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (19559) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (19599) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (19639) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (19689) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (19729) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (19769) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (19819) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (19859) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (19899) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (19949) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (19989) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (20029) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (20079) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (20119) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (20159) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (20209) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (20249) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (20289) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (20339) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (20379) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (20419) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (20469) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (20509) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (20549) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (20599) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (20639) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (20679) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (20729) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (20769) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (20809) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (20859) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (20899) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (20939) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (20989) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (21029) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (21069) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (21119) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21159) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (21199) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (21249) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21289) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (21329) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (21379) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21419) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (21459) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (21509) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (21549) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (21589) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (21639) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21679) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (21719) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (21769) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21809) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (21849) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (21899) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (21939) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (21979) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (22029) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (22069) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (22109) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (22159) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (22199) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (22239) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (22289) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (22329) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (22369) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (22419) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (22459) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (22499) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (22549) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (22589) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (22629) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (22679) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (22719) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (22759) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (22809) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (22849) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (22889) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (22939) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (22979) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (23019) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (23069) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (23109) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (23149) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (23199) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (23239) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (23279) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (23329) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (23369) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (23409) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (23459) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (23499) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (23539) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (23589) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (23629) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (23669) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (23719) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (23759) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (23799) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (23849) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (23889) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (23929) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (23979) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (24019) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (24059) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (24109) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (24149) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (24189) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (24239) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (24279) TOF_RELAY_SERVO: TOF 1 distance: 148 mm | Relay: OFF[0m
+[0;32mI (24319) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (24369) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (24409) TOF_RELAY_SERVO: TOF 1 distance: 148 mm | Relay: OFF[0m
+[0;32mI (24449) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (24499) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (24539) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (24579) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (24629) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (24669) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (24709) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (24759) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (24799) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (24839) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (24889) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (24929) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (24969) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (25019) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (25059) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (25099) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (25149) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (25189) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (25229) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (25279) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (25319) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (25359) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (25409) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (25449) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (25489) TOF_RELAY_SERVO: TOF 2 distance: 92 mm | Relay: OFF[0m
+[0;32mI (25539) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (25579) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (25619) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (25669) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (25709) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (25749) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (25799) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (25839) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (25879) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (25929) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (25969) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (26009) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (26059) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (26099) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (26139) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (26189) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (26229) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (26269) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (26319) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (26359) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (26399) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (26449) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (26489) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (26529) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (26579) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (26619) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (26659) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (26709) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (26749) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (26789) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (26839) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (26879) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (26919) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (26969) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27009) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (27049) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (27099) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27139) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (27179) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (27229) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27269) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (27309) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (27359) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27399) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (27439) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (27489) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (27529) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (27569) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (27619) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27659) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (27699) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (27749) TOF_RELAY_SERVO: HC-SR04 distance: 821 mm[0m
+[0;32mI (27789) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (27829) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (27879) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (27919) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (27959) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (28009) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (28049) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (28089) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (28139) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (28179) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (28219) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (28269) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (28309) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (28349) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (28399) TOF_RELAY_SERVO: HC-SR04 distance: 824 mm[0m
+[0;32mI (28439) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (28479) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (28529) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (28569) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (28609) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (28659) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (28699) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (28739) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (28789) TOF_RELAY_SERVO: HC-SR04 distance: 825 mm[0m
+[0;32mI (28829) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (28869) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (28919) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (28959) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (28999) TOF_RELAY_SERVO: TOF 2 distance: 92 mm | Relay: OFF[0m
+[0;32mI (29049) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (29089) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (29129) TOF_RELAY_SERVO: TOF 2 distance: 102 mm | Relay: OFF[0m
+[0;32mI (29179) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (29219) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (29259) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (29309) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (29349) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (29389) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (29439) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (29479) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (29519) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (29569) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (29609) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (29649) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (29699) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (29739) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (29779) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (29829) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (29869) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (29909) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (29959) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (29999) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (30039) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (30089) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (30129) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (30169) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (30219) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30259) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (30299) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (30349) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30389) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (30429) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (30479) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30519) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (30559) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (30609) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30649) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (30689) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (30739) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30779) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (30819) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (30869) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (30909) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (30949) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (30999) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31039) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (31079) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (31129) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31169) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (31209) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (31259) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31299) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (31339) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (31389) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31429) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (31469) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (31519) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31559) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (31599) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (31649) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31689) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (31729) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (31779) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31819) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (31859) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (31909) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (31949) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (31989) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (32039) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32079) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (32119) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (32169) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32209) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (32249) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (32299) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32339) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (32379) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (32429) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32469) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (32509) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (32559) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32599) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (32639) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (32689) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32729) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (32769) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (32819) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32859) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (32899) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (32949) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (32989) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (33029) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (33079) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (33119) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (33159) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (33209) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (33249) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (33289) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (33339) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (33379) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (33419) TOF_RELAY_SERVO: TOF 2 distance: 102 mm | Relay: OFF[0m
+[0;32mI (33469) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (33509) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (33549) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (33599) TOF_RELAY_SERVO: HC-SR04 distance: 815 mm[0m
+[0;32mI (33639) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (33679) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (33729) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (33769) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (33809) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (33859) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (33899) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (33939) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (33989) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34029) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (34069) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (34119) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34159) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (34199) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (34249) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34289) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (34329) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (34379) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34419) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (34459) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (34509) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34549) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (34589) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (34639) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34679) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (34719) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (34769) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34809) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (34849) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (34899) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (34939) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (34979) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (35029) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (35069) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (35109) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (35159) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (35199) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (35239) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (35289) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (35329) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (35369) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (35419) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (35459) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (35499) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (35549) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (35589) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (35629) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (35679) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (35719) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (35759) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (35809) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (35849) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (35889) TOF_RELAY_SERVO: TOF 2 distance: 102 mm | Relay: OFF[0m
+[0;32mI (35939) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (35979) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (36019) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (36069) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (36109) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (36149) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (36199) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (36239) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (36279) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (36329) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (36369) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (36409) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (36459) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (36499) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (36539) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (36589) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (36629) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (36669) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (36719) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (36759) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (36799) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (36849) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (36889) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (36929) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (36979) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (37019) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (37059) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (37109) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (37149) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (37189) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (37239) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (37279) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (37319) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (37369) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (37409) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (37449) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (37499) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (37539) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (37579) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (37629) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (37669) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (37709) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (37759) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (37799) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (37839) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (37889) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (37929) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (37969) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (38019) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38059) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (38099) TOF_RELAY_SERVO: TOF 2 distance: 101 mm | Relay: OFF[0m
+[0;32mI (38149) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38189) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (38229) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (38279) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38319) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (38359) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (38409) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (38449) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (38489) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (38539) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38579) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (38619) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (38669) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (38709) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (38749) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (38799) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38839) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (38879) TOF_RELAY_SERVO: TOF 2 distance: 100 mm | Relay: OFF[0m
+[0;32mI (38929) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (38969) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (39009) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (39059) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39099) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (39139) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (39189) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39229) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (39269) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (39319) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39359) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (39399) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (39449) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39489) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (39529) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (39579) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39619) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (39659) TOF_RELAY_SERVO: TOF 2 distance: 93 mm | Relay: OFF[0m
+[0;32mI (39709) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39749) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (39789) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (39839) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (39879) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (39919) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (39969) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40009) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (40049) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (40099) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40139) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (40179) TOF_RELAY_SERVO: TOF 2 distance: 101 mm | Relay: OFF[0m
+[0;32mI (40229) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40269) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (40309) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (40359) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40399) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (40439) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (40489) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40529) TOF_RELAY_SERVO: TOF 1 distance: 149 mm | Relay: OFF[0m
+[0;32mI (40569) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (40619) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40659) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (40699) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (40749) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40789) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (40829) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (40879) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (40919) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (40959) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41009) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (41049) TOF_RELAY_SERVO: TOF 1 distance: 153 mm | Relay: OFF[0m
+[0;32mI (41089) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41139) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (41179) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (41219) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41269) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (41309) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (41349) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41399) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (41439) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (41479) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (41529) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (41569) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (41609) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41659) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (41699) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (41739) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (41789) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (41829) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (41869) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (41919) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (41959) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (41999) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (42049) TOF_RELAY_SERVO: HC-SR04 distance: 817 mm[0m
+[0;32mI (42089) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (42129) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (42179) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42219) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (42259) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (42309) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42349) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (42389) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (42439) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42479) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (42519) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (42569) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42609) TOF_RELAY_SERVO: TOF 1 distance: 154 mm | Relay: OFF[0m
+[0;32mI (42649) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (42699) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42739) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (42779) TOF_RELAY_SERVO: TOF 2 distance: 96 mm | Relay: OFF[0m
+[0;32mI (42829) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42869) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (42909) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (42959) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (42999) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (43039) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (43089) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (43129) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (43169) TOF_RELAY_SERVO: TOF 2 distance: 95 mm | Relay: OFF[0m
+[0;32mI (43219) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (43259) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m
+[0;32mI (43299) TOF_RELAY_SERVO: TOF 2 distance: 98 mm | Relay: OFF[0m
+[0;32mI (43349) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (43389) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (43429) TOF_RELAY_SERVO: TOF 2 distance: 97 mm | Relay: OFF[0m
+[0;32mI (43479) TOF_RELAY_SERVO: HC-SR04 distance: 816 mm[0m
+[0;32mI (43519) TOF_RELAY_SERVO: TOF 1 distance: 151 mm | Relay: OFF[0m
+[0;32mI (43559) TOF_RELAY_SERVO: TOF 2 distance: 94 mm | Relay: OFF[0m
+[0;32mI (43609) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (43649) TOF_RELAY_SERVO: TOF 1 distance: 150 mm | Relay: OFF[0m
+[0;32mI (43689) TOF_RELAY_SERVO: TOF 2 distance: 99 mm | Relay: OFF[0m
+[0;32mI (43739) TOF_RELAY_SERVO: HC-SR04 distance: 820 mm[0m
+[0;32mI (43779) TOF_RELAY_SERVO: TOF 1 distance: 152 mm | Relay: OFF[0m

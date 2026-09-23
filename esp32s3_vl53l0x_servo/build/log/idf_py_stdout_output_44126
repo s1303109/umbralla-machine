@@ -1,0 +1,252 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 16 2026 15:59:01[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0afa4h ( 44964) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001afcc vaddr=3fc92800 size=02bf0h ( 11248) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001dbc4 vaddr=40374000 size=02454h (  9300) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1db5ch (121692) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003db84 vaddr=40376454 size=0c2c4h ( 49860) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=00049e50 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Multicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     esp32s3_vl53l0x_servo[0m
+[0;32mI (173) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 16 2026 15:58:49[0m
+[0;32mI (182) app_init: ELF file SHA256:  e387fac3b...[0m
+[0;32mI (186) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (194) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC95CB8 len 00053A58 (334 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (218) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;32mI (236) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (242) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (249) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+[0;32mI (259) TOF_SERVO: Servo resting at 10 degrees[0m
+[0;32mI (259) TOF_SERVO: HC-SR04 ready: TRIG GPIO5, ECHO GPIO6[0m
+[0;32mI (289) TOF_SERVO: VL53L0X detected at I2C address 0x29[0m
+[0;32mI (429) TOF_SERVO: VL53L0X ready; trigger distance is less than 101 mm[0m
+[0;32mI (429) TOF_SERVO: HC-SR04 trigger distance is less than 85 mm[0m
+[0;32mI (429) TOF_SERVO: HC-SR04 distance: 901 mm[0m
+[0;32mI (469) TOF_SERVO: Distance: 168 mm | State: ARMED[0m
+[0;32mI (549) TOF_SERVO: Distance: 165 mm | State: ARMED[0m
+[0;32mI (599) TOF_SERVO: HC-SR04 distance: 1068 mm[0m
+[0;32mI (639) TOF_SERVO: Distance: 166 mm | State: ARMED[0m
+[0;32mI (719) TOF_SERVO: Distance: 165 mm | State: ARMED[0m
+[0;32mI (769) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (809) TOF_SERVO: Distance: 166 mm | State: ARMED[0m
+[0;32mI (889) TOF_SERVO: Distance: 166 mm | State: ARMED[0m
+[0;32mI (939) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (979) TOF_SERVO: Distance: 166 mm | State: ARMED[0m
+[0;32mI (1059) TOF_SERVO: Distance: 166 mm | State: ARMED[0m
+[0;32mI (1109) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (1109) TOF_SERVO: HC-SR04 trigger active: 77 mm < 85 mm[0m
+[0;32mI (1109) TOF_SERVO: TRIGGER: servo moving from 10 to 90 degrees[0m
+[0;32mI (1149) TOF_SERVO: Distance: 166 mm | State: MOVING_TO_90[0m
+[0;32mI (1229) TOF_SERVO: Distance: 166 mm | State: MOVING_TO_90[0m
+[0;32mI (1279) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (1319) TOF_SERVO: Distance: 167 mm | State: MOVING_TO_90[0m
+[0;32mI (1399) TOF_SERVO: Distance: 167 mm | State: MOVING_TO_90[0m
+[0;32mI (1449) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (1489) TOF_SERVO: Distance: 166 mm | State: MOVING_TO_90[0m
+[0;32mI (1569) TOF_SERVO: Distance: 166 mm | State: MOVING_TO_90[0m
+[0;32mI (1619) TOF_SERVO: Servo at 90 degrees; holding until the hand moves away[0m
+[0;32mI (1619) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (1659) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (1739) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (1789) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (1829) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (1909) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (1959) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (1999) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (2079) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (2129) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (2169) TOF_SERVO: Distance: 163 mm | State: HOLDING_90[0m
+[0;32mI (2249) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (2299) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (2339) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (2419) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (2469) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (2509) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (2589) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (2639) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (2679) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (2759) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (2809) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (2849) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (2929) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (2979) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (3019) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (3099) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (3149) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (3189) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (3269) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (3319) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (3359) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (3439) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (3489) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (3529) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (3609) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (3659) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (3699) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (3779) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (3829) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (3869) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (3949) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (3999) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4039) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (4119) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4169) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4209) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4289) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4339) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4379) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4459) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (4509) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4549) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (4629) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4679) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4719) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (4799) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (4849) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (4889) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (4969) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (5019) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (5059) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (5139) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (5189) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (5229) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (5309) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (5359) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (5399) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (5479) TOF_SERVO: Distance: 163 mm | State: HOLDING_90[0m
+[0;32mI (5529) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (5569) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (5649) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (5699) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (5739) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (5819) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (5869) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (5909) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (5989) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (6039) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6079) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (6159) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (6209) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6249) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (6329) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (6379) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6419) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (6499) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (6549) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6589) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (6669) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (6719) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6759) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (6839) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (6889) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (6929) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (7009) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (7059) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7099) TOF_SERVO: Distance: 163 mm | State: HOLDING_90[0m
+[0;32mI (7179) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (7229) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7269) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (7349) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (7399) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7439) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (7519) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (7569) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7609) TOF_SERVO: Distance: 168 mm | State: HOLDING_90[0m
+[0;32mI (7689) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (7739) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7779) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (7859) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (7909) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (7949) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (8029) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (8079) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8119) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (8199) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (8249) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8289) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (8369) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (8419) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8459) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (8539) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (8589) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8629) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (8709) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (8759) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8799) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (8879) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (8929) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (8969) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (9049) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (9099) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9139) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (9219) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (9269) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9309) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (9389) TOF_SERVO: Distance: 169 mm | State: HOLDING_90[0m
+[0;32mI (9439) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9479) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (9559) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (9609) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9649) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (9729) TOF_SERVO: Distance: 162 mm | State: HOLDING_90[0m
+[0;32mI (9779) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9819) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (9899) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (9949) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (9989) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (10069) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (10119) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (10159) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (10239) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (10289) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (10329) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (10409) TOF_SERVO: Distance: 165 mm | State: HOLDING_90[0m
+[0;32mI (10459) TOF_SERVO: HC-SR04 distance: 77 mm[0m
+[0;32mI (10499) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (10579) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (10629) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (10669) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (10749) TOF_SERVO: Distance: 166 mm | State: HOLDING_90[0m
+[0;32mI (10799) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (10839) TOF_SERVO: Distance: 167 mm | State: HOLDING_90[0m
+[0;32mI (10919) TOF_SERVO: Distance: 164 mm | State: HOLDING_90[0m
+[0;32mI (10969) TOF_SERVO: HC-SR04 distance: 68 mm[0m
+[0;32mI (11009) TOF_SERVO: Di

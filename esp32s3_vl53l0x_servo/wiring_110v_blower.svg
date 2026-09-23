@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320">
+  <defs>
+    <style>
+      .title { font: 700 34px sans-serif; fill: #102a43; }
+      .section { font: 700 25px sans-serif; fill: #102a43; }
+      .label { font: 600 18px sans-serif; fill: #102a43; }
+      .small { font: 15px sans-serif; fill: #243b53; }
+      .tiny { font: 13px sans-serif; fill: #334e68; }
+      .box { fill: #fff; stroke: #486581; stroke-width: 2; rx: 12; }
+      .hvbox { fill: #fff7ed; stroke: #c2410c; stroke-width: 3; rx: 14; }
+      .lvbox { fill: #eff6ff; stroke: #2563eb; stroke-width: 3; rx: 14; }
+      .warn { fill: #fff1f2; stroke: #be123c; stroke-width: 2; rx: 10; }
+      .lineL { stroke: #dc2626; stroke-width: 6; fill: none; }
+      .lineN { stroke: #2563eb; stroke-width: 6; fill: none; }
+      .linePE { stroke: #16a34a; stroke-width: 6; fill: none; }
+      .line5 { stroke: #f59e0b; stroke-width: 5; fill: none; }
+      .line0 { stroke: #111827; stroke-width: 5; fill: none; }
+      .signal { stroke: #7c3aed; stroke-width: 4; fill: none; }
+      .dash { stroke-dasharray: 9 7; }
+      .nodeL { fill: #dc2626; }
+      .nodeN { fill: #2563eb; }
+      .nodePE { fill: #16a34a; }
+      .node5 { fill: #f59e0b; }
+      .node0 { fill: #111827; }
+    </style>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect width="1800" height="1320" fill="#f8fafc"/>
+  <text x="60" y="58" class="title">ESP32-S3 三感測器控制 110V／330W 鼓風機 — 端子級接線圖</text>
+  <text x="60" y="88" class="small">依據：S-50-5 圖示端子、SLA-05VDC-SL-C 模組圖、目前 main/main.c GPIO 定義。線色只代表網路功能，不代表現場電纜顏色。</text>
+
+  <!-- High voltage area -->
+  <rect x="40" y="115" width="1720" height="465" class="hvbox"/>
+  <text x="65" y="150" class="section">A. 110V 市電區（與低壓區實體隔離；IP65 箱內、不可裸露）</text>
+
+  <rect x="75" y="190" width="180" height="160" class="box"/>
+  <text x="105" y="225" class="label">X1 市電輸入</text>
+  <text x="105" y="265" class="label" fill="#dc2626">L</text>
+  <text x="105" y="305" class="label" fill="#2563eb">N</text>
+  <text x="105" y="340" class="label" fill="#16a34a">PE</text>
+
+  <rect x="320" y="190" width="230" height="160" class="box"/>
+  <text x="350" y="225" class="label">Q1／S1</text>
+  <text x="350" y="255" class="small">上游 ≤30mA 漏電保護</text>
+  <text x="350" y="282" class="small">雙極總開關</text>
+  <text x="350" y="309" class="small">L 串 T5A/250V 慢熔</text>
+  <text x="350" y="336" class="small">PE 不經開關或保險絲</text>
+
+  <rect x="650" y="170" width="330" height="260" class="box"/>
+  <text x="685" y="207" class="label">PS1：S-50-5</text>
+  <text x="685" y="235" class="small">輸入切換器先固定在 110V</text>
+  <text x="685" y="273" class="label">L　 N　 ⏚　 -V -V　 +V +V</text>
+  <line x1="690" y1="286" x2="946" y2="286" stroke="#94a3b8" stroke-width="2"/>
+  <text x="685" y="324" class="small">輸出先空載調整為 5.0 ± 0.1V</text>
+  <text x="685" y="352" class="small">⏚ 接 PE 與 PSU 金屬外殼</text>
+  <text x="685" y="380" class="small">兩個 -V 互通；兩個 +V 互通</text>
+  <text x="685" y="408" class="small">+V 往低壓區前串 F2 2A</text>
+
+  <rect x="1090" y="175" width="260" height="245" class="box"/>
+  <text x="1120" y="212" class="label">K1 繼電器接點側</text>
+  <text x="1120" y="250" class="label">上：NO（常開）</text>
+  <text x="1120" y="290" class="label">中：COM（公共）</text>
+  <text x="1120" y="330" class="label">下：NC（常閉）</text>
+  <text x="1120" y="370" class="small">只使用 COM、NO</text>
+  <text x="1120" y="398" class="small">NC 留空並加絕緣端蓋</text>
+
+  <rect x="1460" y="175" width="245" height="245" class="box"/>
+  <text x="1490" y="212" class="label">M1 鼓風機</text>
+  <text x="1490" y="245" class="small">150FLJ7-1W2</text>
+  <text x="1490" y="272" class="small">110V / 330W / 60Hz</text>
+  <text x="1490" y="310" class="label">L　N　PE*</text>
+  <text x="1490" y="345" class="small">*只有原電纜確有 PE 才接</text>
+  <text x="1490" y="375" class="small">MOV：V150LA20AP</text>
+  <text x="1490" y="401" class="small">跨接於 M1 的 L–N</text>
+
+  <!-- L wiring -->
+  <path d="M150 263 H320" class="lineL"/>
+  <path d="M550 263 H650" class="lineL"/>
+  <circle cx="610" cy="263" r="7" class="nodeL"/>
+  <path d="M610 263 V160 H1040 V290 H1090" class="lineL"/>
+  <text x="1010" y="278" class="tiny" fill="#dc2626">經保險絲／總開關的 L → COM</text>
+  <path d="M1350 250 H1460" class="lineL"/>
+  <text x="1360" y="238" class="tiny" fill="#dc2626">NO → 鼓風機 L</text>
+  <!-- N wiring -->
+  <path d="M150 303 H320" class="lineN"/>
+  <path d="M550 303 H650" class="lineN"/>
+  <circle cx="610" cy="303" r="7" class="nodeN"/>
+  <path d="M610 303 V455 H1430 V310 H1460" class="lineN"/>
+  <text x="1050" y="477" class="tiny" fill="#2563eb">N 直接到鼓風機，不經繼電器</text>
+  <!-- PE wiring -->
+  <path d="M150 337 H610 V345 H650" class="linePE"/>
+  <circle cx="610" cy="345" r="7" class="nodePE"/>
+  <path d="M610 345 V515 H1435 V345 H1460" class="linePE"/>
+  <text x="720" y="538" class="tiny" fill="#16a34a">PE 同時接 PSU 金屬殼、控制箱金屬件；若鼓風機有 PE 則直接接，永不經繼電器</text>
+
+  <!-- MOV across switched motor L-N -->
+  <line x1="1415" y1="250" x2="1415" y2="263" stroke="#7c2d12" stroke-width="3"/>
+  <rect x="1393" y="263" width="44" height="31" fill="#fef3c7" stroke="#7c2d12" stroke-width="2" rx="4"/>
+  <text x="1399" y="284" class="tiny" fill="#7c2d12">MOV</text>
+  <line x1="1415" y1="294" x2="1415" y2="310" stroke="#7c2d12" stroke-width="3"/>
+
+  <rect x="75" y="455" width="520" height="92" class="warn"/>
+  <text x="95" y="484" class="label" fill="#be123c">關鍵改線</text>
+  <text x="95" y="512" class="small">原本接在 COM／NO／NC 的伺服 5V 線全部拆除。</text>
+  <text x="95" y="538" class="small">這三端之後是 110V；低壓線不得進入此端子排。</text>
+
+  <!-- Low voltage control area -->
+  <rect x="40" y="605" width="1720" height="665" class="lvbox"/>
+  <text x="65" y="642" class="section">B. 5V／3.3V 控制區</text>
+
+  <rect x="90" y="690" width="300" height="210" class="box"/>
+  <text x="120" y="728" class="label">低壓電源分配</text>
+  <text x="120" y="765" class="small">PS1 +V → F2 2A → +5V BUS</text>
+  <text x="120" y="795" class="small">PS1 -V → 0V/GND BUS</text>
+  <text x="120" y="825" class="small">ESP32旁：470µF/10V + 0.1µF</text>
+  <text x="120" y="855" class="small">EXT-5V 可拔跳線串在 ESP32 前</text>
+  <text x="120" y="883" class="small">插電腦 USB 前先拔 EXT-5V</text>
+
+  <rect x="505" y="680" width="410" height="480" class="box"/>
+  <text x="545" y="720" class="label">ESP32-S3（依板上絲印找腳，不依圖中位置）</text>
+  <text x="545" y="762" class="label">5V/VIN　← +5V BUS</text>
+  <text x="545" y="797" class="label">GND　　 ← 0V BUS</text>
+  <text x="545" y="842" class="label">GPIO7　 → K1 IN（H觸發）</text>
+  <text x="545" y="880" class="small">GPIO5　→ HC-SR04 TRIG</text>
+  <text x="545" y="908" class="small">GPIO6　← HC-SR04 ECHO 分壓節點</text>
+  <text x="545" y="946" class="small">GPIO8　↔ TOF1 SDA</text>
+  <text x="545" y="974" class="small">GPIO9　→ TOF1 SCL</text>
+  <text x="545" y="1002" class="small">GPIO10 → TOF1 XSHUT</text>
+  <text x="545" y="1040" class="small">GPIO11 ↔ TOF2 SDA</text>
+  <text x="545" y="1068" class="small">GPIO12 → TOF2 SCL</text>
+  <text x="545" y="1110" class="label" fill="#be123c">GPIO4：拆除舊伺服訊號線，留空</text>
+  <text x="545" y="1142" class="tiny">注意：現行韌體仍含伺服流程；市電負載驗收前需改成鼓風機流程。</text>
+
+  <rect x="1040" y="690" width="330" height="270" class="box"/>
+  <text x="1075" y="728" class="label">K1 模組控制側</text>
+  <text x="1075" y="766" class="label">DC+ ← +5V BUS</text>
+  <text x="1075" y="802" class="label">DC− ← 0V BUS</text>
+  <text x="1075" y="838" class="label">IN　← GPIO7</text>
+  <text x="1075" y="878" class="small">觸發選擇跳帽：H</text>
+  <text x="1075" y="906" class="small">保留 DC+↔JD+ 跳帽</text>
+  <text x="1075" y="934" class="small">保留 DC−↔JD− 跳帽</text>
+
+  <rect x="1450" y="690" width="265" height="270" class="warn"/>
+  <text x="1480" y="728" class="label" fill="#be123c">模組上電前核對</text>
+  <text x="1480" y="765" class="small">1. H/L 跳帽確在 H</text>
+  <text x="1480" y="797" class="small">2. DC/JD 兩跳帽裝妥</text>
+  <text x="1480" y="829" class="small">3. GPIO7 HIGH 才吸合</text>
+  <text x="1480" y="861" class="small">4. 斷電時 COM–NO 開路</text>
+  <text x="1480" y="893" class="small">5. 先用導通檔，後接110V</text>
+  <text x="1480" y="925" class="small">6. NC 完全不用</text>
+
+  <!-- LV bus wiring -->
+  <path d="M390 765 H470 V762 H505" class="line5"/>
+  <path d="M470 762 V660 H1000 V766 H1040" class="line5"/>
+  <path d="M390 795 H450 V797 H505" class="line0"/>
+  <path d="M450 797 V645 H990 V802 H1040" class="line0"/>
+  <path d="M915 842 H1040" class="signal" marker-end="url(#arrowPurple)"/>
+
+  <!-- Sensors -->
+  <rect x="90" y="950" width="300" height="275" class="box"/>
+  <text x="120" y="985" class="label">三顆感測器（保留目前供電線）</text>
+  <text x="120" y="1020" class="small">TOF1：SDA→8、SCL→9、XSHUT→10</text>
+  <text x="120" y="1052" class="small">TOF2：SDA→11、SCL→12</text>
+  <text x="120" y="1084" class="small">HC-SR04：TRIG→5</text>
+  <text x="120" y="1116" class="small">HC ECHO → 10kΩ → GPIO6節點</text>
+  <text x="120" y="1148" class="small">GPIO6節點 → 20kΩ → GND</text>
+  <text x="120" y="1180" class="small">HC VCC=5V；全部 GND 共地</text>
+  <text x="120" y="1210" class="tiny">TOF供電未由照片確認：若目前已穩定讀值，不更動其電源線。</text>
+
+  <path d="M390 1020 H465 V946 H505" class="signal dash"/>
+  <path d="M390 1052 H475 V1040 H505" class="signal dash"/>
+  <path d="M390 1090 H485 V880 H505" class="signal dash"/>
+  <path d="M390 1145 H495 V908 H505" class="signal dash"/>
+
+  <!-- Legend -->
+  <text x="1040" y="1025" class="section">線路圖例</text>
+  <line x1="1045" y1="1060" x2="1130" y2="1060" class="lineL"/><text x="1145" y="1066" class="small">110V L</text>
+  <line x1="1045" y1="1095" x2="1130" y2="1095" class="lineN"/><text x="1145" y="1101" class="small">110V N</text>
+  <line x1="1045" y1="1130" x2="1130" y2="1130" class="linePE"/><text x="1145" y="1136" class="small">PE 保護地</text>
+  <line x1="1320" y1="1060" x2="1405" y2="1060" class="line5"/><text x="1420" y="1066" class="small">+5V</text>
+  <line x1="1320" y1="1095" x2="1405" y2="1095" class="line0"/><text x="1420" y="1101" class="small">0V/GND</text>
+  <line x1="1320" y1="1130" x2="1405" y2="1130" class="signal"/><text x="1420" y="1136" class="small">GPIO／感測訊號</text>
+
+  <text x="1040" y="1190" class="small">端子定位一律以設備本體絲印與斷電導通量測為準。</text>
+  <text x="1040" y="1218" class="small">禁止以照片方向、導線顏色或商品頁文字取代現場確認。</text>
+</svg>

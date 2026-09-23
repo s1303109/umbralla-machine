@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/workspace/esp32s3_vl53l0x_servo/build/CMakeFiles/bootloader
+/workspace/esp32s3_vl53l0x_servo/build/CMakeFiles/bootloader.rule
+/workspace/esp32s3_vl53l0x_servo/build/CMakeFiles/bootloader-complete.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/workspace/esp32s3_vl53l0x_servo/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

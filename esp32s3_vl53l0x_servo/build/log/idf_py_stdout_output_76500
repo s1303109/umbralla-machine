@@ -1,0 +1,125 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 16 2026 15:59:01[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c020020 size=0af94h ( 44948) map[0m
+[0;32mI (94) esp_image: segment 1: paddr=0001afbc vaddr=3fc92800 size=02c00h ( 11264) load[0m
+[0;32mI (97) esp_image: segment 2: paddr=0001dbc4 vaddr=40374000 size=02454h (  9300) load[0m
+[0;32mI (103) esp_image: segment 3: paddr=00020020 vaddr=42000020 size=1dbc8h (121800) map[0m
+[0;32mI (130) esp_image: segment 4: paddr=0003dbf0 vaddr=40376454 size=0c2c4h ( 49860) load[0m
+[0;32mI (141) esp_image: segment 5: paddr=00049ebc vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (147) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (148) boot: Disabling RNG early entropy source...[0m
+[0;32mI (159) cpu_start: Multicore app[0m
+[0;32mI (168) cpu_start: Pro cpu start user code[0m
+[0;32mI (168) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (168) app_init: Application information:[0m
+[0;32mI (168) app_init: Project name:     esp32s3_vl53l0x_servo[0m
+[0;32mI (173) app_init: App version:      1[0m
+[0;32mI (177) app_init: Compile time:     Sep 16 2026 15:58:49[0m
+[0;32mI (182) app_init: ELF file SHA256:  7016acf44...[0m
+[0;32mI (186) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (190) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (194) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (198) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (202) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (208) heap_init: At 3FC95CC8 len 00053A48 (334 KiB): RAM[0m
+[0;32mI (213) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (218) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (223) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (229) spi_flash: detected chip: generic[0m
+[0;32mI (232) spi_flash: flash io: dio[0m
+[0;32mI (236) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (242) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (249) main_task: Started on CPU0[0m
+[0;32mI (259) main_task: Calling app_main()[0m
+[0;32mI (259) TOF_SERVO: Servo resting at 10 degrees[0m
+[0;32mI (259) TOF_SERVO: HC-SR04 ready: TRIG GPIO5, ECHO GPIO6[0m
+[0;32mI (289) TOF_SERVO: TOF 1 detected at I2C address 0x29[0m
+[0;32mI (429) TOF_SERVO: TOF 2 detected at I2C address 0x29[0m
+[0;32mI (819) TOF_SERVO: Both TOF sensors ready; trigger distance is less than 101 mm[0m
+[0;32mI (819) TOF_SERVO: HC-SR04 trigger distance is less than 65 mm[0m
+[0;32mI (819) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (859) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (899) TOF_SERVO: TOF 2 distance: 122 mm | State: ARMED[0m
+[0;32mI (949) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (989) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (1019) TOF_SERVO: TOF 2 distance: 120 mm | State: ARMED[0m
+[0;32mI (1069) TOF_SERVO: HC-SR04 distance: 100 mm[0m
+[0;32mI (1109) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (1139) TOF_SERVO: TOF 2 distance: 120 mm | State: ARMED[0m
+[0;32mI (1189) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (1229) TOF_SERVO: TOF 1 distance: 168 mm | State: ARMED[0m
+[0;32mI (1259) TOF_SERVO: TOF 2 distance: 119 mm | State: ARMED[0m
+[0;32mI (1309) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (1349) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (1379) TOF_SERVO: TOF 2 distance: 124 mm | State: ARMED[0m
+[0;32mI (1429) TOF_SERVO: HC-SR04 distance: 100 mm[0m
+[0;32mI (1469) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (1499) TOF_SERVO: TOF 2 distance: 119 mm | State: ARMED[0m
+[0;32mI (1549) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (1589) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (1619) TOF_SERVO: TOF 2 distance: 122 mm | State: ARMED[0m
+[0;32mI (1669) TOF_SERVO: HC-SR04 distance: 92 mm[0m
+[0;32mI (1709) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (1739) TOF_SERVO: TOF 2 distance: 122 mm | State: ARMED[0m
+[0;32mI (1789) TOF_SERVO: HC-SR04 distance: 92 mm[0m
+[0;32mI (1829) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (1859) TOF_SERVO: TOF 2 distance: 120 mm | State: ARMED[0m
+[0;32mI (1909) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (1949) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (1979) TOF_SERVO: TOF 2 distance: 121 mm | State: ARMED[0m
+[0;32mI (2029) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2069) TOF_SERVO: TOF 1 distance: 168 mm | State: ARMED[0m
+[0;32mI (2099) TOF_SERVO: TOF 2 distance: 121 mm | State: ARMED[0m
+[0;32mI (2149) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2189) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (2219) TOF_SERVO: TOF 2 distance: 121 mm | State: ARMED[0m
+[0;32mI (2269) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2309) TOF_SERVO: TOF 1 distance: 168 mm | State: ARMED[0m
+[0;32mI (2339) TOF_SERVO: TOF 2 distance: 125 mm | State: ARMED[0m
+[0;32mI (2389) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2429) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (2459) TOF_SERVO: TOF 2 distance: 121 mm | State: ARMED[0m
+[0;32mI (2509) TOF_SERVO: HC-SR04 distance: 100 mm[0m
+[0;32mI (2549) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (2579) TOF_SERVO: TOF 2 distance: 122 mm | State: ARMED[0m
+[0;32mI (2629) TOF_SERVO: HC-SR04 distance: 100 mm[0m
+[0;32mI (2669) TOF_SERVO: TOF 1 distance: 168 mm | State: ARMED[0m
+[0;32mI (2699) TOF_SERVO: TOF 2 distance: 123 mm | State: ARMED[0m
+[0;32mI (2749) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2789) TOF_SERVO: TOF 1 distance: 168 mm | State: ARMED[0m
+[0;32mI (2819) TOF_SERVO: TOF 2 distance: 122 mm | State: ARMED[0m
+[0;32mI (2869) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (2909) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (2939) TOF_SERVO: TOF 2 distance: 123 mm | State: ARMED[0m
+[0;32mI (2989) TOF_SERVO: HC-SR04 distance: 100 mm[0m
+[0;32mI (3029) TOF_SERVO: TOF 1 distance: 166 mm | State: ARMED[0m
+[0;32mI (3059) TOF_SERVO: TOF 2 distance: 123 mm | State: ARMED[0m
+[0;32mI (3109) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (3149) TOF_SERVO: TOF 1 distance: 167 mm | State: ARMED[0m
+[0;32mI (3179) TOF_SERVO: TOF 2 distance: 123 mm | State: ARMED[0m
+[0;32mI (3229) TOF_SERVO: HC-SR04 distance: 101 mm[0m
+[0;32mI (3269) TOF_SERVO: TOF 1 distance: 164 mm | State: ARMED[0m
+[0

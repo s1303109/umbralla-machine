@@ -1,0 +1,2 @@
+source /workspace/esp32s3_vl53l0x_servo/build/gdbinit/symbols
+source /workspace/esp32s3_vl53l0x_servo/build/gdbinit/connect
