@@ -1,0 +1,42 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;33m--- esp-idf-monitor 1.7.0 on /dev/ttyACM0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0m--- 0x403c8700: [0;33m_stext[0m[0m at [0;32m??[0m[0m:[1;31m?[0m
+[0m--- 0x403c8924: [0;33mcall_start_cpu0[0m[0m at [0;32m/opt/esp/idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0m--- 0x4037770e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/opt/esp/idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40376b99: [0;33m_xt_lowint1[0m[0m at [0;32m/opt/esp/idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4200bdc6: [0;33mgpio_set_level[0m[0m at [0;32m/opt/esp/idf/components/esp_driver_gpio/src/gpio.c[0m[0m:[1;31m239[0m
+[0m--- 0x42006b97: [0;33mlcd_write_bus[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m95[0m
+[0m--- 0x42006c6e: [0;33mlcd_write_byte_selected[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m101[0m
+[0m--- 0x42006df2: [0;33mlcd_write_color[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m222[0m
+[0m--- 0x42006e5e: [0;33mlcd_fill_rect[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m250[0m
+[0m--- 0x42006fba: [0;33mdraw_sensor_card[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m333[0m
+[0m--- 0x4200707b: [0;33mrender_status[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m353[0m
+[0m--- 0x42007171: [0;33mlcd_display_task[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m388[0m
+[0m--- 0x4037a001: [0;33mvPortTaskWrapper[0m[0m at [0;32m/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x4037770e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/opt/esp/idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40376b99: [0;33m_xt_lowint1[0m[0m at [0;32m/opt/esp/idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x40041a73: [0;33mets_delay_us[0m[0m in [0;32mROM[0m
+[0m--- 0x42006c8d: [0;33mlcd_write_byte_selected[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m105[0m
+[0m--- 0x42006df8: [0;33mlcd_write_color[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m223[0m
+[0m--- 0x42006e5e: [0;33mlcd_fill_rect[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m250[0m
+[0m--- 0x42007045: [0;33mrender_status[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m348[0m
+[0m--- 0x42007171: [0;33mlcd_display_task[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m388[0m
+[0m--- 0x4037a001: [0;33mvPortTaskWrapper[0m[0m at [0;32m/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m--- 0x4037770e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/opt/esp/idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40376b99: [0;33m_xt_lowint1[0m[0m at [0;32m/opt/esp/idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4200bd92: [0;33mgpio_set_level[0m[0m at [0;32m/opt/esp/idf/components/esp_driver_gpio/src/gpio.c[0m[0m:[1;31m238[0m
+[0m--- 0x42006b97: [0;33mlcd_write_bus[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m95[0m
+[0m--- 0x42006c6e: [0;33mlcd_write_byte_selected[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m101[0m
+[0m--- 0x42006df2: [0;33mlcd_write_color[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m222[0m
+[0m--- 0x4037770e: [0;33mesp_crosscore_isr[0m[0m at [0;32m/opt/esp/idf/components/esp_system/crosscore_int.c[0m[0m:[1;31m74[0m
+[0m--- 0x40376b99: [0;33m_xt_lowint1[0m[0m at [0;32m/opt/esp/idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m1240[0m
+[0m--- 0x4200bd67: [0;33mgpio_set_level[0m[0m at [0;32m/opt/esp/idf/components/esp_driver_gpio/src/gpio.c[0m[0m:[1;31m238[0m
+[0m--- 0x42006b97: [0;33mlcd_write_bus[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m95[0m
+[0m--- 0x42006c6e: [0;33mlcd_write_byte_selected[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m101[0m
+[0m--- 0x42006df2: [0;33mlcd_write_color[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m222[0m
+[0m--- 0x42006e5e: [0;33mlcd_fill_rect[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m250[0m
+[0m--- 0x42007045: [0;33mrender_status[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m348[0m
+[0m--- 0x42007171: [0;33mlcd_display_task[0m[0m at [0;32m/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c[0m[0m:[1;31m388[0m
+[0m--- 0x4037a001: [0;33mvPortTaskWrapper[0m[0m at [0;32m/opt/esp/idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c[0m[0m:[1;31m139[0m
+[0m

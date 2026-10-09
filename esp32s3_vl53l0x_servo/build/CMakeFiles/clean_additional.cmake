@@ -8,6 +8,7 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "bootloader/bootloader.map"
   "config/sdkconfig.cmake"
   "config/sdkconfig.h"
+  "dashboard.rgb565.S"
   "esp-idf/esptool_py/flasher_args.json.in"
   "esp-idf/mbedtls/x509_crt_bundle"
   "esp32s3_vl53l0x_servo.bin"

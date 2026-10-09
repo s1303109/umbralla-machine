@@ -60,7 +60,5 @@
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/vl53l0x_idf/libvl53l0x_idf.a
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/libmain.a
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/vl53l0x_idf/libvl53l0x_idf.a
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a

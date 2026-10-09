@@ -359,13 +359,6 @@
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/vl53l0x_idf/CMakeFiles/install.dir
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/vl53l0x_idf/CMakeFiles/install/local.dir
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/vl53l0x_idf/CMakeFiles/install/strip.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/__idf_esp_driver_ledc.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/edit_cache.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/rebuild_cache.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/list_install_components.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/install.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/install/local.dir
-/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/CMakeFiles/install/strip.dir
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/CMakeFiles/__idf_main.dir
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/CMakeFiles/rebuild_cache.dir

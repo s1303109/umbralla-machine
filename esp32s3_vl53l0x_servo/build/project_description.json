@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32s3_vl53l0x_servo",
-    "project_version":    "1",
+    "project_version":    "c529b87-dirty",
     "project_path":       "/workspace/esp32s3_vl53l0x_servo",
     "idf_path":           "/opt/esp/idf",
     "build_dir":          "/workspace/esp32s3_vl53l0x_servo/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "xtensa-esp32s3-elf-",
     "c_compiler":         "/opt/esp/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/opt/esp/idf/components/efuse/Kconfig;/opt/esp/idf/components/esp_common/Kconfig;/opt/esp/idf/components/esp_driver_gpio/Kconfig;/opt/esp/idf/components/esp_driver_i2c/Kconfig;/opt/esp/idf/components/esp_driver_ledc/Kconfig;/opt/esp/idf/components/esp_hw_support/Kconfig;/opt/esp/idf/components/esp_mm/Kconfig;/opt/esp/idf/components/esp_partition/Kconfig;/opt/esp/idf/components/esp_pm/Kconfig;/opt/esp/idf/components/esp_ringbuf/Kconfig;/opt/esp/idf/components/esp_rom/Kconfig;/opt/esp/idf/components/esp_security/Kconfig;/opt/esp/idf/components/esp_system/Kconfig;/opt/esp/idf/components/esp_timer/Kconfig;/opt/esp/idf/components/freertos/Kconfig;/opt/esp/idf/components/hal/Kconfig;/opt/esp/idf/components/heap/Kconfig;/opt/esp/idf/components/log/Kconfig;/opt/esp/idf/components/mbedtls/Kconfig;/opt/esp/idf/components/newlib/Kconfig;/opt/esp/idf/components/pthread/Kconfig;/opt/esp/idf/components/soc/Kconfig;/opt/esp/idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "/opt/esp/idf/components/efuse/Kconfig;/opt/esp/idf/components/esp_common/Kconfig;/opt/esp/idf/components/esp_driver_gpio/Kconfig;/opt/esp/idf/components/esp_driver_i2c/Kconfig;/opt/esp/idf/components/esp_hw_support/Kconfig;/opt/esp/idf/components/esp_mm/Kconfig;/opt/esp/idf/components/esp_partition/Kconfig;/opt/esp/idf/components/esp_pm/Kconfig;/opt/esp/idf/components/esp_ringbuf/Kconfig;/opt/esp/idf/components/esp_rom/Kconfig;/opt/esp/idf/components/esp_security/Kconfig;/opt/esp/idf/components/esp_system/Kconfig;/opt/esp/idf/components/esp_timer/Kconfig;/opt/esp/idf/components/freertos/Kconfig;/opt/esp/idf/components/hal/Kconfig;/opt/esp/idf/components/heap/Kconfig;/opt/esp/idf/components/log/Kconfig;/opt/esp/idf/components/mbedtls/Kconfig;/opt/esp/idf/components/newlib/Kconfig;/opt/esp/idf/components/pthread/Kconfig;/opt/esp/idf/components/soc/Kconfig;/opt/esp/idf/components/spi_flash/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "/opt/esp/idf/components/bootloader/Kconfig.projbuild;/opt/esp/idf/components/esp_app_format/Kconfig.projbuild;/opt/esp/idf/components/esp_rom/Kconfig.projbuild;/opt/esp/idf/components/esptool_py/Kconfig.projbuild;/opt/esp/idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "newlib", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_ledc", "esp_hw_support", "esp_mm", "esp_partition", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "newlib", "partition_table", "pthread", "soc", "spi_flash", "vl53l0x_idf", "xtensa", "" ],
-    "build_component_paths" : [ "/opt/esp/idf/components/app_update", "/opt/esp/idf/components/bootloader", "/opt/esp/idf/components/bootloader_support", "/opt/esp/idf/components/cxx", "/opt/esp/idf/components/efuse", "/opt/esp/idf/components/esp_app_format", "/opt/esp/idf/components/esp_bootloader_format", "/opt/esp/idf/components/esp_common", "/opt/esp/idf/components/esp_driver_gpio", "/opt/esp/idf/components/esp_driver_i2c", "/opt/esp/idf/components/esp_driver_ledc", "/opt/esp/idf/components/esp_hw_support", "/opt/esp/idf/components/esp_mm", "/opt/esp/idf/components/esp_partition", "/opt/esp/idf/components/esp_pm", "/opt/esp/idf/components/esp_ringbuf", "/opt/esp/idf/components/esp_rom", "/opt/esp/idf/components/esp_security", "/opt/esp/idf/components/esp_system", "/opt/esp/idf/components/esp_timer", "/opt/esp/idf/components/esptool_py", "/opt/esp/idf/components/freertos", "/opt/esp/idf/components/hal", "/opt/esp/idf/components/heap", "/opt/esp/idf/components/log", "/workspace/esp32s3_vl53l0x_servo/main", "/opt/esp/idf/components/mbedtls", "/opt/esp/idf/components/newlib", "/opt/esp/idf/components/partition_table", "/opt/esp/idf/components/pthread", "/opt/esp/idf/components/soc", "/opt/esp/idf/components/spi_flash", "/workspace/esp32s3_vl53l0x_servo/components/vl53l0x_idf", "/opt/esp/idf/components/xtensa", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_driver_gpio", "esp_driver_i2c", "esp_hw_support", "esp_mm", "esp_partition", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "newlib", "partition_table", "pthread", "soc", "spi_flash", "vl53l0x_idf", "xtensa", "" ],
+    "build_component_paths" : [ "/opt/esp/idf/components/app_update", "/opt/esp/idf/components/bootloader", "/opt/esp/idf/components/bootloader_support", "/opt/esp/idf/components/cxx", "/opt/esp/idf/components/efuse", "/opt/esp/idf/components/esp_app_format", "/opt/esp/idf/components/esp_bootloader_format", "/opt/esp/idf/components/esp_common", "/opt/esp/idf/components/esp_driver_gpio", "/opt/esp/idf/components/esp_driver_i2c", "/opt/esp/idf/components/esp_hw_support", "/opt/esp/idf/components/esp_mm", "/opt/esp/idf/components/esp_partition", "/opt/esp/idf/components/esp_pm", "/opt/esp/idf/components/esp_ringbuf", "/opt/esp/idf/components/esp_rom", "/opt/esp/idf/components/esp_security", "/opt/esp/idf/components/esp_system", "/opt/esp/idf/components/esp_timer", "/opt/esp/idf/components/esptool_py", "/opt/esp/idf/components/freertos", "/opt/esp/idf/components/hal", "/opt/esp/idf/components/heap", "/opt/esp/idf/components/log", "/workspace/esp32s3_vl53l0x_servo/main", "/opt/esp/idf/components/mbedtls", "/opt/esp/idf/components/newlib", "/opt/esp/idf/components/partition_table", "/opt/esp/idf/components/pthread", "/opt/esp/idf/components/soc", "/opt/esp/idf/components/spi_flash", "/workspace/esp32s3_vl53l0x_servo/components/vl53l0x_idf", "/opt/esp/idf/components/xtensa", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -176,21 +176,6 @@
             "managed_priv_reqs": [],
             "file": "/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
             "sources": [ "/opt/esp/idf/components/esp_driver_i2c/i2c_master.c", "/opt/esp/idf/components/esp_driver_i2c/i2c_common.c", "/opt/esp/idf/components/esp_driver_i2c/i2c_slave.c" ],
-            "include_dirs": [ "include" ]
-        },
-        "esp_driver_ledc": {
-            "alias": "idf::esp_driver_ledc",
-            "target": "___idf_esp_driver_ledc",
-            "prefix": "idf",
-            "dir": "/opt/esp/idf/components/esp_driver_ledc",
-            "type": "LIBRARY",
-            "lib": "__idf_esp_driver_ledc",
-            "reqs": [ "esp_driver_gpio" ],
-            "priv_reqs": [ "esp_pm" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/workspace/esp32s3_vl53l0x_servo/build/esp-idf/esp_driver_ledc/libesp_driver_ledc.a",
-            "sources": [ "/opt/esp/idf/components/esp_driver_ledc/src/ledc.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_hw_support": {
@@ -410,12 +395,12 @@
             "dir": "/workspace/esp32s3_vl53l0x_servo/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "vl53l0x_idf", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_ledc", "esp_timer" ],
+            "reqs": [ "vl53l0x_idf", "esp_driver_gpio", "esp_driver_i2c", "esp_timer" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/libmain.a",
-            "sources": [ "/workspace/esp32s3_vl53l0x_servo/main/main.c" ],
+            "sources": [ "/workspace/esp32s3_vl53l0x_servo/main/main.c", "/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c", "/workspace/esp32s3_vl53l0x_servo/build/dashboard.rgb565.S" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
@@ -1842,7 +1827,7 @@
             "prefix": "idf",
             "dir": "/workspace/esp32s3_vl53l0x_servo/main",
             "lib": "__idf_main",
-            "reqs": [ "vl53l0x_idf", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_ledc", "esp_timer" ],
+            "reqs": [ "vl53l0x_idf", "esp_driver_gpio", "esp_driver_i2c", "esp_timer" ],
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
