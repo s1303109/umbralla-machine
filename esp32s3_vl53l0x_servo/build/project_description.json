@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32s3_vl53l0x_servo",
-    "project_version":    "c529b87-dirty",
+    "project_version":    "e637eb4-dirty",
     "project_path":       "/workspace/esp32s3_vl53l0x_servo",
     "idf_path":           "/opt/esp/idf",
     "build_dir":          "/workspace/esp32s3_vl53l0x_servo/build",

@@ -8,7 +8,6 @@
 #include "driver/gpio.h"
 #include "esp_heap_caps.h"
 #include "esp_log.h"
-#include "esp_rom_sys.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 #include "freertos/task.h"
@@ -29,10 +28,13 @@ static const char *TAG = "LCD_DISPLAY";
 #define FAN_Y 72U
 #define FAN_WIDTH 126U
 #define FAN_HEIGHT 94U
+#define FAN_ROTOR_X (FAN_X + 7U)
+#define FAN_ROTOR_Y (FAN_Y + 6U)
+#define FAN_ROTOR_WIDTH 82U
+#define FAN_ROTOR_HEIGHT 82U
 
-#define SPRITE_MAX_WIDTH LCD_WIDTH
-#define SPRITE_MAX_HEIGHT 130U
-#define SPRITE_CAPACITY (SPRITE_MAX_WIDTH * SPRITE_MAX_HEIGHT)
+/* The blower-status panel is the largest region redrawn at one time. */
+#define SPRITE_CAPACITY (270U * 55U)
 
 #define COLOR_BACKGROUND 0x020CU
 #define COLOR_BACKGROUND_2 0x0841U
@@ -56,7 +58,7 @@ static const char *TAG = "LCD_DISPLAY";
 #define COLOR_REFERENCE_BLUE 0x2D7CU
 #define COLOR_REFERENCE_LIGHT_BLUE 0xE73FU
 
-#define FAN_FRAME_MS 45U
+#define FAN_FRAME_MS 20U
 #define CARD_REFRESH_MS 500U
 #define DISPLAY_POLL_MS 10U
 
@@ -176,9 +178,19 @@ static inline void lcd_write_byte_selected(uint8_t value)
 {
     lcd_write_bus(value);
     GPIO.out1_w1tc.val = LCD_WR_HIGH_MASK;
-    esp_rom_delay_us(1);
+    /*
+     * ILI9486L requires a >=50 ns write cycle and >=15 ns for each WR phase.
+     * These explicit delays remain within specification even at 240 MHz and
+     * avoid the visible wipe caused by the previous 1 us delay per byte.
+     */
+    __asm__ __volatile__(
+        "nop; nop; nop; nop; nop; nop; nop; nop; "
+        "nop; nop; nop; nop;"
+        ::: "memory");
     GPIO.out1_w1ts.val = LCD_WR_HIGH_MASK;
-    __asm__ __volatile__("nop; nop; nop; nop;" ::: "memory");
+    __asm__ __volatile__(
+        "nop; nop; nop; nop; nop; nop; nop; nop;"
+        ::: "memory");
 }
 
 static void lcd_write_command(uint8_t command, const uint8_t *data, size_t length)
@@ -267,6 +279,10 @@ static void lcd_init_ili9486(void)
     lcd_write_command(0xE1, negative_gamma, sizeof(negative_gamma));
     lcd_write_command(0x20, NULL, 0);
     lcd_write_command(0x36, landscape_rotated_180, sizeof(landscape_rotated_180));
+}
+
+static void lcd_enable_display(void)
+{
     lcd_write_command(0x29, NULL, 0);
     vTaskDelay(pdMS_TO_TICKS(150));
 }
@@ -559,9 +575,6 @@ static void lcd_push_canvas(uint16_t x, uint16_t y, const canvas_t *canvas)
     const uint32_t pixel_count = (uint32_t)canvas->width * canvas->height;
     for (uint32_t index = 0; index < pixel_count; ++index) {
         lcd_write_color(canvas->pixels[index]);
-        if ((index & 0x07FFU) == 0x07FFU) {
-            vTaskDelay(1);
-        }
     }
     lcd_end_pixels();
 }
@@ -646,7 +659,7 @@ static int16_t trig_72(const int16_t table[36], uint8_t angle)
     return (int16_t)((table[base] + table[(base + 1U) % 36U]) / 2);
 }
 
-static void draw_fan(bool running, uint8_t frame)
+static void draw_fan_shell(bool running)
 {
     canvas_t fan = canvas_begin_from_dashboard(FAN_X, FAN_Y, FAN_WIDTH, FAN_HEIGHT);
     const int center_x = 48;
@@ -654,20 +667,6 @@ static void draw_fan(bool running, uint8_t frame)
     const uint16_t blade = running ? COLOR_REFERENCE_BLUE : COLOR_REFERENCE_MUTED;
     canvas_fill_circle(&fan, center_x, center_y, 43, COLOR_REFERENCE_LIGHT_BLUE);
     canvas_circle(&fan, center_x, center_y, 43, 0xBE7FU);
-
-    for (uint8_t blade_index = 0; blade_index < 3; ++blade_index) {
-        const uint8_t base = (uint8_t)((frame + blade_index * 24U) % 72U);
-        for (int radius = 12; radius <= 35; radius += 2) {
-            const uint8_t curve =
-                (uint8_t)((base + (radius - 12) / 4) % 72U);
-            const int x = center_x + trig_72(COS_36, curve) * radius / 1024;
-            const int y = center_y + trig_72(SIN_36, curve) * radius / 1024;
-            const int brush = 8 - (radius - 12) / 7;
-            canvas_fill_circle(&fan, x, y, brush, blade);
-        }
-    }
-    canvas_fill_circle(&fan, center_x, center_y, 9, COLOR_WHITE);
-    canvas_fill_circle(&fan, center_x, center_y, 5, running ? COLOR_GREEN : COLOR_REFERENCE_MUTED);
 
     for (int line = 0; line < 3; ++line) {
         for (int x = 91; x <= 119; ++x) {
@@ -677,6 +676,38 @@ static void draw_fan(bool running, uint8_t frame)
         }
     }
     lcd_push_canvas(FAN_X, FAN_Y, &fan);
+}
+
+static void draw_fan_rotor(bool running, uint8_t frame)
+{
+    canvas_t fan = canvas_begin_from_dashboard(
+        FAN_ROTOR_X,
+        FAN_ROTOR_Y,
+        FAN_ROTOR_WIDTH,
+        FAN_ROTOR_HEIGHT);
+    const int center_x = 41;
+    const int center_y = 41;
+    const uint16_t blade = running ? COLOR_REFERENCE_BLUE : COLOR_REFERENCE_MUTED;
+
+    /* Rebuild only the circular rotor area; the shell and wind marks stay put. */
+    canvas_fill_circle(&fan, center_x, center_y, 43, COLOR_REFERENCE_LIGHT_BLUE);
+    canvas_circle(&fan, center_x, center_y, 43, 0xBE7FU);
+
+    for (uint8_t blade_index = 0; blade_index < 3; ++blade_index) {
+        const uint8_t base = (uint8_t)((frame + blade_index * 24U) % 72U);
+        for (int radius = 10; radius <= 32; radius += 2) {
+            const uint8_t curve =
+                (uint8_t)((base + (radius - 10) / 4) % 72U);
+            const int x = center_x + trig_72(COS_36, curve) * radius / 1024;
+            const int y = center_y + trig_72(SIN_36, curve) * radius / 1024;
+            const int brush = 7 - (radius - 10) / 7;
+            canvas_fill_circle(&fan, x, y, brush, blade);
+        }
+    }
+    canvas_fill_circle(&fan, center_x, center_y, 9, COLOR_WHITE);
+    canvas_fill_circle(&fan, center_x, center_y, 5, running ? COLOR_GREEN : COLOR_REFERENCE_MUTED);
+
+    lcd_push_canvas(FAN_ROTOR_X, FAN_ROTOR_Y, &fan);
 }
 
 static void draw_blower_status(bool running)
@@ -872,13 +903,15 @@ static void lcd_display_task(void *argument)
     lcd_display_status_t latest = {0};
     draw_live_label();
     draw_header_status(false);
-    draw_fan(false, 0);
+    draw_fan_shell(false);
+    draw_fan_rotor(false, 0);
     draw_blower_status(false);
     draw_sensor_dynamic(0, false, false, 0, 101);
     draw_sensor_dynamic(1, false, false, 0, 101);
     draw_sensor_dynamic(2, false, false, 0, 65);
     draw_footer_sensors(&displayed);
     draw_footer_relay(false);
+    lcd_enable_display();
 
     TickType_t last_card_refresh = xTaskGetTickCount();
     TickType_t last_fan_frame = last_card_refresh;
@@ -919,9 +952,11 @@ static void lcd_display_task(void *argument)
             draw_header_status(latest.blower_running);
             draw_blower_status(latest.blower_running);
             fan_frame = 0;
-            draw_fan(latest.blower_running, fan_frame);
+            draw_fan_shell(latest.blower_running);
+            draw_fan_rotor(latest.blower_running, fan_frame);
             draw_footer_relay(latest.blower_running);
             displayed.blower_running = latest.blower_running;
+            last_fan_frame = now;
         }
 
         if (tof_1_state_changed) {
@@ -1021,7 +1056,7 @@ static void lcd_display_task(void *argument)
         if (latest.blower_running &&
             now - last_fan_frame >= pdMS_TO_TICKS(FAN_FRAME_MS)) {
             fan_frame = (uint8_t)((fan_frame + 1U) % 72U);
-            draw_fan(true, fan_frame);
+            draw_fan_rotor(true, fan_frame);
             last_fan_frame = now;
         }
     }
@@ -1029,10 +1064,12 @@ static void lcd_display_task(void *argument)
 
 esp_err_t lcd_display_start(void)
 {
+    bool sprite_uses_psram = true;
     sprite_pixels = heap_caps_malloc(
         SPRITE_CAPACITY * sizeof(uint16_t),
         MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
     if (sprite_pixels == NULL) {
+        sprite_uses_psram = false;
         sprite_pixels = heap_caps_malloc(
             SPRITE_CAPACITY * sizeof(uint16_t),
             MALLOC_CAP_8BIT);
@@ -1040,6 +1077,12 @@ esp_err_t lcd_display_start(void)
     if (sprite_pixels == NULL) {
         return ESP_ERR_NO_MEM;
     }
+    ESP_LOGI(
+        TAG,
+        "Display buffer: %u bytes in %s; free internal RAM: %u bytes",
+        (unsigned)(SPRITE_CAPACITY * sizeof(uint16_t)),
+        sprite_uses_psram ? "PSRAM" : "internal RAM",
+        (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT));
 
     status_queue = xQueueCreate(1, sizeof(lcd_display_status_t));
     if (status_queue == NULL) {
