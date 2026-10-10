@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32s3_vl53l0x_servo",
-    "project_version":    "e637eb4-dirty",
+    "project_version":    "a78bf0f-dirty",
     "project_path":       "/workspace/esp32s3_vl53l0x_servo",
     "idf_path":           "/opt/esp/idf",
     "build_dir":          "/workspace/esp32s3_vl53l0x_servo/build",
@@ -400,7 +400,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/workspace/esp32s3_vl53l0x_servo/build/esp-idf/main/libmain.a",
-            "sources": [ "/workspace/esp32s3_vl53l0x_servo/main/main.c", "/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c", "/workspace/esp32s3_vl53l0x_servo/build/dashboard.rgb565.S" ],
+            "sources": [ "/workspace/esp32s3_vl53l0x_servo/main/main.c", "/workspace/esp32s3_vl53l0x_servo/main/lcd_display.c", "/workspace/esp32s3_vl53l0x_servo/build/dashboard.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/fan_original.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/fan_delta.s8.S", "/workspace/esp32s3_vl53l0x_servo/build/blower_on.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/blower_off.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/relay_on.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/relay_off.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/sensor_lights_on.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/sensor_lights_off.rgb565.S", "/workspace/esp32s3_vl53l0x_servo/build/menu_digits.alpha8.S" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

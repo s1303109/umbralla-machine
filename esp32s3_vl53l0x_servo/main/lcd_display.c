@@ -3,7 +3,6 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <string.h>
 
 #include "driver/gpio.h"
 #include "esp_heap_caps.h"
@@ -24,14 +23,33 @@ static const char *TAG = "LCD_DISPLAY";
 #define LCD_WIDTH 480U
 #define LCD_HEIGHT 320U
 
-#define FAN_X 22U
-#define FAN_Y 72U
-#define FAN_WIDTH 126U
-#define FAN_HEIGHT 94U
-#define FAN_ROTOR_X (FAN_X + 7U)
-#define FAN_ROTOR_Y (FAN_Y + 6U)
-#define FAN_ROTOR_WIDTH 82U
-#define FAN_ROTOR_HEIGHT 82U
+#define FAN_X 56U
+#define FAN_Y 75U
+#define FAN_WIDTH 110U
+#define FAN_HEIGHT 110U
+#define FAN_FRAME_COUNT 72U
+#define FAN_CENTER_X_Q8 14080
+#define FAN_CENTER_Y_Q8 14016
+#define FAN_HUB_RADIUS_Q8 3994
+#define FAN_ROTATION_RADIUS_Q8 13568
+#define FAN_EDGE_MARGIN 1U
+#define BLOWER_STATUS_X 176U
+#define BLOWER_STATUS_Y 112U
+#define BLOWER_STATUS_WIDTH 88U
+#define BLOWER_STATUS_HEIGHT 35U
+#define RELAY_STATUS_X 189U
+#define RELAY_STATUS_Y 214U
+#define RELAY_STATUS_WIDTH 70U
+#define RELAY_STATUS_HEIGHT 29U
+#define SENSOR_LIGHT_X 423U
+#define SENSOR_LIGHT_WIDTH 33U
+#define SENSOR_LIGHT_HEIGHT 30U
+#define DIGIT_ATLAS_WIDTH 276U
+#define DIGIT_HEIGHT 31U
+#define DIGIT_CELL_WIDTH 23U
+#define DIGIT_ADVANCE 17U
+#define UNIT_ADVANCE 10U
+#define UNIT_GAP 2U
 
 /* The blower-status panel is the largest region redrawn at one time. */
 #define SPRITE_CAPACITY (270U * 55U)
@@ -53,10 +71,8 @@ static const char *TAG = "LCD_DISPLAY";
 #define COLOR_RED_DARK 0x6004U
 #define COLOR_AMBER 0xFD20U
 #define COLOR_BLACK 0x0000U
-#define COLOR_REFERENCE_TEXT 0x10E5U
-#define COLOR_REFERENCE_MUTED 0x738EU
-#define COLOR_REFERENCE_BLUE 0x2D7CU
-#define COLOR_REFERENCE_LIGHT_BLUE 0xE73FU
+#define COLOR_MENU_WHITE 0xFF9EU
+#define COLOR_MENU_MUTED 0xBD35U
 
 #define FAN_FRAME_MS 20U
 #define CARD_REFRESH_MS 500U
@@ -78,53 +94,6 @@ static const gpio_num_t LCD_DATA_PINS[8] = {
 };
 
 typedef struct {
-    char character;
-    uint8_t rows[7];
-} glyph_t;
-
-static const glyph_t FONT[] = {
-    {' ', {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}},
-    {'-', {0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00}},
-    {'/', {0x01, 0x02, 0x04, 0x08, 0x10, 0x00, 0x00}},
-    {'0', {0x0E, 0x11, 0x13, 0x15, 0x19, 0x11, 0x0E}},
-    {'1', {0x04, 0x0C, 0x04, 0x04, 0x04, 0x04, 0x0E}},
-    {'2', {0x0E, 0x11, 0x01, 0x02, 0x04, 0x08, 0x1F}},
-    {'3', {0x1E, 0x01, 0x01, 0x0E, 0x01, 0x01, 0x1E}},
-    {'4', {0x02, 0x06, 0x0A, 0x12, 0x1F, 0x02, 0x02}},
-    {'5', {0x1F, 0x10, 0x10, 0x1E, 0x01, 0x01, 0x1E}},
-    {'6', {0x0E, 0x10, 0x10, 0x1E, 0x11, 0x11, 0x0E}},
-    {'7', {0x1F, 0x01, 0x02, 0x04, 0x08, 0x08, 0x08}},
-    {'8', {0x0E, 0x11, 0x11, 0x0E, 0x11, 0x11, 0x0E}},
-    {'9', {0x0E, 0x11, 0x11, 0x0F, 0x01, 0x01, 0x0E}},
-    {'A', {0x0E, 0x11, 0x11, 0x1F, 0x11, 0x11, 0x11}},
-    {'B', {0x1E, 0x11, 0x11, 0x1E, 0x11, 0x11, 0x1E}},
-    {'C', {0x0E, 0x11, 0x10, 0x10, 0x10, 0x11, 0x0E}},
-    {'D', {0x1E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x1E}},
-    {'E', {0x1F, 0x10, 0x10, 0x1E, 0x10, 0x10, 0x1F}},
-    {'F', {0x1F, 0x10, 0x10, 0x1E, 0x10, 0x10, 0x10}},
-    {'G', {0x0E, 0x11, 0x10, 0x17, 0x11, 0x11, 0x0F}},
-    {'H', {0x11, 0x11, 0x11, 0x1F, 0x11, 0x11, 0x11}},
-    {'I', {0x0E, 0x04, 0x04, 0x04, 0x04, 0x04, 0x0E}},
-    {'J', {0x07, 0x02, 0x02, 0x02, 0x12, 0x12, 0x0C}},
-    {'K', {0x11, 0x12, 0x14, 0x18, 0x14, 0x12, 0x11}},
-    {'L', {0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 0x1F}},
-    {'M', {0x11, 0x1B, 0x15, 0x15, 0x11, 0x11, 0x11}},
-    {'N', {0x11, 0x19, 0x15, 0x13, 0x11, 0x11, 0x11}},
-    {'O', {0x0E, 0x11, 0x11, 0x11, 0x11, 0x11, 0x0E}},
-    {'P', {0x1E, 0x11, 0x11, 0x1E, 0x10, 0x10, 0x10}},
-    {'Q', {0x0E, 0x11, 0x11, 0x11, 0x15, 0x12, 0x0D}},
-    {'R', {0x1E, 0x11, 0x11, 0x1E, 0x14, 0x12, 0x11}},
-    {'S', {0x0F, 0x10, 0x10, 0x0E, 0x01, 0x01, 0x1E}},
-    {'T', {0x1F, 0x04, 0x04, 0x04, 0x04, 0x04, 0x04}},
-    {'U', {0x11, 0x11, 0x11, 0x11, 0x11, 0x11, 0x0E}},
-    {'V', {0x11, 0x11, 0x11, 0x11, 0x11, 0x0A, 0x04}},
-    {'W', {0x11, 0x11, 0x11, 0x15, 0x15, 0x15, 0x0A}},
-    {'X', {0x11, 0x11, 0x0A, 0x04, 0x0A, 0x11, 0x11}},
-    {'Y', {0x11, 0x11, 0x0A, 0x04, 0x04, 0x04, 0x04}},
-    {'Z', {0x1F, 0x01, 0x02, 0x04, 0x08, 0x10, 0x1F}},
-};
-
-typedef struct {
     uint16_t *pixels;
     uint16_t width;
     uint16_t height;
@@ -137,6 +106,24 @@ extern const uint8_t dashboard_rgb565_start[]
     asm("_binary_dashboard_rgb565_start");
 extern const uint8_t dashboard_rgb565_end[]
     asm("_binary_dashboard_rgb565_end");
+extern const uint8_t fan_original_rgb565_start[]
+    asm("_binary_fan_original_rgb565_start");
+extern const uint8_t fan_delta_s8_start[]
+    asm("_binary_fan_delta_s8_start");
+extern const uint8_t blower_on_rgb565_start[]
+    asm("_binary_blower_on_rgb565_start");
+extern const uint8_t blower_off_rgb565_start[]
+    asm("_binary_blower_off_rgb565_start");
+extern const uint8_t relay_on_rgb565_start[]
+    asm("_binary_relay_on_rgb565_start");
+extern const uint8_t relay_off_rgb565_start[]
+    asm("_binary_relay_off_rgb565_start");
+extern const uint8_t sensor_lights_on_rgb565_start[]
+    asm("_binary_sensor_lights_on_rgb565_start");
+extern const uint8_t sensor_lights_off_rgb565_start[]
+    asm("_binary_sensor_lights_off_rgb565_start");
+extern const uint8_t menu_digits_alpha8_start[]
+    asm("_binary_menu_digits_alpha8_start");
 
 static const int16_t COS_36[36] = {
     1024, 1008, 962, 887, 784, 658, 512, 350, 178,
@@ -144,12 +131,22 @@ static const int16_t COS_36[36] = {
     -1024, -1008, -962, -887, -784, -658, -512, -350, -178,
     0, 178, 350, 512, 658, 784, 887, 962, 1008,
 };
+
 static const int16_t SIN_36[36] = {
     0, 178, 350, 512, 658, 784, 887, 962, 1008,
     1024, 1008, 962, 887, 784, 658, 512, 350, 178,
     0, -178, -350, -512, -658, -784, -887, -962, -1008,
     -1024, -1008, -962, -887, -784, -658, -512, -350, -178,
 };
+
+static int16_t trig_72(const int16_t table[36], uint8_t angle)
+{
+    const uint8_t base = (uint8_t)((angle / 2U) % 36U);
+    if ((angle & 1U) == 0U) {
+        return table[base];
+    }
+    return (int16_t)((table[base] + table[(base + 1U) % 36U]) / 2);
+}
 
 static uint64_t lcd_data_pin_mask(void)
 {
@@ -338,21 +335,6 @@ static void lcd_fill_rect(
     lcd_end_pixels();
 }
 
-static const uint8_t *font_rows(char character)
-{
-    for (size_t index = 0; index < sizeof(FONT) / sizeof(FONT[0]); ++index) {
-        if (FONT[index].character == character) {
-            return FONT[index].rows;
-        }
-    }
-    return FONT[0].rows;
-}
-
-static uint16_t text_width(const char *text, uint8_t scale)
-{
-    return (uint16_t)(strlen(text) * 6U * scale);
-}
-
 static canvas_t canvas_begin(uint16_t width, uint16_t height, uint16_t color)
 {
     canvas_t canvas = {
@@ -400,170 +382,35 @@ static canvas_t canvas_begin_from_dashboard(
     return canvas;
 }
 
-static void canvas_pixel(canvas_t *canvas, int x, int y, uint16_t color)
+static uint16_t blend_rgb565(uint16_t background, uint16_t foreground, uint8_t alpha)
+{
+    const uint16_t inverse = (uint16_t)(255U - alpha);
+    const uint16_t background_red = (background >> 11) & 0x1FU;
+    const uint16_t background_green = (background >> 5) & 0x3FU;
+    const uint16_t background_blue = background & 0x1FU;
+    const uint16_t foreground_red = (foreground >> 11) & 0x1FU;
+    const uint16_t foreground_green = (foreground >> 5) & 0x3FU;
+    const uint16_t foreground_blue = foreground & 0x1FU;
+    const uint16_t red =
+        (uint16_t)((background_red * inverse + foreground_red * alpha + 127U) / 255U);
+    const uint16_t green =
+        (uint16_t)((background_green * inverse + foreground_green * alpha + 127U) / 255U);
+    const uint16_t blue =
+        (uint16_t)((background_blue * inverse + foreground_blue * alpha + 127U) / 255U);
+    return (uint16_t)((red << 11) | (green << 5) | blue);
+}
+
+static void canvas_blend_pixel(
+    canvas_t *canvas,
+    int x,
+    int y,
+    uint16_t color,
+    uint8_t alpha)
 {
     if (x >= 0 && y >= 0 && x < canvas->width && y < canvas->height) {
-        canvas->pixels[(uint32_t)y * canvas->width + (uint32_t)x] = color;
+        const uint32_t index = (uint32_t)y * canvas->width + (uint32_t)x;
+        canvas->pixels[index] = blend_rgb565(canvas->pixels[index], color, alpha);
     }
-}
-
-static void canvas_fill_rect(
-    canvas_t *canvas,
-    int x,
-    int y,
-    int width,
-    int height,
-    uint16_t color)
-{
-    if (x < 0) {
-        width += x;
-        x = 0;
-    }
-    if (y < 0) {
-        height += y;
-        y = 0;
-    }
-    if (x + width > canvas->width) {
-        width = canvas->width - x;
-    }
-    if (y + height > canvas->height) {
-        height = canvas->height - y;
-    }
-    if (width <= 0 || height <= 0) {
-        return;
-    }
-    for (int row = y; row < y + height; ++row) {
-        uint16_t *destination = &canvas->pixels[(uint32_t)row * canvas->width + x];
-        for (int column = 0; column < width; ++column) {
-            destination[column] = color;
-        }
-    }
-}
-
-static void canvas_fill_circle(
-    canvas_t *canvas,
-    int center_x,
-    int center_y,
-    int radius,
-    uint16_t color)
-{
-    const int radius_squared = radius * radius;
-    for (int y = -radius; y <= radius; ++y) {
-        for (int x = -radius; x <= radius; ++x) {
-            if (x * x + y * y <= radius_squared) {
-                canvas_pixel(canvas, center_x + x, center_y + y, color);
-            }
-        }
-    }
-}
-
-static void canvas_circle(
-    canvas_t *canvas,
-    int center_x,
-    int center_y,
-    int radius,
-    uint16_t color)
-{
-    int x = radius;
-    int y = 0;
-    int error = 1 - radius;
-    while (x >= y) {
-        canvas_pixel(canvas, center_x + x, center_y + y, color);
-        canvas_pixel(canvas, center_x + y, center_y + x, color);
-        canvas_pixel(canvas, center_x - y, center_y + x, color);
-        canvas_pixel(canvas, center_x - x, center_y + y, color);
-        canvas_pixel(canvas, center_x - x, center_y - y, color);
-        canvas_pixel(canvas, center_x - y, center_y - x, color);
-        canvas_pixel(canvas, center_x + y, center_y - x, color);
-        canvas_pixel(canvas, center_x + x, center_y - y, color);
-        ++y;
-        if (error < 0) {
-            error += 2 * y + 1;
-        } else {
-            --x;
-            error += 2 * (y - x) + 1;
-        }
-    }
-}
-
-static void canvas_draw_char(
-    canvas_t *canvas,
-    int x,
-    int y,
-    char character,
-    uint8_t scale,
-    uint16_t foreground)
-{
-    const uint8_t *rows = font_rows(character);
-    for (uint8_t row = 0; row < 7; ++row) {
-        for (uint8_t column = 0; column < 5; ++column) {
-            if (rows[row] & (1U << (4U - column))) {
-                canvas_fill_rect(
-                    canvas,
-                    x + column * scale,
-                    y + row * scale,
-                    scale,
-                    scale,
-                    foreground);
-            }
-        }
-    }
-}
-
-static void canvas_draw_text(
-    canvas_t *canvas,
-    int x,
-    int y,
-    const char *text,
-    uint8_t scale,
-    uint16_t foreground)
-{
-    while (*text != '\0') {
-        canvas_draw_char(canvas, x, y, *text, scale, foreground);
-        x += 6 * scale;
-        ++text;
-    }
-}
-
-static uint16_t bold_text_width(const char *text, uint8_t scale)
-{
-    const size_t length = strlen(text);
-    if (length == 0U) {
-        return 0U;
-    }
-    return (uint16_t)(length * (6U * scale + 1U) - 1U);
-}
-
-static void canvas_draw_text_bold(
-    canvas_t *canvas,
-    int x,
-    int y,
-    const char *text,
-    uint8_t scale,
-    uint16_t foreground)
-{
-    while (*text != '\0') {
-        canvas_draw_char(canvas, x, y, *text, scale, foreground);
-        canvas_draw_char(canvas, x + 1, y, *text, scale, foreground);
-        x += 6 * scale + 1;
-        ++text;
-    }
-}
-
-static void canvas_draw_centered_bold(
-    canvas_t *canvas,
-    int y,
-    const char *text,
-    uint8_t scale,
-    uint16_t foreground)
-{
-    canvas_draw_text_bold(
-        canvas,
-        ((int)canvas->width - (int)bold_text_width(text, scale)) / 2,
-        y,
-        text,
-        scale,
-        foreground);
 }
 
 static void lcd_push_canvas(uint16_t x, uint16_t y, const canvas_t *canvas)
@@ -575,6 +422,22 @@ static void lcd_push_canvas(uint16_t x, uint16_t y, const canvas_t *canvas)
     const uint32_t pixel_count = (uint32_t)canvas->width * canvas->height;
     for (uint32_t index = 0; index < pixel_count; ++index) {
         lcd_write_color(canvas->pixels[index]);
+    }
+    lcd_end_pixels();
+}
+
+static void lcd_push_rgb565_asset(
+    uint16_t x,
+    uint16_t y,
+    uint16_t width,
+    uint16_t height,
+    const uint8_t *asset)
+{
+    lcd_begin_pixels(x, y, width, height);
+    const uint32_t pixel_count = (uint32_t)width * height;
+    for (uint32_t index = 0; index < pixel_count; ++index) {
+        lcd_write_byte_selected(asset[index * 2U]);
+        lcd_write_byte_selected(asset[index * 2U + 1U]);
     }
     lcd_end_pixels();
 }
@@ -605,127 +468,134 @@ static void draw_static_screen(void)
     lcd_end_pixels();
 }
 
-static void draw_readable_static_labels(void)
+static int16_t sample_fan_delta(
+    int source_x_q8,
+    int source_y_q8,
+    uint8_t channel)
 {
-    canvas_t subtitle = canvas_begin_from_dashboard(102, 39, 175, 14);
-    canvas_draw_centered_bold(
-        &subtitle, 3, "UMBRELLA DRYING SYSTEM", 1, COLOR_REFERENCE_MUTED);
-    lcd_push_canvas(102, 39, &subtitle);
+    const int x0 = source_x_q8 / 256;
+    const int y0 = source_y_q8 / 256;
+    const int fraction_x = source_x_q8 & 0xFF;
+    const int fraction_y = source_y_q8 & 0xFF;
+    const int8_t *delta = (const int8_t *)fan_delta_s8_start;
+    const size_t top_left = ((size_t)y0 * FAN_WIDTH + x0) * 3U + channel;
+    const size_t top_right = top_left + 3U;
+    const size_t bottom_left = top_left + FAN_WIDTH * 3U;
+    const size_t bottom_right = bottom_left + 3U;
+    const int32_t top =
+        delta[top_left] * (256 - fraction_x) +
+        delta[top_right] * fraction_x;
+    const int32_t bottom =
+        delta[bottom_left] * (256 - fraction_x) +
+        delta[bottom_right] * fraction_x;
+    const int32_t value =
+        top * (256 - fraction_y) + bottom * fraction_y;
+    return (int16_t)(
+        value >= 0 ? (value + 32768) / 65536 :
+                     -((-value + 32768) / 65536));
+}
 
-    canvas_t system = canvas_begin_from_dashboard(168, 83, 132, 14);
-    canvas_draw_centered_bold(&system, 3, "SYSTEM STATUS", 1, COLOR_REFERENCE_TEXT);
-    lcd_push_canvas(168, 83, &system);
+static uint16_t clamp_fan_component(int value, int maximum)
+{
+    if (value < 0) {
+        return 0;
+    }
+    if (value > maximum) {
+        return (uint16_t)maximum;
+    }
+    return (uint16_t)value;
+}
 
-    static const uint16_t distance_label_x[3] = {17, 175, 331};
-    for (uint8_t sensor = 0; sensor < 3; ++sensor) {
-        canvas_t label = canvas_begin_from_dashboard(
-            distance_label_x[sensor], 196, 62, 14);
-        canvas_draw_centered_bold(&label, 3, "DISTANCE", 1, COLOR_REFERENCE_MUTED);
-        lcd_push_canvas(distance_label_x[sensor], 196, &label);
+static void draw_fan_rotor(bool running, uint8_t frame)
+{
+    if (!running) {
+        lcd_push_rgb565_asset(
+            FAN_X,
+            FAN_Y,
+            FAN_WIDTH,
+            FAN_HEIGHT,
+            fan_original_rgb565_start);
+        return;
     }
 
-    canvas_t relay = canvas_begin_from_dashboard(319, 284, 42, 14);
-    canvas_draw_centered_bold(&relay, 3, "RELAY", 1, COLOR_REFERENCE_TEXT);
-    lcd_push_canvas(319, 284, &relay);
-}
+    canvas_t fan = canvas_begin_from_dashboard(
+        FAN_X,
+        FAN_Y,
+        FAN_WIDTH,
+        FAN_HEIGHT);
+    const uint8_t angle = (uint8_t)(frame % FAN_FRAME_COUNT);
+    const int32_t cosine = trig_72(COS_36, angle);
+    const int32_t sine = trig_72(SIN_36, angle);
+    const int32_t rotation_radius_squared =
+        FAN_ROTATION_RADIUS_Q8 * FAN_ROTATION_RADIUS_Q8;
+    const int32_t hub_radius_squared =
+        FAN_HUB_RADIUS_Q8 * FAN_HUB_RADIUS_Q8;
 
-static void draw_live_label(void)
-{
-    canvas_t label = canvas_begin_from_dashboard(374, 8, 90, 14);
-    canvas_draw_centered_bold(&label, 3, "LIVE MONITOR", 1, COLOR_REFERENCE_MUTED);
-    lcd_push_canvas(374, 8, &label);
-}
+    for (uint16_t y = 0; y < FAN_HEIGHT; ++y) {
+        for (uint16_t x = 0; x < FAN_WIDTH; ++x) {
+            const int32_t dx_q8 = (int32_t)x * 256 - FAN_CENTER_X_Q8;
+            const int32_t dy_q8 = (int32_t)y * 256 - FAN_CENTER_Y_Q8;
+            const int32_t distance_squared =
+                dx_q8 * dx_q8 + dy_q8 * dy_q8;
+            const size_t pixel_index = (size_t)y * FAN_WIDTH + x;
 
-static void draw_header_status(bool running)
-{
-    canvas_t status = canvas_begin_from_dashboard(371, 29, 91, 19);
-    canvas_fill_circle(&status, 8, 9, 6, running ? COLOR_GREEN : COLOR_REFERENCE_BLUE);
-    canvas_draw_text_bold(
-        &status,
-        20,
-        6,
-        running ? "RUNNING" : "STANDBY",
-        1,
-        COLOR_WHITE);
-    lcd_push_canvas(371, 29, &status);
-}
+            if (distance_squared <= hub_radius_squared) {
+                fan.pixels[pixel_index] =
+                    ((uint16_t)fan_original_rgb565_start[pixel_index * 2U] << 8) |
+                    fan_original_rgb565_start[pixel_index * 2U + 1U];
+                continue;
+            }
+            if (
+                distance_squared > rotation_radius_squared ||
+                x < FAN_EDGE_MARGIN ||
+                x >= FAN_WIDTH - FAN_EDGE_MARGIN ||
+                y < FAN_EDGE_MARGIN ||
+                y >= FAN_HEIGHT - FAN_EDGE_MARGIN) {
+                continue;
+            }
 
-static int16_t trig_72(const int16_t table[36], uint8_t angle)
-{
-    const uint8_t base = (uint8_t)((angle / 2U) % 36U);
-    if ((angle & 1U) == 0U) {
-        return table[base];
-    }
-    return (int16_t)((table[base] + table[(base + 1U) % 36U]) / 2);
-}
+            const int32_t source_x_q8 = FAN_CENTER_X_Q8 +
+                (cosine * dx_q8 + sine * dy_q8) / 1024;
+            const int32_t source_y_q8 = FAN_CENTER_Y_Q8 +
+                (-sine * dx_q8 + cosine * dy_q8) / 1024;
+            const int source_x = source_x_q8 / 256;
+            const int source_y = source_y_q8 / 256;
+            if (
+                source_x < (int)FAN_EDGE_MARGIN ||
+                source_y < (int)FAN_EDGE_MARGIN ||
+                source_x + 1 >= (int)(FAN_WIDTH - FAN_EDGE_MARGIN) ||
+                source_y + 1 >= (int)(FAN_HEIGHT - FAN_EDGE_MARGIN)) {
+                continue;
+            }
 
-static void draw_fan_shell(bool running)
-{
-    canvas_t fan = canvas_begin_from_dashboard(FAN_X, FAN_Y, FAN_WIDTH, FAN_HEIGHT);
-    const int center_x = 48;
-    const int center_y = 47;
-    const uint16_t blade = running ? COLOR_REFERENCE_BLUE : COLOR_REFERENCE_MUTED;
-    canvas_fill_circle(&fan, center_x, center_y, 43, COLOR_REFERENCE_LIGHT_BLUE);
-    canvas_circle(&fan, center_x, center_y, 43, 0xBE7FU);
-
-    for (int line = 0; line < 3; ++line) {
-        for (int x = 91; x <= 119; ++x) {
-            const uint8_t phase = (uint8_t)(((x - 91) * 2 + line * 8) % 36);
-            const int y = 34 + line * 13 + SIN_36[phase] * 3 / 1024;
-            canvas_fill_circle(&fan, x, y, 1, blade);
+            const uint16_t background = fan.pixels[pixel_index];
+            const uint16_t red = clamp_fan_component(
+                ((background >> 11) & 0x1FU) +
+                    sample_fan_delta(source_x_q8, source_y_q8, 0),
+                0x1F);
+            const uint16_t green = clamp_fan_component(
+                ((background >> 5) & 0x3FU) +
+                    sample_fan_delta(source_x_q8, source_y_q8, 1),
+                0x3F);
+            const uint16_t blue = clamp_fan_component(
+                (background & 0x1FU) +
+                    sample_fan_delta(source_x_q8, source_y_q8, 2),
+                0x1F);
+            fan.pixels[pixel_index] =
+                (uint16_t)((red << 11) | (green << 5) | blue);
         }
     }
     lcd_push_canvas(FAN_X, FAN_Y, &fan);
 }
 
-static void draw_fan_rotor(bool running, uint8_t frame)
-{
-    canvas_t fan = canvas_begin_from_dashboard(
-        FAN_ROTOR_X,
-        FAN_ROTOR_Y,
-        FAN_ROTOR_WIDTH,
-        FAN_ROTOR_HEIGHT);
-    const int center_x = 41;
-    const int center_y = 41;
-    const uint16_t blade = running ? COLOR_REFERENCE_BLUE : COLOR_REFERENCE_MUTED;
-
-    /* Rebuild only the circular rotor area; the shell and wind marks stay put. */
-    canvas_fill_circle(&fan, center_x, center_y, 43, COLOR_REFERENCE_LIGHT_BLUE);
-    canvas_circle(&fan, center_x, center_y, 43, 0xBE7FU);
-
-    for (uint8_t blade_index = 0; blade_index < 3; ++blade_index) {
-        const uint8_t base = (uint8_t)((frame + blade_index * 24U) % 72U);
-        for (int radius = 10; radius <= 32; radius += 2) {
-            const uint8_t curve =
-                (uint8_t)((base + (radius - 10) / 4) % 72U);
-            const int x = center_x + trig_72(COS_36, curve) * radius / 1024;
-            const int y = center_y + trig_72(SIN_36, curve) * radius / 1024;
-            const int brush = 7 - (radius - 10) / 7;
-            canvas_fill_circle(&fan, x, y, brush, blade);
-        }
-    }
-    canvas_fill_circle(&fan, center_x, center_y, 9, COLOR_WHITE);
-    canvas_fill_circle(&fan, center_x, center_y, 5, running ? COLOR_GREEN : COLOR_REFERENCE_MUTED);
-
-    lcd_push_canvas(FAN_ROTOR_X, FAN_ROTOR_Y, &fan);
-}
-
 static void draw_blower_status(bool running)
 {
-    canvas_t status = canvas_begin_from_dashboard(169, 99, 270, 55);
-    canvas_draw_centered_bold(
-        &status,
-        2,
-        running ? "BLOWER RUNNING" : "BLOWER STOPPED",
-        3,
-        running ? COLOR_REFERENCE_TEXT : COLOR_REFERENCE_MUTED);
-    canvas_draw_centered_bold(
-        &status,
-        39,
-        running ? "KEEP UMBRELLA IN PLACE" : "WAITING FOR ALL SENSORS",
-        1,
-        COLOR_REFERENCE_MUTED);
-    lcd_push_canvas(169, 99, &status);
+    lcd_push_rgb565_asset(
+        BLOWER_STATUS_X,
+        BLOWER_STATUS_Y,
+        BLOWER_STATUS_WIDTH,
+        BLOWER_STATUS_HEIGHT,
+        running ? blower_on_rgb565_start : blower_off_rgb565_start);
 }
 
 static void draw_sensor_state(
@@ -733,22 +603,75 @@ static void draw_sensor_state(
     bool active,
     bool valid)
 {
-    static const uint16_t state_x[3] = {130, 286, 442};
-    const uint16_t x = state_x[sensor_index];
-    canvas_t state = canvas_begin_from_dashboard(x, 181, 23, 22);
-    const uint16_t color = !valid ? COLOR_AMBER : (active ? COLOR_GREEN : COLOR_REFERENCE_BLUE);
-    canvas_fill_circle(&state, 11, 11, 9, color);
-    if (active && valid) {
-        for (int step = 0; step < 5; ++step) {
-            canvas_fill_circle(&state, 6 + step, 11 + step, 1, COLOR_WHITE);
-        }
-        for (int step = 0; step < 7; ++step) {
-            canvas_fill_circle(&state, 10 + step, 15 - step, 1, COLOR_WHITE);
-        }
-    } else {
-        canvas_draw_text(&state, valid ? 9 : 8, 8, valid ? "-" : "X", 1, COLOR_WHITE);
+    static const uint16_t state_y[3] = {52, 123, 194};
+    const uint16_t y = state_y[sensor_index];
+    const size_t patch_size =
+        (size_t)SENSOR_LIGHT_WIDTH * SENSOR_LIGHT_HEIGHT * 2U;
+    const uint8_t *asset = active && valid
+        ? sensor_lights_on_rgb565_start
+        : sensor_lights_off_rgb565_start;
+    lcd_push_rgb565_asset(
+        SENSOR_LIGHT_X,
+        y,
+        SENSOR_LIGHT_WIDTH,
+        SENSOR_LIGHT_HEIGHT,
+        asset + sensor_index * patch_size);
+}
+
+static int menu_glyph_index(char character)
+{
+    if (character >= '0' && character <= '9') {
+        return character - '0';
     }
-    lcd_push_canvas(x, 181, &state);
+    if (character == 'm') {
+        return 10;
+    }
+    if (character == '-') {
+        return 11;
+    }
+    return -1;
+}
+
+static void canvas_draw_menu_glyph(
+    canvas_t *canvas,
+    int x,
+    char character,
+    uint16_t color)
+{
+    const int glyph_index = menu_glyph_index(character);
+    if (glyph_index < 0) {
+        return;
+    }
+    const uint32_t glyph_x = (uint32_t)glyph_index * DIGIT_CELL_WIDTH;
+    for (uint16_t row = 0; row < DIGIT_HEIGHT; ++row) {
+        for (uint16_t column = 0; column < DIGIT_CELL_WIDTH; ++column) {
+            const uint8_t alpha = menu_digits_alpha8_start[
+                (uint32_t)row * DIGIT_ATLAS_WIDTH + glyph_x + column];
+            if (alpha != 0U) {
+                canvas_blend_pixel(canvas, x + column, row, color, alpha);
+            }
+        }
+    }
+}
+
+static void canvas_draw_menu_text(
+    canvas_t *canvas,
+    int x,
+    const char *text,
+    bool valid)
+{
+    char previous_character = '\0';
+    while (*text != '\0') {
+        if (*text == 'm' && previous_character != 'm') {
+            x += UNIT_GAP;
+        }
+        const uint16_t color =
+            (!valid || *text == 'm') ? COLOR_MENU_MUTED : COLOR_MENU_WHITE;
+        canvas_draw_menu_glyph(canvas, x, *text, color);
+        x += *text == 'm' ? UNIT_ADVANCE : DIGIT_ADVANCE;
+        previous_character = *text;
+        ++text;
+    }
 }
 
 static void draw_sensor_value(
@@ -757,123 +680,39 @@ static void draw_sensor_value(
     bool valid,
     uint32_t distance_mm)
 {
-    static const uint16_t value_x[3] = {65, 221, 377};
-    static const uint16_t value_width[3] = {82, 83, 87};
-    const uint16_t x = value_x[sensor_index];
-    const uint16_t width = value_width[sensor_index];
-    const uint16_t accent = !valid ? COLOR_AMBER :
-        (active ? COLOR_GREEN : COLOR_REFERENCE_TEXT);
-    char distance_text[8];
+    (void)active;
+    static const uint16_t value_y[3] = {80, 151, 222};
+    const uint16_t y = value_y[sensor_index];
+    char distance_text[12];
     if (valid) {
-        snprintf(distance_text, sizeof(distance_text), "%u", (unsigned)distance_mm);
+        snprintf(distance_text, sizeof(distance_text), "%umm", (unsigned)distance_mm);
     } else {
-        snprintf(distance_text, sizeof(distance_text), "----");
+        snprintf(distance_text, sizeof(distance_text), "---");
     }
 
-    const uint8_t scale = valid && distance_mm >= 1000U ? 2U : 3U;
-    canvas_t value = canvas_begin_from_dashboard(x, 210, width, 31);
-    canvas_draw_text(&value, 0, scale == 3U ? 4 : 9, distance_text, scale, accent);
-    const uint16_t number_width = text_width(distance_text, scale);
-    if (valid) {
-        canvas_draw_text_bold(
-            &value,
-            number_width + 3,
-            18,
-            "MM",
-            1,
-            COLOR_REFERENCE_MUTED);
-    }
-    lcd_push_canvas(x, 210, &value);
+    canvas_t value = canvas_begin_from_dashboard(289, y, 118, 31);
+    canvas_draw_menu_text(&value, 2, distance_text, valid);
+    lcd_push_canvas(289, y, &value);
 }
 
-static void draw_sensor_progress(
-    uint8_t sensor_index,
-    bool active,
-    bool valid,
-    uint32_t distance_mm,
-    uint32_t threshold_mm)
+static void draw_relay_status(bool running)
 {
-    static const uint16_t progress_x[3] = {18, 176, 332};
-    static const uint16_t progress_width[3] = {130, 130, 132};
-    const uint16_t x = progress_x[sensor_index];
-    const uint16_t width = progress_width[sensor_index];
-    canvas_t progress = canvas_begin_from_dashboard(x, 244, width, 9);
-    canvas_fill_rect(&progress, 0, 2, width, 5, 0xDEDBU);
-    uint16_t filled = 0;
-    if (valid && distance_mm < threshold_mm) {
-        filled = (uint16_t)(
-            (uint32_t)(threshold_mm - distance_mm) * width / threshold_mm);
-        if (filled < 5U) {
-            filled = 5U;
-        }
-    }
-    if (filled > width) {
-        filled = width;
-    }
-    canvas_fill_rect(
-        &progress,
-        0,
-        2,
-        filled,
-        5,
-        active ? COLOR_GREEN : COLOR_REFERENCE_BLUE);
-    lcd_push_canvas(x, 244, &progress);
-}
-
-static uint8_t active_sensor_count(const lcd_display_status_t *status)
-{
-    return (uint8_t)status->tof_1_active +
-           (uint8_t)status->tof_2_active +
-           (uint8_t)status->ultrasonic_active;
-}
-
-static void draw_footer_sensors(const lcd_display_status_t *status)
-{
-    char sensor_text[24];
-    snprintf(
-        sensor_text,
-        sizeof(sensor_text),
-        "SENSORS %u/3",
-        (unsigned)active_sensor_count(status));
-
-    canvas_t sensors = canvas_begin_from_dashboard(61, 277, 180, 27);
-    const uint16_t accent =
-        active_sensor_count(status) == 3U ? COLOR_GREEN : COLOR_REFERENCE_BLUE;
-    canvas_fill_circle(&sensors, 12, 13, 10, accent);
-    canvas_draw_text(&sensors, 29, 2, sensor_text, 2, COLOR_REFERENCE_TEXT);
-    canvas_draw_text_bold(
-        &sensors,
-        29,
-        18,
-        active_sensor_count(status) == 3U ? "ALL READY" : "WAITING",
-        1,
-        COLOR_REFERENCE_MUTED);
-    lcd_push_canvas(61, 277, &sensors);
-}
-
-static void draw_footer_relay(bool running)
-{
-    canvas_t relay = canvas_begin_from_dashboard(364, 279, 48, 23);
-    canvas_fill_rect(&relay, 0, 1, 48, 21, running ? COLOR_GREEN : COLOR_REFERENCE_MUTED);
-    canvas_draw_centered_bold(&relay, 5, running ? "ON" : "OFF", 2, COLOR_WHITE);
-    lcd_push_canvas(364, 279, &relay);
+    lcd_push_rgb565_asset(
+        RELAY_STATUS_X,
+        RELAY_STATUS_Y,
+        RELAY_STATUS_WIDTH,
+        RELAY_STATUS_HEIGHT,
+        running ? relay_on_rgb565_start : relay_off_rgb565_start);
 }
 
 static void draw_sensor_dynamic(
     uint8_t sensor_index,
     bool active,
     bool valid,
-    uint32_t distance_mm,
-    uint32_t threshold_mm)
+    uint32_t distance_mm)
 {
     draw_sensor_state(sensor_index, active, valid);
     draw_sensor_value(sensor_index, active, valid, distance_mm);
-    draw_sensor_progress(
-        sensor_index,
-        active,
-        valid,
-        distance_mm,
-        threshold_mm);
 }
 
 static bool sensor_state_changed(
@@ -897,20 +736,15 @@ static void lcd_display_task(void *argument)
     lcd_hardware_reset();
     lcd_init_ili9486();
     draw_static_screen();
-    draw_readable_static_labels();
 
     lcd_display_status_t displayed = {0};
     lcd_display_status_t latest = {0};
-    draw_live_label();
-    draw_header_status(false);
-    draw_fan_shell(false);
     draw_fan_rotor(false, 0);
     draw_blower_status(false);
-    draw_sensor_dynamic(0, false, false, 0, 101);
-    draw_sensor_dynamic(1, false, false, 0, 101);
-    draw_sensor_dynamic(2, false, false, 0, 65);
-    draw_footer_sensors(&displayed);
-    draw_footer_relay(false);
+    draw_sensor_dynamic(0, false, false, 0);
+    draw_sensor_dynamic(1, false, false, 0);
+    draw_sensor_dynamic(2, false, false, 0);
+    draw_relay_status(false);
     lcd_enable_display();
 
     TickType_t last_card_refresh = xTaskGetTickCount();
@@ -949,12 +783,10 @@ static void lcd_display_task(void *argument)
             latest.ultrasonic_valid);
 
         if (blower_changed) {
-            draw_header_status(latest.blower_running);
             draw_blower_status(latest.blower_running);
             fan_frame = 0;
-            draw_fan_shell(latest.blower_running);
             draw_fan_rotor(latest.blower_running, fan_frame);
-            draw_footer_relay(latest.blower_running);
+            draw_relay_status(latest.blower_running);
             displayed.blower_running = latest.blower_running;
             last_fan_frame = now;
         }
@@ -964,8 +796,7 @@ static void lcd_display_task(void *argument)
                 0,
                 latest.tof_1_active,
                 latest.tof_1_valid,
-                latest.tof_1_distance_mm,
-                101);
+                latest.tof_1_distance_mm);
             displayed.tof_1_active = latest.tof_1_active;
             displayed.tof_1_valid = latest.tof_1_valid;
             displayed.tof_1_distance_mm = latest.tof_1_distance_mm;
@@ -975,8 +806,7 @@ static void lcd_display_task(void *argument)
                 1,
                 latest.tof_2_active,
                 latest.tof_2_valid,
-                latest.tof_2_distance_mm,
-                101);
+                latest.tof_2_distance_mm);
             displayed.tof_2_active = latest.tof_2_active;
             displayed.tof_2_valid = latest.tof_2_valid;
             displayed.tof_2_distance_mm = latest.tof_2_distance_mm;
@@ -986,16 +816,10 @@ static void lcd_display_task(void *argument)
                 2,
                 latest.ultrasonic_active,
                 latest.ultrasonic_valid,
-                latest.ultrasonic_distance_mm,
-                65);
+                latest.ultrasonic_distance_mm);
             displayed.ultrasonic_active = latest.ultrasonic_active;
             displayed.ultrasonic_valid = latest.ultrasonic_valid;
             displayed.ultrasonic_distance_mm = latest.ultrasonic_distance_mm;
-        }
-
-        if (tof_1_state_changed || tof_2_state_changed ||
-            ultrasonic_state_changed) {
-            draw_footer_sensors(&latest);
         }
 
         if (now - last_card_refresh >= pdMS_TO_TICKS(CARD_REFRESH_MS)) {
@@ -1008,12 +832,6 @@ static void lcd_display_task(void *argument)
                     latest.tof_1_active,
                     true,
                     latest.tof_1_distance_mm);
-                draw_sensor_progress(
-                    0,
-                    latest.tof_1_active,
-                    true,
-                    latest.tof_1_distance_mm,
-                    101);
                 displayed.tof_1_distance_mm = latest.tof_1_distance_mm;
             }
             if (!tof_2_state_changed && latest.tof_2_valid &&
@@ -1025,12 +843,6 @@ static void lcd_display_task(void *argument)
                     latest.tof_2_active,
                     true,
                     latest.tof_2_distance_mm);
-                draw_sensor_progress(
-                    1,
-                    latest.tof_2_active,
-                    true,
-                    latest.tof_2_distance_mm,
-                    101);
                 displayed.tof_2_distance_mm = latest.tof_2_distance_mm;
             }
             if (!ultrasonic_state_changed && latest.ultrasonic_valid &&
@@ -1042,12 +854,6 @@ static void lcd_display_task(void *argument)
                     latest.ultrasonic_active,
                     true,
                     latest.ultrasonic_distance_mm);
-                draw_sensor_progress(
-                    2,
-                    latest.ultrasonic_active,
-                    true,
-                    latest.ultrasonic_distance_mm,
-                    65);
                 displayed.ultrasonic_distance_mm = latest.ultrasonic_distance_mm;
             }
             last_card_refresh = now;
@@ -1055,7 +861,7 @@ static void lcd_display_task(void *argument)
 
         if (latest.blower_running &&
             now - last_fan_frame >= pdMS_TO_TICKS(FAN_FRAME_MS)) {
-            fan_frame = (uint8_t)((fan_frame + 1U) % 72U);
+            fan_frame = (uint8_t)((fan_frame + 1U) % FAN_FRAME_COUNT);
             draw_fan_rotor(true, fan_frame);
             last_fan_frame = now;
         }

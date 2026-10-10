@@ -10,4 +10,13 @@ idf_component_register(
     esp_timer
   EMBED_FILES
     "assets/dashboard.rgb565"
+    "assets/fan_original.rgb565"
+    "assets/fan_delta.s8"
+    "assets/blower_on.rgb565"
+    "assets/blower_off.rgb565"
+    "assets/relay_on.rgb565"
+    "assets/relay_off.rgb565"
+    "assets/sensor_lights_on.rgb565"
+    "assets/sensor_lights_off.rgb565"
+    "assets/menu_digits.alpha8"
 )

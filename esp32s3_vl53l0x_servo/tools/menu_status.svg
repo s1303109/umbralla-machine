@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="16" viewBox="0 0 128 16">
+  <rect width="128" height="16" fill="#000000"/>
+  <g fill="#ffffff" font-family="Lato, DejaVu Sans, sans-serif" font-size="9.4" font-weight="400">
+    <text x="1" y="11">STOP</text>
+    <text x="65" y="11">OFF</text>
+  </g>
+</svg>

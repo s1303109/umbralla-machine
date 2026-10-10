@@ -1,0 +1,1494 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+[0;32mI (25) boot: compile time Oct 10 2026 10:03:46[0m
+[0;32mI (25) boot: Muls=4[0m
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 10 2026 10:03:46[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c030020 size=57644h (357956) map[0m
+[0;32mI (150) esp_image: segment 1: paddr=0006766c vaddr=3fc92f00 size=02d30h ( 11568) load[0m
+[0;32mI (152) esp_image: segment 2: paddr=0006a3a4 vaddr=40374000 size=05c74h ( 23668) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00070020 vaddr=42000020 size=28078h (163960) map[0m
+[0;32mI (190) esp_image: segment 4: paddr=000980a0 vaddr=40379c74 size=09240h ( 37440) load[0m
+[0;32mI (198) esp_image: segment 5: paddr=000a12e8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (205) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (205) boot: Disabling RNG early entropy source...[0m
+[0;32mI (216) cpu_start: Multicore app[0m
+[0;32mI (225) cpu_start: Pro cpu start user code[0m
+[0;32mI (225) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (225) app_init: Application information:[0m
+[0;32mI (225) app_init: Project name:     esp32s3_vl53l0x_servo[0m
+[0;32mI (230) app_init: App version:      a78bf0f-dirty[0m
+[0;32mI (235) app_init: Compile time:     Oct 10 2026 10:03:41[0m
+[0;32mI (240) app_init: ELF file SHA256:  89780ff16...[0m
+[0;32mI (244) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (248) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (252) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (256) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (260) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FC96580 len 00053190 (332 KiB): RAM[0m
+[0;32mI (271) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (276) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (281) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (287) spi_flash: detected chip: generic[0m
+[0;32mI (290) spi_flash: flash io: dio[0m
+[0;32mI (294) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (300) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (307) main_task: Started on CPU0[0m
+[0;32mI (317) main_task: Calling app_main()[0m
+[0;32mI (317) TOF_BLOWER_LCD: Relay ready: GPIO7, high-level trigger, initial state OFF[0m
+[0;32mI (327) LCD_DISPLAY: Display buffer: 29700 bytes in internal RAM; free internal RAM: 356008 bytes[0m
+[0;32mI (327) TOF_BLOWER_LCD: HC-SR04 ready: TRIG GPIO5, ECHO GPIO6[0m
+[0;32mI (357) TOF_BLOWER_LCD: TOF 1 detected at I2C address 0x29[0m
+[0;32mI (497) TOF_BLOWER_LCD: TOF 2 detected at I2C address 0x29[0m
+[0;32mI (727) TOF_BLOWER_LCD: TOF thresholds: both less than 101 mm[0m
+[0;32mI (727) TOF_BLOWER_LCD: HC-SR04 threshold: less than 65 mm[0m
+[0;32mI (727) TOF_BLOWER_LCD: Start requires all three sensors for 3 consecutive cycles[0m
+[0;32mI (737) TOF_BLOWER_LCD: Stop is immediate when any sensor clears or becomes invalid[0m
+[0;33mW (807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (837) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (907) LCD_DISPLAY: Touch electrode scan D0=0: CS/YP=4095 RS/XM=3709[0m
+[0;32mI (907) LCD_DISPLAY: Touch electrode scan D0=1: CS/YP=2459 RS/XM=1901[0m
+[0;32mI (917) LCD_DISPLAY: Touch electrode scan D1=0: CS/YP=2304 RS/XM=1576[0m
+[0;32mI (917) LCD_DISPLAY: Touch electrode scan D1=1: CS/YP=3212 RS/XM=2396[0m
+[0;32mI (927) LCD_DISPLAY: Touch pair scan D0=0 D1=1: CS/YP=1943 RS/XM=1011 delta=932[0m
+[0;32mI (927) LCD_DISPLAY: Touch pair scan D0=1 D1=0: CS/YP=1835 RS/XM=795 delta=1040[0m
+[0;33mW (927) LCD_DISPLAY: No valid touch calibration; starting five-point setup[0m
+[0;33mW (947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (957) LCD_DISPLAY: Touch release check: Z1=3438 Z2=3625 pressure=3908 pressed=1[0m
+[0;33mW (977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (977) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1117) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1257) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1397) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1537) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1677) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1817) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (1927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (1957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (1957) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (1977) LCD_DISPLAY: Touch release check: Z1=3559 Z2=3885 pressure=3769 pressed=1[0m
+[0;33mW (2067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2097) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2237) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2377) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2517) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2657) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2797) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (2907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (2937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (2937) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (2997) LCD_DISPLAY: Touch release check: Z1=4021 Z2=4095 pressure=4021 pressed=1[0m
+[0;33mW (3047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3077) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3217) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3357) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3497) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3637) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3777) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (3887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (3917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (3917) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (4017) LCD_DISPLAY: Touch release check: Z1=3980 Z2=4095 pressure=3980 pressed=1[0m
+[0;33mW (4027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4057) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4197) TOF_BLOWER_LCD: TOF1=63 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4337) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4477) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4617) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4757) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4757) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (4867) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (4897) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (4897) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5037) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (5037) LCD_DISPLAY: Touch release check: Z1=3325 Z2=3531 pressure=3889 pressed=1[0m
+[0;33mW (5147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5177) TOF_BLOWER_LCD: TOF1=66 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5317) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5457) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5597) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5737) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (5877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (5877) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (5987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6017) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6017) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (6037) LCD_DISPLAY: Touch release check: Z1=3357 Z2=3537 pressure=3915 pressed=1[0m
+[0;33mW (6127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6157) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6157) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6267) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6297) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6297) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6407) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6437) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6437) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6577) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6577) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6687) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6717) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6717) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6827) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6857) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6857) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (6967) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (6997) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (6997) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (7057) LCD_DISPLAY: Touch release check: Z1=3623 Z2=3864 pressure=3854 pressed=1[0m
+[0;33mW (7107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7137) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7277) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7277) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7387) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7417) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7417) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7527) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7557) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7557) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7697) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7837) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (7947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (7977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (7977) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (8077) LCD_DISPLAY: Touch release check: Z1=3983 Z2=4095 pressure=3983 pressed=1[0m
+[0;33mW (8087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8117) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8257) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8397) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8537) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8677) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8797) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8827) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8827) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (8947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (8977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (8977) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (9097) LCD_DISPLAY: Touch release check: Z1=3875 Z2=4095 pressure=3875 pressed=1[0m
+[0;33mW (9117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9117) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9257) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9397) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9537) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9677) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9817) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (9927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (9957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (9957) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10097) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (10117) LCD_DISPLAY: Touch release check: Z1=3466 Z2=3660 pressure=3901 pressed=1[0m
+[0;33mW (10207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10237) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10377) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10517) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10657) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10797) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (10907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (10937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (10937) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11077) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (11137) LCD_DISPLAY: Touch release check: Z1=3465 Z2=3736 pressure=3824 pressed=1[0m
+[0;33mW (11187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11217) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11357) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11497) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11637) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11777) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (11887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (11917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (11917) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12057) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (12157) LCD_DISPLAY: Touch release check: Z1=3933 Z2=4095 pressure=3933 pressed=1[0m
+[0;33mW (12167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12197) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12337) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12477) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12617) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12757) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12757) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (12867) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (12897) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (12897) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13037) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13177) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (13177) LCD_DISPLAY: Touch release check: Z1=3989 Z2=4095 pressure=3989 pressed=1[0m
+[0;33mW (13287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13317) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13457) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13597) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13737) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (13857) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (13887) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (13887) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14037) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14177) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (14177) LCD_DISPLAY: Touch release check: Z1=4013 Z2=4095 pressure=4013 pressed=1[0m
+[0;33mW (14287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14317) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14457) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14597) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14737) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (14877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (14877) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (14987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15017) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15017) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15157) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15157) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (15177) LCD_DISPLAY: Touch release check: Z1=3928 Z2=4095 pressure=3928 pressed=1[0m
+[0;33mW (15267) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15297) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15297) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15407) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15437) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15437) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15577) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15577) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15687) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15717) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15717) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15827) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15857) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15857) TOF_BLOWER_LCD: TOF1=65 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (15967) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (15997) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (15997) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16137) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (16197) LCD_DISPLAY: Touch release check: Z1=3492 Z2=3655 pressure=3932 pressed=1[0m
+[0;33mW (16247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16277) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16277) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16387) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16417) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16417) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16527) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16557) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16557) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16697) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16837) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (16947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (16977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (16977) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (17087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17117) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (17217) LCD_DISPLAY: Touch release check: Z1=3497 Z2=3631 pressure=3961 pressed=1[0m
+[0;33mW (17227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17257) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (17367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (17367) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=595 mm | Relay=OFF[0m
+[0;33mW (17477) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17507) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17507) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (17617) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17647) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17647) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (17757) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17787) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17787) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (17897) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (17927) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (17927) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (18037) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (18037) TOF_BLOWER_LCD: TOF1=82 mm TOF2=INVALID/0 mm HC=609 mm | Relay=OFF[0m
+[0;33mW (18147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (18177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (18177) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (18237) LCD_DISPLAY: Touch release check: Z1=3784 Z2=4053 pressure=3826 pressed=1[0m
+[0;33mW (18287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (18317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (18317) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (18427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (18427) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=591 mm | Relay=OFF[0m
+[0;33mW (18537) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (18537) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=623 mm | Relay=OFF[0m
+[0;33mW (18647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (18677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (18677) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (18787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (18817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (18817) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (18927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (18957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (18957) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (19067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (19097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (19097) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (19207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19207) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=570 mm | Relay=OFF[0m
+[0;32mI (19257) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (19317) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19317) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=625 mm | Relay=OFF[0m
+[0;33mW (19427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19427) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=577 mm | Relay=OFF[0m
+[0;33mW (19537) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19537) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=562 mm | Relay=OFF[0m
+[0;33mW (19647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19647) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=563 mm | Relay=OFF[0m
+[0;33mW (19757) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (19787) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (19787) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (19897) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (19897) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=580 mm | Relay=OFF[0m
+[0;33mW (20007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (20007) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=566 mm | Relay=OFF[0m
+[0;33mW (20117) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20147) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20147) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20257) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (20277) LCD_DISPLAY: Touch release check: Z1=3848 Z2=4095 pressure=3848 pressed=1[0m
+[0;33mW (20287) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20287) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20397) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20427) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20427) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20537) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20567) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20567) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20677) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20707) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20707) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20817) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20847) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20847) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (20957) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (20987) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (20987) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21097) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21127) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21127) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21237) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21267) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21267) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (21297) LCD_DISPLAY: Touch release check: Z1=3335 Z2=3559 pressure=3871 pressed=1[0m
+[0;33mW (21377) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21407) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21407) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21517) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21547) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21547) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21657) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21687) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21687) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21797) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21827) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21827) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (21937) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (21967) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (21967) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22077) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22107) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22107) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22217) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22247) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22247) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (22317) LCD_DISPLAY: Touch release check: Z1=3463 Z2=3724 pressure=3834 pressed=1[0m
+[0;33mW (22357) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22387) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22387) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22497) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22527) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22527) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22637) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22667) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22667) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22777) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22807) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22807) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (22917) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (22947) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (22947) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23057) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23087) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23087) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23197) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23227) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23227) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23337) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (23337) LCD_DISPLAY: Touch release check: Z1=3795 Z2=4095 pressure=3795 pressed=1[0m
+[0;33mW (23367) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23367) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23477) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23507) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23507) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23617) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23647) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23647) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23757) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23787) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23787) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (23897) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (23927) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (23927) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24037) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24067) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24067) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24177) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24207) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24207) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24317) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24347) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24347) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (24357) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (24457) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24487) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24487) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24597) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24627) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24627) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24737) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24767) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24767) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (24877) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (24907) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (24907) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25017) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25047) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25047) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25157) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25187) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25187) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25297) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25327) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25327) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (25377) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (25437) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25467) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25467) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25577) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25607) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25607) TOF_BLOWER_LCD: TOF1=66 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25717) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25747) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25747) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (25857) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (25887) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (25887) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26037) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26157) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26187) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26187) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26297) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26327) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26327) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (26397) LCD_DISPLAY: Touch release check: Z1=3355 Z2=3551 pressure=3899 pressed=1[0m
+[0;33mW (26437) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26467) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26467) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26577) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26607) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26607) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26717) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26747) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26747) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26857) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (26887) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (26887) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (26997) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27027) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27027) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27137) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27167) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27167) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27277) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27307) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27307) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27417) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (27417) LCD_DISPLAY: Touch release check: Z1=3381 Z2=3590 pressure=3886 pressed=1[0m
+[0;33mW (27447) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27447) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27557) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27587) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27587) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27697) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27727) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27727) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27837) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (27867) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (27867) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (27977) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28007) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28007) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28117) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28147) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28147) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28257) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28287) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28287) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28397) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28427) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28427) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (28437) LCD_DISPLAY: Touch release check: Z1=3737 Z2=4019 pressure=3813 pressed=1[0m
+[0;33mW (28537) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28567) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28567) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28677) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28707) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28707) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28817) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28847) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28847) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (28957) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (28987) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (28987) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29097) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29127) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29127) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29237) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29267) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29267) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29377) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29407) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29407) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (29457) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (29517) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29547) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29547) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29657) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29687) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29687) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29797) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29827) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29827) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (29937) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (29967) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (29967) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30077) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30107) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30107) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30217) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30247) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30247) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30357) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30387) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30387) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (30477) LCD_DISPLAY: Touch release check: Z1=3916 Z2=4095 pressure=3916 pressed=1[0m
+[0;33mW (30497) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30527) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30527) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30637) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30667) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30667) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30777) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30807) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30807) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (30917) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (30947) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (30947) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31057) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31087) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31087) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31197) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31227) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31227) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31337) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31367) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31367) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31477) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (31497) LCD_DISPLAY: Touch release check: Z1=3227 Z2=3414 pressure=3908 pressed=1[0m
+[0;33mW (31507) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31507) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31617) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31647) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31647) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31757) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31787) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31787) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (31897) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (31927) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (31927) TOF_BLOWER_LCD: TOF1=65 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32037) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32067) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32067) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32177) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32207) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32207) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32317) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32347) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32347) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32457) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32487) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32487) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (32517) LCD_DISPLAY: Touch release check: Z1=3453 Z2=3729 pressure=3819 pressed=1[0m
+[0;33mW (32597) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32627) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32627) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32737) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32767) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32767) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (32877) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (32907) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (32907) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33017) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33047) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33047) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33157) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33187) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33187) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33297) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33327) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33327) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33437) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33467) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33467) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (33537) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (33577) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33607) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33607) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33717) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33747) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33747) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33857) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (33887) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (33887) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (33997) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34027) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34027) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34137) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34167) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34167) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34277) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34307) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34307) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34417) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34447) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34447) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34557) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (34557) LCD_DISPLAY: Touch release check: Z1=4045 Z2=4095 pressure=4045 pressed=1[0m
+[0;33mW (34587) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34587) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34697) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34727) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34727) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34837) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (34867) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (34867) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (34977) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35007) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35007) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35117) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35147) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35147) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35257) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35287) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35287) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35397) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35427) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35427) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35537) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35567) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35567) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (35577) LCD_DISPLAY: Touch release check: Z1=3500 Z2=3759 pressure=3836 pressed=1[0m
+[0;33mW (35677) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35707) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35707) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35817) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35847) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35847) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (35957) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (35987) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (35987) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (36097) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (36097) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=561 mm | Relay=OFF[0m
+[0;33mW (36207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36237) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (36347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36377) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (36487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36517) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (36597) LCD_DISPLAY: Touch release check: Z1=3261 Z2=3434 pressure=3922 pressed=1[0m
+[0;33mW (36627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36657) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (36767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36797) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (36907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (36937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (36937) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37077) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37217) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37357) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37497) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (37617) LCD_DISPLAY: Touch release check: Z1=3769 Z2=4077 pressure=3787 pressed=1[0m
+[0;33mW (37637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37637) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37777) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (37887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (37917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (37917) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38057) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38197) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38337) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38477) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38617) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (38637) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (38727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38757) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38757) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (38867) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (38897) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (38897) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39037) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39177) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39317) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39457) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39597) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (39657) LCD_DISPLAY: Touch release check: Z1=3849 Z2=4095 pressure=3849 pressed=1[0m
+[0;33mW (39707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39737) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (39877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (39877) TOF_BLOWER_LCD: TOF1=64 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (39987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40017) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40017) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40157) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40157) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40267) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40297) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40297) TOF_BLOWER_LCD: TOF1=64 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40407) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40437) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40437) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40577) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40577) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (40677) LCD_DISPLAY: Touch release check: Z1=3192 Z2=3317 pressure=3970 pressed=1[0m
+[0;33mW (40687) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40717) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40717) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40827) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40857) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40857) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (40967) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (40997) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (40997) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41137) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41277) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41277) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41387) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41417) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41417) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41527) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41557) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41557) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41697) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (41697) LCD_DISPLAY: Touch release check: Z1=3425 Z2=3624 pressure=3896 pressed=1[0m
+[0;33mW (41807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41837) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (41947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (41977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (41977) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42117) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42257) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42397) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42537) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42677) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (42697) LCD_DISPLAY: Touch release check: Z1=3493 Z2=3708 pressure=3880 pressed=1[0m
+[0;33mW (42787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42817) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (42927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (42957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (42957) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43097) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43237) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43377) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43517) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43657) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (43717) LCD_DISPLAY: Touch release check: Z1=4087 Z2=4095 pressure=4087 pressed=1[0m
+[0;33mW (43767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43797) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (43907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (43937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (43937) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44077) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44217) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44357) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44497) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44637) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (44737) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (44747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44777) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (44897) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (44927) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (44927) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45077) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45217) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45357) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45497) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45637) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (45757) LCD_DISPLAY: Touch release check: Z1=3559 Z2=3763 pressure=3891 pressed=1[0m
+[0;33mW (45777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45777) TOF_BLOWER_LCD: TOF1=81 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (45887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (45917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (45917) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46057) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46197) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46337) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46477) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46617) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (46727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46757) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46757) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (46777) LCD_DISPLAY: Touch release check: Z1=3240 Z2=3409 pressure=3926 pressed=1[0m
+[0;33mW (46867) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (46897) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (46897) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47037) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47177) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47317) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47457) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47597) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47737) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (47797) LCD_DISPLAY: Touch release check: Z1=3533 Z2=3765 pressure=3863 pressed=1[0m
+[0;33mW (47847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (47877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (47877) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (47987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48017) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48017) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48157) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48157) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48267) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48297) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48297) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48407) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48437) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48437) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48577) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48577) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48687) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48717) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48717) TOF_BLOWER_LCD: TOF1=67 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (48817) LCD_DISPLAY: Touch release check: Z1=4054 Z2=4095 pressure=4054 pressed=1[0m
+[0;33mW (48827) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48857) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48857) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (48967) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (48997) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (48997) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49137) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49277) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49277) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49387) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49417) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49417) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49527) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49557) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49557) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49697) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (49807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49837) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (49837) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (49947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (49977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (49977) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50117) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50257) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50397) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50537) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50677) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (50787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50817) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (50837) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (50927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (50957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (50957) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51097) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51237) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51377) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51517) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51657) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (51767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51797) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (51857) LCD_DISPLAY: Touch release check: Z1=3937 Z2=4095 pressure=3937 pressed=1[0m
+[0;33mW (51907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (51937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (51937) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52077) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52217) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52357) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52497) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52637) TOF_BLOWER_LCD: TOF1=66 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (52747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52777) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (52877) LCD_DISPLAY: Touch release check: Z1=3207 Z2=3295 pressure=4007 pressed=1[0m
+[0;33mW (52887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (52917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (52917) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53057) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53197) TOF_BLOWER_LCD: TOF1=66 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53337) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53477) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53617) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53757) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53757) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (53867) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (53897) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (53897) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (53897) LCD_DISPLAY: Touch release check: Z1=3353 Z2=3571 pressure=3877 pressed=1[0m
+[0;33mW (54007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54037) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54037) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54177) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54317) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54457) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54457) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54567) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54597) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54597) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54707) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54737) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54737) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (54847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (54877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (54877) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (54897) LCD_DISPLAY: Touch release check: Z1=3412 Z2=3573 pressure=3934 pressed=1[0m
+[0;33mW (54987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55017) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55017) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55157) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55157) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55267) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55297) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55297) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55407) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55437) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55437) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55577) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55577) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55687) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55717) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55717) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (55827) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55857) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55857) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (55917) LCD_DISPLAY: Touch release check: Z1=3919 Z2=4095 pressure=3919 pressed=1[0m
+[0;33mW (55967) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (55997) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (55997) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56137) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56277) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56277) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56387) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56417) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56417) TOF_BLOWER_LCD: TOF1=78 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56527) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56557) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56557) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56697) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (56807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56837) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (56937) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (56947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (56977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (56977) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57117) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57257) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57397) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57537) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57677) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57787) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57817) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57817) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (57927) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (57957) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (57957) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (57957) LCD_DISPLAY: Touch release check: Z1=3815 Z2=4095 pressure=3815 pressed=1[0m
+[0;33mW (58067) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58097) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58097) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58207) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58237) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58237) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58347) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58377) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58377) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58517) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58517) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58627) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58657) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58657) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58797) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58797) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (58907) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (58937) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (58937) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (58957) LCD_DISPLAY: Touch release check: Z1=3867 Z2=4095 pressure=3867 pressed=1[0m
+[0;33mW (59047) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59077) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59077) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59187) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59217) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59217) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59327) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59357) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59357) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59467) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59497) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59497) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59637) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59777) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (59887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (59917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (59917) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (59977) LCD_DISPLAY: Touch release check: Z1=3208 Z2=3400 pressure=3903 pressed=1[0m
+[0;33mW (60027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60057) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60057) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60167) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60197) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60197) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60307) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60337) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60337) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60447) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60477) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60477) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60587) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60617) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60617) TOF_BLOWER_LCD: TOF1=80 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60727) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (60737) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=1642 mm | Relay=OFF[0m
+[0;33mW (60847) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (60877) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (60877) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (60987) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (60997) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=1607 mm | Relay=OFF[0m
+[0;32mI (60997) LCD_DISPLAY: Touch release check: Z1=3447 Z2=3737 pressure=3805 pressed=1[0m
+[0;33mW (61107) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (61137) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (61137) TOF_BLOWER_LCD: TOF1=68 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (61247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (61257) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=1652 mm | Relay=OFF[0m
+[0;33mW (61367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (61397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (61397) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (61507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (61537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (61537) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (61647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (61657) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=1612 mm | Relay=OFF[0m
+[0;33mW (61767) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (61777) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=1609 mm | Relay=OFF[0m
+[0;33mW (61887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (61897) TOF_BLOWER_LCD: TOF1=74 mm TOF2=INVALID/0 mm HC=1609 mm | Relay=OFF[0m
+[0;33mW (62007) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (62017) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=1609 mm | Relay=OFF[0m
+[0;32mI (62017) LCD_DISPLAY: Touch release check: Z1=4019 Z2=4095 pressure=4019 pressed=1[0m
+[0;33mW (62127) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (62137) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=1604 mm | Relay=OFF[0m
+[0;33mW (62247) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (62257) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=1604 mm | Relay=OFF[0m
+[0;33mW (62367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (62377) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=1604 mm | Relay=OFF[0m
+[0;33mW (62487) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (62497) TOF_BLOWER_LCD: TOF1=71 mm TOF2=INVALID/0 mm HC=1601 mm | Relay=OFF[0m
+[0;33mW (62607) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (62637) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (62637) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (62747) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (62777) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (62777) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (62887) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (62917) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (62917) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (63027) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (63037) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=1631 mm | Relay=OFF[0m
+[0;32mI (63037) LCD_DISPLAY: Touch release check: Z1=4095 Z2=4095 pressure=4095 pressed=1[0m
+[0;33mW (63147) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (63177) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (63177) TOF_BLOWER_LCD: TOF1=76 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (63287) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (63317) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (63317) TOF_BLOWER_LCD: TOF1=75 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (63427) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (63437) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=1624 mm | Relay=OFF[0m
+[0;33mW (63547) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;32mI (63557) TOF_BLOWER_LCD: TOF1=79 mm TOF2=INVALID/0 mm HC=1608 mm | Relay=OFF[0m
+[0;33mW (63667) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (63697) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (63697) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (63807) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (63837) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (63837) TOF_BLOWER_LCD: TOF1=70 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (63947) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (63977) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (63977) TOF_BLOWER_LCD: TOF1=69 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;32mI (64057) LCD_DISPLAY: Touch release check: Z1=3763 Z2=4037 pressure=3821 pressed=1[0m
+[0;33mW (64087) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (64117) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (64117) TOF_BLOWER_LCD: TOF1=77 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (64227) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (64257) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (64257) TOF_BLOWER_LCD: TOF1=73 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (64367) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (64397) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (64397) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (64507) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (64537) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (64537) TOF_BLOWER_LCD: TOF1=72 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
+[0;33mW (64647) TOF_BLOWER_LCD: TOF 2 invalid: error=ESP_OK status=4[0m
+[0;33mW (64677) TOF_BLOWER_LCD: HC-SR04 echo timeout; check wiring or target range[0m
+[0;32mI (64677) TOF_BLOWER_LCD: TOF1=66 mm TOF2=INVALID/0 mm HC=INVALID/0 mm | Relay=OFF[0m
