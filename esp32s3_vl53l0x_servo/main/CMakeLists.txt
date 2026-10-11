@@ -7,6 +7,7 @@ idf_component_register(
     vl53l0x_idf
     esp_driver_gpio
     esp_driver_i2c
+    esp_psram
     esp_timer
   EMBED_FILES
     "assets/dashboard.rgb565"

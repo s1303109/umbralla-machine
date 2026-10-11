@@ -3,6 +3,7 @@
 #include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "driver/gpio.h"
 #include "esp_heap_caps.h"
@@ -28,6 +29,7 @@ static const char *TAG = "LCD_DISPLAY";
 #define FAN_WIDTH 110U
 #define FAN_HEIGHT 110U
 #define FAN_FRAME_COUNT 72U
+#define FAN_CACHED_FRAME_COUNT (FAN_FRAME_COUNT / FAN_FRAME_STEP)
 #define FAN_CENTER_X_Q8 14080
 #define FAN_CENTER_Y_Q8 14016
 #define FAN_HUB_RADIUS_Q8 3994
@@ -74,7 +76,8 @@ static const char *TAG = "LCD_DISPLAY";
 #define COLOR_MENU_WHITE 0xFF9EU
 #define COLOR_MENU_MUTED 0xBD35U
 
-#define FAN_FRAME_MS 20U
+#define FAN_FRAME_MS 40U
+#define FAN_FRAME_STEP 2U
 #define CARD_REFRESH_MS 500U
 #define DISPLAY_POLL_MS 10U
 
@@ -101,6 +104,9 @@ typedef struct {
 
 static QueueHandle_t status_queue;
 static uint16_t *sprite_pixels;
+static uint16_t *fan_previous_pixels;
+static uint16_t *fan_frame_cache;
+static bool fan_previous_valid;
 
 extern const uint8_t dashboard_rgb565_start[]
     asm("_binary_dashboard_rgb565_start");
@@ -157,17 +163,23 @@ static uint64_t lcd_data_pin_mask(void)
     return mask;
 }
 
-static void lcd_write_bus(uint8_t value)
+static inline void lcd_write_bus(uint8_t value)
 {
     const uint32_t low_value =
         ((uint32_t)(value & 0x3FU) << 13) |
         ((uint32_t)(value & 0x40U) << 15);
 
-    GPIO.out_w1tc = LCD_DATA_LOW_MASK;
-    GPIO.out1_w1tc.val = LCD_DATA_HIGH_MASK;
+    /*
+     * Drive each data pin directly to its next state.  Clearing the complete
+     * bus first forced unchanged high bits through a needless 1->0->1 pulse,
+     * increasing simultaneous-switching current on the parallel wiring.
+     */
+    GPIO.out_w1tc = LCD_DATA_LOW_MASK & ~low_value;
     GPIO.out_w1ts = low_value;
     if ((value & 0x80U) != 0U) {
         GPIO.out1_w1ts.val = LCD_DATA_HIGH_MASK;
+    } else {
+        GPIO.out1_w1tc.val = LCD_DATA_HIGH_MASK;
     }
 }
 
@@ -248,6 +260,12 @@ static void lcd_hardware_reset(void)
 static void lcd_init_ili9486(void)
 {
     static const uint8_t pixel_format[] = {0x55};
+    /*
+     * Fix the panel refresh at the ILI9486L reset default of 70 Hz instead of
+     * relying on clone/module power-on state.  The second byte keeps the
+     * documented 17-clock line period.
+     */
+    static const uint8_t frame_rate_control[] = {0xB0, 0x11};
     static const uint8_t power_control_1[] = {0x0E, 0x0E};
     static const uint8_t power_control_2[] = {0x41, 0x00};
     static const uint8_t power_control_3[] = {0x55};
@@ -268,6 +286,10 @@ static void lcd_init_ili9486(void)
     lcd_write_command(0x11, NULL, 0);
     vTaskDelay(pdMS_TO_TICKS(120));
     lcd_write_command(0x3A, pixel_format, sizeof(pixel_format));
+    lcd_write_command(
+        0xB1,
+        frame_rate_control,
+        sizeof(frame_rate_control));
     lcd_write_command(0xC0, power_control_1, sizeof(power_control_1));
     lcd_write_command(0xC1, power_control_2, sizeof(power_control_2));
     lcd_write_command(0xC2, power_control_3, sizeof(power_control_3));
@@ -426,6 +448,46 @@ static void lcd_push_canvas(uint16_t x, uint16_t y, const canvas_t *canvas)
     lcd_end_pixels();
 }
 
+static void lcd_push_changed_rows(
+    uint16_t x,
+    uint16_t y,
+    const canvas_t *canvas,
+    uint16_t *previous)
+{
+    if (canvas->width == 0 || canvas->height == 0 || previous == NULL) {
+        return;
+    }
+
+    for (uint16_t row = 0; row < canvas->height; ++row) {
+        const uint32_t row_start = (uint32_t)row * canvas->width;
+        uint16_t first_changed = canvas->width;
+        uint16_t last_changed = 0;
+
+        for (uint16_t column = 0; column < canvas->width; ++column) {
+            const uint32_t index = row_start + column;
+            if (canvas->pixels[index] != previous[index]) {
+                if (first_changed == canvas->width) {
+                    first_changed = column;
+                }
+                last_changed = column;
+            }
+        }
+
+        if (first_changed == canvas->width) {
+            continue;
+        }
+
+        const uint16_t span_width = last_changed - first_changed + 1U;
+        lcd_begin_pixels(x + first_changed, y + row, span_width, 1);
+        for (uint16_t column = first_changed;
+             column <= last_changed;
+             ++column) {
+            lcd_write_color(canvas->pixels[row_start + column]);
+        }
+        lcd_end_pixels();
+    }
+}
+
 static void lcd_push_rgb565_asset(
     uint16_t x,
     uint16_t y,
@@ -506,18 +568,8 @@ static uint16_t clamp_fan_component(int value, int maximum)
     return (uint16_t)value;
 }
 
-static void draw_fan_rotor(bool running, uint8_t frame)
+static canvas_t render_fan_rotor_frame(uint8_t frame)
 {
-    if (!running) {
-        lcd_push_rgb565_asset(
-            FAN_X,
-            FAN_Y,
-            FAN_WIDTH,
-            FAN_HEIGHT,
-            fan_original_rgb565_start);
-        return;
-    }
-
     canvas_t fan = canvas_begin_from_dashboard(
         FAN_X,
         FAN_Y,
@@ -585,7 +637,86 @@ static void draw_fan_rotor(bool running, uint8_t frame)
                 (uint16_t)((red << 11) | (green << 5) | blue);
         }
     }
-    lcd_push_canvas(FAN_X, FAN_Y, &fan);
+    return fan;
+}
+
+static void build_fan_frame_cache(void)
+{
+    if (fan_frame_cache == NULL) {
+        return;
+    }
+
+    const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
+    for (uint8_t cache_index = 0;
+         cache_index < FAN_CACHED_FRAME_COUNT;
+         ++cache_index) {
+        const uint8_t frame = (uint8_t)(cache_index * FAN_FRAME_STEP);
+        const canvas_t fan = render_fan_rotor_frame(frame);
+        memcpy(
+            fan_frame_cache + (uint32_t)cache_index * pixel_count,
+            fan.pixels,
+            pixel_count * sizeof(uint16_t));
+    }
+    ESP_LOGI(
+        TAG,
+        "Fan cache ready: %u frames, %u bytes in PSRAM",
+        (unsigned)FAN_CACHED_FRAME_COUNT,
+        (unsigned)(
+            FAN_CACHED_FRAME_COUNT * pixel_count * sizeof(uint16_t)));
+}
+
+static void draw_fan_rotor(bool running, uint8_t frame)
+{
+    if (!running) {
+        lcd_push_rgb565_asset(
+            FAN_X,
+            FAN_Y,
+            FAN_WIDTH,
+            FAN_HEIGHT,
+            fan_original_rgb565_start);
+        if (fan_previous_pixels != NULL) {
+            const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
+            for (uint32_t index = 0; index < pixel_count; ++index) {
+                fan_previous_pixels[index] =
+                    ((uint16_t)fan_original_rgb565_start[index * 2U] << 8) |
+                    fan_original_rgb565_start[index * 2U + 1U];
+            }
+            fan_previous_valid = true;
+        }
+        return;
+    }
+
+    canvas_t fan;
+    if (fan_frame_cache != NULL && (frame % FAN_FRAME_STEP) == 0U) {
+        const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
+        const uint8_t cache_index =
+            (uint8_t)((frame / FAN_FRAME_STEP) % FAN_CACHED_FRAME_COUNT);
+        fan = (canvas_t){
+            .pixels = fan_frame_cache + (uint32_t)cache_index * pixel_count,
+            .width = FAN_WIDTH,
+            .height = FAN_HEIGHT,
+        };
+    } else {
+        fan = render_fan_rotor_frame(frame);
+    }
+
+    if (fan_previous_pixels != NULL && fan_previous_valid) {
+        lcd_push_changed_rows(
+            FAN_X,
+            FAN_Y,
+            &fan,
+            fan_previous_pixels);
+    } else {
+        lcd_push_canvas(FAN_X, FAN_Y, &fan);
+    }
+
+    if (fan_previous_pixels != NULL) {
+        const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
+        for (uint32_t index = 0; index < pixel_count; ++index) {
+            fan_previous_pixels[index] = fan.pixels[index];
+        }
+        fan_previous_valid = true;
+    }
 }
 
 static void draw_blower_status(bool running)
@@ -739,6 +870,7 @@ static void lcd_display_task(void *argument)
 
     lcd_display_status_t displayed = {0};
     lcd_display_status_t latest = {0};
+    build_fan_frame_cache();
     draw_fan_rotor(false, 0);
     draw_blower_status(false);
     draw_sensor_dynamic(0, false, false, 0);
@@ -861,7 +993,8 @@ static void lcd_display_task(void *argument)
 
         if (latest.blower_running &&
             now - last_fan_frame >= pdMS_TO_TICKS(FAN_FRAME_MS)) {
-            fan_frame = (uint8_t)((fan_frame + 1U) % FAN_FRAME_COUNT);
+            fan_frame = (uint8_t)(
+                (fan_frame + FAN_FRAME_STEP) % FAN_FRAME_COUNT);
             draw_fan_rotor(true, fan_frame);
             last_fan_frame = now;
         }
@@ -870,30 +1003,46 @@ static void lcd_display_task(void *argument)
 
 esp_err_t lcd_display_start(void)
 {
-    bool sprite_uses_psram = true;
     sprite_pixels = heap_caps_malloc(
         SPRITE_CAPACITY * sizeof(uint16_t),
-        MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
-    if (sprite_pixels == NULL) {
-        sprite_uses_psram = false;
-        sprite_pixels = heap_caps_malloc(
-            SPRITE_CAPACITY * sizeof(uint16_t),
-            MALLOC_CAP_8BIT);
-    }
+        MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
     if (sprite_pixels == NULL) {
         return ESP_ERR_NO_MEM;
     }
+
+    fan_previous_pixels = heap_caps_malloc(
+        (uint32_t)FAN_WIDTH * FAN_HEIGHT * sizeof(uint16_t),
+        MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    if (fan_previous_pixels == NULL) {
+        ESP_LOGW(
+            TAG,
+            "Fan differential buffer unavailable; using full fan updates");
+    }
+
+    fan_frame_cache = heap_caps_malloc(
+        (uint32_t)FAN_CACHED_FRAME_COUNT * FAN_WIDTH * FAN_HEIGHT *
+            sizeof(uint16_t),
+        MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+    if (fan_frame_cache == NULL) {
+        ESP_LOGW(
+            TAG,
+            "Fan PSRAM cache unavailable; using runtime rotation");
+    }
     ESP_LOGI(
         TAG,
-        "Display buffer: %u bytes in %s; free internal RAM: %u bytes",
+        "Display buffer: %u bytes in internal RAM; free internal RAM: %u bytes; free PSRAM: %u bytes",
         (unsigned)(SPRITE_CAPACITY * sizeof(uint16_t)),
-        sprite_uses_psram ? "PSRAM" : "internal RAM",
-        (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT));
+        (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT),
+        (unsigned)heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
 
     status_queue = xQueueCreate(1, sizeof(lcd_display_status_t));
     if (status_queue == NULL) {
         heap_caps_free(sprite_pixels);
         sprite_pixels = NULL;
+        heap_caps_free(fan_previous_pixels);
+        fan_previous_pixels = NULL;
+        heap_caps_free(fan_frame_cache);
+        fan_frame_cache = NULL;
         return ESP_ERR_NO_MEM;
     }
 
@@ -909,6 +1058,10 @@ esp_err_t lcd_display_start(void)
         status_queue = NULL;
         heap_caps_free(sprite_pixels);
         sprite_pixels = NULL;
+        heap_caps_free(fan_previous_pixels);
+        fan_previous_pixels = NULL;
+        heap_caps_free(fan_frame_cache);
+        fan_frame_cache = NULL;
         return ESP_ERR_NO_MEM;
     }
     return ESP_OK;
