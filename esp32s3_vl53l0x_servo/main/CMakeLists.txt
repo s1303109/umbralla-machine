@@ -2,6 +2,7 @@ idf_component_register(
   SRCS
     "main.c"
     "lcd_display.c"
+    "assets/menu_fonts.c"
   INCLUDE_DIRS "."
   REQUIRES
     vl53l0x_idf
@@ -9,15 +10,9 @@ idf_component_register(
     esp_driver_i2c
     esp_psram
     esp_timer
+    lvgl
   EMBED_FILES
-    "assets/dashboard.rgb565"
-    "assets/fan_original.rgb565"
-    "assets/fan_delta.s8"
-    "assets/blower_on.rgb565"
-    "assets/blower_off.rgb565"
-    "assets/relay_on.rgb565"
-    "assets/relay_off.rgb565"
-    "assets/sensor_lights_on.rgb565"
-    "assets/sensor_lights_off.rgb565"
-    "assets/menu_digits.alpha8"
+    "assets/lvgl_background.rgb565"
+    "assets/lvgl_fan_frames.rgb565"
+    "assets/lvgl_states.rgb565"
 )

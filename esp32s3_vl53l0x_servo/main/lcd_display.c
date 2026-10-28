@@ -1,6 +1,5 @@
 #include "lcd_display.h"
 
-#include <stddef.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -8,9 +7,11 @@
 #include "driver/gpio.h"
 #include "esp_heap_caps.h"
 #include "esp_log.h"
+#include "esp_timer.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/queue.h"
 #include "freertos/task.h"
+#include "lvgl.h"
 #include "soc/gpio_struct.h"
 
 static const char *TAG = "LCD_DISPLAY";
@@ -23,63 +24,6 @@ static const char *TAG = "LCD_DISPLAY";
 
 #define LCD_WIDTH 480U
 #define LCD_HEIGHT 320U
-
-#define FAN_X 56U
-#define FAN_Y 75U
-#define FAN_WIDTH 110U
-#define FAN_HEIGHT 110U
-#define FAN_FRAME_COUNT 72U
-#define FAN_CACHED_FRAME_COUNT (FAN_FRAME_COUNT / FAN_FRAME_STEP)
-#define FAN_CENTER_X_Q8 14080
-#define FAN_CENTER_Y_Q8 14016
-#define FAN_HUB_RADIUS_Q8 3994
-#define FAN_ROTATION_RADIUS_Q8 13568
-#define FAN_EDGE_MARGIN 1U
-#define BLOWER_STATUS_X 176U
-#define BLOWER_STATUS_Y 112U
-#define BLOWER_STATUS_WIDTH 88U
-#define BLOWER_STATUS_HEIGHT 35U
-#define RELAY_STATUS_X 189U
-#define RELAY_STATUS_Y 214U
-#define RELAY_STATUS_WIDTH 70U
-#define RELAY_STATUS_HEIGHT 29U
-#define SENSOR_LIGHT_X 423U
-#define SENSOR_LIGHT_WIDTH 33U
-#define SENSOR_LIGHT_HEIGHT 30U
-#define DIGIT_ATLAS_WIDTH 276U
-#define DIGIT_HEIGHT 31U
-#define DIGIT_CELL_WIDTH 23U
-#define DIGIT_ADVANCE 17U
-#define UNIT_ADVANCE 10U
-#define UNIT_GAP 2U
-
-/* The blower-status panel is the largest region redrawn at one time. */
-#define SPRITE_CAPACITY (270U * 55U)
-
-#define COLOR_BACKGROUND 0x020CU
-#define COLOR_BACKGROUND_2 0x0841U
-#define COLOR_PANEL_TOP 0x10A4U
-#define COLOR_PANEL_BOTTOM 0x0822U
-#define COLOR_WHITE 0xFFFFU
-#define COLOR_MUTED 0x9D76U
-#define COLOR_DIM 0x5B0DU
-#define COLOR_CYAN 0x07FFU
-#define COLOR_CYAN_DARK 0x0350U
-#define COLOR_BLUE 0x157EU
-#define COLOR_BLUE_DARK 0x082CU
-#define COLOR_GREEN 0x2FC7U
-#define COLOR_GREEN_DARK 0x02E1U
-#define COLOR_RED 0xF2A8U
-#define COLOR_RED_DARK 0x6004U
-#define COLOR_AMBER 0xFD20U
-#define COLOR_BLACK 0x0000U
-#define COLOR_MENU_WHITE 0xFF9EU
-#define COLOR_MENU_MUTED 0xBD35U
-
-#define FAN_FRAME_MS 40U
-#define FAN_FRAME_STEP 2U
-#define CARD_REFRESH_MS 500U
-#define DISPLAY_POLL_MS 10U
 
 #define LCD_DATA_LOW_MASK ((0x3FU << 13) | (1U << 21))
 #define LCD_DATA_HIGH_MASK (1U << (47 - 32))
@@ -96,63 +40,49 @@ static const gpio_num_t LCD_DATA_PINS[8] = {
     GPIO_NUM_47,
 };
 
-typedef struct {
-    uint16_t *pixels;
-    uint16_t width;
-    uint16_t height;
-} canvas_t;
+
+#define DRAW_BUFFER_MAX_ROWS 40U
+#define DRAW_BUFFER_MIN_ROWS 8U
+#define INTERNAL_RESERVE_BYTES (96U * 1024U)
+#define DISPLAY_STACK_BYTES 8192U
+#define DISPLAY_POLL_MS 10U
+#define COLOR_TEXT 0xFAF6F4U
+#define COLOR_MUTED 0xBEB0ADU
 
 static QueueHandle_t status_queue;
-static uint16_t *sprite_pixels;
-static uint16_t *fan_previous_pixels;
-static uint16_t *fan_frame_cache;
-static bool fan_previous_valid;
+static lv_color_t *draw_pixels[2];
+static uint16_t draw_rows;
+static lv_disp_draw_buf_t draw_buffer;
+static lv_disp_drv_t display_driver;
+static esp_timer_handle_t tick_timer;
 
-extern const uint8_t dashboard_rgb565_start[]
-    asm("_binary_dashboard_rgb565_start");
-extern const uint8_t dashboard_rgb565_end[]
-    asm("_binary_dashboard_rgb565_end");
-extern const uint8_t fan_original_rgb565_start[]
-    asm("_binary_fan_original_rgb565_start");
-extern const uint8_t fan_delta_s8_start[]
-    asm("_binary_fan_delta_s8_start");
-extern const uint8_t blower_on_rgb565_start[]
-    asm("_binary_blower_on_rgb565_start");
-extern const uint8_t blower_off_rgb565_start[]
-    asm("_binary_blower_off_rgb565_start");
-extern const uint8_t relay_on_rgb565_start[]
-    asm("_binary_relay_on_rgb565_start");
-extern const uint8_t relay_off_rgb565_start[]
-    asm("_binary_relay_off_rgb565_start");
-extern const uint8_t sensor_lights_on_rgb565_start[]
-    asm("_binary_sensor_lights_on_rgb565_start");
-extern const uint8_t sensor_lights_off_rgb565_start[]
-    asm("_binary_sensor_lights_off_rgb565_start");
-extern const uint8_t menu_digits_alpha8_start[]
-    asm("_binary_menu_digits_alpha8_start");
 
-static const int16_t COS_36[36] = {
-    1024, 1008, 962, 887, 784, 658, 512, 350, 178,
-    0, -178, -350, -512, -658, -784, -887, -962, -1008,
-    -1024, -1008, -962, -887, -784, -658, -512, -350, -178,
-    0, 178, 350, 512, 658, 784, 887, 962, 1008,
+LV_FONT_DECLARE(menu_digits_22);
+LV_FONT_DECLARE(menu_units_12);
+extern const uint8_t background_start[] asm("_binary_lvgl_background_rgb565_start");
+extern const uint8_t fan_frames_start[] asm("_binary_lvgl_fan_frames_rgb565_start");
+extern const uint8_t states_start[] asm("_binary_lvgl_states_rgb565_start");
+#define FAN_FRAME_COUNT 36U
+#define FAN_WIDTH 114U
+#define FAN_HEIGHT 106U
+#define FAN_FRAME_BYTES (FAN_WIDTH * FAN_HEIGHT * 2U)
+static const lv_img_dsc_t background_image = {
+    .header = {.cf = LV_IMG_CF_TRUE_COLOR, .w = LCD_WIDTH, .h = LCD_HEIGHT},
+    .data_size = LCD_WIDTH * LCD_HEIGHT * 2U,
+    .data = background_start,
 };
+static lv_img_dsc_t fan_images[FAN_FRAME_COUNT];
+static lv_img_dsc_t state_images[5][2];
 
-static const int16_t SIN_36[36] = {
-    0, 178, 350, 512, 658, 784, 887, 962, 1008,
-    1024, 1008, 962, 887, 784, 658, 512, 350, 178,
-    0, -178, -350, -512, -658, -784, -887, -962, -1008,
-    -1024, -1008, -962, -887, -784, -658, -512, -350, -178,
-};
-
-static int16_t trig_72(const int16_t table[36], uint8_t angle)
-{
-    const uint8_t base = (uint8_t)((angle / 2U) % 36U);
-    if ((angle & 1U) == 0U) {
-        return table[base];
-    }
-    return (int16_t)((table[base] + table[(base + 1U) % 36U]) / 2);
-}
+typedef struct {
+    lv_obj_t *value;
+    lv_obj_t *unit;
+    lv_obj_t *light;
+} sensor_widgets_t;
+static sensor_widgets_t sensors[3];
+static lv_obj_t *fan;
+static lv_obj_t *blower_state;
+static lv_obj_t *relay_state;
 
 static uint64_t lcd_data_pin_mask(void)
 {
@@ -329,742 +259,338 @@ static void lcd_begin_pixels(uint16_t x, uint16_t y, uint16_t width, uint16_t he
     gpio_set_level(LCD_RS_PIN, 1);
 }
 
-static inline void lcd_write_color(uint16_t color)
-{
-    lcd_write_byte_selected((uint8_t)(color >> 8));
-    lcd_write_byte_selected((uint8_t)color);
-}
-
 static void lcd_end_pixels(void)
 {
     gpio_set_level(LCD_CS_PIN, 1);
 }
 
-static void lcd_fill_rect(
-    uint16_t x,
-    uint16_t y,
-    uint16_t width,
-    uint16_t height,
-    uint16_t color)
+
+/* The byte-swapped lv_color_t buffer is already in panel wire order.
+ * GPIO transfer is synchronous: do not signal flush_ready until CS goes high.
+ * Two draw buffers do not make this bit-banged interface asynchronous/DMA. */
+static void display_flush(lv_disp_drv_t *driver, const lv_area_t *area, lv_color_t *pixels)
 {
-    lcd_begin_pixels(x, y, width, height);
-    for (uint32_t pixel = 0; pixel < (uint32_t)width * height; ++pixel) {
-        lcd_write_color(color);
-        if ((pixel & 0x07FFU) == 0x07FFU) {
-            vTaskDelay(1);
-        }
+    const uint16_t width = (uint16_t)(area->x2 - area->x1 + 1);
+    const uint16_t height = (uint16_t)(area->y2 - area->y1 + 1);
+    lcd_begin_pixels((uint16_t)area->x1, (uint16_t)area->y1, width, height);
+    const uint8_t *bytes = (const uint8_t *)pixels;
+    const size_t length = (size_t)width * height * sizeof(lv_color_t);
+    for (size_t i = 0; i < length; ++i) {
+        lcd_write_byte_selected(bytes[i]);
     }
     lcd_end_pixels();
+    lv_disp_flush_ready(driver);
 }
 
-static canvas_t canvas_begin(uint16_t width, uint16_t height, uint16_t color)
+static void display_tick(void *argument)
 {
-    canvas_t canvas = {
-        .pixels = sprite_pixels,
-        .width = width,
-        .height = height,
-    };
-    if ((uint32_t)width * height > SPRITE_CAPACITY) {
-        canvas.width = 0;
-        canvas.height = 0;
-        return canvas;
-    }
-    for (uint32_t index = 0; index < (uint32_t)width * height; ++index) {
-        canvas.pixels[index] = color;
-    }
-    return canvas;
+    (void)argument;
+    lv_tick_inc(1);
 }
 
-static uint16_t dashboard_pixel(uint16_t x, uint16_t y)
+static void display_log(const char *message)
 {
-    const uint32_t offset = ((uint32_t)y * LCD_WIDTH + x) * 2U;
-    return (uint16_t)(((uint16_t)dashboard_rgb565_start[offset] << 8) |
-                      dashboard_rgb565_start[offset + 1U]);
+    ESP_LOGW(TAG, "%s", message);
 }
 
-static canvas_t canvas_begin_from_dashboard(
-    uint16_t screen_x,
-    uint16_t screen_y,
-    uint16_t width,
-    uint16_t height)
+
+/* The fixed artwork, including the glass, Chinese titles and icons, is sampled
+ * directly from /workspace/MENU.png at 480x320 without zoom/rearrangement.
+ * Transparent LVGL groups retain the five original card bounds. Only these
+ * groups' dynamic child images/labels invalidate regions during operation. */
+static lv_obj_t *card_group(lv_obj_t *parent, int x, int y, int width, int height)
 {
-    canvas_t canvas = canvas_begin(width, height, COLOR_WHITE);
-    if (canvas.width == 0U || screen_x + width > LCD_WIDTH ||
-        screen_y + height > LCD_HEIGHT) {
-        canvas.width = 0;
-        canvas.height = 0;
-        return canvas;
-    }
-    for (uint16_t y = 0; y < height; ++y) {
-        for (uint16_t x = 0; x < width; ++x) {
-            canvas.pixels[(uint32_t)y * width + x] =
-                dashboard_pixel(screen_x + x, screen_y + y);
-        }
-    }
-    return canvas;
+    lv_obj_t *object = lv_obj_create(parent);
+    lv_obj_remove_style_all(object);
+    lv_obj_clear_flag(object, LV_OBJ_FLAG_SCROLLABLE | LV_OBJ_FLAG_CLICKABLE);
+    lv_obj_set_pos(object, x, y);
+    lv_obj_set_size(object, width, height);
+    return object;
 }
 
-static uint16_t blend_rgb565(uint16_t background, uint16_t foreground, uint8_t alpha)
+static lv_obj_t *image_at(lv_obj_t *parent, int x, int y, const lv_img_dsc_t *image)
 {
-    const uint16_t inverse = (uint16_t)(255U - alpha);
-    const uint16_t background_red = (background >> 11) & 0x1FU;
-    const uint16_t background_green = (background >> 5) & 0x3FU;
-    const uint16_t background_blue = background & 0x1FU;
-    const uint16_t foreground_red = (foreground >> 11) & 0x1FU;
-    const uint16_t foreground_green = (foreground >> 5) & 0x3FU;
-    const uint16_t foreground_blue = foreground & 0x1FU;
-    const uint16_t red =
-        (uint16_t)((background_red * inverse + foreground_red * alpha + 127U) / 255U);
-    const uint16_t green =
-        (uint16_t)((background_green * inverse + foreground_green * alpha + 127U) / 255U);
-    const uint16_t blue =
-        (uint16_t)((background_blue * inverse + foreground_blue * alpha + 127U) / 255U);
-    return (uint16_t)((red << 11) | (green << 5) | blue);
+    lv_obj_t *object = lv_img_create(parent);
+    lv_img_set_src(object, image);
+    lv_obj_set_pos(object, x, y);
+    return object;
 }
 
-static void canvas_blend_pixel(
-    canvas_t *canvas,
-    int x,
-    int y,
-    uint16_t color,
-    uint8_t alpha)
+static lv_obj_t *label_at(lv_obj_t *parent, int x, int y, const char *text,
+                          const lv_font_t *font, uint32_t color)
 {
-    if (x >= 0 && y >= 0 && x < canvas->width && y < canvas->height) {
-        const uint32_t index = (uint32_t)y * canvas->width + (uint32_t)x;
-        canvas->pixels[index] = blend_rgb565(canvas->pixels[index], color, alpha);
-    }
+    lv_obj_t *label = lv_label_create(parent);
+    lv_obj_remove_style_all(label);
+    lv_obj_set_style_text_font(label, font, 0);
+    lv_obj_set_style_text_color(label, lv_color_hex(color), 0);
+    lv_label_set_text(label, text);
+    lv_obj_set_pos(label, x, y);
+    return label;
 }
 
-static void lcd_push_canvas(uint16_t x, uint16_t y, const canvas_t *canvas)
+static void initialize_images(void)
 {
-    if (canvas->width == 0 || canvas->height == 0) {
-        return;
-    }
-    lcd_begin_pixels(x, y, canvas->width, canvas->height);
-    const uint32_t pixel_count = (uint32_t)canvas->width * canvas->height;
-    for (uint32_t index = 0; index < pixel_count; ++index) {
-        lcd_write_color(canvas->pixels[index]);
-    }
-    lcd_end_pixels();
-}
-
-static void lcd_push_changed_rows(
-    uint16_t x,
-    uint16_t y,
-    const canvas_t *canvas,
-    uint16_t *previous)
-{
-    if (canvas->width == 0 || canvas->height == 0 || previous == NULL) {
-        return;
-    }
-
-    for (uint16_t row = 0; row < canvas->height; ++row) {
-        const uint32_t row_start = (uint32_t)row * canvas->width;
-        uint16_t first_changed = canvas->width;
-        uint16_t last_changed = 0;
-
-        for (uint16_t column = 0; column < canvas->width; ++column) {
-            const uint32_t index = row_start + column;
-            if (canvas->pixels[index] != previous[index]) {
-                if (first_changed == canvas->width) {
-                    first_changed = column;
-                }
-                last_changed = column;
-            }
-        }
-
-        if (first_changed == canvas->width) {
-            continue;
-        }
-
-        const uint16_t span_width = last_changed - first_changed + 1U;
-        lcd_begin_pixels(x + first_changed, y + row, span_width, 1);
-        for (uint16_t column = first_changed;
-             column <= last_changed;
-             ++column) {
-            lcd_write_color(canvas->pixels[row_start + column]);
-        }
-        lcd_end_pixels();
-    }
-}
-
-static void lcd_push_rgb565_asset(
-    uint16_t x,
-    uint16_t y,
-    uint16_t width,
-    uint16_t height,
-    const uint8_t *asset)
-{
-    lcd_begin_pixels(x, y, width, height);
-    const uint32_t pixel_count = (uint32_t)width * height;
-    for (uint32_t index = 0; index < pixel_count; ++index) {
-        lcd_write_byte_selected(asset[index * 2U]);
-        lcd_write_byte_selected(asset[index * 2U + 1U]);
-    }
-    lcd_end_pixels();
-}
-
-static void draw_static_screen(void)
-{
-    const size_t expected_size = (size_t)LCD_WIDTH * LCD_HEIGHT * 2U;
-    const size_t asset_size =
-        (size_t)(dashboard_rgb565_end - dashboard_rgb565_start);
-    if (asset_size != expected_size) {
-        ESP_LOGE(
-            TAG,
-            "Dashboard asset size mismatch: got %u, expected %u",
-            (unsigned)asset_size,
-            (unsigned)expected_size);
-        lcd_fill_rect(0, 0, LCD_WIDTH, LCD_HEIGHT, COLOR_WHITE);
-        return;
-    }
-
-    lcd_begin_pixels(0, 0, LCD_WIDTH, LCD_HEIGHT);
-    for (uint32_t pixel = 0; pixel < (uint32_t)LCD_WIDTH * LCD_HEIGHT; ++pixel) {
-        lcd_write_byte_selected(dashboard_rgb565_start[pixel * 2U]);
-        lcd_write_byte_selected(dashboard_rgb565_start[pixel * 2U + 1U]);
-        if ((pixel & 0x07FFU) == 0x07FFU) {
-            vTaskDelay(1);
-        }
-    }
-    lcd_end_pixels();
-}
-
-static int16_t sample_fan_delta(
-    int source_x_q8,
-    int source_y_q8,
-    uint8_t channel)
-{
-    const int x0 = source_x_q8 / 256;
-    const int y0 = source_y_q8 / 256;
-    const int fraction_x = source_x_q8 & 0xFF;
-    const int fraction_y = source_y_q8 & 0xFF;
-    const int8_t *delta = (const int8_t *)fan_delta_s8_start;
-    const size_t top_left = ((size_t)y0 * FAN_WIDTH + x0) * 3U + channel;
-    const size_t top_right = top_left + 3U;
-    const size_t bottom_left = top_left + FAN_WIDTH * 3U;
-    const size_t bottom_right = bottom_left + 3U;
-    const int32_t top =
-        delta[top_left] * (256 - fraction_x) +
-        delta[top_right] * fraction_x;
-    const int32_t bottom =
-        delta[bottom_left] * (256 - fraction_x) +
-        delta[bottom_right] * fraction_x;
-    const int32_t value =
-        top * (256 - fraction_y) + bottom * fraction_y;
-    return (int16_t)(
-        value >= 0 ? (value + 32768) / 65536 :
-                     -((-value + 32768) / 65536));
-}
-
-static uint16_t clamp_fan_component(int value, int maximum)
-{
-    if (value < 0) {
-        return 0;
-    }
-    if (value > maximum) {
-        return (uint16_t)maximum;
-    }
-    return (uint16_t)value;
-}
-
-static canvas_t render_fan_rotor_frame(uint8_t frame)
-{
-    canvas_t fan = canvas_begin_from_dashboard(
-        FAN_X,
-        FAN_Y,
-        FAN_WIDTH,
-        FAN_HEIGHT);
-    const uint8_t angle = (uint8_t)(frame % FAN_FRAME_COUNT);
-    const int32_t cosine = trig_72(COS_36, angle);
-    const int32_t sine = trig_72(SIN_36, angle);
-    const int32_t rotation_radius_squared =
-        FAN_ROTATION_RADIUS_Q8 * FAN_ROTATION_RADIUS_Q8;
-    const int32_t hub_radius_squared =
-        FAN_HUB_RADIUS_Q8 * FAN_HUB_RADIUS_Q8;
-
-    for (uint16_t y = 0; y < FAN_HEIGHT; ++y) {
-        for (uint16_t x = 0; x < FAN_WIDTH; ++x) {
-            const int32_t dx_q8 = (int32_t)x * 256 - FAN_CENTER_X_Q8;
-            const int32_t dy_q8 = (int32_t)y * 256 - FAN_CENTER_Y_Q8;
-            const int32_t distance_squared =
-                dx_q8 * dx_q8 + dy_q8 * dy_q8;
-            const size_t pixel_index = (size_t)y * FAN_WIDTH + x;
-
-            if (distance_squared <= hub_radius_squared) {
-                fan.pixels[pixel_index] =
-                    ((uint16_t)fan_original_rgb565_start[pixel_index * 2U] << 8) |
-                    fan_original_rgb565_start[pixel_index * 2U + 1U];
-                continue;
-            }
-            if (
-                distance_squared > rotation_radius_squared ||
-                x < FAN_EDGE_MARGIN ||
-                x >= FAN_WIDTH - FAN_EDGE_MARGIN ||
-                y < FAN_EDGE_MARGIN ||
-                y >= FAN_HEIGHT - FAN_EDGE_MARGIN) {
-                continue;
-            }
-
-            const int32_t source_x_q8 = FAN_CENTER_X_Q8 +
-                (cosine * dx_q8 + sine * dy_q8) / 1024;
-            const int32_t source_y_q8 = FAN_CENTER_Y_Q8 +
-                (-sine * dx_q8 + cosine * dy_q8) / 1024;
-            const int source_x = source_x_q8 / 256;
-            const int source_y = source_y_q8 / 256;
-            if (
-                source_x < (int)FAN_EDGE_MARGIN ||
-                source_y < (int)FAN_EDGE_MARGIN ||
-                source_x + 1 >= (int)(FAN_WIDTH - FAN_EDGE_MARGIN) ||
-                source_y + 1 >= (int)(FAN_HEIGHT - FAN_EDGE_MARGIN)) {
-                continue;
-            }
-
-            const uint16_t background = fan.pixels[pixel_index];
-            const uint16_t red = clamp_fan_component(
-                ((background >> 11) & 0x1FU) +
-                    sample_fan_delta(source_x_q8, source_y_q8, 0),
-                0x1F);
-            const uint16_t green = clamp_fan_component(
-                ((background >> 5) & 0x3FU) +
-                    sample_fan_delta(source_x_q8, source_y_q8, 1),
-                0x3F);
-            const uint16_t blue = clamp_fan_component(
-                (background & 0x1FU) +
-                    sample_fan_delta(source_x_q8, source_y_q8, 2),
-                0x1F);
-            fan.pixels[pixel_index] =
-                (uint16_t)((red << 11) | (green << 5) | blue);
-        }
-    }
-    return fan;
-}
-
-static void build_fan_frame_cache(void)
-{
-    if (fan_frame_cache == NULL) {
-        return;
-    }
-
-    const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
-    for (uint8_t cache_index = 0;
-         cache_index < FAN_CACHED_FRAME_COUNT;
-         ++cache_index) {
-        const uint8_t frame = (uint8_t)(cache_index * FAN_FRAME_STEP);
-        const canvas_t fan = render_fan_rotor_frame(frame);
-        memcpy(
-            fan_frame_cache + (uint32_t)cache_index * pixel_count,
-            fan.pixels,
-            pixel_count * sizeof(uint16_t));
-    }
-    ESP_LOGI(
-        TAG,
-        "Fan cache ready: %u frames, %u bytes in PSRAM",
-        (unsigned)FAN_CACHED_FRAME_COUNT,
-        (unsigned)(
-            FAN_CACHED_FRAME_COUNT * pixel_count * sizeof(uint16_t)));
-}
-
-static void draw_fan_rotor(bool running, uint8_t frame)
-{
-    if (!running) {
-        lcd_push_rgb565_asset(
-            FAN_X,
-            FAN_Y,
-            FAN_WIDTH,
-            FAN_HEIGHT,
-            fan_original_rgb565_start);
-        if (fan_previous_pixels != NULL) {
-            const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
-            for (uint32_t index = 0; index < pixel_count; ++index) {
-                fan_previous_pixels[index] =
-                    ((uint16_t)fan_original_rgb565_start[index * 2U] << 8) |
-                    fan_original_rgb565_start[index * 2U + 1U];
-            }
-            fan_previous_valid = true;
-        }
-        return;
-    }
-
-    canvas_t fan;
-    if (fan_frame_cache != NULL && (frame % FAN_FRAME_STEP) == 0U) {
-        const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
-        const uint8_t cache_index =
-            (uint8_t)((frame / FAN_FRAME_STEP) % FAN_CACHED_FRAME_COUNT);
-        fan = (canvas_t){
-            .pixels = fan_frame_cache + (uint32_t)cache_index * pixel_count,
-            .width = FAN_WIDTH,
-            .height = FAN_HEIGHT,
+    for (unsigned i = 0; i < FAN_FRAME_COUNT; ++i) {
+        fan_images[i] = (lv_img_dsc_t){
+            .header = {.cf = LV_IMG_CF_TRUE_COLOR, .w = FAN_WIDTH, .h = FAN_HEIGHT},
+            .data_size = FAN_FRAME_BYTES,
+            .data = fan_frames_start + i * FAN_FRAME_BYTES,
         };
-    } else {
-        fan = render_fan_rotor_frame(frame);
     }
-
-    if (fan_previous_pixels != NULL && fan_previous_valid) {
-        lcd_push_changed_rows(
-            FAN_X,
-            FAN_Y,
-            &fan,
-            fan_previous_pixels);
-    } else {
-        lcd_push_canvas(FAN_X, FAN_Y, &fan);
-    }
-
-    if (fan_previous_pixels != NULL) {
-        const uint32_t pixel_count = (uint32_t)FAN_WIDTH * FAN_HEIGHT;
-        for (uint32_t index = 0; index < pixel_count; ++index) {
-            fan_previous_pixels[index] = fan.pixels[index];
-        }
-        fan_previous_valid = true;
-    }
-}
-
-static void draw_blower_status(bool running)
-{
-    lcd_push_rgb565_asset(
-        BLOWER_STATUS_X,
-        BLOWER_STATUS_Y,
-        BLOWER_STATUS_WIDTH,
-        BLOWER_STATUS_HEIGHT,
-        running ? blower_on_rgb565_start : blower_off_rgb565_start);
-}
-
-static void draw_sensor_state(
-    uint8_t sensor_index,
-    bool active,
-    bool valid)
-{
-    static const uint16_t state_y[3] = {52, 123, 194};
-    const uint16_t y = state_y[sensor_index];
-    const size_t patch_size =
-        (size_t)SENSOR_LIGHT_WIDTH * SENSOR_LIGHT_HEIGHT * 2U;
-    const uint8_t *asset = active && valid
-        ? sensor_lights_on_rgb565_start
-        : sensor_lights_off_rgb565_start;
-    lcd_push_rgb565_asset(
-        SENSOR_LIGHT_X,
-        y,
-        SENSOR_LIGHT_WIDTH,
-        SENSOR_LIGHT_HEIGHT,
-        asset + sensor_index * patch_size);
-}
-
-static int menu_glyph_index(char character)
-{
-    if (character >= '0' && character <= '9') {
-        return character - '0';
-    }
-    if (character == 'm') {
-        return 10;
-    }
-    if (character == '-') {
-        return 11;
-    }
-    return -1;
-}
-
-static void canvas_draw_menu_glyph(
-    canvas_t *canvas,
-    int x,
-    char character,
-    uint16_t color)
-{
-    const int glyph_index = menu_glyph_index(character);
-    if (glyph_index < 0) {
-        return;
-    }
-    const uint32_t glyph_x = (uint32_t)glyph_index * DIGIT_CELL_WIDTH;
-    for (uint16_t row = 0; row < DIGIT_HEIGHT; ++row) {
-        for (uint16_t column = 0; column < DIGIT_CELL_WIDTH; ++column) {
-            const uint8_t alpha = menu_digits_alpha8_start[
-                (uint32_t)row * DIGIT_ATLAS_WIDTH + glyph_x + column];
-            if (alpha != 0U) {
-                canvas_blend_pixel(canvas, x + column, row, color, alpha);
-            }
+    static const uint16_t widths[] = {80, 50, 22, 22, 22};
+    static const uint16_t heights[] = {29, 21, 27, 27, 27};
+    size_t offset = 0;
+    for (unsigned i = 0; i < 5; ++i) {
+        for (unsigned on = 0; on < 2; ++on) {
+            const size_t size = (size_t)widths[i] * heights[i] * 2U;
+            state_images[i][on] = (lv_img_dsc_t){
+                .header = {.cf = LV_IMG_CF_TRUE_COLOR, .w = widths[i], .h = heights[i]},
+                .data_size = size,
+                .data = states_start + offset,
+            };
+            offset += size;
         }
     }
 }
 
-static void canvas_draw_menu_text(
-    canvas_t *canvas,
-    int x,
-    const char *text,
-    bool valid)
+static void create_sensor(lv_obj_t *screen, unsigned index)
 {
-    char previous_character = '\0';
-    while (*text != '\0') {
-        if (*text == 'm' && previous_character != 'm') {
-            x += UNIT_GAP;
-        }
-        const uint16_t color =
-            (!valid || *text == 'm') ? COLOR_MENU_MUTED : COLOR_MENU_WHITE;
-        canvas_draw_menu_glyph(canvas, x, *text, color);
-        x += *text == 'm' ? UNIT_ADVANCE : DIGIT_ADVANCE;
-        previous_character = *text;
-        ++text;
+    static const int card_y[] = {49, 116, 185};
+    static const int value_y[] = {81, 149, 218};
+    static const int light_y[] = {57, 124, 193};
+    lv_obj_t *card = card_group(screen, 276, card_y[index], 188, 65);
+    sensors[index].value = label_at(card, 16, value_y[index] - card_y[index], "---",
+                                     &menu_digits_22, COLOR_MUTED);
+    sensors[index].unit = label_at(card, 16, value_y[index] - card_y[index] + 10,
+                                    "mm", &menu_units_12, COLOR_MUTED);
+    lv_obj_add_flag(sensors[index].unit, LV_OBJ_FLAG_HIDDEN);
+    sensors[index].light = image_at(card, 145, light_y[index] - card_y[index],
+                                     &state_images[index + 2][0]);
+}
+
+static void create_dashboard(void)
+{
+    initialize_images();
+    lv_obj_t *screen = lv_scr_act();
+    lv_obj_remove_style_all(screen);
+    lv_obj_set_style_bg_color(screen, lv_color_hex(0x9C7368), 0);
+    lv_obj_set_style_bg_opa(screen, LV_OPA_COVER, 0);
+    lv_obj_clear_flag(screen, LV_OBJ_FLAG_SCROLLABLE);
+    image_at(screen, 0, 0, &background_image);
+
+    lv_obj_t *blower = card_group(screen, 18, 49, 249, 138);
+    fan = image_at(blower, 42, 29, &fan_images[0]);
+    blower_state = image_at(blower, 160, 66, &state_images[0][0]);
+    lv_obj_t *relay = card_group(screen, 18, 192, 249, 60);
+    relay_state = image_at(relay, 174, 18, &state_images[1][0]);
+    for (unsigned i = 0; i < 3; ++i) {
+        create_sensor(screen, i);
     }
 }
 
-static void draw_sensor_value(
-    uint8_t sensor_index,
-    bool active,
-    bool valid,
-    uint32_t distance_mm)
+static void fan_frame(void *image, int32_t frame)
 {
-    (void)active;
-    static const uint16_t value_y[3] = {80, 151, 222};
-    const uint16_t y = value_y[sensor_index];
-    char distance_text[12];
-    if (valid) {
-        snprintf(distance_text, sizeof(distance_text), "%umm", (unsigned)distance_mm);
+    /* Frames retain MENU's photographic blade shading, fixed hub and background.
+     * The read-only flash data is used directly: no PSRAM frame cache is needed. */
+    lv_img_set_src(image, &fan_images[(unsigned)frame % FAN_FRAME_COUNT]);
+}
+
+static void set_running(bool running)
+{
+    lv_anim_del(fan, fan_frame);
+    if (running) {
+        lv_anim_t animation;
+        lv_anim_init(&animation);
+        lv_anim_set_var(&animation, fan);
+        lv_anim_set_exec_cb(&animation, fan_frame);
+        lv_anim_set_values(&animation, 0, FAN_FRAME_COUNT - 1U);
+        lv_anim_set_time(&animation, 1200);
+        lv_anim_set_repeat_count(&animation, LV_ANIM_REPEAT_INFINITE);
+        lv_anim_start(&animation);
     } else {
-        snprintf(distance_text, sizeof(distance_text), "---");
+        lv_img_set_src(fan, &fan_images[0]);
     }
-
-    canvas_t value = canvas_begin_from_dashboard(289, y, 118, 31);
-    canvas_draw_menu_text(&value, 2, distance_text, valid);
-    lcd_push_canvas(289, y, &value);
+    lv_img_set_src(blower_state, &state_images[0][running]);
+    /* This interface has one shared relay/blower state, as in main.c. */
+    lv_img_set_src(relay_state, &state_images[1][running]);
 }
 
-static void draw_relay_status(bool running)
+static void update_sensor(unsigned index, bool active, bool valid, uint32_t distance,
+                          bool previous_active, bool previous_valid, uint32_t previous_distance)
 {
-    lcd_push_rgb565_asset(
-        RELAY_STATUS_X,
-        RELAY_STATUS_Y,
-        RELAY_STATUS_WIDTH,
-        RELAY_STATUS_HEIGHT,
-        running ? relay_on_rgb565_start : relay_off_rgb565_start);
+    if ((active && valid) != (previous_active && previous_valid)) {
+        lv_img_set_src(sensors[index].light, &state_images[index + 2][active && valid]);
+    }
+    if (valid != previous_valid || (valid && distance != previous_distance)) {
+        char text[12];
+        if (!valid) {
+            snprintf(text, sizeof(text), "---");
+        } else if (distance > 9999U) {
+            snprintf(text, sizeof(text), "9999+");
+        } else {
+            snprintf(text, sizeof(text), "%u", (unsigned)distance);
+        }
+        lv_label_set_text(sensors[index].value, text);
+        lv_obj_set_style_text_color(sensors[index].value,
+            lv_color_hex(valid ? COLOR_TEXT : COLOR_MUTED), 0);
+        if (valid) {
+            lv_obj_clear_flag(sensors[index].unit, LV_OBJ_FLAG_HIDDEN);
+            lv_obj_update_layout(sensors[index].value);
+            lv_obj_set_x(sensors[index].unit, 16 + lv_obj_get_width(sensors[index].value) + 2);
+        } else {
+            lv_obj_add_flag(sensors[index].unit, LV_OBJ_FLAG_HIDDEN);
+        }
+    }
 }
 
-static void draw_sensor_dynamic(
-    uint8_t sensor_index,
-    bool active,
-    bool valid,
-    uint32_t distance_mm)
+/* Called only in the display task. No other task may enter LVGL. */
+static void apply_status(const lcd_display_status_t *next, lcd_display_status_t *previous)
 {
-    draw_sensor_state(sensor_index, active, valid);
-    draw_sensor_value(sensor_index, active, valid, distance_mm);
-}
-
-static bool sensor_state_changed(
-    bool previous_active,
-    bool previous_valid,
-    bool next_active,
-    bool next_valid)
-{
-    return previous_active != next_active || previous_valid != next_valid;
-}
-
-static uint32_t distance_difference(uint32_t left, uint32_t right)
-{
-    return left > right ? left - right : right - left;
+    if (next->blower_running != previous->blower_running) {
+        set_running(next->blower_running);
+    }
+    update_sensor(0, next->tof_1_active, next->tof_1_valid, next->tof_1_distance_mm,
+                  previous->tof_1_active, previous->tof_1_valid, previous->tof_1_distance_mm);
+    update_sensor(1, next->tof_2_active, next->tof_2_valid, next->tof_2_distance_mm,
+                  previous->tof_2_active, previous->tof_2_valid, previous->tof_2_distance_mm);
+    update_sensor(2, next->ultrasonic_active, next->ultrasonic_valid, next->ultrasonic_distance_mm,
+                  previous->ultrasonic_active, previous->ultrasonic_valid, previous->ultrasonic_distance_mm);
+    *previous = *next;
 }
 
 static void lcd_display_task(void *argument)
 {
-    (void)argument;
+    QueueHandle_t ready_queue = (QueueHandle_t)argument;
+    const esp_timer_create_args_t timer_args = {
+        .callback = display_tick,
+        .name = "lvgl_tick",
+    };
+    esp_err_t result = esp_timer_create(&timer_args, &tick_timer);
+    if (result == ESP_OK) {
+        result = esp_timer_start_periodic(tick_timer, 1000);
+        if (result != ESP_OK) {
+            esp_timer_delete(tick_timer);
+            tick_timer = NULL;
+        }
+    }
+    if (result != ESP_OK) {
+        xQueueSend(ready_queue, &result, portMAX_DELAY);
+        vTaskDelete(NULL);
+        return;
+    }
+
+    lv_init();
+    lv_log_register_print_cb(display_log);
+    lv_disp_draw_buf_init(&draw_buffer, draw_pixels[0], draw_pixels[1], LCD_WIDTH * draw_rows);
+    lv_disp_drv_init(&display_driver);
+    display_driver.hor_res = LCD_WIDTH;
+    display_driver.ver_res = LCD_HEIGHT;
+    display_driver.draw_buf = &draw_buffer;
+    display_driver.flush_cb = display_flush;
+    display_driver.full_refresh = 0;
+    if (lv_disp_drv_register(&display_driver) == NULL) {
+        esp_timer_stop(tick_timer);
+        esp_timer_delete(tick_timer);
+        tick_timer = NULL;
+        result = ESP_ERR_NO_MEM;
+        xQueueSend(ready_queue, &result, portMAX_DELAY);
+        vTaskDelete(NULL);
+        return;
+    }
+
     lcd_gpio_init();
     lcd_hardware_reset();
     lcd_init_ili9486();
-    draw_static_screen();
+    create_dashboard();
+    /* Finish the initial picture before enabling the panel, as in the old driver. */
+    lv_refr_now(NULL);
+    lcd_enable_display();
+    ESP_LOGI(TAG, "ILI9486 dashboard ready: 480x320, rotated 180 degrees; LVGL %d.%d.%d; core %d",
+             LVGL_VERSION_MAJOR, LVGL_VERSION_MINOR, LVGL_VERSION_PATCH, xPortGetCoreID());
+    ESP_LOGI(TAG, "LVGL draw buffers: 2 x %u bytes, %u rows, internal DRAM; free internal: %u; PSRAM: %u",
+             (unsigned)(LCD_WIDTH * draw_rows * sizeof(lv_color_t)), (unsigned)draw_rows,
+             (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT),
+             (unsigned)heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
+    xQueueSend(ready_queue, &result, portMAX_DELAY);
 
     lcd_display_status_t displayed = {0};
-    lcd_display_status_t latest = {0};
-    build_fan_frame_cache();
-    draw_fan_rotor(false, 0);
-    draw_blower_status(false);
-    draw_sensor_dynamic(0, false, false, 0);
-    draw_sensor_dynamic(1, false, false, 0);
-    draw_sensor_dynamic(2, false, false, 0);
-    draw_relay_status(false);
-    lcd_enable_display();
-
-    TickType_t last_card_refresh = xTaskGetTickCount();
-    TickType_t last_fan_frame = last_card_refresh;
-    uint8_t fan_frame = 0;
-    ESP_LOGI(TAG, "ILI9486 dashboard ready: 480x320, rotated 180 degrees");
-
+    int64_t last_diagnostics = esp_timer_get_time();
     while (true) {
-        lcd_display_status_t incoming = {0};
-        if (xQueueReceive(
-                status_queue,
-                &incoming,
-                pdMS_TO_TICKS(DISPLAY_POLL_MS)) == pdTRUE) {
-            latest = incoming;
-            while (xQueueReceive(status_queue, &incoming, 0) == pdTRUE) {
-                latest = incoming;
-            }
+        lcd_display_status_t incoming;
+        if (xQueueReceive(status_queue, &incoming, pdMS_TO_TICKS(DISPLAY_POLL_MS)) == pdTRUE) {
+            apply_status(&incoming, &displayed);
         }
-
-        const TickType_t now = xTaskGetTickCount();
-        const bool blower_changed = displayed.blower_running != latest.blower_running;
-        const bool tof_1_state_changed = sensor_state_changed(
-            displayed.tof_1_active,
-            displayed.tof_1_valid,
-            latest.tof_1_active,
-            latest.tof_1_valid);
-        const bool tof_2_state_changed = sensor_state_changed(
-            displayed.tof_2_active,
-            displayed.tof_2_valid,
-            latest.tof_2_active,
-            latest.tof_2_valid);
-        const bool ultrasonic_state_changed = sensor_state_changed(
-            displayed.ultrasonic_active,
-            displayed.ultrasonic_valid,
-            latest.ultrasonic_active,
-            latest.ultrasonic_valid);
-
-        if (blower_changed) {
-            draw_blower_status(latest.blower_running);
-            fan_frame = 0;
-            draw_fan_rotor(latest.blower_running, fan_frame);
-            draw_relay_status(latest.blower_running);
-            displayed.blower_running = latest.blower_running;
-            last_fan_frame = now;
-        }
-
-        if (tof_1_state_changed) {
-            draw_sensor_dynamic(
-                0,
-                latest.tof_1_active,
-                latest.tof_1_valid,
-                latest.tof_1_distance_mm);
-            displayed.tof_1_active = latest.tof_1_active;
-            displayed.tof_1_valid = latest.tof_1_valid;
-            displayed.tof_1_distance_mm = latest.tof_1_distance_mm;
-        }
-        if (tof_2_state_changed) {
-            draw_sensor_dynamic(
-                1,
-                latest.tof_2_active,
-                latest.tof_2_valid,
-                latest.tof_2_distance_mm);
-            displayed.tof_2_active = latest.tof_2_active;
-            displayed.tof_2_valid = latest.tof_2_valid;
-            displayed.tof_2_distance_mm = latest.tof_2_distance_mm;
-        }
-        if (ultrasonic_state_changed) {
-            draw_sensor_dynamic(
-                2,
-                latest.ultrasonic_active,
-                latest.ultrasonic_valid,
-                latest.ultrasonic_distance_mm);
-            displayed.ultrasonic_active = latest.ultrasonic_active;
-            displayed.ultrasonic_valid = latest.ultrasonic_valid;
-            displayed.ultrasonic_distance_mm = latest.ultrasonic_distance_mm;
-        }
-
-        if (now - last_card_refresh >= pdMS_TO_TICKS(CARD_REFRESH_MS)) {
-            if (!tof_1_state_changed && latest.tof_1_valid &&
-                distance_difference(
-                    displayed.tof_1_distance_mm,
-                    latest.tof_1_distance_mm) >= 2U) {
-                draw_sensor_value(
-                    0,
-                    latest.tof_1_active,
-                    true,
-                    latest.tof_1_distance_mm);
-                displayed.tof_1_distance_mm = latest.tof_1_distance_mm;
-            }
-            if (!tof_2_state_changed && latest.tof_2_valid &&
-                distance_difference(
-                    displayed.tof_2_distance_mm,
-                    latest.tof_2_distance_mm) >= 2U) {
-                draw_sensor_value(
-                    1,
-                    latest.tof_2_active,
-                    true,
-                    latest.tof_2_distance_mm);
-                displayed.tof_2_distance_mm = latest.tof_2_distance_mm;
-            }
-            if (!ultrasonic_state_changed && latest.ultrasonic_valid &&
-                distance_difference(
-                    displayed.ultrasonic_distance_mm,
-                    latest.ultrasonic_distance_mm) >= 2U) {
-                draw_sensor_value(
-                    2,
-                    latest.ultrasonic_active,
-                    true,
-                    latest.ultrasonic_distance_mm);
-                displayed.ultrasonic_distance_mm = latest.ultrasonic_distance_mm;
-            }
-            last_card_refresh = now;
-        }
-
-        if (latest.blower_running &&
-            now - last_fan_frame >= pdMS_TO_TICKS(FAN_FRAME_MS)) {
-            fan_frame = (uint8_t)(
-                (fan_frame + FAN_FRAME_STEP) % FAN_FRAME_COUNT);
-            draw_fan_rotor(true, fan_frame);
-            last_fan_frame = now;
+        lv_timer_handler();
+        const int64_t now = esp_timer_get_time();
+        if (now - last_diagnostics >= 60000000LL) {
+            ESP_LOGI(TAG, "LVGL heap: internal free=%u min=%u; PSRAM free=%u; stack unused=%u bytes",
+                     (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT),
+                     (unsigned)heap_caps_get_minimum_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT),
+                     (unsigned)heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT),
+                     (unsigned)uxTaskGetStackHighWaterMark(NULL));
+            last_diagnostics = now;
         }
     }
 }
 
+static void release_draw_buffers(void)
+{
+    for (unsigned i = 0; i < 2; ++i) {
+        heap_caps_free(draw_pixels[i]);
+        draw_pixels[i] = NULL;
+    }
+}
+
+static esp_err_t allocate_draw_buffers(void)
+{
+    const uint32_t caps = MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT;
+    for (uint16_t rows = DRAW_BUFFER_MAX_ROWS; rows >= DRAW_BUFFER_MIN_ROWS; rows -= 8U) {
+        const size_t bytes = LCD_WIDTH * rows * sizeof(lv_color_t);
+        if (heap_caps_get_free_size(caps) < 2U * bytes + INTERNAL_RESERVE_BYTES) {
+            continue;
+        }
+        draw_pixels[0] = heap_caps_malloc(bytes, caps);
+        draw_pixels[1] = heap_caps_malloc(bytes, caps);
+        if (draw_pixels[0] != NULL && draw_pixels[1] != NULL) {
+            draw_rows = rows;
+            return ESP_OK;
+        }
+        release_draw_buffers();
+    }
+    return ESP_ERR_NO_MEM;
+}
+
 esp_err_t lcd_display_start(void)
 {
-    sprite_pixels = heap_caps_malloc(
-        SPRITE_CAPACITY * sizeof(uint16_t),
-        MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
-    if (sprite_pixels == NULL) {
-        return ESP_ERR_NO_MEM;
+    if (status_queue != NULL) {
+        return ESP_ERR_INVALID_STATE;
     }
-
-    fan_previous_pixels = heap_caps_malloc(
-        (uint32_t)FAN_WIDTH * FAN_HEIGHT * sizeof(uint16_t),
-        MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
-    if (fan_previous_pixels == NULL) {
-        ESP_LOGW(
-            TAG,
-            "Fan differential buffer unavailable; using full fan updates");
+    esp_err_t result = allocate_draw_buffers();
+    if (result != ESP_OK) {
+        return result;
     }
-
-    fan_frame_cache = heap_caps_malloc(
-        (uint32_t)FAN_CACHED_FRAME_COUNT * FAN_WIDTH * FAN_HEIGHT *
-            sizeof(uint16_t),
-        MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
-    if (fan_frame_cache == NULL) {
-        ESP_LOGW(
-            TAG,
-            "Fan PSRAM cache unavailable; using runtime rotation");
-    }
-    ESP_LOGI(
-        TAG,
-        "Display buffer: %u bytes in internal RAM; free internal RAM: %u bytes; free PSRAM: %u bytes",
-        (unsigned)(SPRITE_CAPACITY * sizeof(uint16_t)),
-        (unsigned)heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT),
-        (unsigned)heap_caps_get_free_size(MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT));
-
     status_queue = xQueueCreate(1, sizeof(lcd_display_status_t));
-    if (status_queue == NULL) {
-        heap_caps_free(sprite_pixels);
-        sprite_pixels = NULL;
-        heap_caps_free(fan_previous_pixels);
-        fan_previous_pixels = NULL;
-        heap_caps_free(fan_frame_cache);
-        fan_frame_cache = NULL;
-        return ESP_ERR_NO_MEM;
+    QueueHandle_t ready_queue = xQueueCreate(1, sizeof(esp_err_t));
+    if (status_queue == NULL || ready_queue == NULL) {
+        result = ESP_ERR_NO_MEM;
+    } else if (xTaskCreatePinnedToCore(lcd_display_task, "lcd_lvgl", DISPLAY_STACK_BYTES,
+                                     ready_queue, 1, NULL, 1) != pdPASS) {
+        result = ESP_ERR_NO_MEM;
+    } else {
+        /* Report display/timer startup failures through the existing interface. */
+        xQueueReceive(ready_queue, &result, portMAX_DELAY);
     }
-
-    if (xTaskCreatePinnedToCore(
-            lcd_display_task,
-            "lcd_display",
-            6144,
-            NULL,
-            1,
-            NULL,
-            1) != pdPASS) {
-        vQueueDelete(status_queue);
-        status_queue = NULL;
-        heap_caps_free(sprite_pixels);
-        sprite_pixels = NULL;
-        heap_caps_free(fan_previous_pixels);
-        fan_previous_pixels = NULL;
-        heap_caps_free(fan_frame_cache);
-        fan_frame_cache = NULL;
-        return ESP_ERR_NO_MEM;
+    if (ready_queue != NULL) {
+        vQueueDelete(ready_queue);
     }
-    return ESP_OK;
+    if (result != ESP_OK) {
+        if (status_queue != NULL) {
+            vQueueDelete(status_queue);
+            status_queue = NULL;
+        }
+        release_draw_buffers();
+    }
+    return result;
 }
 
 void lcd_display_update(const lcd_display_status_t *status)
