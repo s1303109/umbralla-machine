@@ -313,6 +313,26 @@ ENABLE_TESTING:BOOL=
 //No help, variable specified on the command line.
 ESP_PLATFORM:UNINITIALIZED=1
 
+//Directory under which to collect all populated content
+FETCHCONTENT_BASE_DIR:PATH=/workspace/esp32s3_vl53l0x_servo/build/_deps
+
+//Disables all attempts to download or update content and assumes
+// source dirs already exist
+FETCHCONTENT_FULLY_DISCONNECTED:BOOL=OFF
+
+//Enables QUIET option for all content population
+FETCHCONTENT_QUIET:BOOL=ON
+
+//When not empty, overrides where to find pre-populated content
+// for lvgl
+FETCHCONTENT_SOURCE_DIR_LVGL:PATH=
+
+//Enables UPDATE_DISCONNECTED behavior for all content population
+FETCHCONTENT_UPDATES_DISCONNECTED:BOOL=OFF
+
+//Enables UPDATE_DISCONNECTED behavior just for population of lvgl
+FETCHCONTENT_UPDATES_DISCONNECTED_LVGL:BOOL=OFF
+
 //Generate the auto-generated files as needed
 GEN_FILES:BOOL=
 
@@ -548,7 +568,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=48
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=52
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

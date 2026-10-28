@@ -23,6 +23,8 @@ static const char *TAG = "TOF_BLOWER_LCD";
 #define HC_SR04_TRIG_PIN GPIO_NUM_5
 #define HC_SR04_ECHO_PIN GPIO_NUM_6
 #define RELAY_PIN GPIO_NUM_7
+// HIGH drives the external NPN interface; K2 itself is configured for LOW trigger.
+#define MOTOR_RELAY_PIN GPIO_NUM_2
 #define TOF_I2C_ADDRESS 0x29U
 
 #define RELAY_ON_LEVEL 1
@@ -61,14 +63,27 @@ static sensor_reading_t ultrasonic_reading = {
 
 static esp_err_t relay_set_enabled(bool enabled)
 {
-    const esp_err_t result = gpio_set_level(
+    esp_err_t result = gpio_set_level(
         RELAY_PIN, enabled ? RELAY_ON_LEVEL : RELAY_OFF_LEVEL);
-    if (result == ESP_OK && relay_enabled != enabled) {
+    if (result == ESP_OK) {
+        result = gpio_set_level(
+            MOTOR_RELAY_PIN, enabled ? RELAY_ON_LEVEL : RELAY_OFF_LEVEL);
+    }
+    if (result != ESP_OK) {
+        // Best effort: release both loads if either output cannot be written.
+        gpio_set_level(RELAY_PIN, RELAY_OFF_LEVEL);
+        gpio_set_level(MOTOR_RELAY_PIN, RELAY_OFF_LEVEL);
+        relay_enabled = false;
+        return result;
+    }
+    if (relay_enabled != enabled) {
         relay_enabled = enabled;
         ESP_LOGI(
             TAG,
             "Blower relay %s",
             enabled ? "ON (COM-NO closed)" : "OFF (COM-NO open)");
+        ESP_LOGI(TAG, "24V motor relay %s (GPIO%d via NPN, K2 LOW trigger)",
+                 enabled ? "ON" : "OFF", (int)MOTOR_RELAY_PIN);
     }
     return result;
 }
@@ -79,8 +94,12 @@ static esp_err_t relay_init(void)
         gpio_set_level(RELAY_PIN, RELAY_OFF_LEVEL),
         TAG,
         "Failed to preset relay OFF");
+    ESP_RETURN_ON_ERROR(
+        gpio_set_level(MOTOR_RELAY_PIN, RELAY_OFF_LEVEL),
+        TAG,
+        "Failed to preset motor relay OFF");
     const gpio_config_t relay_config = {
-        .pin_bit_mask = 1ULL << RELAY_PIN,
+        .pin_bit_mask = (1ULL << RELAY_PIN) | (1ULL << MOTOR_RELAY_PIN),
         .mode = GPIO_MODE_OUTPUT,
         .pull_up_en = GPIO_PULLUP_DISABLE,
         .pull_down_en = GPIO_PULLDOWN_ENABLE,
@@ -349,6 +368,8 @@ void app_main(void)
 {
     ESP_ERROR_CHECK(relay_init());
     ESP_LOGI(TAG, "Relay ready: GPIO7, high-level trigger, initial state OFF");
+    ESP_LOGI(TAG, "Motor relay ready: GPIO%d, active-high NPN drive, K2 LOW trigger, initial state OFF",
+             (int)MOTOR_RELAY_PIN);
 
     ESP_ERROR_CHECK(lcd_display_start());
     publish_display_status();

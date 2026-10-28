@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/CMakeFiles/lvgl-populate"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/CMakeFiles/lvgl-populate.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/CMakeFiles/lvgl-populate-complete.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-build.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-configure.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-download.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-install.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-mkdir.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-patch.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-test.rule"
+		},
+		{
+			"file" : "/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/lvgl-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"lvgl-populate"
+		],
+		"name" : "lvgl-populate"
+	}
+}

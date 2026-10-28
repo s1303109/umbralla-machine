@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=/opt/esp/tools/cmake/3.30.2/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/download-lvgl-populate.cmake;COMMAND;/opt/esp/tools/cmake/3.30.2/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/verify-lvgl-populate.cmake;COMMAND;/opt/esp/tools/cmake/3.30.2/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl-subbuild/lvgl-populate-prefix/src/lvgl-populate-stamp/extract-lvgl-populate.cmake
+source_dir=/workspace/esp32s3_vl53l0x_servo/build/_deps/lvgl
+work_dir=/workspace/esp32s3_vl53l0x_servo/build/_deps
+url(s)=https://codeload.github.com/lvgl/lvgl/tar.gz/refs/tags/v8.4.0
+hash=SHA256=3b454d602e1667b9bd2c434f5e8156753d92cf3e71fc40a0cb0d99fca9a605be
+      no_extract=
+
