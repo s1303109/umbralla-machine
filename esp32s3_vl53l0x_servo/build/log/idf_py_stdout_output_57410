@@ -1,0 +1,805 @@
+Command: /opt/esp/python_env/idf5.5_py3.12_env/bin/python /opt/esp/idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 /workspace/esp32s3_vl53l0x_servo/build/esp32s3_vl53l0x_servo.elf /workspace/esp32s3_vl53l0x_servo/build/bootloader/bootloader.elf -m '/opt/esp/python_env/idf5.5_py3.12_env/bin/python' '/opt/esp/idf/tools/idf.py' '-p' '/dev/ttyACM0'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x28 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x158c
+load:0x403c8700,len:0xd24
+load:0x403cb700,len:0x2f34
+entry 0x403c8924
+[0;32mI (24) boot: ESP-IDF v5.5.1 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Oct 28 2026 15:12:50[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (25) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.3[0m
+[0;32mI (31) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (35) boot.esp32s3: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32s3: SPI Flash Size : 16MB[0m
+[0;32mI (43) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (50) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00800000[0m
+[0;32mI (76) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3c040020 size=135ccch (1268940) map[0m
+[0;32mI (310) esp_image: segment 1: paddr=00145cf4 vaddr=3fc94000 size=030d4h ( 12500) load[0m
+[0;32mI (313) esp_image: segment 2: paddr=00148dd0 vaddr=40374000 size=07248h ( 29256) load[0m
+[0;32mI (320) esp_image: segment 3: paddr=00150020 vaddr=42000020 size=37e40h (228928) map[0m
+[0;32mI (362) esp_image: segment 4: paddr=00187e68 vaddr=4037b248 size=08d30h ( 36144) load[0m
+[0;32mI (370) esp_image: segment 5: paddr=00190ba0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (377) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (377) boot: Disabling RNG early entropy source...[0m
+[0;32mI (388) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (388) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (388) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (390) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (395) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (399) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (403) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (408) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (413) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (417) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (422) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (427) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (431) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (435) esp_psram: Speed: 80MHz[0m
+[0;32mI (438) cpu_start: Multicore app[0m
+[0;32mI (873) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (882) cpu_start: Pro cpu start user code[0m
+[0;32mI (882) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (882) app_init: Application information:[0m
+[0;32mI (882) app_init: Project name:     esp32s3_vl53l0x_servo[0m
+[0;32mI (887) app_init: App version:      0a69e40-dirty[0m
+[0;32mI (892) app_init: Compile time:     Oct 29 2026 11:50:06[0m
+[0;32mI (897) app_init: ELF file SHA256:  32d99776f...[0m
+[0;32mI (901) app_init: ESP-IDF:          v5.5.1[0m
+[0;32mI (905) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (909) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (913) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (917) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (923) heap_init: At 3FC980A0 len 00051670 (325 KiB): RAM[0m
+[0;32mI (928) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (933) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[0;32mI (938) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (944) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (951) spi_flash: detected chip: generic[0m
+[0;32mI (954) spi_flash: flash io: dio[0m
+[0;32mI (957) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (963) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (970) main_task: Started on CPU0[0m
+[0;32mI (980) main_task: Calling app_main()[0m
+[0;32mI (980) TOF_BLOWER_LCD: Relay ready: GPIO7, high-level trigger, initial state OFF[0m
+[0;32mI (980) TOF_BLOWER_LCD: Motor relay ready: GPIO2, active-high NPN drive, K2 LOW trigger, initial state OFF[0m
+[0;32mI (990) TOF_BLOWER_LCD: Servo signal ready: GPIO1, 50 Hz, signal LOW until sensors enable K2; identification test only[0m
+[0;32mI (1780) LCD_DISPLAY: ILI9486 dashboard ready: 480x320, rotated 180 degrees; LVGL 8.4.0; core 1[0m
+[0;32mI (1780) LCD_DISPLAY: LVGL draw buffers: 2 x 38400 bytes, 40 rows, internal DRAM; free internal: 285796; PSRAM: 8386308[0m
+[0;32mI (1790) TOF_BLOWER_LCD: HC-SR04 ready: TRIG GPIO5, ECHO GPIO6[0m
+[0;32mI (1810) TOF_BLOWER_LCD: TOF 1 detected at I2C address 0x29[0m
+[0;32mI (1920) TOF_BLOWER_LCD: TOF 2 detected at I2C address 0x29[0m
+[0;32mI (2320) TOF_BLOWER_LCD: TOF thresholds: both less than 101 mm[0m
+[0;32mI (2320) TOF_BLOWER_LCD: HC-SR04 threshold: less than 65 mm[0m
+[0;32mI (2320) TOF_BLOWER_LCD: Start requires all three sensors for 3 consecutive cycles[0m
+[0;32mI (2320) TOF_BLOWER_LCD: Stop is immediate when any sensor clears or becomes invalid[0m
+[0;33mW (2350) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2400) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (2470) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2510) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (2580) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2620) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (2690) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2730) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (2800) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2840) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (2910) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (2950) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3020) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3060) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3130) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3170) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3240) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3280) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=61 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3350) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3390) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3460) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3500) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3570) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3610) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3680) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3720) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3790) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3830) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (3900) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (3940) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4010) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4050) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4120) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4160) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4230) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4270) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4340) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4380) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4450) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4490) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4560) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4600) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4670) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4710) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4780) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4820) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (4890) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (4930) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5000) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5040) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5110) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5150) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5220) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5260) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5330) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5370) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5440) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5480) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5550) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5590) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5660) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5700) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5770) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5810) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5880) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (5920) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (5990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6030) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6100) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6140) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6210) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6250) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=61 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6320) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6360) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6470) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6540) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6580) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6650) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6690) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6760) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6800) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6870) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (6910) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (6980) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7020) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7090) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7130) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7200) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7240) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7310) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7350) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7420) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7460) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7530) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7570) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7640) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7680) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7750) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7790) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7860) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (7900) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (7970) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8010) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=47 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8080) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8120) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8190) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8230) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8300) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8340) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8410) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8450) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8520) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8560) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8630) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8670) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8740) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8780) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8850) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (8890) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (8960) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9000) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9070) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9110) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9180) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9220) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=60 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9290) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9330) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9400) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9440) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9510) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9550) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9620) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9660) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9730) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9770) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9840) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9880) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (9950) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (9990) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10060) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10100) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10170) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10210) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10280) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10320) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10390) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10430) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10500) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10540) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10610) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10650) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10720) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10760) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10830) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10870) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (10940) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (10980) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11050) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11090) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11160) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11200) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11270) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11310) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11380) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11420) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11490) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11530) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11600) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11640) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11710) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11750) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11820) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11860) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (11930) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (11970) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12040) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12080) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12150) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12190) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12260) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12300) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12370) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12410) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12480) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12520) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12590) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12630) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12700) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12740) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12810) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12850) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=47 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (12920) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (12960) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13030) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13070) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13140) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13180) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (13250) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13290) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (13360) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13400) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13470) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13510) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13580) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13620) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13690) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13730) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13800) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13840) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (13910) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (13950) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14020) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14060) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14130) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14170) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14240) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14280) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14350) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14390) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14460) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14500) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14570) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14610) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14680) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14720) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14790) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14830) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (14900) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (14940) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (15010) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15050) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15120) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15160) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15230) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15270) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15340) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15380) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15450) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15490) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15560) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15600) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15670) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15710) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (15780) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15820) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (15890) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (15930) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (16000) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16040) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16110) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16150) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16220) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16260) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16330) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16370) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16440) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16480) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16550) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16590) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16660) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16700) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16770) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16810) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16880) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (16920) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (16990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17030) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (17100) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17140) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (17210) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17250) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (17320) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17360) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (17430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17470) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (17540) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17580) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (17650) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17690) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (17760) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17800) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (17870) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (17910) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (17980) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18020) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (18090) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18130) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (18200) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18240) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (18310) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18350) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (18420) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18460) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (18530) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18570) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (18640) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18680) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (18750) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18790) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (18860) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (18900) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (18970) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19010) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19080) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19120) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19190) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19230) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19300) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19340) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19410) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19450) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19520) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19560) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19630) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19670) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19740) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19780) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (19850) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (19890) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (19960) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20000) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20070) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20110) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (20180) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20220) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20290) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20330) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20400) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20440) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (20510) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20550) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20620) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20660) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20730) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20770) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (20840) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20880) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=62 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (20950) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (20990) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21060) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21100) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21170) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21210) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21280) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21320) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21390) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21430) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (21500) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21540) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21610) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21650) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21720) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21760) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (21830) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21870) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (21940) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (21980) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22050) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22090) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22160) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22200) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22270) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22310) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22380) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22420) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22490) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22530) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (22600) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22640) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=646 mm | Relay=OFF[0m
+[0;33mW (22710) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22750) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22820) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22860) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (22930) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (22970) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23040) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23080) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23150) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23190) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23260) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23300) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23370) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23410) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23480) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23520) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23590) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23630) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23700) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23740) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23810) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23850) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (23920) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (23960) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24030) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24070) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24140) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24180) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24250) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24290) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24360) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24400) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24470) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24510) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24590) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24640) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24710) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24750) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24820) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24860) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (24930) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (24970) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25040) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25080) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25150) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25190) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25260) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25300) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25370) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25410) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25480) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25520) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25590) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25630) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25700) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25740) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25810) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25850) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (25920) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (25960) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26030) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26070) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26140) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26180) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26250) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26290) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26360) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26400) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26470) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26510) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26580) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26620) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26690) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26730) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26800) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26840) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (26910) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (26950) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27020) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27060) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27130) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27170) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27240) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27280) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27350) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27390) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27460) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27500) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27570) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27610) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27680) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27720) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27790) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27830) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (27900) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (27940) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28010) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28050) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28120) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28160) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28230) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28270) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28340) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28380) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28450) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28490) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28560) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28600) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28670) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28710) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28780) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28820) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (28890) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (28930) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29000) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29040) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29110) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29150) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29220) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29260) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29330) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29370) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29440) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29480) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29550) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29590) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29660) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29700) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29770) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29810) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29880) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (29920) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (29990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30030) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30100) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30140) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30210) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30250) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30320) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30360) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30470) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30540) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30580) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30650) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30690) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30760) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30800) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30870) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (30910) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (30990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31040) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=60 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31110) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31150) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31220) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31260) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31330) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31370) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31440) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31480) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31550) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31590) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31660) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31700) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31770) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31810) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31880) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (31920) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (31990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32030) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32100) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32140) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32210) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32250) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32320) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32360) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32470) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32540) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32580) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32650) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32690) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32760) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32800) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32870) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (32910) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (32980) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33020) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33090) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33130) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33200) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33240) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=62 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33310) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33350) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33480) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33550) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33590) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33660) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33700) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33770) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33810) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33880) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (33920) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=60 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (33990) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34030) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34100) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34140) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34210) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34250) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34320) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34360) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=48 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34430) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34470) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34540) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34580) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34650) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34690) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34760) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34800) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34870) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (34910) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (34980) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35020) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35090) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35130) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35200) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35240) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35310) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35350) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35420) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35460) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35530) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35570) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35640) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35680) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35750) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35790) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35860) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (35900) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (35970) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36010) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36080) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36120) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36190) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36230) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36300) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36340) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36410) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36450) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36520) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36560) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36630) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36670) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36740) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36780) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36850) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (36890) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (36960) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37000) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37070) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37110) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37180) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37220) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37290) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37330) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37400) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37440) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37510) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37550) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37620) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37660) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37730) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37770) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37840) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37880) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (37950) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (37990) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38060) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38100) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38170) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38210) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=643 mm | Relay=OFF[0m
+[0;33mW (38280) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38320) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38390) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38430) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38500) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38540) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38610) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38650) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38720) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38760) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38830) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38870) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=59 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (38940) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (38980) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39050) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39090) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39160) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39200) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39270) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39310) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39380) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39420) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=49 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39490) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39530) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39600) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39640) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39710) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39750) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39820) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39860) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (39930) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (39970) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=58 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40040) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40080) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40150) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40190) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40260) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40300) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=51 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40370) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40410) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40480) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40520) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=54 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40590) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40630) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40700) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40740) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40810) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40850) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (40920) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (40960) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41030) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41070) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=53 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41140) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41180) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=638 mm | Relay=OFF[0m
+[0;33mW (41250) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41290) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41360) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41400) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=56 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41470) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41510) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=57 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41580) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41620) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=50 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41690) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41730) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41800) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41840) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=52 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (41910) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m
+[0;32mI (41950) TOF_BLOWER_LCD: TOF1=INVALID/0 mm TOF2=55 mm HC=642 mm | Relay=OFF[0m
+[0;33mW (42020) TOF_BLOWER_LCD: TOF 1 invalid: error=ESP_OK status=4[0m

@@ -3,6 +3,7 @@
 
 #include "driver/gpio.h"
 #include "driver/i2c_master.h"
+#include "driver/ledc.h"
 #include "esp_check.h"
 #include "esp_err.h"
 #include "esp_log.h"
@@ -25,6 +26,7 @@ static const char *TAG = "TOF_BLOWER_LCD";
 #define RELAY_PIN GPIO_NUM_7
 // HIGH drives the external NPN interface; K2 itself is configured for LOW trigger.
 #define MOTOR_RELAY_PIN GPIO_NUM_2
+#define SERVO_SIGNAL_PIN GPIO_NUM_1
 #define TOF_I2C_ADDRESS 0x29U
 
 #define RELAY_ON_LEVEL 1
@@ -36,6 +38,24 @@ static const char *TAG = "TOF_BLOWER_LCD";
 #define REQUIRED_START_CYCLES 3U
 #define MEASUREMENT_INTERVAL_MS 50U
 #define HC_SR04_ECHO_TIMEOUT_US 30000LL
+
+// Identification test only: these pulses do not specify an RPM or an angle.
+#define SERVO_PWM_FREQUENCY_HZ 50U
+#define SERVO_PWM_PERIOD_US 20000U
+#define SERVO_PWM_RESOLUTION_BITS 14U
+#define SERVO_NEUTRAL_PULSE_US 1500U
+#define SERVO_TEST_PULSE_US 1600U
+#define SERVO_POWER_SETTLE_US 100000LL
+#define SERVO_NEUTRAL_HOLD_US 500000LL
+
+_Static_assert(SERVO_SIGNAL_PIN != MOTOR_RELAY_PIN &&
+               SERVO_SIGNAL_PIN != RELAY_PIN,
+               "Servo signal and relay GPIOs must be different");
+_Static_assert(SERVO_NEUTRAL_PULSE_US >= 1000U &&
+               SERVO_NEUTRAL_PULSE_US <= 2000U &&
+               SERVO_TEST_PULSE_US >= 1000U &&
+               SERVO_TEST_PULSE_US <= 2000U,
+               "Keep identification pulses within the initial test range");
 
 typedef struct {
     const char *name;
@@ -61,20 +81,131 @@ static sensor_reading_t ultrasonic_reading = {
     .threshold_mm = HC_SR04_TRIGGER_DISTANCE_MM,
 };
 
+typedef enum {
+    SERVO_TEST_OFF,
+    SERVO_TEST_POWER_WAIT,
+    SERVO_TEST_NEUTRAL,
+    SERVO_TEST_RUNNING,
+} servo_test_phase_t;
+
+static bool servo_pwm_ready;
+static servo_test_phase_t servo_test_phase;
+static int64_t servo_phase_deadline_us;
+
+static esp_err_t servo_signal_off(void)
+{
+    servo_test_phase = SERVO_TEST_OFF;
+    if (!servo_pwm_ready) {
+        return ESP_OK;
+    }
+    // No pulses into the unpowered servo; K2 opens its V+ supply separately.
+    return ledc_stop(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 0);
+}
+
+static esp_err_t servo_write_pulse_us(uint32_t pulse_us)
+{
+    if (pulse_us < 1000U || pulse_us > 2000U) {
+        return ESP_ERR_INVALID_ARG;
+    }
+    const uint32_t duty =
+        (pulse_us * (1UL << SERVO_PWM_RESOLUTION_BITS) +
+         SERVO_PWM_PERIOD_US / 2U) / SERVO_PWM_PERIOD_US;
+    ESP_RETURN_ON_ERROR(
+        ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, duty),
+        TAG, "Failed to set servo pulse");
+    return ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0);
+}
+
+static esp_err_t servo_signal_init(void)
+{
+    ESP_RETURN_ON_ERROR(gpio_set_level(SERVO_SIGNAL_PIN, 0),
+                        TAG, "Failed to preset servo signal LOW");
+    const gpio_config_t signal_config = {
+        .pin_bit_mask = 1ULL << SERVO_SIGNAL_PIN,
+        .mode = GPIO_MODE_OUTPUT,
+        .pull_up_en = GPIO_PULLUP_DISABLE,
+        .pull_down_en = GPIO_PULLDOWN_ENABLE,
+        .intr_type = GPIO_INTR_DISABLE,
+    };
+    ESP_RETURN_ON_ERROR(gpio_config(&signal_config),
+                        TAG, "Failed to configure servo GPIO");
+    const ledc_timer_config_t timer_config = {
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .duty_resolution = LEDC_TIMER_14_BIT,
+        .timer_num = LEDC_TIMER_0,
+        .freq_hz = SERVO_PWM_FREQUENCY_HZ,
+        .clk_cfg = LEDC_AUTO_CLK,
+    };
+    ESP_RETURN_ON_ERROR(ledc_timer_config(&timer_config),
+                        TAG, "Failed to configure servo timer");
+    const ledc_channel_config_t channel_config = {
+        .gpio_num = SERVO_SIGNAL_PIN,
+        .speed_mode = LEDC_LOW_SPEED_MODE,
+        .channel = LEDC_CHANNEL_0,
+        .intr_type = LEDC_INTR_DISABLE,
+        .timer_sel = LEDC_TIMER_0,
+        .duty = 0,
+        .hpoint = 0,
+    };
+    ESP_RETURN_ON_ERROR(ledc_channel_config(&channel_config),
+                        TAG, "Failed to configure servo channel");
+    servo_pwm_ready = true;
+    return servo_signal_off();
+}
+
+static void servo_schedule_start(void)
+{
+    if (servo_pwm_ready && servo_test_phase == SERVO_TEST_OFF) {
+        // Nonblocking: sensor checks continue while the relay/supply settles.
+        servo_test_phase = SERVO_TEST_POWER_WAIT;
+        servo_phase_deadline_us = esp_timer_get_time() + SERVO_POWER_SETTLE_US;
+    }
+}
+
+static esp_err_t servo_service(void)
+{
+    const int64_t now_us = esp_timer_get_time();
+    if (servo_test_phase == SERVO_TEST_POWER_WAIT &&
+        now_us >= servo_phase_deadline_us) {
+        ESP_RETURN_ON_ERROR(servo_write_pulse_us(SERVO_NEUTRAL_PULSE_US),
+                            TAG, "Failed to send initial servo pulse");
+        servo_test_phase = SERVO_TEST_NEUTRAL;
+        servo_phase_deadline_us = now_us + SERVO_NEUTRAL_HOLD_US;
+        ESP_LOGI(TAG, "Servo test: GPIO%d, %u us initial pulse; a positional servo may move",
+                 (int)SERVO_SIGNAL_PIN, (unsigned)SERVO_NEUTRAL_PULSE_US);
+    } else if (servo_test_phase == SERVO_TEST_NEUTRAL &&
+               now_us >= servo_phase_deadline_us) {
+        ESP_RETURN_ON_ERROR(servo_write_pulse_us(SERVO_TEST_PULSE_US),
+                            TAG, "Failed to send servo identification pulse");
+        servo_test_phase = SERVO_TEST_RUNNING;
+        ESP_LOGI(TAG, "Servo test: holding %u us; observe position versus continuous rotation; RPM uncalibrated",
+                 (unsigned)SERVO_TEST_PULSE_US);
+    }
+    return ESP_OK;
+}
+
 static esp_err_t relay_set_enabled(bool enabled)
 {
-    esp_err_t result = gpio_set_level(
-        RELAY_PIN, enabled ? RELAY_ON_LEVEL : RELAY_OFF_LEVEL);
+    // Stop the control signal before removing servo power.
+    esp_err_t result = enabled ? ESP_OK : servo_signal_off();
+    if (result == ESP_OK) {
+        result = gpio_set_level(
+            RELAY_PIN, enabled ? RELAY_ON_LEVEL : RELAY_OFF_LEVEL);
+    }
     if (result == ESP_OK) {
         result = gpio_set_level(
             MOTOR_RELAY_PIN, enabled ? RELAY_ON_LEVEL : RELAY_OFF_LEVEL);
     }
     if (result != ESP_OK) {
         // Best effort: release both loads if either output cannot be written.
+        servo_signal_off();
         gpio_set_level(RELAY_PIN, RELAY_OFF_LEVEL);
         gpio_set_level(MOTOR_RELAY_PIN, RELAY_OFF_LEVEL);
         relay_enabled = false;
         return result;
+    }
+    if (enabled) {
+        servo_schedule_start();
     }
     if (relay_enabled != enabled) {
         relay_enabled = enabled;
@@ -82,7 +213,7 @@ static esp_err_t relay_set_enabled(bool enabled)
             TAG,
             "Blower relay %s",
             enabled ? "ON (COM-NO closed)" : "OFF (COM-NO open)");
-        ESP_LOGI(TAG, "24V motor relay %s (GPIO%d via NPN, K2 LOW trigger)",
+        ESP_LOGI(TAG, "Auxiliary power relay %s (GPIO%d via NPN, K2 LOW trigger)",
                  enabled ? "ON" : "OFF", (int)MOTOR_RELAY_PIN);
     }
     return result;
@@ -350,6 +481,10 @@ static void evaluate_all_sensors(void)
         stop_blower_immediately("not all three sensors are below threshold");
     }
 
+    if (servo_service() != ESP_OK) {
+        stop_blower_immediately("servo PWM error");
+    }
+
     ESP_LOGI(
         TAG,
         "TOF1=%s%u mm TOF2=%s%u mm HC=%s%u mm | Relay=%s",
@@ -370,6 +505,9 @@ void app_main(void)
     ESP_LOGI(TAG, "Relay ready: GPIO7, high-level trigger, initial state OFF");
     ESP_LOGI(TAG, "Motor relay ready: GPIO%d, active-high NPN drive, K2 LOW trigger, initial state OFF",
              (int)MOTOR_RELAY_PIN);
+    ESP_ERROR_CHECK(servo_signal_init());
+    ESP_LOGI(TAG, "Servo signal ready: GPIO%d, %u Hz, signal LOW until sensors enable K2; identification test only",
+             (int)SERVO_SIGNAL_PIN, (unsigned)SERVO_PWM_FREQUENCY_HZ);
 
     ESP_ERROR_CHECK(lcd_display_start());
     publish_display_status();
