@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "library_name": "My_Electronics_Library",
+  "target_kicad_major": 8,
+  "interaction": {
+    "one_question_at_a_time": true,
+    "use_popup_questions": true,
+    "final_packaging_authorized": true,
+    "prefer_existing_model_and_photo_evidence": true,
+    "collection_closed": true
+  },
+  "current_component_id": "USER-SENSOR-001A",
+  "last_completed_component_id": "USER-PWR-001",
+  "confirmed_components": [
+    {
+      "id": "USER-ESP32-001",
+      "manufacturer": "VCC-GND Studio",
+      "model": "YD-ESP32-S3",
+      "hardware_version": "Type-A V1.5",
+      "form_factor": "Development board",
+      "usb": "Dual USB Type-C",
+      "module_mpn": "ESP32-S3-WROOM-1-N16R8",
+      "mounting": "Two rows of pin headers / sockets on carrier PCB",
+      "photo_source": "/workspace/esp32.jpg",
+      "purchase_url": null,
+      "status": "Partially Verified",
+      "confirmed_by": [
+        "使用者確認完整開發板與 USB-C",
+        "照片辨識 YD-ESP32-S3 Type-A V1.5 與 VCC-GND Studio",
+        "使用者確認兩排排針／排母插在 PCB 上",
+        "使用者實測確認兩排排針中心距 25.40 mm",
+        "使用者同意先收錄 Symbol/Footprint，3D 缺少與 V1.5、排母尺寸待核對"
+      ],
+      "pending": [
+        "原廠 V1.4 與實物 V1.5 的逐腳對應",
+        "排母型號、孔徑、高度與 USB 插頭空間",
+        "完整開發板 3D 模型缺少，使用者接受",
+        "最終載板的額外 RF 淨空驗證"
+      ],
+      "measured_row_spacing_mm": 25.4,
+      "symbol": "ESP32_Custom:YD-ESP32-S3_Type-A_V1.5_N16R8",
+      "footprint": "ESP32_Custom:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm",
+      "full_board_3d": "Missing; user accepts initial entry without 3D"
+    }
+  ],
+  "upstream": {
+    "repository": "https://github.com/espressif/kicad-libraries",
+    "release": "3.0.2",
+    "commit": "4f6c7a65f161b0df77955b49a1398f77dfdb255e",
+    "metadata_min_kicad": "8.0.0",
+    "archive_sha256": "2df44ed8a41246c5de9f40803a9329a22a7bd465c8a222dea8f36bffcbb79b6b"
+  },
+  "completion_scope": "ESP32 與 LM2596 初版已收錄；其他模組外接介面已建立，尚未完成全部實物規格驗收。",
+  "next_action": "依安裝教學註冊；仍待確認的硬體資料保持原狀態，不因打包而宣稱 Verified。",
+  "pending_question": "是否結束零件收集，將目前初版及待確認報告一併打包？",
+  "confirmed_mounting": {
+    "ESP32": "Two 1x22 sockets on carrier PCB",
+    "Other existing modules": "Retain modules and connect by wires; user confirmed",
+    "Discrete parts": "Physical package/lead pitch still require verification"
+  },
+  "tof_photo": "/workspace/TOF.jpg",
+  "library_stage": "Initial library built and KiCad 8 automated validation passed; awaiting collection completion confirmation",
+  "external_interfaces": [
+    {
+      "id": "USER-PWR-001",
+      "symbol": "Power_Custom:LM2596_Module_External",
+      "status": "Partially Verified",
+      "mounting": "Wired external module; user confirmed"
+    },
+    {
+      "id": "USER-PWR-002",
+      "symbol": "Power_Custom:D-50B_External",
+      "status": "Partially Verified",
+      "mounting": "Chassis-mounted external supply"
+    },
+    {
+      "id": "USER-RELAY-002",
+      "symbol": "Relay_Custom:HW-307_5V_External",
+      "status": "Partially Verified",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-SENSOR-001A",
+      "symbol": "Sensors_Custom:VL53L0X_Module_I2C_4Wire_Interface",
+      "status": "Pending",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-SENSOR-001B",
+      "symbol": "Sensors_Custom:VL53L0_1X_V2_6Wire_Interface",
+      "status": "Partially Verified",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-SENSOR-002",
+      "symbol": "Sensors_Custom:HC-SR04_4Wire_Interface",
+      "status": "Pending",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-DISPLAY-001",
+      "symbol": "Display_Custom:TFT_3p5_Shield_Wire_Interface",
+      "status": "Pending",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-RELAY-001",
+      "symbol": "Relay_Custom:SLA05_Relay_Module_Wire_Interface",
+      "status": "Pending",
+      "mounting": "External module connected by wires; user confirmed"
+    },
+    {
+      "id": "USER-SERVO-001",
+      "symbol": "Other_Custom:RC_Servo_3Wire_Interface",
+      "status": "Pending",
+      "mounting": "External module connected by wires; user confirmed"
+    }
+  ],
+  "unresolved_summary": [
+    "上方 ToF 小板側邊兩焊盤功能；下方板實際 L0X/L1X 與 VIN 額定",
+    "載板連接器料號、腳距與額定",
+    "S9014 C331 實物廠牌及腳序、離散件封裝",
+    "伺服實際完整型號、額定及連續旋轉能力",
+    "全部型號各變體之電氣、機構與 3D 人工核對"
+  ],
+  "validation_summary": {
+    "kicad_cli": "8.0.9",
+    "active_symbols": 52,
+    "footprints": 54,
+    "model_files": 33,
+    "inventory_records": 71,
+    "automated_errors": 0,
+    "fixture_erc_errors": 0,
+    "fixture_erc_warnings": 0,
+    "manual_review_items_remain": true
+  },
+  "packaging_validation_utc": "2026-10-29T14:22:45.229553+00:00"
+}

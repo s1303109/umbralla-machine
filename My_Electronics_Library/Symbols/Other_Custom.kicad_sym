@@ -1,0 +1,194 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "kicad_symbol_editor")
+  (symbol "RC_Servo_3Wire_Interface"
+    (property "ki_keywords" "Other external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (external device); carrier connector footprint Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "Datasheets/USER_PARTS_EVIDENCE.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "Unidentified three-wire RC servo"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "Generic external servo wire interface only; exact servo model and continuous rotation capability unknown"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "RC_Servo_3Wire_Interface"
+      (at 0 15.239999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "RC_Servo_3Wire_Interface_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "WIRE INTERFACE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size .762 .762)
+          )
+        )
+      )
+    )
+    (symbol "RC_Servo_3Wire_Interface_1_1"
+      (pin power_in line
+        (at -22.86 7.619999999999999 0)
+        (length 5.08)
+        (name "V+"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "V+"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.539999999999999 0)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "GND"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at 22.86 7.619999999999999 180)
+        (length 5.08)
+        (name "SIG"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "SIG"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+)

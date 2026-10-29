@@ -1,0 +1,664 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "kicad_symbol_editor")
+  (symbol "VL53L0X_Module_I2C_4Wire_Interface"
+    (property "ki_keywords" "Sensors external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (external device); carrier connector footprint Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "Datasheets/USER_PARTS_EVIDENCE.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "VL53L0X small purple module (photo upper)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "Four-wire I2C interface observed on upper module; extra side pads not represented until verified"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.st.com/resource/en/datasheet/vl53l0x.pdf"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "VL53L0X_Module_I2C_4Wire_Interface"
+      (at 0 15.239999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "VL53L0X_Module_I2C_4Wire_Interface_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "WIRE INTERFACE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size .762 .762)
+          )
+        )
+      )
+    )
+    (symbol "VL53L0X_Module_I2C_4Wire_Interface_1_1"
+      (pin power_in line
+        (at -22.86 7.619999999999999 0)
+        (length 5.08)
+        (name "VIN"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "VIN"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.539999999999999 0)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "GND"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -22.86 -2.540000000000001 0)
+        (length 5.08)
+        (name "SCL"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "SCL"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 22.86 7.619999999999999 180)
+        (length 5.08)
+        (name "SDA"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "SDA"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+  (symbol "VL53L0_1X_V2_6Wire_Interface"
+    (property "ki_keywords" "Sensors external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (external device); carrier connector footprint Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Partially Verified"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "Datasheets/USER_PARTS_EVIDENCE.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "VL53L0/1X V2, V438 marking (photo lower)"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "Six labeled wire terminals on shared VL53L0/1X V2 breakout; exact sensor and VIN rating pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.st.com/resource/en/datasheet/vl53l0x.pdf"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "VL53L0_1X_V2_6Wire_Interface"
+      (at 0 15.239999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "VL53L0_1X_V2_6Wire_Interface_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "WIRE INTERFACE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size .762 .762)
+          )
+        )
+      )
+    )
+    (symbol "VL53L0_1X_V2_6Wire_Interface_1_1"
+      (pin power_in line
+        (at -22.86 7.619999999999999 0)
+        (length 5.08)
+        (name "VIN"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "VIN"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.539999999999999 0)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "GND"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -22.86 -2.540000000000001 0)
+        (length 5.08)
+        (name "SCL"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "SCL"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin bidirectional line
+        (at 22.86 7.619999999999999 180)
+        (length 5.08)
+        (name "SDA"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "SDA"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin open_collector line
+        (at 22.86 2.539999999999999 180)
+        (length 5.08)
+        (name "GPIO1"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "GPIO1"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -22.86 -7.620000000000001 0)
+        (length 5.08)
+        (name "XSHUT"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "XSHUT"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+  (symbol "HC-SR04_4Wire_Interface"
+    (property "ki_keywords" "Sensors external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (external device); carrier connector footprint Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "Datasheets/USER_PARTS_EVIDENCE.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "HC-SR04 module"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "External ultrasonic module, four logical wire terminals"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "HC-SR04_4Wire_Interface"
+      (at 0 15.239999999999998 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "HC-SR04_4Wire_Interface_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "WIRE INTERFACE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size .762 .762)
+          )
+        )
+      )
+    )
+    (symbol "HC-SR04_4Wire_Interface_1_1"
+      (pin power_in line
+        (at -22.86 7.619999999999999 0)
+        (length 5.08)
+        (name "VCC"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "VCC"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.539999999999999 0)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "GND"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -22.86 -2.540000000000001 0)
+        (length 5.08)
+        (name "TRIG"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "TRIG"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin output line
+        (at 22.86 7.619999999999999 180)
+        (length 5.08)
+        (name "ECHO"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "ECHO"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+)

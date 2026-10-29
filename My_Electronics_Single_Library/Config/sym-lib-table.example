@@ -1,0 +1,3 @@
+(sym_lib_table
+ (lib (name "My_Electronics_All")(type "KiCad")(uri "${MY_KICAD_LIB_DIR}/My_Electronics_All.kicad_sym")(options "")(descr "Single merged personal symbol library, KiCad 8"))
+)

@@ -1,0 +1,38 @@
+[
+  {
+    "footprint": "QFN-32-1EP_4x4mm_P0.4mm_EP2.9x2.9mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-32-1EP_4x4mm_P0.4mm_EP2.9x2.9mm.wrl"
+  },
+  {
+    "footprint": "QFN-24-1EP_4x4mm_P0.5mm_EP2.8x2.8mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-24-1EP_4x4mm_P0.5mm_EP2.8x2.8mm.wrl"
+  },
+  {
+    "footprint": "QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm.wrl"
+  },
+  {
+    "footprint": "QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm.wrl"
+  },
+  {
+    "footprint": "QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm.wrl"
+  },
+  {
+    "footprint": "QFN-40-1EP_5x5mm_P0.4mm_EP3.6x3.6mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-40-1EP_5x5mm_P0.4mm_EP3.6x3.6mm.wrl"
+  },
+  {
+    "footprint": "QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm.wrl"
+  },
+  {
+    "footprint": "QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm.wrl"
+  },
+  {
+    "footprint": "QFN-56-1EP_7x7mm_P0.4mm_EP5.6x5.6mm",
+    "original_reference": "${KICAD8_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/QFN-56-1EP_7x7mm_P0.4mm_EP5.6x5.6mm.wrl"
+  }
+]

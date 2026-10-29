@@ -1,0 +1,474 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "kicad_symbol_editor")
+  (symbol "LM2596_Module_External"
+    (property "ki_keywords" "Power external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (module itself); carrier connector MPN/footprint Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Partially Verified"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "TI PDF covers IC only; module ports from existing wiring record and user confirmation."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "../esp32s3_vl53l0x_servo/WIRING_6V_MOTOR.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "LM2596 adjustable buck module"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "Complete adjustable buck module; wired external device, not bare LM2596 IC"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.ti.com/lit/ds/symlink/lm2596.pdf"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "LM2596_Module_External"
+      (at 0 15.24 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "LM2596_Module_External_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "EXTERNAL DEVICE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1 1)
+          )
+        )
+      )
+    )
+    (symbol "LM2596_Module_External_1_1"
+      (pin power_in line
+        (at -22.86 7.62 0)
+        (length 5.08)
+        (name "IN+"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "IN+"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.54 0)
+        (length 5.08)
+        (name "IN-"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "IN-"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_out line
+        (at 22.86 7.62 180)
+        (length 5.08)
+        (name "OUT+"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "OUT+"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at 22.86 2.54 180)
+        (length 5.08)
+        (name "OUT-"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "OUT-"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+  (symbol "D-50B_External"
+    (property "ki_keywords" "Power external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Not Applicable (chassis device); carrier connectors Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Partially Verified"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "Manufacturer D-50-SPEC, 2011-06-17, terminal assignment; physical nameplate checked."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "https://www.meanwell.com/Upload/PDF/D-50/D-50-SPEC.PDF"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "D-50B"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "MEAN WELL"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "Chassis dual-output supply, +5V 6A and +24V 1A; external terminal representation"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://www.meanwell.com/Upload/PDF/D-50/D-50-SPEC.PDF"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "D-50B_External"
+      (at 0 15.24 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "D-50B_External_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "EXTERNAL DEVICE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1 1)
+          )
+        )
+      )
+    )
+    (symbol "D-50B_External_1_1"
+      (pin power_in line
+        (at -22.86 7.62 0)
+        (length 5.08)
+        (name "AC/L"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "1"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.54 0)
+        (length 5.08)
+        (name "AC/N"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "2"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin passive line
+        (at -22.86 -2.54 0)
+        (length 5.08)
+        (name "FG/PE"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "3"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_out line
+        (at 22.86 7.62 180)
+        (length 5.08)
+        (name "+24V/V2"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "4"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at 22.86 2.54 180)
+        (length 5.08)
+        (name "COM"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "5"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at 22.86 -2.54 180)
+        (length 5.08)
+        (name "COM"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "6"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_out line
+        (at 22.86 -7.62 180)
+        (length 5.08)
+        (name "+5V/V1"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "7"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+)

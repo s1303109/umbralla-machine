@@ -1,0 +1,105 @@
+{
+  "ESP32-C3-MINI-1": {
+    "49": 9
+  },
+  "ESP32-C3-MINI-1U": {
+    "49": 9
+  },
+  "ESP32-C3-MINI-1_HandSoldering": {
+    "49": 9
+  },
+  "ESP32-C3-WROOM-02": {
+    "19": 9
+  },
+  "ESP32-C3-WROOM-02U": {
+    "19": 9
+  },
+  "ESP32-C6-MINI-1": {
+    "49": 9
+  },
+  "ESP32-C6-MINI-1U": {
+    "49": 9
+  },
+  "ESP32-C6-WROOM-1": {
+    "29": 9
+  },
+  "ESP32-C6-WROOM-1U": {
+    "29": 9
+  },
+  "ESP32-H2-MINI-1": {
+    "49": 9
+  },
+  "ESP32-MINI-1": {
+    "55": 9
+  },
+  "ESP32-MINI-1U": {
+    "55": 9
+  },
+  "ESP32-P4": {
+    "105": 9
+  },
+  "ESP32-PICO-MINI-02": {
+    "49": 9
+  },
+  "ESP32-PICO-MINI-02U": {
+    "49": 9
+  },
+  "ESP32-PICO-MINI-02_HandSoldering": {
+    "49": 9
+  },
+  "ESP32-S2-MINI-1": {
+    "61": 9
+  },
+  "ESP32-S2-MINI-1U": {
+    "61": 9
+  },
+  "ESP32-S2-MINI-1_HandSoldering": {
+    "61": 9
+  },
+  "ESP32-S2-SOLO-2U": {
+    "41": 9
+  },
+  "ESP32-S2-SOLO": {
+    "41": 9
+  },
+  "ESP32-S2-WROOM": {
+    "43": 9
+  },
+  "ESP32-S2-WROVER": {
+    "43": 13
+  },
+  "ESP32-S3-MINI-1": {
+    "61": 9
+  },
+  "ESP32-S3-MINI-1U": {
+    "61": 9
+  },
+  "ESP32-S3-WROOM-1": {
+    "41": 11
+  },
+  "ESP32-S3-WROOM-1U": {
+    "41": 9
+  },
+  "ESP32-S3-WROOM-2": {
+    "41": 11
+  },
+  "ESP32-WROOM-32E": {
+    "39": 12
+  },
+  "ESP32-WROOM-32UE": {
+    "39": 9
+  },
+  "ESP32-WROOM-DA": {
+    "41": 9
+  },
+  "ESP32-WROVER-E": {
+    "39": 9
+  },
+  "ESP32-WROVER-E_ThermalVias": {
+    "39": 21
+  },
+  "ESP8685-WROOM-06": {
+    "20": 2,
+    "22": 9
+  }
+}

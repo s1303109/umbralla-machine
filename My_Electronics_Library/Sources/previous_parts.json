@@ -1,0 +1,179 @@
+[
+  {
+    "id": "USER-SENSOR-001",
+    "category": "Sensors",
+    "model": "VL53L0X breakout modules ×2",
+    "scope": "Superseded aggregate record: photo now shows two different module boards; see USER-SENSOR-001A/001B",
+    "source": "Existing WIRING_110V_BLOWER.md; project main/main.c",
+    "pending": "Historical aggregate only; do not count as two extra physical sensors",
+    "status": "Not Applicable"
+  },
+  {
+    "id": "USER-SENSOR-002",
+    "category": "Sensors",
+    "model": "HC-SR04 module",
+    "scope": "Current; functional VCC/TRIG/ECHO/GND recorded",
+    "source": "Existing WIRING_110V_BLOWER.md",
+    "pending": "Exact board variant and carrier mounting/header geometry"
+  },
+  {
+    "id": "USER-DISPLAY-001",
+    "category": "Display",
+    "model": "3.5 inch TFT LCD Shield / ILI9486L",
+    "scope": "Current; shield photo has 74HC245 and AMS1117; do not use bare controller footprint",
+    "source": "/workspace/pin of lcd.jpg",
+    "pending": "Shield revision, complete header numbering/geometry and mounting"
+  },
+  {
+    "id": "USER-RELAY-001",
+    "category": "Relay",
+    "model": "SLA-05VDC-SL-C based relay module",
+    "scope": "Current K1; complete module, not bare Songle relay",
+    "source": "/workspace/relay.png; WIRING_110V_BLOWER.md",
+    "pending": "Module board revision/mounting; contact terminal names via photo before footprint"
+  },
+  {
+    "id": "USER-TRANSISTOR-001",
+    "category": "Other",
+    "model": "S9014 C331",
+    "scope": "User part; manufacturer and lead orientation unknown; C331 alone is insufficient",
+    "source": "https://rees52.com/products/s9014-c-331-bipolar-transistor-rs1517",
+    "pending": "Actual manufacturer/TO-92 pinout; do not silently substitute onsemi SS9014"
+  },
+  {
+    "id": "REF-TRANSISTOR-002",
+    "category": "Other",
+    "model": "onsemi 2N3904",
+    "scope": "Previously proposed alternative, ownership not confirmed",
+    "source": "https://www.onsemi.com/download/data-sheet/pdf/2n3904-d.pdf",
+    "pending": "Whether actually used; lead style/footprint"
+  },
+  {
+    "id": "REF-DIODE-001",
+    "category": "Other",
+    "model": "Vishay 1N5408-E3/54",
+    "scope": "Previously selected motor diode candidate; removed in servo wiring",
+    "source": "https://www.vishay.com/docs/88516/1n5400.pdf",
+    "pending": "Historical/candidate only; actual purchased part not confirmed"
+  },
+  {
+    "id": "REF-DIODE-002",
+    "category": "Other",
+    "model": "ST 1N5822",
+    "scope": "Discussed alternative; not confirmed installed",
+    "source": "https://www.st.com/resource/en/datasheet/1n5822.pdf",
+    "pending": "Historical/candidate only"
+  },
+  {
+    "id": "REF-DIODE-003",
+    "category": "Other",
+    "model": "1N5288",
+    "scope": "User asked about it; current-regulator diode, not motor flyback diode",
+    "source": "WIRING_6V_MOTOR.md",
+    "pending": "Inquiry only; not confirmed actual component"
+  },
+  {
+    "id": "REF-MOTOR-001",
+    "category": "Other",
+    "model": "JGB37-520 6V 200RPM",
+    "scope": "Previous geared motor, user intends replacement by servo",
+    "source": "User conversation; WIRING_6V_MOTOR.md",
+    "pending": "Manufacturer, exact variant and final inventory inclusion"
+  },
+  {
+    "id": "USER-SERVO-001",
+    "category": "Other",
+    "model": "Unidentified three-wire servo (YF-6125MG-like)",
+    "scope": "Exact model and continuous-rotation capability unresolved; hand rotation is insufficient",
+    "source": "WIRING_SERVO_TEST.md; user conversation",
+    "pending": "Actual servo label/version; DS3225MG/YF-6125MG links are not confirmed substitutes"
+  },
+  {
+    "id": "USER-LOAD-001",
+    "category": "Other",
+    "model": "150FLJ7-1W2 110V blower",
+    "scope": "External equipment; photo/nameplate recorded 110V 330W 60Hz",
+    "source": "WIRING_110V_BLOWER.md; /workspace/wind.png",
+    "pending": "Actual L/N/PE wire identity; no fabricated solder footprint"
+  },
+  {
+    "id": "REF-PWR-003",
+    "category": "Power",
+    "model": "S-50-5 5V 10A",
+    "scope": "Earlier supply; later D-50B confirmed; retain as historical record",
+    "source": "WIRING_110V_BLOWER.md",
+    "pending": "Do not confuse terminal order with D-50B"
+  },
+  {
+    "id": "USER-PASSIVE-001",
+    "category": "Other",
+    "model": "Resistors 1.5k / 47k / 4.7k / 10k / 20k ohm, 0.25W",
+    "scope": "Values documented; manufacturer/body/lead pitch not confirmed",
+    "source": "WIRING_SERVO_TEST.md; WIRING_110V_BLOWER.md",
+    "pending": "Exact mounting package before PCB footprint"
+  },
+  {
+    "id": "USER-PASSIVE-002",
+    "category": "Other",
+    "model": "470uF 10V / 100nF capacitors",
+    "scope": "Documented design values, not confirmed purchased MPNs",
+    "source": "WIRING_110V_BLOWER.md",
+    "pending": "Case dimensions/polarity/lead pitch; final rail voltage rating"
+  },
+  {
+    "id": "USER-CONN-001",
+    "category": "Power",
+    "model": "Carrier connectors for LM2596 IN/OUT wires",
+    "scope": "Required by user confirmed wired mounting",
+    "source": "User confirmation 2026-10-29",
+    "pending": "Connector MPN, pitch, wire size/current before footprint"
+  },
+  {
+    "id": "USER-PROTECTION-001",
+    "category": "Power",
+    "model": "V150LA20AP 150VAC MOV",
+    "scope": "Original diagram selection, installation not confirmed",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Actual MPN/package and installation"
+  },
+  {
+    "id": "USER-PROTECTION-002",
+    "category": "Power",
+    "model": "T5A 250V time-lag fuse / F1",
+    "scope": "Original diagram configuration",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Exact fuse/fuseholder MPN and actual installation"
+  },
+  {
+    "id": "USER-PROTECTION-003",
+    "category": "Power",
+    "model": "2A fuse / F2",
+    "scope": "Original low-voltage branch diagram",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Voltage rating, speed, fuseholder and MPN"
+  },
+  {
+    "id": "USER-PROTECTION-004",
+    "category": "Power",
+    "model": "DC >=32V fuses F3/F4/F5, amperes TBD",
+    "scope": "Current servo wiring diagram provision",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Current ratings and protection coordination; physical holders"
+  },
+  {
+    "id": "USER-PROTECTION-005",
+    "category": "Power",
+    "model": "RCD <=30mA",
+    "scope": "Original diagram provision",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Exact device MPN and installation"
+  },
+  {
+    "id": "USER-SWITCH-001",
+    "category": "Power",
+    "model": "Double-pole main switch",
+    "scope": "Original diagram provision",
+    "source": "WIRING_110V_BLOWER.md; WIRING_SERVO_TEST.md",
+    "pending": "Actual part, ratings and wiring identity"
+  }
+]

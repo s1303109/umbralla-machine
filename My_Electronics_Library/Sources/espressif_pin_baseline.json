@@ -1,0 +1,8751 @@
+{
+  "ESP32": [
+    {
+      "number": "1",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "VDET_1/GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "11",
+      "name": "VDET_2/GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "12",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO25/ADC2_CH8/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO26/ADC2_CH9/DAC_2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO27/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "LNA_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO2/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO4/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "VDD_SDIO",
+      "type": "power_out"
+    },
+    {
+      "number": "27",
+      "name": "GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SD_DATA_2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SD_DATA_3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "SD_CMD/GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "SD_CLK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "SD_DATA_0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "SD_DATA_1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "38",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "45",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "46",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "CAP2",
+      "type": "input"
+    },
+    {
+      "number": "48",
+      "name": "CAP1",
+      "type": "input"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "SENSOR_CAPP/GPIO37/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "SENSOR_CAPN/GPIO38/ADC1_CH2",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "CHIP_PU",
+      "type": "input"
+    }
+  ],
+  "ESP32-C3": [
+    {
+      "number": "1",
+      "name": "LNA_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO5/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "18",
+      "name": "VDD_SPI/GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "SPIHD/GPIO12",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "SPIWP/GPIO13",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "SPICS0/GPIO14",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "SPICLK/GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "SPID/GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "SPIQ/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO18/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO19/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "U0RXD/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "U0TXD/GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "30",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "31",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "33",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "XTAL_32K_P/ADC1_CH0",
+      "type": "output"
+    },
+    {
+      "number": "5",
+      "name": "XTAL_32K_N/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "32",
+      "name": "VDDA",
+      "type": "passive"
+    }
+  ],
+  "ESP32-C3-DevKitC-02": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "11",
+      "name": "GPIO8/RGB_LED",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "14",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "16",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "17",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "18",
+      "name": "GPIO19/USBD_+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO18/USBD_-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "21",
+      "name": "GPIO21/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO20/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "24",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "26",
+      "name": "GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "RST",
+      "type": "output"
+    },
+    {
+      "number": "5",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "6",
+      "name": "GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C3-DevKitM-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "13",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "14",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "16",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "17",
+      "name": "GPIO19/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO18/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "25",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "28",
+      "name": "GPIO20/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO21/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "7",
+      "name": "RST",
+      "type": "output"
+    },
+    {
+      "number": "8",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "9",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C3-MINI-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "11",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "12",
+      "name": "GPIO0/ADC1_CH0/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO1/ADC1_CH1/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "15",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "18",
+      "name": "GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO5/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "25",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "26",
+      "name": "GPIO18/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO19/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "29",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GPIO20/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO21/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "33",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "34",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "35",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "36",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "37",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "6",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "8",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "NC",
+      "type": "no_connect"
+    }
+  ],
+  "ESP32-C3-WROOM-02": [
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO20/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO21/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO18/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO19/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO1/ADC1_CH1/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO0/ADC1_CH0/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "3",
+      "name": "GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO5/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GND",
+      "type": "passive"
+    }
+  ],
+  "ESP32-C5-DevKitC-1": [
+    {
+      "number": "14",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "EN/RESET",
+      "type": "input"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO25",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "16",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "18",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "19",
+      "name": "GPIO13/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO14/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GPIO28",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "24",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO24",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO2/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO12/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO11/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "GPIO3/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO4/MTCK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO5/MTDO",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO27",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6": [
+    {
+      "number": "1",
+      "name": "ANT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "MTMS/GPIO4/FSPIHD/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "MTDI/GPIO5/FSPIWP/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO6/FSPICLK/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO7/FSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "VDDA3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "SPICS0/GPIO24",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "SPIQ/GPIO25",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "SPIWP/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "VDD_SPI/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "SPIHD/GPIO28",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "SPICLK/GPIO29",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "SPID/GPIO30",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "VDDPST2",
+      "type": "power_in"
+    },
+    {
+      "number": "29",
+      "name": "U0TXD/GPIO16/FSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "VDDA3P3",
+      "type": "passive"
+    },
+    {
+      "number": "30",
+      "name": "U0RXD/GPIO17/FSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO18/SDIO_CMD/FSPICS2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO19/SDIO_CLK/FSPICS3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO20/SDIO_DATA0/FSPICS4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO21/SDIO_DATA1/FSPICS5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO22/SDIO_DATA2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO23/SDIO_DATA3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "VDDA1",
+      "type": "power_in"
+    },
+    {
+      "number": "38",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "39",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "4",
+      "name": "CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "40",
+      "name": "VDDA2",
+      "type": "power_in"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "5",
+      "name": "VDDPST1",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "GPIO0/XTAL_32K_P/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO1/XTAL_32K_N/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO2/FSPIQ/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6-DevKitC-1": [
+    {
+      "number": "14",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "EN/RESET",
+      "type": "input"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "16",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "18",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "19",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GPIO9/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO15/JTAG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO4/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO17/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO16/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "GPIO5/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO8/BOOT",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6-DevKitM-1": [
+    {
+      "number": "14",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "EN/RESET",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO14",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "16",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "17",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO9/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO15/JTAG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO17/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO16/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO4/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO5/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO8/BOOT",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6-MINI-1/U": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO5/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "12",
+      "name": "GPIO0/ADC1_CH0/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO1/ADC1_CH1/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "15",
+      "name": "MTCK/GPIO6/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "MTDO/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO14",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "22",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "U0RXD/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "U0TXD/GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "33",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "34",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "35",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "36",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "37",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "6",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "8",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6-WROOM-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "23",
+      "name": "GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "U0RXD/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "U0TXD/GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "29",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "3",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "4",
+      "name": "MTMS/GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "MTDI/GPIO5/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "MTCK/GPIO6/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "MTDO/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO0/ADC1_CH0/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO1/ADC1_CH1/XTAL_32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-C6FH4": [
+    {
+      "number": "1",
+      "name": "ANT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "MTMS/GPIO4/FSPIHD/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "MTDI/GPIO5/FSPIWP/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO6/FSPICLK/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO7/FSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO12/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO13/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO14",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "VDDA3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "VDDPST2",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "U0TXD/GPIO16/FSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "U0RXD/GPIO17/FSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO18/SDIO_CMD/FSPICS2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO19/SDIO_CLK/FSPICS3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO20/SDIO_DATA0/FSPICS4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO21/SDIO_DATA1/FSPICS5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO22/SDIO_DATA2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO23/SDIO_DATA3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "VDDA1",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "VDDA3P3",
+      "type": "passive"
+    },
+    {
+      "number": "30",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "31",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "32",
+      "name": "VDDA2",
+      "type": "power_in"
+    },
+    {
+      "number": "33",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "VDDPST1",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "GPIO0/XTAL_32K_P/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO1/XTAL_32K_N/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO2/FSPIQ/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-DevKitC": [
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "19",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "DAC_2/ADC2_CH9/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "ADC2_CH7/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "SD_DATA2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "SD_DATA3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "CMD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "20",
+      "name": "SD_CLK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "SD_DATA0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "SD_DATA1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "ADC2_CH2/GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "ADC2_CH0/GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "33",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "VDET_1/GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "VDET_2/GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "DAC_1/ADC2_CH8/GPIO25",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-DevKitM-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "DAC_1/GPIO2_CH8/GPIO25",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "DAC_2/ADC2_CH9/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "4",
+      "name": "GPIO37/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "GPIO38/ADC1_CH2",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "RST",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "14",
+      "name": "ADC2_CH7/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "18",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "ADC2_CH2/GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "ADC2_CH0/GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "SD_DATA2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "SD_DATA3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "U0TX/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "U0RX/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GND",
+      "type": "passive"
+    }
+  ],
+  "ESP32-H2": [
+    {
+      "number": "1",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO10/ZCD0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO11/ZCD1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO12",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO13/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO14/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "18",
+      "name": "VBAT",
+      "type": "power_in"
+    },
+    {
+      "number": "19",
+      "name": "VDDA_PMU",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "VDDPST2",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "U0RXD/GPIO23/FSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "U0TXD/GPIO24/FSPICS2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO25/FSPICS3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "USB_D-/GPIO26/FSPICS4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "USB_D+/GPIO27/FSPICS5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "28",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "29",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "3",
+      "name": "GPIO0/FSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "31",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "32",
+      "name": "ANT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "GPIO1/FSPICS0/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "MTMS/GPIO2/FSPIWP/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "MTDO/GPIO3/FSPIHD/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "MTCK/GPIO4/FSPICLK/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "MTDI/GPIO5/FSPID/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "VDDPST1",
+      "type": "power_in"
+    }
+  ],
+  "ESP32-H2-MINI-1": [
+    {
+      "number": "10",
+      "name": "GPIO1/FSPICS0/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "24",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO25/FSPICS3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "29",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "32",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "33",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "34",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "35",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "4",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "7",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "9",
+      "name": "GPIO0/FSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "11",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "12",
+      "name": "GPIO13/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO14/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "15",
+      "name": "VBAT",
+      "type": "input"
+    },
+    {
+      "number": "16",
+      "name": "GPIO12",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO4/FSPICLK/ADC1_CH3/MTCK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO5/FSPID/ADC1_CH4/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO10/ZCD0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO11/ZCD1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO26/FSPICS4/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO27/FSPICS5/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GPIO23/FSPICS1/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO24/FSPICS2/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "37",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO2/FSPIWP/ADC1_CH1/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "6",
+      "name": "GPIO3/FSPIHD/ADC1_CH2/MTDO",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "EN",
+      "type": "input"
+    }
+  ],
+  "ESP32-MINI-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "54",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "55",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "VDET_2/GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "11",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO25/ADC2_CH8/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO26/ADC2_CH9/DAC_2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO27/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO2/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO4/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "24",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "25",
+      "name": "SD_DATA2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "SD_DATA3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "28",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "29",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "32",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_CAPP/GPIO37/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "SENSOR_CAPN/GPIO38/ADC1_CH2",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "VDET_1/GPIO34/ADC1_CH6",
+      "type": "input"
+    }
+  ],
+  "ESP32-P4": [
+    {
+      "number": "10",
+      "name": "GPIO9/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "100",
+      "name": "XTAL_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "101",
+      "name": "VDDA",
+      "type": "bidirectional"
+    },
+    {
+      "number": "102",
+      "name": "VBAT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "103",
+      "name": "CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "104",
+      "name": "GPIO0/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "105",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "11",
+      "name": "GPIO10/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO11/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO12/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO13/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO14/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO15/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO16/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO17/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO18/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO19/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "VDDPST_2",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GPIO20/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO21/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO22/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO23/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "VDD_HP_0",
+      "type": "power_in"
+    },
+    {
+      "number": "27",
+      "name": "FLASH_CS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "FLASH_Q",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "FLASH_WP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "VDDPST_3",
+      "type": "power_in"
+    },
+    {
+      "number": "31",
+      "name": "FLASH_HOLD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "FLASH_CK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "FLASH_D",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "DSI_REXT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "DSI_DATAP1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "DSI_DATAN1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "DSI_CLKN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "DSI_CLKP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "DSI_DATAP0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "DSI_DATAN0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "VDD_MIPI_DPHY",
+      "type": "power_in"
+    },
+    {
+      "number": "42",
+      "name": "CSI_DATAN0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "CSI_DATAP0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "44",
+      "name": "CSI_CLKP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "45",
+      "name": "CSI_CLKN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "46",
+      "name": "CSI_DATAN1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "47",
+      "name": "CSI_DATAP1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "48",
+      "name": "CSI_REXT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "49",
+      "name": "USB-DM",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "USB-DP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "51",
+      "name": "VCCA",
+      "type": "power_in"
+    },
+    {
+      "number": "52",
+      "name": "GPIO24/ADC/USB",
+      "type": "bidirectional"
+    },
+    {
+      "number": "53",
+      "name": "GPIO25/ADC/USB",
+      "type": "bidirectional"
+    },
+    {
+      "number": "54",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "55",
+      "name": "GPIO26/ADC/USB",
+      "type": "bidirectional"
+    },
+    {
+      "number": "56",
+      "name": "GPIO27/ADC/USB",
+      "type": "bidirectional"
+    },
+    {
+      "number": "57",
+      "name": "GPIO28",
+      "type": "bidirectional"
+    },
+    {
+      "number": "58",
+      "name": "GPIO29",
+      "type": "bidirectional"
+    },
+    {
+      "number": "59",
+      "name": "VDDPST",
+      "type": "power_in"
+    },
+    {
+      "number": "60",
+      "name": "GPIO30",
+      "type": "bidirectional"
+    },
+    {
+      "number": "61",
+      "name": "GPIO31",
+      "type": "bidirectional"
+    },
+    {
+      "number": "62",
+      "name": "VDDPST_4",
+      "type": "power_in"
+    },
+    {
+      "number": "63",
+      "name": "GPIO32",
+      "type": "bidirectional"
+    },
+    {
+      "number": "64",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "65",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "66",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "67",
+      "name": "VDDPST",
+      "type": "power_in"
+    },
+    {
+      "number": "68",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "69",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "70",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "71",
+      "name": "VFB/VO1",
+      "type": "power_in"
+    },
+    {
+      "number": "72",
+      "name": "VFB/VO2",
+      "type": "power_in"
+    },
+    {
+      "number": "73",
+      "name": "VFB/VO3",
+      "type": "power_in"
+    },
+    {
+      "number": "74",
+      "name": "VFB/VO4",
+      "type": "power_in"
+    },
+    {
+      "number": "75",
+      "name": "VDDPST_LDO",
+      "type": "power_in"
+    },
+    {
+      "number": "76",
+      "name": "VDD_HP_2",
+      "type": "power_in"
+    },
+    {
+      "number": "77",
+      "name": "VDDPST_DCDC",
+      "type": "power_in"
+    },
+    {
+      "number": "78",
+      "name": "FB_DCDC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "79",
+      "name": "EN_DCDC",
+      "type": "output"
+    },
+    {
+      "number": "80",
+      "name": "GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "81",
+      "name": "GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "82",
+      "name": "GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "83",
+      "name": "GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "84",
+      "name": "GPIO43",
+      "type": "bidirectional"
+    },
+    {
+      "number": "85",
+      "name": "VDDPST_5",
+      "type": "power_in"
+    },
+    {
+      "number": "86",
+      "name": "GPIO44",
+      "type": "bidirectional"
+    },
+    {
+      "number": "87",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "88",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "89",
+      "name": "GPIO47",
+      "type": "bidirectional"
+    },
+    {
+      "number": "90",
+      "name": "GPIO48",
+      "type": "bidirectional"
+    },
+    {
+      "number": "91",
+      "name": "VDD_HP_3",
+      "type": "power_in"
+    },
+    {
+      "number": "92",
+      "name": "GPIO49/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "93",
+      "name": "GPIO50/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "94",
+      "name": "GPIO51/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "95",
+      "name": "GPIO52/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "96",
+      "name": "VDDPST_6",
+      "type": "power_in"
+    },
+    {
+      "number": "97",
+      "name": "GPIO53/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "98",
+      "name": "GPIO54/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "99",
+      "name": "XTAL_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "1",
+      "name": "GPIO1/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GPIO2/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO3/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO8/ADC",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "VDDPST_1",
+      "type": "power_in"
+    }
+  ],
+  "ESP32-PICO-MINI-02": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "37",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "45",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "VDET_2/GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "11",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "12",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "15",
+      "name": "GPIO25/ADC2_CH8/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO26/ADC2_CH9/DAC_2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO27/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO2/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO4/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "SD_DATA_0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SD_DATA_1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "33",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_CAPP/GPIO37/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "SENSOR_CAPN/GPIO38/ADC1_CH2",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "VDET_1/GPIO34/ADC1_CH6",
+      "type": "input"
+    }
+  ],
+  "ESP32-PICO-V3": [
+    {
+      "number": "1",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "VDET_1/GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "11",
+      "name": "VDET_2/GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "12",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO25/ADC2_CH8/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO26/ADC2_CH9/DAC_2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO27/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "LNA_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO2/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO4/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "VDD_SDIO",
+      "type": "power_out"
+    },
+    {
+      "number": "27",
+      "name": "GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SD_DATA_2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SD_DATA_3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "SD_CMD/GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "SD_CLK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "SD_DATA_0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "SD_DATA_1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "38",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "46",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "SENSOR_CAPP/GPIO37/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "SENSOR_CAPN/GPIO38/ADC1_CH2",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "9",
+      "name": "CHIP_PU",
+      "type": "input"
+    }
+  ],
+  "ESP32-S2": [
+    {
+      "number": "1",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "LNA_IN/RF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO17/ADC2_CH6/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO18/ADC2_CH7/DAC_2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO19/ADC2_CH8/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20/ADC2_CH9/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "VDD3P3_RTC_IO",
+      "type": "power_in"
+    },
+    {
+      "number": "28",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "VDD_SPI",
+      "type": "power_out"
+    },
+    {
+      "number": "31",
+      "name": "SPIHD/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "SPIWP/GPIO28",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "SPICS0/GPIO29",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "SPICLK/GPIO30",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "SPIQ/GPIO31",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "SPID/GPIO32",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "40",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "input"
+    },
+    {
+      "number": "44",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "output"
+    },
+    {
+      "number": "45",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "46",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "input"
+    },
+    {
+      "number": "47",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "output"
+    },
+    {
+      "number": "48",
+      "name": "U0TXD/GPIO43",
+      "type": "bidirectional"
+    },
+    {
+      "number": "49",
+      "name": "U0RXD/GPIO44",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "51",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "53",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "54",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "55",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "56",
+      "name": "CHIP_PU/RESET",
+      "type": "bidirectional"
+    },
+    {
+      "number": "57",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-DevKitC-1": [
+    {
+      "number": "14",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "19",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "39",
+      "name": "GPIO42/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO44/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "GPIO43/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO17/ADC2_CH6/U1TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO18/ADC2_CH7/U1RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "23",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "24",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "25",
+      "name": "GPIO19/ADC2_CH8/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20/ADC2_CH9/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "RST",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO39/MTCK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO40/MTDO",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO41/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO15/ADC2_CH4/32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO16/ADC2_CH5/32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-DevKitM": [
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_out"
+    },
+    {
+      "number": "10",
+      "name": "GPIO8/TOUCH8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO9/TOUCH9/ADC1_CH8/FSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO17/U1TXD/ADC2_CH6/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "5V0",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GPIO18/U1RXD/ADC2_CH7/DAC_2/CLK_OUT3/RGB_LED",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO1/TOUCH1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "U0TXD/GPIO43/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "U0RXD/GPIO44/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO45/VSPI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO2/TOUCH2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO46/LOG",
+      "type": "input"
+    },
+    {
+      "number": "41",
+      "name": "~{RST}",
+      "type": "input"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO3/TOUCH3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO4/TOUCH4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO5/TOUCH5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO6/TOUCH6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO7/TOUCH7/ADC1_CH6",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-MINI-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "45",
+      "name": "CHIP/PU/RESET",
+      "type": "bidirectional"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "54",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "55",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "56",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "57",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "58",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "59",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "60",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "61",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "62",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "63",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "64",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "65",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "ADC2_CH6/DAC_1/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "ADC2_CH7/DAC_2/GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "USB_D-/ADC2_CH8/GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "USB_D+/ADC2_CH9/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "28",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "31",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO43/U0TXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO44/U0RXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-SOLO": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO17/U1TXD/ADC2_CH6/DAC_1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO18/U1RXD/ADC2_CH7/DAC_2/CLK_OUT3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/TOUCH8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO3/TOUCH3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "17",
+      "name": "GPIO9/TOUCH9/ADC1_CH8/FSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "SPIIO4/GPIO33/FSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "SPIIO5/GPIO34/FSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SPIIO6/GPIO35/FSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SPIIO7/GPIO36/FSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "EN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "SPIDQS/GPIO37/FSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO38/FSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "MTCK/GPIO39/CLK_OUT3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTDO/GPIO40/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDI/GPIO41/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTMS/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "U0RXD/GPIO44/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "U0TXD/GPIO43/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO2/TOUCH2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO1/TOUCH1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/TOUCH4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/TOUCH5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/TOUCH6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/TOUCH7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-Saola-1": [
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "ADC2_CH6/DAC_1/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "ADC2_CH7/DAC_2/GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "USB_D-/ADC2_CH8/GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "USB_D+/ADC2_CH9/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO43/U0TXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO44/U0RXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "unspecified"
+    },
+    {
+      "number": "40",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "41",
+      "name": "CHIP/PU/RESET",
+      "type": "input"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-WROOM": [
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "ADC2_CH6/DAC_1/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "ADC2_CH7/DAC_2/GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "USB_D-/ADC2_CH8/GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "USB_D+/ADC2_CH9/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "27",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO43/U0TXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO44/U0RXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "41",
+      "name": "CHIP/PU/RESET",
+      "type": "input"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S2-WROVER": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "ADC2_CH6/DAC_1/GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "ADC2_CH7/DAC_2/GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "USB_D-/ADC2_CH8/GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "USB_D+/ADC2_CH9/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "27",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "30",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO43/U0TXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO44/U0RXD/PROG",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO46",
+      "type": "input"
+    },
+    {
+      "number": "41",
+      "name": "CHIP/PU/RESET",
+      "type": "input"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S3": [
+    {
+      "number": "36",
+      "name": "SPICLK_N/GPIO48",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "SPICLK_P/GPIO47",
+      "type": "bidirectional"
+    },
+    {
+      "number": "1",
+      "name": "LNA_IN/RF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GPIO15/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO16/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO17/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO18/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO19/USB_D-/ADC2_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20/USB_D+/ADC2_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SPI_CS1/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "VDD_SPI",
+      "type": "power_out"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "SPIHD/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "SPIWP/GPIO28",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "SPICS0/GPIO29",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "SPICLK/GPIO30",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "SPIQ/GPIO31",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "SPID/GPIO32",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO33",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO34",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "CHIP_PU/RESET",
+      "type": "input"
+    },
+    {
+      "number": "40",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "44",
+      "name": "MTCK/JTAG/GPIO39",
+      "type": "bidirectional"
+    },
+    {
+      "number": "45",
+      "name": "MTDO/JTAG/GPIO40",
+      "type": "bidirectional"
+    },
+    {
+      "number": "46",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "47",
+      "name": "MTDI/JTAG/GPIO41",
+      "type": "bidirectional"
+    },
+    {
+      "number": "48",
+      "name": "MTMS/JTAG/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "49",
+      "name": "U0TXD/PROG/GPIO43",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "U0RXD/PROG/GPIO44",
+      "type": "bidirectional"
+    },
+    {
+      "number": "51",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "52",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "53",
+      "name": "XTAL_N",
+      "type": "input"
+    },
+    {
+      "number": "54",
+      "name": "XTAL_P",
+      "type": "output"
+    },
+    {
+      "number": "55",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "56",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "57",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S3-DevKitC": [
+    {
+      "number": "14",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO13/ADC2_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO42/MTMS",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GPIO2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GPIO44/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "43",
+      "name": "GPIO43/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "44",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "1",
+      "name": "3V3",
+      "type": "passive"
+    },
+    {
+      "number": "10",
+      "name": "GPIO17/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO18/ADC2_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/ADC1_CH7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9/ADC1_CH8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10/ADC1_CH9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO11/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO12/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO14/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "5V",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "23",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "24",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "25",
+      "name": "GPIO19/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO20/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO47",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO48",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO35",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO36",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO37",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO38",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO39/MTCK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO40/MTDO",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO41/MTDI",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO15/ADC2_CH4/32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO16/ADC2_CH5/32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S3-MINI-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO6/TOUCH6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO7/TOUCH7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4/SUBSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6/SUBSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "20",
+      "name": "GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO17/U1TXD/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO18/U1RXD/ADC2_CH7/CLK_OUT3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO47/SPICLK_P/SUBSPICLK_P_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SPIIO4/GPIO33/FSPIHD/SUBSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SPIIO5/GPIO34/FSPICS0/SUBSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "GPIO48/SPICLK_N/SUBSPICLK_N_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "SPIIO6/GPIO35/FSPID/SUBSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "SPIIO7/GPIO36/FSPICLK/SUBSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "SPIDQS/GPIO37/FSPIQ/SUBSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "GPIO38/FSPIWP/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTCK/GPIO39/CLK_OUT3/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "MTDO/GPIO40/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "MTDI/GPIO41/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "MTMS/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "U0TXD/GPIO43/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "U0RXD/GPIO44/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "41",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "42",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "44",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "45",
+      "name": "EN",
+      "type": "input"
+    },
+    {
+      "number": "46",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "47",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "48",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "49",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO1/TOUCH1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "50",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "51",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "52",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "53",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "54",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "55",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "56",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "57",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "58",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "59",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "6",
+      "name": "GPIO2/TOUCH2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "60",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "61",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "62",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "63",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "64",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "65",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "7",
+      "name": "GPIO3/TOUCH3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO4/TOUCH4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO5/TOUCH5/ADC1_CH4",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S3-WROOM-1": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO17/U1TXD/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO18/U1RXD/ADC2_CH7/CLK_OUT3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO3/TOUCH3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4/SUBSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6/SUBSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO47/SPICLK_P/SUBSPICLK_P_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO48/SPICLK_N/SUBSPICLK_N_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "SPIIO6/GPIO35/FSPID/SUBSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "SPIIO7/GPIO36/FSPICLK/SUBSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "EN",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "SPIDQS/GPIO37/FSPIQ/SUBSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO38/FSPIWP/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "MTCK/GPIO39/CLK_OUT3/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTDO/GPIO40/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDI/GPIO41/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTMS/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "U0RXD/GPIO44/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "U0TXD/GPIO43/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO2/TOUCH2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO1/TOUCH1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/TOUCH4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/TOUCH5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/TOUCH6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/TOUCH7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-S3-WROOM-2": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "GPIO17/U1TXD/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO18/U1RXD/ADC2_CH7/CLK_OUT3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO3/TOUCH3/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO46",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "18",
+      "name": "GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4/SUBSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6/SUBSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO47/SPICLK_P/SUBSPICLK_P_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO48/SPICLK_N/SUBSPICLK_N_DIFF",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "GPIO45",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO0/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "29",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "3",
+      "name": "EN",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "31",
+      "name": "GPIO38/FSPIWP/SUBSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "MTCK/GPIO39/CLK_OUT3/SUBSPICS1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "MTDO/GPIO40/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "MTDI/GPIO41/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "MTMS/GPIO42",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "U0RXD/GPIO44/CLK_OUT2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "U0TXD/GPIO43/CLK_OUT1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO2/TOUCH2/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO1/TOUCH1/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "GPIO4/TOUCH4/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "41",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "GPIO5/TOUCH5/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO6/TOUCH6/ADC1_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO7/TOUCH7/ADC1_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-WROOM-DA": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "40",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "43",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "11",
+      "name": "DAC_2/ADC2_CH9/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "ADC2_CH7/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "17",
+      "name": "MTCK/GPIO13/ADC2_CH4/TOUCH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "24",
+      "name": "MTDO/GPIO15/ADC2_CH3/TOUCH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO0/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO4/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "32",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO3/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO1/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "39",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-WROOM-E": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "DAC_1/ADC2_CH8/GPIO25",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "DAC_2/ADC2_CH9/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "ADC2_CH7/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "16",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "23",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "ADC2_CH2/GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "ADC2_CH0/GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "GPIO17",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND_THERMAL",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP32-WROVER-E": [
+    {
+      "number": "1",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "DAC_1/ADC2_CH8/GPIO25",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "DAC_2/ADC2_CH9/GPIO26",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "ADC2_CH7/GPIO27",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTMS/GPIO14/ADC2_CH6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "MTDI/GPIO12/ADC2_CH5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "16",
+      "name": "MTCK/GPIO13/ADC2_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "3V3",
+      "type": "power_in"
+    },
+    {
+      "number": "23",
+      "name": "MTDO/GPIO15/ADC2_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "ADC2_CH2/GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "GPIO0/BOOT/ADC2_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "ADC2_CH0/GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "3",
+      "name": "EN/CHIP_PU",
+      "type": "input"
+    },
+    {
+      "number": "30",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "31",
+      "name": "GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "33",
+      "name": "GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "34",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "35",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "36",
+      "name": "GPIO22",
+      "type": "bidirectional"
+    },
+    {
+      "number": "37",
+      "name": "GPIO23",
+      "type": "bidirectional"
+    },
+    {
+      "number": "38",
+      "name": "GND",
+      "type": "passive"
+    },
+    {
+      "number": "39",
+      "name": "GND_THERMAL",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "SENSOR_VP/GPIO36/ADC1_CH0",
+      "type": "input"
+    },
+    {
+      "number": "5",
+      "name": "SENSOR_VN/GPIO39/ADC1_CH3",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO34/ADC1_CH6",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "GPIO35/ADC1_CH7",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "32K_XP/GPIO32/ADC1_CH4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "32K_XN/GPIO33/ADC1_CH5",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP8266": [
+    {
+      "number": "1",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO12",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "VDDPST",
+      "type": "power_in"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO13",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "VDDPST",
+      "type": "passive"
+    },
+    {
+      "number": "18",
+      "name": "SDIO_DATA_2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "SDIO_DATA_3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "LNA",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "SDIO_CMD/GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "SDIO_CLK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "SDIO_DATA_0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "SDIO_DATA_1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "XTAL_OUT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "XTAL_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "VDDD",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "31",
+      "name": "RES12K",
+      "type": "input"
+    },
+    {
+      "number": "32",
+      "name": "EXT_RSTB",
+      "type": "power_in"
+    },
+    {
+      "number": "33",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "VDD_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "TOUT/ADC",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "XPD_DCDC/GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO14",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP8285": [
+    {
+      "number": "1",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO12",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "VDDPST",
+      "type": "power_in"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO13",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO15",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO4",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "VDDPST",
+      "type": "passive"
+    },
+    {
+      "number": "18",
+      "name": "SDIO_DATA_2/GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "SDIO_DATA_3/GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "LNA",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "SDIO_CMD/GPIO11",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "SDIO_CLK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "SDIO_DATA_0/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "SDIO_DATA_1/GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "GPIO5",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "U0RXD/GPIO3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "26",
+      "name": "U0TXD/GPIO1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "27",
+      "name": "XTAL_OUT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "28",
+      "name": "XTAL_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "29",
+      "name": "VDDD",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "30",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "31",
+      "name": "RES12K",
+      "type": "input"
+    },
+    {
+      "number": "32",
+      "name": "EXT_RSTB",
+      "type": "power_in"
+    },
+    {
+      "number": "33",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "4",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "5",
+      "name": "VDD_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "6",
+      "name": "TOUT/ADC",
+      "type": "input"
+    },
+    {
+      "number": "7",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "XPD_DCDC/GPIO16",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO14",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP8684": [
+    {
+      "number": "1",
+      "name": "ANT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO5/FSPIWP",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO6/FSPICLK",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO7/FSPID",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10/FSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "18",
+      "name": "GPIO18",
+      "type": "bidirectional"
+    },
+    {
+      "number": "19",
+      "name": "U0RXD/GPIO19",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "VDDA3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "20",
+      "name": "U0TXD/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "21",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "22",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "23",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "24",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "25",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "VDDA3P3",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "GPIO0/ADC1_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "5",
+      "name": "GPIO1/ADC1_CH1",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO2/ADC1_CH2/FSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO4/ADC1_CH4/FSPIHD",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP8685": [
+    {
+      "number": "1",
+      "name": "LNA_IN",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "MTDI/GPIO5/ADC2_CH0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "VDD3P3_RTC",
+      "type": "power_in"
+    },
+    {
+      "number": "12",
+      "name": "MTCK/GPIO6",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "MTDO/GPIO7",
+      "type": "bidirectional"
+    },
+    {
+      "number": "14",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "15",
+      "name": "GPIO9/BOOT",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO10",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "VDD3P3_CPU",
+      "type": "power_in"
+    },
+    {
+      "number": "2",
+      "name": "VDD3P3",
+      "type": "power_in"
+    },
+    {
+      "number": "21",
+      "name": "GPIO18/USB_D-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "GPIO19/USB_D+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "23",
+      "name": "U0RXD/GPIO20",
+      "type": "bidirectional"
+    },
+    {
+      "number": "24",
+      "name": "U0TXD/GPIO21",
+      "type": "bidirectional"
+    },
+    {
+      "number": "25",
+      "name": "XTAL_N",
+      "type": "output"
+    },
+    {
+      "number": "26",
+      "name": "XTAL_P",
+      "type": "input"
+    },
+    {
+      "number": "27",
+      "name": "VDDA",
+      "type": "power_in"
+    },
+    {
+      "number": "28",
+      "name": "VDDA",
+      "type": "passive"
+    },
+    {
+      "number": "29",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "VDD3P3",
+      "type": "passive"
+    },
+    {
+      "number": "4",
+      "name": "GPIO0/XTAL_32K_P/ADC1_CH0",
+      "type": "output"
+    },
+    {
+      "number": "5",
+      "name": "GPIO1/XTAL_32K_N/ADC1_CH1",
+      "type": "input"
+    },
+    {
+      "number": "6",
+      "name": "GPIO2/ADC1_CH2",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH3",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "MTMS/GPIO4/ADC1_CH4",
+      "type": "bidirectional"
+    }
+  ],
+  "ESP8685-WROOM-06": [
+    {
+      "number": "21",
+      "name": "GPIO8",
+      "type": "bidirectional"
+    },
+    {
+      "number": "1",
+      "name": "GPIO1/ADC1_CH1/XTAL32K_N",
+      "type": "bidirectional"
+    },
+    {
+      "number": "10",
+      "name": "GPIO6/FSPICLK/MTCK/LEDPWM",
+      "type": "bidirectional"
+    },
+    {
+      "number": "11",
+      "name": "GPIO4/ADC1_CH4/FSPIHD/MTMS/LEDPWM",
+      "type": "bidirectional"
+    },
+    {
+      "number": "12",
+      "name": "GPIO5/ADC2_CH0/FSPIP/MTDI/LEDPWM",
+      "type": "bidirectional"
+    },
+    {
+      "number": "13",
+      "name": "GND",
+      "type": "power_in"
+    },
+    {
+      "number": "14",
+      "name": "VDD33",
+      "type": "power_in"
+    },
+    {
+      "number": "15",
+      "name": "GPIO18/USBD-",
+      "type": "bidirectional"
+    },
+    {
+      "number": "16",
+      "name": "GPIO19/USBD+",
+      "type": "bidirectional"
+    },
+    {
+      "number": "17",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "18",
+      "name": "CHIP_EN",
+      "type": "input"
+    },
+    {
+      "number": "19",
+      "name": "GPIO10/FSPICS0",
+      "type": "bidirectional"
+    },
+    {
+      "number": "2",
+      "name": "GPIO2/ADC1_CH2/FSPIQ",
+      "type": "bidirectional"
+    },
+    {
+      "number": "20",
+      "name": "GPIO9",
+      "type": "bidirectional"
+    },
+    {
+      "number": "22",
+      "name": "EPAD",
+      "type": "power_in"
+    },
+    {
+      "number": "3",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "4",
+      "name": "NC",
+      "type": "no_connect"
+    },
+    {
+      "number": "5",
+      "name": "GPIO0/ADC1_CH0/XTAL_32K_P",
+      "type": "bidirectional"
+    },
+    {
+      "number": "6",
+      "name": "GPIO20/U0RXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "7",
+      "name": "GPIO21/U0TXD",
+      "type": "bidirectional"
+    },
+    {
+      "number": "8",
+      "name": "GPIO3/ADC1_CH3/LEDPWM",
+      "type": "bidirectional"
+    },
+    {
+      "number": "9",
+      "name": "GPIO7/FSPID/MTDO/LEDPWM",
+      "type": "bidirectional"
+    }
+  ]
+}

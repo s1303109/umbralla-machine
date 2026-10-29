@@ -1,0 +1,263 @@
+{
+  "sha": "b4ac4d60d1845a554bbbc7c97806ccb97cf08941",
+  "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/b4ac4d60d1845a554bbbc7c97806ccb97cf08941",
+  "tree": [
+    {
+      "path": "0-public-USB to serial CH343 driver(important)",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ef8589022d8f854a29846da30994032f1895b08f",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/ef8589022d8f854a29846da30994032f1895b08f"
+    },
+    {
+      "path": "0-public-USB to serial CH343 driver(important)/0-CH343\u9a71\u52a8\u8bf4\u660e.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16bf397b2bbed98174b67e5ed5c31973036dbcbc",
+      "size": 306097,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/16bf397b2bbed98174b67e5ed5c31973036dbcbc"
+    },
+    {
+      "path": "0-public-USB to serial CH343 driver(important)/1-Windows-CH343SER.EXE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcfc4a88814f5f39c2438e3c65f9c7925cd79975",
+      "size": 622560,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/fcfc4a88814f5f39c2438e3c65f9c7925cd79975"
+    },
+    {
+      "path": "0-public-USB to serial CH343 driver(important)/2-MAC-CH34XSER_MAC.ZIP",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1eabc47cf95e7a6bfb6774ad798dc2cde2274fe0",
+      "size": 2433361,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/1eabc47cf95e7a6bfb6774ad798dc2cde2274fe0"
+    },
+    {
+      "path": "0-public-USB to serial CH343 driver(important)/CH343-drive.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f14d9aa365eee3e0081661ce3e752829241434d",
+      "size": 1487,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/0f14d9aa365eee3e0081661ce3e752829241434d"
+    },
+    {
+      "path": "1-MPY-firmware",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "013392fde36d9842ff9a725aee114b92078bbf2e",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/013392fde36d9842ff9a725aee114b92078bbf2e"
+    },
+    {
+      "path": "1-MPY-firmware/YD-ESP32-S3-N16R8-MPY-V1.1.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "385855b0ab01f31633d1a5adb01d060fe60e7964",
+      "size": 1417552,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/385855b0ab01f31633d1a5adb01d060fe60e7964"
+    },
+    {
+      "path": "1-MPY-firmware/YD-ESP32-S3-N8R2-MPY-V1.1.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7b4c51119d3bb9542f64def8cf5bb807997f67e6",
+      "size": 1416032,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/7b4c51119d3bb9542f64def8cf5bb807997f67e6"
+    },
+    {
+      "path": "1-MPY-firmware/YD-ESP32-S3-N8R8-MPY-V1.1.bin",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "585ca0ee325e35115c279d03b86405cda43e12ba",
+      "size": 1417552,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/585ca0ee325e35115c279d03b86405cda43e12ba"
+    },
+    {
+      "path": "2-MPY-downloard tool",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5de311cd565bccbd38172df2a01e11435eb9cdde",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/5de311cd565bccbd38172df2a01e11435eb9cdde"
+    },
+    {
+      "path": "2-MPY-downloard tool/flash_download_tool.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "85446a65169012ed2ce54841b5f9c0896114134c",
+      "size": 1583,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/85446a65169012ed2ce54841b5f9c0896114134c"
+    },
+    {
+      "path": "3-MPY-Thonny",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "102281945562acd796852a9dc27d82858307fd64",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/102281945562acd796852a9dc27d82858307fd64"
+    },
+    {
+      "path": "3-MPY-Thonny/Micropython-IDE-Thonny.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f0d48f1206456d2a2552bdf089b81b1a55087bf9",
+      "size": 1449,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/f0d48f1206456d2a2552bdf089b81b1a55087bf9"
+    },
+    {
+      "path": "4-MPY-Test-Python-DEMO",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "ee05b7ac7aaa928a5be0867871ccd0f40091946e",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/ee05b7ac7aaa928a5be0867871ccd0f40091946e"
+    },
+    {
+      "path": "4-MPY-Test-Python-DEMO/test-main.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a84855327d088427fc9ad1e72a6a0a3155479782",
+      "size": 693,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/a84855327d088427fc9ad1e72a6a0a3155479782"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "3842b6bdd166ecf6ded0d3bbeb5b3fb310e97698",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/3842b6bdd166ecf6ded0d3bbeb5b3fb310e97698"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/ESP32-S3-0702 (9).PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f7a37b91cbe828ba1e1a48657b50631105b9ec9e",
+      "size": 2935606,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/f7a37b91cbe828ba1e1a48657b50631105b9ec9e"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/ESP32-S3-Metric.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "72bd1777dbceb9425eb6a43454df505cef8d2b6f",
+      "size": 116018,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/72bd1777dbceb9425eb6a43454df505cef8d2b6f"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/ESP32-S3-inch.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "563a91e210deee949107d0e2715c7beb4955a85a",
+      "size": 116871,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/563a91e210deee949107d0e2715c7beb4955a85a"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/ESP32-S3-size-pcb-ad.PcbDoc",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "171b9d0a0ed9e5cdbd12b22eaed72f0d9b40cae3",
+      "size": 990720,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/171b9d0a0ed9e5cdbd12b22eaed72f0d9b40cae3"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/S3-V1.2 (14).PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "bb7ae626012f14864b608513710fb0dd05d3a031",
+      "size": 2758437,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/bb7ae626012f14864b608513710fb0dd05d3a031"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/YD-ESP32-S3-SCH-V1.4.pdf",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15168a83e477ac7703ac818e9aab5e8f0cdd1696",
+      "size": 429073,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/15168a83e477ac7703ac818e9aab5e8f0cdd1696"
+    },
+    {
+      "path": "5-public-YD-ESP32-S3-Hardware info/YD-ESP32-S3.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a4c31267c09cd98429bd8b206ca003586d182b0",
+      "size": 1705630,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/5a4c31267c09cd98429bd8b206ca003586d182b0"
+    },
+    {
+      "path": "6-IDF-C-ORG web",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b90d567900bb4f3a56cc01c24481e8cd77de8920",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/b90d567900bb4f3a56cc01c24481e8cd77de8920"
+    },
+    {
+      "path": "6-IDF-C-ORG web/ESP32-S3-IDF-C-ORG-WEB.html",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d06b3a16537c66771c982af8d58a9c025f436dfd",
+      "size": 1585,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/d06b3a16537c66771c982af8d58a9c025f436dfd"
+    },
+    {
+      "path": "IMG",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "5b4a459ce0d51a9ebd2f993bf4c65384a4e339c5",
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/trees/5b4a459ce0d51a9ebd2f993bf4c65384a4e339c5"
+    },
+    {
+      "path": "IMG/YD-ESP32-S3.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "684a5a0f8f2f48e5efe6d931128a9fd40944e462",
+      "size": 165119,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/684a5a0f8f2f48e5efe6d931128a9fd40944e462"
+    },
+    {
+      "path": "IMG/img1.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8c3fabc73ce404a47ed6585119455b601cb88741",
+      "size": 445270,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/8c3fabc73ce404a47ed6585119455b601cb88741"
+    },
+    {
+      "path": "IMG/img11.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d6a4e96441575408426acef33a4593e3fc6379df",
+      "size": 441749,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/d6a4e96441575408426acef33a4593e3fc6379df"
+    },
+    {
+      "path": "IMG/img2.PNG",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e682e7c21024531af80e8ad53ea81719f107ebbc",
+      "size": 488530,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/e682e7c21024531af80e8ad53ea81719f107ebbc"
+    },
+    {
+      "path": "IMG/img3.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e53d0a9f16ee991ed875072202257853c3784601",
+      "size": 30689,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/e53d0a9f16ee991ed875072202257853c3784601"
+    },
+    {
+      "path": "IMG/img4.png",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c3bf31844520e25dee4e67bc73365c9af2269ef8",
+      "size": 36463,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/c3bf31844520e25dee4e67bc73365c9af2269ef8"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a88a172d27067fde372132ef4241da8a1f1d9cfd",
+      "size": 14166,
+      "url": "https://api.github.com/repos/vcc-gnd/YD-ESP32-S3/git/blobs/a88a172d27067fde372132ef4241da8a1f1d9cfd"
+    }
+  ],
+  "truncated": false
+}

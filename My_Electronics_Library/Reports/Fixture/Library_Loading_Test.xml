@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/My_Electronics_Library/Examples/Library_Loading_Test.kicad_sch</source>
+    <date>2026-10-29T14:22:37+0000</date>
+    <tool>Eeschema 8.0.9-8.0.9-0~ubuntu24.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Library_Loading_Test.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>YD-ESP32-S3_Type-A_V1.5_N16R8</value>
+      <footprint>ESP32_Custom:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</footprint>
+      <fields>
+        <field name="Footprint">ESP32_Custom:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="ESP32_Custom" part="YD-ESP32-S3_Type-A_V1.5_N16R8" description="Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Library_Loading_Test.kicad_sch"/>
+      <property name="ki_keywords" value="ESP32 S3 YD N16R8 development board Type-C 44 pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0307bab7-215b-5ead-9ff6-9db50813132b</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>ESP32-S3-WROOM-1-N16R8</value>
+      <footprint>ESP32_Custom:ESP32-S3-WROOM-1</footprint>
+      <fields>
+        <field name="Footprint">ESP32_Custom:ESP32-S3-WROOM-1</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="ESP32_Custom" part="ESP32-S3-WROOM-1-N16R8" description="Bare WROOM module: 16 MB Quad flash / 8 MB Octal PSRAM; IO35/36/37 reserved; not the YD development board"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="Library_Loading_Test.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7cbc84c1-3497-537d-950b-2e6c47fdc527</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="ESP32_Custom" part="ESP32-S3-WROOM-1-N16R8">
+      <description>Bare WROOM module: 16 MB Quad flash / 8 MB Octal PSRAM; IO35/36/37 reserved; not the YD development board</description>
+      <docs>https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">ESP32-S3-WROOM-1-N16R8</field>
+        <field name="Footprint">ESP32_Custom:ESP32-S3-WROOM-1</field>
+        <field name="Datasheet">https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</field>
+        <field name="Description">Bare WROOM module: 16 MB Quad flash / 8 MB Octal PSRAM; IO35/36/37 reserved; not the YD development board</field>
+        <field name="Source">https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf</field>
+        <field name="Verification">Partially Verified</field>
+        <field name="MPN">ESP32-S3-WROOM-1-N16R8</field>
+        <field name="Manufacturer">Espressif Systems</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="3V3" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="GPIO4/TOUCH4/ADC1_CH3" type="bidirectional"/>
+        <pin num="5" name="GPIO5/TOUCH5/ADC1_CH4" type="bidirectional"/>
+        <pin num="6" name="GPIO6/TOUCH6/ADC1_CH5" type="bidirectional"/>
+        <pin num="7" name="GPIO7/TOUCH7/ADC1_CH6" type="bidirectional"/>
+        <pin num="8" name="GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P" type="bidirectional"/>
+        <pin num="9" name="GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N" type="bidirectional"/>
+        <pin num="10" name="GPIO17/U1TXD/ADC2_CH6" type="bidirectional"/>
+        <pin num="11" name="GPIO18/U1RXD/ADC2_CH7/CLK_OUT3" type="bidirectional"/>
+        <pin num="12" name="GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1" type="bidirectional"/>
+        <pin num="13" name="GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-" type="bidirectional"/>
+        <pin num="14" name="GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+" type="bidirectional"/>
+        <pin num="15" name="GPIO3/TOUCH3/ADC1_CH2" type="bidirectional"/>
+        <pin num="16" name="GPIO46" type="bidirectional"/>
+        <pin num="17" name="GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD" type="bidirectional"/>
+        <pin num="18" name="GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4/SUBSPICS0" type="bidirectional"/>
+        <pin num="19" name="GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBSPID" type="bidirectional"/>
+        <pin num="20" name="GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6/SUBSPICLK" type="bidirectional"/>
+        <pin num="21" name="GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ" type="bidirectional"/>
+        <pin num="22" name="GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS/SUBSPIWP" type="bidirectional"/>
+        <pin num="23" name="GPIO21" type="bidirectional"/>
+        <pin num="24" name="GPIO47/SPICLK_P/SUBSPICLK_P_DIFF" type="bidirectional"/>
+        <pin num="25" name="GPIO48/SPICLK_N/SUBSPICLK_N_DIFF" type="bidirectional"/>
+        <pin num="26" name="GPIO45" type="bidirectional"/>
+        <pin num="27" name="GPIO0/BOOT" type="bidirectional"/>
+        <pin num="28" name="RESERVED_PSRAM/IO35" type="no_connect"/>
+        <pin num="29" name="RESERVED_PSRAM/IO36" type="no_connect"/>
+        <pin num="30" name="RESERVED_PSRAM/IO37" type="no_connect"/>
+        <pin num="31" name="GPIO38/FSPIWP/SUBSPIWP" type="bidirectional"/>
+        <pin num="32" name="MTCK/GPIO39/CLK_OUT3/SUBSPICS1" type="bidirectional"/>
+        <pin num="33" name="MTDO/GPIO40/CLK_OUT2" type="bidirectional"/>
+        <pin num="34" name="MTDI/GPIO41/CLK_OUT1" type="bidirectional"/>
+        <pin num="35" name="MTMS/GPIO42" type="bidirectional"/>
+        <pin num="36" name="U0RXD/GPIO44/CLK_OUT2" type="bidirectional"/>
+        <pin num="37" name="U0TXD/GPIO43/CLK_OUT1" type="bidirectional"/>
+        <pin num="38" name="GPIO2/TOUCH2/ADC1_CH1" type="bidirectional"/>
+        <pin num="39" name="GPIO1/TOUCH1/ADC1_CH0" type="bidirectional"/>
+        <pin num="40" name="GND" type="passive"/>
+        <pin num="41" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ESP32_Custom" part="YD-ESP32-S3_Type-A_V1.5_N16R8">
+      <description>Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8</description>
+      <docs>https://github.com/vcc-gnd/YD-ESP32-S3</docs>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">YD-ESP32-S3_Type-A_V1.5_N16R8</field>
+        <field name="Footprint">ESP32_Custom:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</field>
+        <field name="Datasheet">https://github.com/vcc-gnd/YD-ESP32-S3</field>
+        <field name="Description">Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8</field>
+        <field name="Mounting">Two 1x22 sockets, 25.40 mm row spacing</field>
+        <field name="Source">https://github.com/vcc-gnd/YD-ESP32-S3</field>
+        <field name="Verification">Partially Verified</field>
+        <field name="MPN">YD-ESP32-S3 Type-A V1.5 / ESP32-S3-WROOM-1-N16R8</field>
+        <field name="Manufacturer">VCC-GND Studio</field>
+      </fields>
+      <pins>
+        <pin num="J1.1" name="3V3" type="passive"/>
+        <pin num="J1.2" name="3V3" type="passive"/>
+        <pin num="J1.3" name="EN" type="input"/>
+        <pin num="J1.4" name="GPIO4" type="bidirectional"/>
+        <pin num="J1.5" name="GPIO5" type="bidirectional"/>
+        <pin num="J1.6" name="GPIO6" type="bidirectional"/>
+        <pin num="J1.7" name="GPIO7" type="bidirectional"/>
+        <pin num="J1.8" name="GPIO15" type="bidirectional"/>
+        <pin num="J1.9" name="GPIO16" type="bidirectional"/>
+        <pin num="J1.10" name="GPIO17" type="bidirectional"/>
+        <pin num="J1.11" name="GPIO18" type="bidirectional"/>
+        <pin num="J1.12" name="GPIO8" type="bidirectional"/>
+        <pin num="J1.13" name="GPIO3" type="bidirectional"/>
+        <pin num="J1.14" name="GPIO46" type="bidirectional"/>
+        <pin num="J1.15" name="GPIO9" type="bidirectional"/>
+        <pin num="J1.16" name="GPIO10" type="bidirectional"/>
+        <pin num="J1.17" name="GPIO11" type="bidirectional"/>
+        <pin num="J1.18" name="GPIO12" type="bidirectional"/>
+        <pin num="J1.19" name="GPIO13" type="bidirectional"/>
+        <pin num="J1.20" name="GPIO14" type="bidirectional"/>
+        <pin num="J1.21" name="5V" type="passive"/>
+        <pin num="J1.22" name="GND" type="passive"/>
+        <pin num="J2.1" name="GND" type="passive"/>
+        <pin num="J2.2" name="GPIO43/TX" type="bidirectional"/>
+        <pin num="J2.3" name="GPIO44/RX" type="bidirectional"/>
+        <pin num="J2.4" name="GPIO1" type="bidirectional"/>
+        <pin num="J2.5" name="GPIO2" type="bidirectional"/>
+        <pin num="J2.6" name="GPIO42" type="bidirectional"/>
+        <pin num="J2.7" name="GPIO41" type="bidirectional"/>
+        <pin num="J2.8" name="GPIO40" type="bidirectional"/>
+        <pin num="J2.9" name="GPIO39" type="bidirectional"/>
+        <pin num="J2.10" name="GPIO38" type="bidirectional"/>
+        <pin num="J2.11" name="GPIO37/RESERVED" type="no_connect"/>
+        <pin num="J2.12" name="GPIO36/RESERVED" type="no_connect"/>
+        <pin num="J2.13" name="GPIO35/RESERVED" type="no_connect"/>
+        <pin num="J2.14" name="GPIO0" type="bidirectional"/>
+        <pin num="J2.15" name="GPIO45" type="bidirectional"/>
+        <pin num="J2.16" name="GPIO48/RGB" type="bidirectional"/>
+        <pin num="J2.17" name="GPIO47" type="bidirectional"/>
+        <pin num="J2.18" name="GPIO21" type="bidirectional"/>
+        <pin num="J2.19" name="GPIO20/USB_D+" type="bidirectional"/>
+        <pin num="J2.20" name="GPIO19/USB_D-" type="bidirectional"/>
+        <pin num="J2.21" name="GND" type="passive"/>
+        <pin num="J2.22" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="ESP32_Custom">
+      <uri>/workspace/My_Electronics_Library/Symbols/ESP32_Custom.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="unconnected-(A1-3V3-PadJ1.1)">
+      <node ref="A1" pin="J1.1" pinfunction="3V3" pintype="passive+no_connect"/>
+    </net>
+    <net code="2" name="unconnected-(A1-3V3-PadJ1.2)">
+      <node ref="A1" pin="J1.2" pinfunction="3V3" pintype="passive+no_connect"/>
+    </net>
+    <net code="3" name="unconnected-(A1-5V-PadJ1.21)">
+      <node ref="A1" pin="J1.21" pinfunction="5V" pintype="passive+no_connect"/>
+    </net>
+    <net code="4" name="unconnected-(A1-EN-PadJ1.3)">
+      <node ref="A1" pin="J1.3" pinfunction="EN" pintype="input+no_connect"/>
+    </net>
+    <net code="5" name="unconnected-(A1-GND-PadJ1.22)">
+      <node ref="A1" pin="J1.22" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="6" name="unconnected-(A1-GND-PadJ2.1)">
+      <node ref="A1" pin="J2.1" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="7" name="unconnected-(A1-GND-PadJ2.21)">
+      <node ref="A1" pin="J2.21" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="8" name="unconnected-(A1-GND-PadJ2.22)">
+      <node ref="A1" pin="J2.22" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(A1-GPIO0-PadJ2.14)">
+      <node ref="A1" pin="J2.14" pinfunction="GPIO0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(A1-GPIO1-PadJ2.4)">
+      <node ref="A1" pin="J2.4" pinfunction="GPIO1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(A1-GPIO2-PadJ2.5)">
+      <node ref="A1" pin="J2.5" pinfunction="GPIO2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="12" name="unconnected-(A1-GPIO3-PadJ1.13)">
+      <node ref="A1" pin="J1.13" pinfunction="GPIO3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(A1-GPIO4-PadJ1.4)">
+      <node ref="A1" pin="J1.4" pinfunction="GPIO4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(A1-GPIO5-PadJ1.5)">
+      <node ref="A1" pin="J1.5" pinfunction="GPIO5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(A1-GPIO6-PadJ1.6)">
+      <node ref="A1" pin="J1.6" pinfunction="GPIO6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="16" name="unconnected-(A1-GPIO7-PadJ1.7)">
+      <node ref="A1" pin="J1.7" pinfunction="GPIO7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="17" name="unconnected-(A1-GPIO8-PadJ1.12)">
+      <node ref="A1" pin="J1.12" pinfunction="GPIO8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(A1-GPIO9-PadJ1.15)">
+      <node ref="A1" pin="J1.15" pinfunction="GPIO9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(A1-GPIO10-PadJ1.16)">
+      <node ref="A1" pin="J1.16" pinfunction="GPIO10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(A1-GPIO11-PadJ1.17)">
+      <node ref="A1" pin="J1.17" pinfunction="GPIO11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(A1-GPIO12-PadJ1.18)">
+      <node ref="A1" pin="J1.18" pinfunction="GPIO12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(A1-GPIO13-PadJ1.19)">
+      <node ref="A1" pin="J1.19" pinfunction="GPIO13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(A1-GPIO14-PadJ1.20)">
+      <node ref="A1" pin="J1.20" pinfunction="GPIO14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(A1-GPIO15-PadJ1.8)">
+      <node ref="A1" pin="J1.8" pinfunction="GPIO15" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(A1-GPIO16-PadJ1.9)">
+      <node ref="A1" pin="J1.9" pinfunction="GPIO16" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(A1-GPIO17-PadJ1.10)">
+      <node ref="A1" pin="J1.10" pinfunction="GPIO17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(A1-GPIO18-PadJ1.11)">
+      <node ref="A1" pin="J1.11" pinfunction="GPIO18" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(A1-GPIO19{slash}USB_D--PadJ2.20)">
+      <node ref="A1" pin="J2.20" pinfunction="GPIO19/USB_D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(A1-GPIO20{slash}USB_D+-PadJ2.19)">
+      <node ref="A1" pin="J2.19" pinfunction="GPIO20/USB_D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(A1-GPIO21-PadJ2.18)">
+      <node ref="A1" pin="J2.18" pinfunction="GPIO21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(A1-GPIO35{slash}RESERVED-PadJ2.13)">
+      <node ref="A1" pin="J2.13" pinfunction="GPIO35/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(A1-GPIO36{slash}RESERVED-PadJ2.12)">
+      <node ref="A1" pin="J2.12" pinfunction="GPIO36/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(A1-GPIO37{slash}RESERVED-PadJ2.11)">
+      <node ref="A1" pin="J2.11" pinfunction="GPIO37/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(A1-GPIO38-PadJ2.10)">
+      <node ref="A1" pin="J2.10" pinfunction="GPIO38" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(A1-GPIO39-PadJ2.9)">
+      <node ref="A1" pin="J2.9" pinfunction="GPIO39" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(A1-GPIO40-PadJ2.8)">
+      <node ref="A1" pin="J2.8" pinfunction="GPIO40" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(A1-GPIO41-PadJ2.7)">
+      <node ref="A1" pin="J2.7" pinfunction="GPIO41" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(A1-GPIO42-PadJ2.6)">
+      <node ref="A1" pin="J2.6" pinfunction="GPIO42" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(A1-GPIO43{slash}TX-PadJ2.2)">
+      <node ref="A1" pin="J2.2" pinfunction="GPIO43/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(A1-GPIO44{slash}RX-PadJ2.3)">
+      <node ref="A1" pin="J2.3" pinfunction="GPIO44/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(A1-GPIO45-PadJ2.15)">
+      <node ref="A1" pin="J2.15" pinfunction="GPIO45" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(A1-GPIO46-PadJ1.14)">
+      <node ref="A1" pin="J1.14" pinfunction="GPIO46" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(A1-GPIO47-PadJ2.17)">
+      <node ref="A1" pin="J2.17" pinfunction="GPIO47" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(A1-GPIO48{slash}RGB-PadJ2.16)">
+      <node ref="A1" pin="J2.16" pinfunction="GPIO48/RGB" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(U1-3V3-Pad2)">
+      <node ref="U1" pin="2" pinfunction="3V3" pintype="power_in+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(U1-EN-Pad3)">
+      <node ref="U1" pin="3" pinfunction="EN" pintype="input+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(U1-GND-Pad1)">
+      <node ref="U1" pin="1" pinfunction="GND" pintype="power_in+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(U1-GND-Pad40)">
+      <node ref="U1" pin="40" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(U1-GND-Pad41)">
+      <node ref="U1" pin="41" pinfunction="GND" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U1-GPIO0{slash}BOOT-Pad27)">
+      <node ref="U1" pin="27" pinfunction="GPIO0/BOOT" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U1-GPIO1{slash}TOUCH1{slash}ADC1_CH0-Pad39)">
+      <node ref="U1" pin="39" pinfunction="GPIO1/TOUCH1/ADC1_CH0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U1-GPIO2{slash}TOUCH2{slash}ADC1_CH1-Pad38)">
+      <node ref="U1" pin="38" pinfunction="GPIO2/TOUCH2/ADC1_CH1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U1-GPIO3{slash}TOUCH3{slash}ADC1_CH2-Pad15)">
+      <node ref="U1" pin="15" pinfunction="GPIO3/TOUCH3/ADC1_CH2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U1-GPIO4{slash}TOUCH4{slash}ADC1_CH3-Pad4)">
+      <node ref="U1" pin="4" pinfunction="GPIO4/TOUCH4/ADC1_CH3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U1-GPIO5{slash}TOUCH5{slash}ADC1_CH4-Pad5)">
+      <node ref="U1" pin="5" pinfunction="GPIO5/TOUCH5/ADC1_CH4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U1-GPIO6{slash}TOUCH6{slash}ADC1_CH5-Pad6)">
+      <node ref="U1" pin="6" pinfunction="GPIO6/TOUCH6/ADC1_CH5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U1-GPIO7{slash}TOUCH7{slash}ADC1_CH6-Pad7)">
+      <node ref="U1" pin="7" pinfunction="GPIO7/TOUCH7/ADC1_CH6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U1-GPIO8{slash}TOUCH8{slash}ADC1_CH7{slash}SUBSPICS1-Pad12)">
+      <node ref="U1" pin="12" pinfunction="GPIO8/TOUCH8/ADC1_CH7/SUBSPICS1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U1-GPIO9{slash}TOUCH9{slash}ADC1_CH8{slash}FSPIHD{slash}SUBSPIHD-Pad17)">
+      <node ref="U1" pin="17" pinfunction="GPIO9/TOUCH9/ADC1_CH8/FSPIHD/SUBSPIHD" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U1-GPIO10{slash}TOUCH10{slash}ADC1_CH9{slash}FSPICS0{slash}FSPIIO4{slash}SUBSPICS0-Pad18)">
+      <node ref="U1" pin="18" pinfunction="GPIO10/TOUCH10/ADC1_CH9/FSPICS0/FSPIIO4/SUBSPICS0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="61" name="unconnected-(U1-GPIO11{slash}TOUCH11{slash}ADC2_CH0{slash}FSPID{slash}FSPIIO5{slash}SUBSPID-Pad19)">
+      <node ref="U1" pin="19" pinfunction="GPIO11/TOUCH11/ADC2_CH0/FSPID/FSPIIO5/SUBSPID" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="62" name="unconnected-(U1-GPIO12{slash}TOUCH12{slash}ADC2_CH1{slash}FSPICLK{slash}FSPIIO6{slash}SUBSPICLK-Pad20)">
+      <node ref="U1" pin="20" pinfunction="GPIO12/TOUCH12/ADC2_CH1/FSPICLK/FSPIIO6/SUBSPICLK" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="63" name="unconnected-(U1-GPIO13{slash}TOUCH13{slash}ADC2_CH2{slash}FSPIQ{slash}FSPIIO7{slash}SUBSPIQ-Pad21)">
+      <node ref="U1" pin="21" pinfunction="GPIO13/TOUCH13/ADC2_CH2/FSPIQ/FSPIIO7/SUBSPIQ" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="64" name="unconnected-(U1-GPIO14{slash}TOUCH14{slash}ADC2_CH3{slash}FSPIWP{slash}FSPIDQS{slash}SUBSPIWP-Pad22)">
+      <node ref="U1" pin="22" pinfunction="GPIO14/TOUCH14/ADC2_CH3/FSPIWP/FSPIDQS/SUBSPIWP" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="65" name="unconnected-(U1-GPIO15{slash}U0RTS{slash}ADC2_CH4{slash}XTAL_32K_P-Pad8)">
+      <node ref="U1" pin="8" pinfunction="GPIO15/U0RTS/ADC2_CH4/XTAL_32K_P" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="66" name="unconnected-(U1-GPIO16{slash}U0CTS{slash}ADC2_CH5{slash}XTAL_32K_N-Pad9)">
+      <node ref="U1" pin="9" pinfunction="GPIO16/U0CTS/ADC2_CH5/XTAL_32K_N" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="67" name="unconnected-(U1-GPIO17{slash}U1TXD{slash}ADC2_CH6-Pad10)">
+      <node ref="U1" pin="10" pinfunction="GPIO17/U1TXD/ADC2_CH6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="68" name="unconnected-(U1-GPIO18{slash}U1RXD{slash}ADC2_CH7{slash}CLK_OUT3-Pad11)">
+      <node ref="U1" pin="11" pinfunction="GPIO18/U1RXD/ADC2_CH7/CLK_OUT3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="69" name="unconnected-(U1-GPIO19{slash}U1RTS{slash}ADC2_CH8{slash}CLK_OUT2{slash}USB_D--Pad13)">
+      <node ref="U1" pin="13" pinfunction="GPIO19/U1RTS/ADC2_CH8/CLK_OUT2/USB_D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="70" name="unconnected-(U1-GPIO20{slash}U1CTS{slash}ADC2_CH9{slash}CLK_OUT1{slash}USB_D+-Pad14)">
+      <node ref="U1" pin="14" pinfunction="GPIO20/U1CTS/ADC2_CH9/CLK_OUT1/USB_D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="71" name="unconnected-(U1-GPIO21-Pad23)">
+      <node ref="U1" pin="23" pinfunction="GPIO21" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="72" name="unconnected-(U1-GPIO38{slash}FSPIWP{slash}SUBSPIWP-Pad31)">
+      <node ref="U1" pin="31" pinfunction="GPIO38/FSPIWP/SUBSPIWP" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="73" name="unconnected-(U1-GPIO45-Pad26)">
+      <node ref="U1" pin="26" pinfunction="GPIO45" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="74" name="unconnected-(U1-GPIO46-Pad16)">
+      <node ref="U1" pin="16" pinfunction="GPIO46" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(U1-GPIO47{slash}SPICLK_P{slash}SUBSPICLK_P_DIFF-Pad24)">
+      <node ref="U1" pin="24" pinfunction="GPIO47/SPICLK_P/SUBSPICLK_P_DIFF" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(U1-GPIO48{slash}SPICLK_N{slash}SUBSPICLK_N_DIFF-Pad25)">
+      <node ref="U1" pin="25" pinfunction="GPIO48/SPICLK_N/SUBSPICLK_N_DIFF" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(U1-MTCK{slash}GPIO39{slash}CLK_OUT3{slash}SUBSPICS1-Pad32)">
+      <node ref="U1" pin="32" pinfunction="MTCK/GPIO39/CLK_OUT3/SUBSPICS1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(U1-MTDI{slash}GPIO41{slash}CLK_OUT1-Pad34)">
+      <node ref="U1" pin="34" pinfunction="MTDI/GPIO41/CLK_OUT1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(U1-MTDO{slash}GPIO40{slash}CLK_OUT2-Pad33)">
+      <node ref="U1" pin="33" pinfunction="MTDO/GPIO40/CLK_OUT2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(U1-MTMS{slash}GPIO42-Pad35)">
+      <node ref="U1" pin="35" pinfunction="MTMS/GPIO42" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(U1-RESERVED_PSRAM{slash}IO35-Pad28)">
+      <node ref="U1" pin="28" pinfunction="RESERVED_PSRAM/IO35" pintype="no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(U1-RESERVED_PSRAM{slash}IO36-Pad29)">
+      <node ref="U1" pin="29" pinfunction="RESERVED_PSRAM/IO36" pintype="no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(U1-RESERVED_PSRAM{slash}IO37-Pad30)">
+      <node ref="U1" pin="30" pinfunction="RESERVED_PSRAM/IO37" pintype="no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(U1-U0RXD{slash}GPIO44{slash}CLK_OUT2-Pad36)">
+      <node ref="U1" pin="36" pinfunction="U0RXD/GPIO44/CLK_OUT2" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="85" name="unconnected-(U1-U0TXD{slash}GPIO43{slash}CLK_OUT1-Pad37)">
+      <node ref="U1" pin="37" pinfunction="U0TXD/GPIO43/CLK_OUT1" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

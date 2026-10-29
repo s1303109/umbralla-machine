@@ -1,0 +1,248 @@
+(kicad_symbol_lib
+  (version 20231120)
+  (generator "kicad_symbol_editor")
+  (symbol "HW-307_5V_External"
+    (property "ki_keywords" "Relay external module terminal functional"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "FootprintStatus" "Pending"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Verification" "Partially Verified"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "SourceScope" "Photo confirms module marking and all six terminal labels; seller title describes low-level trigger."
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Source" "../esp32s3_vl53l0x_servo/WIRING_24V_MOTOR.md"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "HW-307 / JQC3F-05VDC-C"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Unknown module manufacturer"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Description" "5V complete relay module, control and NO/COM/NC terminals; not bare relay package"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Datasheet" "https://shopee.tw/1路-繼電器模組-DC-5V-Relay擴展板-DC-0.1～4V低電平觸發-i.4491023.2033050029"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Footprint" ""
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (in_bom yes)
+    (on_board no)
+    (pin_names
+      (offset 1.016)
+    )
+    (property "Reference" "A"
+      (at 0 17.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "HW-307_5V_External"
+      (at 0 15.24 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (symbol "HW-307_5V_External_0_1"
+      (rectangle
+        (start -17.78 12.7)
+        (end 17.78 -12.7)
+        (stroke
+          (width .254)
+          (type default)
+        )
+        (fill
+          (type background)
+        )
+      )
+      (text "EXTERNAL DEVICE"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1 1)
+          )
+        )
+      )
+    )
+    (symbol "HW-307_5V_External_1_1"
+      (pin power_in line
+        (at -22.86 7.62 0)
+        (length 5.08)
+        (name "VCC_5V"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CTRL.VCC"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin power_in line
+        (at -22.86 2.54 0)
+        (length 5.08)
+        (name "GND"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CTRL.GND"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin input line
+        (at -22.86 -2.54 0)
+        (length 5.08)
+        (name "IN_LOW_TRIGGER"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CTRL.IN"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin passive line
+        (at 22.86 7.62 180)
+        (length 5.08)
+        (name "NO"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CONTACT.NO"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin passive line
+        (at 22.86 2.54 180)
+        (length 5.08)
+        (name "COM"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CONTACT.COM"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+      (pin passive line
+        (at 22.86 -2.54 180)
+        (length 5.08)
+        (name "NC"
+          (effects
+            (font
+              (size 1.016 1.016)
+            )
+          )
+        )
+        (number "CONTACT.NC"
+          (effects
+            (font
+              (size .762 .762)
+            )
+          )
+        )
+      )
+    )
+  )
+)

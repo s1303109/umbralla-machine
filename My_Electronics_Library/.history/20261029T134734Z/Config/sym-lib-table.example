@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "ESP32_Custom")(type "KiCad")(uri "${MY_KICAD_LIB_DIR}/Symbols/ESP32_Custom.kicad_sym")(options "")(descr "Personal ESP32 library, KiCad 8"))
+)

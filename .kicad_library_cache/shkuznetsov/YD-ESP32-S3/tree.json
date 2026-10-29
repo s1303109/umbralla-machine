@@ -1,0 +1,62 @@
+{
+  "sha": "bb410449c3d5ee20096ff273d6c1081c5dd6228f",
+  "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/trees/bb410449c3d5ee20096ff273d6c1081c5dd6228f",
+  "tree": [
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7008009b7937dde4a9be2dd420c1bd61150708e3",
+      "size": 1076,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/7008009b7937dde4a9be2dd420c1bd61150708e3"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "16e46d7e1e930594ef07bfdbbc800dc81cdbcde7",
+      "size": 2499,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/16e46d7e1e930594ef07bfdbbc800dc81cdbcde7"
+    },
+    {
+      "path": "YD-ESP32-S3.kicad_mod",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ff8e8faa32bb399773241d0a6d91c9a487b4b4b9",
+      "size": 25316,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/ff8e8faa32bb399773241d0a6d91c9a487b4b4b9"
+    },
+    {
+      "path": "YD-ESP32-S3.kicad_sym",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9f29d0c3b10350685522336908bbf959dd44bdf4",
+      "size": 13116,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/9f29d0c3b10350685522336908bbf959dd44bdf4"
+    },
+    {
+      "path": "YD-ESP32-S3.step",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c829a2d552e7b09883c5c5ab81233b6fb49e04b7",
+      "size": 20631414,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/c829a2d552e7b09883c5c5ab81233b6fb49e04b7"
+    },
+    {
+      "path": "images",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b2d1816789ff9f38c5b8c28095cde01543101e20",
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/trees/b2d1816789ff9f38c5b8c28095cde01543101e20"
+    },
+    {
+      "path": "images/sample.jpg",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "733ebeb7f0bfd0fdee31531e8a481802cf813711",
+      "size": 235216,
+      "url": "https://api.github.com/repos/shkuznetsov/YD-ESP32-S3/git/blobs/733ebeb7f0bfd0fdee31531e8a481802cf813711"
+    }
+  ],
+  "truncated": false
+}

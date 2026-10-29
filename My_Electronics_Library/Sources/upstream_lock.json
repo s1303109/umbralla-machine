@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "espressif_release": "3.0.2",
+  "espressif_commit": "4f6c7a65f161b0df77955b49a1398f77dfdb255e",
+  "kicad_footprints_tag": "8.0.9",
+  "kicad_footprints_commit": "f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35",
+  "files": [
+    {
+      "cache_path": "espressif/3.0.2/espressif-kicad-addon.zip",
+      "url": "https://github.com/espressif/kicad-libraries/releases/download/3.0.2/espressif-kicad-addon.zip",
+      "sha256": "2df44ed8a41246c5de9f40803a9329a22a7bd465c8a222dea8f36bffcbb79b6b"
+    },
+    {
+      "cache_path": "espressif/3.0.2/LICENSE.md",
+      "url": "https://raw.githubusercontent.com/espressif/kicad-libraries/4f6c7a65f161b0df77955b49a1398f77dfdb255e/LICENSE.md",
+      "sha256": "6eb43c2548ac6714db47ccbd62354bd194e918f606b071a5e9893680b941d75a"
+    },
+    {
+      "cache_path": "kicad/8.0.9/LICENSE.md",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/LICENSE.md",
+      "sha256": "45d2bce75e5a4208f5afb01b8fb2c406e700371c4fe2b5f5cd5c443d46db4d8f"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-24-1EP_4x4mm_P0.5mm_EP2.8x2.8mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-24-1EP_4x4mm_P0.5mm_EP2.8x2.8mm.kicad_mod",
+      "sha256": "5b2dc262979b8960009d0a41069856a8c6d99a5ef4f5ac2252b9216ba22e4932"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-28-1EP_4x4mm_P0.4mm_EP2.6x2.6mm.kicad_mod",
+      "sha256": "5629ca6c6cee27c2dbcb66baf9448d9828d9463beb13321a627f7c8b5ccdfcbd"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm.kicad_mod",
+      "sha256": "9d09c3da3855c83ee28496084c3f8371a825ec8d124ff64eb9cbfabec1476bec"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm.kicad_mod",
+      "sha256": "d3576ef2dd8baa19dbc6515a75e88b46f6669a14419274c45f24b70001c3a974"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-40-1EP_5x5mm_P0.4mm_EP3.6x3.6mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-40-1EP_5x5mm_P0.4mm_EP3.6x3.6mm.kicad_mod",
+      "sha256": "c71fde06b9a8fb56ec45374e062b53acd58ad375a4637b0b3c911d7c8acd38bb"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-48-1EP_6x6mm_P0.4mm_EP4.3x4.3mm.kicad_mod",
+      "sha256": "5e6425c86f53e7e2b1799087343d686a532223bc8b4ab6aa7949b69b7e3ff914"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-48-1EP_7x7mm_P0.5mm_EP5.15x5.15mm.kicad_mod",
+      "sha256": "4ba456fca25dcf38e0a365d09f83661d07855b3dcff452f8d3a53eeb182404bf"
+    },
+    {
+      "cache_path": "kicad/8.0.9/Package_DFN_QFN.pretty/QFN-56-1EP_7x7mm_P0.4mm_EP5.6x5.6mm.kicad_mod",
+      "url": "https://gitlab.com/kicad/libraries/kicad-footprints/-/raw/f6da1c7ab465ca8a77eadf30e9f7f9b8e2829f35/Package_DFN_QFN.pretty/QFN-56-1EP_7x7mm_P0.4mm_EP5.6x5.6mm.kicad_mod",
+      "sha256": "c971a6e39659b3071be3020ad8a014aa545e48b2dbba95e4d4113eaaae43fe92"
+    }
+  ]
+}

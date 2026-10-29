@@ -1,0 +1,32 @@
+{
+  "symbol": "YD-ESP32-S3_Type-A_V1.5_N16R8",
+  "footprint": "YD-ESP32-S3_2x22_P2.54mm_Row25.40mm",
+  "manufacturer": "VCC-GND Studio",
+  "model": "YD-ESP32-S3 Type-A V1.5 / ESP32-S3-WROOM-1-N16R8",
+  "status": "Partially Verified",
+  "source_commit": "b4ac4d60d1845a554bbbc7c97806ccb97cf08941",
+  "source_repository": "https://github.com/vcc-gnd/YD-ESP32-S3",
+  "schematic_file": "5-public-YD-ESP32-S3-Hardware info/YD-ESP32-S3-SCH-V1.4.pdf",
+  "mechanical_file": "5-public-YD-ESP32-S3-Hardware info/ESP32-S3-Metric.pdf",
+  "geometry_mm": {
+    "row_spacing": 25.4,
+    "pitch": 2.54,
+    "body_width": 27.94,
+    "body_length": 57.15,
+    "total_length_with_antenna": 63.39,
+    "top_pin_center_to_body_edge": 1.91,
+    "carrier_pad_diameter": 1.8,
+    "carrier_finished_hole": 1.1
+  },
+  "geometry_notes": "原廠尺寸圖未標實物 V1.5；排距另經使用者確認。載板焊盤 1.8 / 成品孔 1.1 mm 是本庫排母安裝預選值，不是原廠開發板孔尺寸。製板前依實際排母規格核對。",
+  "numbering": "Top view, antenna up / USB down. Left J1.1..J1.22 and right J2.1..J2.22 both count top to bottom; library pad numbers explicitly retain connector identity. Not GPIO numbers.",
+  "left": ["3V3", "3V3", "EN", "GPIO4", "GPIO5", "GPIO6", "GPIO7", "GPIO15", "GPIO16", "GPIO17", "GPIO18", "GPIO8", "GPIO3", "GPIO46", "GPIO9", "GPIO10", "GPIO11", "GPIO12", "GPIO13", "GPIO14", "5V", "GND"],
+  "right": ["GND", "GPIO43/TX", "GPIO44/RX", "GPIO1", "GPIO2", "GPIO42", "GPIO41", "GPIO40", "GPIO39", "GPIO38", "GPIO37/RESERVED", "GPIO36/RESERVED", "GPIO35/RESERVED", "GPIO0", "GPIO45", "GPIO48/RGB", "GPIO47", "GPIO21", "GPIO20/USB_D+", "GPIO19/USB_D-", "GND", "GND"],
+  "pending": [
+    "公開 V1.4 原理圖與實物 Type-A V1.5 的其餘差異",
+    "實物全 44 腳標示及方向逐腳核對",
+    "載板所用排母料號、成品孔、外殼與高度核對",
+    "完整開發板 3D 模型缺少；未以模組 STEP 冒充整板",
+    "天線額外淨空依最終載板與 Espressif 硬體設計指南核對"
+  ]
+}

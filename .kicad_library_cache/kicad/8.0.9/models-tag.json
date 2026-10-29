@@ -1,0 +1,27 @@
+{
+  "name": "8.0.9",
+  "message": "Tag stable version 8.0.9.",
+  "target": "afea1ed02313ffecc68f3d28a278f5bf09f12ab1",
+  "commit": {
+    "id": "fdd65b7b79d120b3c36b83c125297af7b4522f4f",
+    "short_id": "fdd65b7b",
+    "created_at": "2024-12-23T13:25:02.000+00:00",
+    "parent_ids": [
+      "90551c40514433d1c50ad60603ae0c9099bbd8e7"
+    ],
+    "title": "replace MSOP-12 and MSOP-16 models with more exact ones (width = 4.039 mm instead of 4.00 mm)",
+    "message": "replace MSOP-12 and MSOP-16 models with more exact ones (width = 4.039 mm instead of 4.00 mm)\n\nSee merge request kicad/libraries/kicad-packages3D!1114\n",
+    "author_name": "Simon F",
+    "author_email": "spf85k@gmail.com",
+    "authored_date": "2024-12-23T13:25:02.000+00:00",
+    "committer_name": "kliment",
+    "committer_email": "kliment@0xfb.com",
+    "committed_date": "2024-12-23T13:25:02.000+00:00",
+    "trailers": {},
+    "extended_trailers": {},
+    "web_url": "https://gitlab.com/kicad/libraries/kicad-packages3D/-/commit/fdd65b7b79d120b3c36b83c125297af7b4522f4f"
+  },
+  "release": null,
+  "protected": true,
+  "created_at": "2025-02-18T17:04:35.000Z"
+}

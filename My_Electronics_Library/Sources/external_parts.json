@@ -1,0 +1,523 @@
+[
+  {
+    "id": "USER-PWR-001",
+    "category": "Power",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "LM2596 adjustable buck module",
+    "symbol": "LM2596_Module_External",
+    "description": "Complete adjustable buck module; wired external device, not bare LM2596 IC",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "https://www.ti.com/lit/ds/symlink/lm2596.pdf",
+    "source_scope": "TI PDF covers IC only; module ports from existing wiring record and user confirmation.",
+    "status": "Partially Verified",
+    "mounting": "Wired external module; user confirmed",
+    "footprint_status": "Not Applicable (module itself); carrier connector MPN/footprint Pending",
+    "pins": [
+      [
+        "IN+",
+        "IN+",
+        "power_in",
+        "left"
+      ],
+      [
+        "IN-",
+        "IN-",
+        "power_in",
+        "left"
+      ],
+      [
+        "OUT+",
+        "OUT+",
+        "power_out",
+        "right"
+      ],
+      [
+        "OUT-",
+        "OUT-",
+        "power_in",
+        "right"
+      ]
+    ],
+    "notes": "24V input -> provisional 6V output. Full module current/ratings remain unverified; carrier connector not yet selected."
+  },
+  {
+    "id": "USER-PWR-002",
+    "category": "Power",
+    "manufacturer": "MEAN WELL",
+    "model": "D-50B",
+    "symbol": "D-50B_External",
+    "description": "Chassis dual-output supply, +5V 6A and +24V 1A; external terminal representation",
+    "source": "https://www.meanwell.com/Upload/PDF/D-50/D-50-SPEC.PDF",
+    "datasheet": "https://www.meanwell.com/Upload/PDF/D-50/D-50-SPEC.PDF",
+    "photo": "/workspace/transformer ammp.jpg",
+    "source_scope": "Manufacturer D-50-SPEC, 2011-06-17, terminal assignment; physical nameplate checked.",
+    "status": "Partially Verified",
+    "mounting": "Chassis-mounted external supply",
+    "footprint_status": "Not Applicable (chassis device); carrier connectors Pending",
+    "pins": [
+      [
+        "1",
+        "AC/L",
+        "power_in",
+        "left"
+      ],
+      [
+        "2",
+        "AC/N",
+        "power_in",
+        "left"
+      ],
+      [
+        "3",
+        "FG/PE",
+        "passive",
+        "left"
+      ],
+      [
+        "4",
+        "+24V/V2",
+        "power_out",
+        "right"
+      ],
+      [
+        "5",
+        "COM",
+        "power_in",
+        "right"
+      ],
+      [
+        "6",
+        "COM",
+        "power_in",
+        "right"
+      ],
+      [
+        "7",
+        "+5V/V1",
+        "power_out",
+        "right"
+      ]
+    ],
+    "notes": "Terminal numbering from official PDF. Do not use older S-50-5 terminal order; no PCB mains safety approval."
+  },
+  {
+    "id": "USER-RELAY-002",
+    "category": "Relay",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "HW-307 / JQC3F-05VDC-C",
+    "symbol": "HW-307_5V_External",
+    "description": "5V complete relay module, control and NO/COM/NC terminals; not bare relay package",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "https://shopee.tw/1路-繼電器模組-DC-5V-Relay擴展板-DC-0.1～4V低電平觸發-i.4491023.2033050029",
+    "photo": "/workspace/RELAY SMALL 05VDC.jpg",
+    "source_scope": "Photo confirms module marking and all six terminal labels; seller title describes low-level trigger.",
+    "status": "Partially Verified",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connectors Pending",
+    "pins": [
+      [
+        "CTRL.VCC",
+        "VCC_5V",
+        "power_in",
+        "left"
+      ],
+      [
+        "CTRL.GND",
+        "GND",
+        "power_in",
+        "left"
+      ],
+      [
+        "CTRL.IN",
+        "IN_LOW_TRIGGER",
+        "input",
+        "left"
+      ],
+      [
+        "CONTACT.NO",
+        "NO",
+        "passive",
+        "right"
+      ],
+      [
+        "CONTACT.COM",
+        "COM",
+        "passive",
+        "right"
+      ],
+      [
+        "CONTACT.NC",
+        "NC",
+        "passive",
+        "right"
+      ]
+    ],
+    "notes": "Symbol pin IDs are logical terminal IDs, not numbered bare-relay pins. Full-board footprint/3D absent. Photo ratings not treated as motor-duty approval."
+  },
+  {
+    "id": "USER-SENSOR-001A",
+    "category": "Sensors",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "VL53L0X small purple module (photo upper)",
+    "symbol": "VL53L0X_Module_I2C_4Wire_Interface",
+    "description": "Four-wire I2C interface observed on upper module; extra side pads not represented until verified",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "https://www.st.com/resource/en/datasheet/vl53l0x.pdf",
+    "photo": "/workspace/TOF.jpg",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Pending",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "VIN",
+        "VIN",
+        "power_in",
+        "left"
+      ],
+      [
+        "GND",
+        "GND",
+        "power_in",
+        "left"
+      ],
+      [
+        "SCL",
+        "SCL",
+        "input",
+        "left"
+      ],
+      [
+        "SDA",
+        "SDA",
+        "bidirectional",
+        "right"
+      ]
+    ],
+    "notes": "VIN rating unknown; two side pads exist but labels/functions not fully resolved. This is a four-wire interface, not a complete module land pattern."
+  },
+  {
+    "id": "USER-SENSOR-001B",
+    "category": "Sensors",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "VL53L0/1X V2, V438 marking (photo lower)",
+    "symbol": "VL53L0_1X_V2_6Wire_Interface",
+    "description": "Six labeled wire terminals on shared VL53L0/1X V2 breakout; exact sensor and VIN rating pending",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "https://www.st.com/resource/en/datasheet/vl53l0x.pdf",
+    "photo": "/workspace/TOF.jpg",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Partially Verified",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "VIN",
+        "VIN",
+        "power_in",
+        "left"
+      ],
+      [
+        "GND",
+        "GND",
+        "power_in",
+        "left"
+      ],
+      [
+        "SCL",
+        "SCL",
+        "input",
+        "left"
+      ],
+      [
+        "SDA",
+        "SDA",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "GPIO1",
+        "GPIO1",
+        "open_collector",
+        "right"
+      ],
+      [
+        "XSHUT",
+        "XSHUT",
+        "input",
+        "left"
+      ]
+    ],
+    "notes": "Photo does not distinguish populated L0X vs L1X. Existing project uses VL53L0X driver; no inferred 5V capability."
+  },
+  {
+    "id": "USER-SENSOR-002",
+    "category": "Sensors",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "HC-SR04 module",
+    "symbol": "HC-SR04_4Wire_Interface",
+    "description": "External ultrasonic module, four logical wire terminals",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "",
+    "photo": "",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Pending",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "VCC",
+        "VCC",
+        "power_in",
+        "left"
+      ],
+      [
+        "GND",
+        "GND",
+        "power_in",
+        "left"
+      ],
+      [
+        "TRIG",
+        "TRIG",
+        "input",
+        "left"
+      ],
+      [
+        "ECHO",
+        "ECHO",
+        "output",
+        "right"
+      ]
+    ],
+    "notes": "VCC/TRIG/ECHO/GND from existing wiring record; exact board maker/revision unknown; no module footprint."
+  },
+  {
+    "id": "USER-DISPLAY-001",
+    "category": "Display",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "3.5 inch TFT LCD Shield (ILI9486-compatible)",
+    "symbol": "TFT_3p5_Shield_Wire_Interface",
+    "description": "Named LCD/SD/power wire interfaces from shield photo; not the bare controller package",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "",
+    "photo": "/workspace/pin of lcd.jpg",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Pending",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "5V",
+        "5V",
+        "passive",
+        "left"
+      ],
+      [
+        "3V3",
+        "3V3",
+        "passive",
+        "left"
+      ],
+      [
+        "GND",
+        "GND",
+        "passive",
+        "left"
+      ],
+      [
+        "LCD_RST",
+        "LCD_RST",
+        "input",
+        "left"
+      ],
+      [
+        "LCD_CS",
+        "LCD_CS",
+        "input",
+        "left"
+      ],
+      [
+        "LCD_RS",
+        "LCD_RS",
+        "input",
+        "left"
+      ],
+      [
+        "LCD_WR",
+        "LCD_WR",
+        "input",
+        "left"
+      ],
+      [
+        "LCD_RD",
+        "LCD_RD",
+        "input",
+        "left"
+      ],
+      [
+        "LCD_D0",
+        "LCD_D0",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D1",
+        "LCD_D1",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D2",
+        "LCD_D2",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D3",
+        "LCD_D3",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D4",
+        "LCD_D4",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D5",
+        "LCD_D5",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D6",
+        "LCD_D6",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "LCD_D7",
+        "LCD_D7",
+        "bidirectional",
+        "right"
+      ],
+      [
+        "SD_SS",
+        "SD_SS",
+        "input",
+        "right"
+      ],
+      [
+        "SD_DI",
+        "SD_DI",
+        "input",
+        "right"
+      ],
+      [
+        "SD_DO",
+        "SD_DO",
+        "output",
+        "right"
+      ],
+      [
+        "SD_SCK",
+        "SD_SCK",
+        "input",
+        "right"
+      ]
+    ],
+    "notes": "Photo shows 74HC245 x2 and AMS1117-3.3 onboard. Duplicated/unlabeled physical header positions not modeled; power terminals passive because source direction is not fully verified."
+  },
+  {
+    "id": "USER-RELAY-001",
+    "category": "Relay",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "Relay module based on SLA-05VDC-SL-C",
+    "symbol": "SLA05_Relay_Module_Wire_Interface",
+    "description": "External six-terminal interface of complete relay module; H/L and supply jumpers remain physical settings",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "https://www.handsontec.com/dataspecs/module/30A-RelayMod.pdf",
+    "photo": "/workspace/relay.png",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Pending",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "CTRL.DC+",
+        "DC+_5V",
+        "power_in",
+        "left"
+      ],
+      [
+        "CTRL.DC-",
+        "DC-",
+        "power_in",
+        "left"
+      ],
+      [
+        "CTRL.IN",
+        "IN",
+        "input",
+        "left"
+      ],
+      [
+        "CONTACT.NO",
+        "NO",
+        "passive",
+        "right"
+      ],
+      [
+        "CONTACT.COM",
+        "COM",
+        "passive",
+        "right"
+      ],
+      [
+        "CONTACT.NC",
+        "NC",
+        "passive",
+        "right"
+      ]
+    ],
+    "notes": "Linked guide is a similar module, not proof of exact board revision. Existing wiring uses H trigger and fitted DC/JD jumpers. No motor/mains rating approval."
+  },
+  {
+    "id": "USER-SERVO-001",
+    "category": "Other",
+    "manufacturer": "Unknown module manufacturer",
+    "model": "Unidentified three-wire RC servo",
+    "symbol": "RC_Servo_3Wire_Interface",
+    "description": "Generic external servo wire interface only; exact servo model and continuous rotation capability unknown",
+    "source": "Datasheets/USER_PARTS_EVIDENCE.md",
+    "datasheet": "",
+    "photo": "",
+    "source_scope": "User photograph and existing project wiring; logical wire interfaces, not numbered module pads. IC datasheet is not a module supply-rating guarantee.",
+    "status": "Pending",
+    "mounting": "External module connected by wires; user confirmed",
+    "footprint_status": "Not Applicable (external device); carrier connector footprint Pending",
+    "pins": [
+      [
+        "V+",
+        "V+",
+        "power_in",
+        "left"
+      ],
+      [
+        "GND",
+        "GND",
+        "power_in",
+        "left"
+      ],
+      [
+        "SIG",
+        "SIG",
+        "input",
+        "right"
+      ]
+    ],
+    "notes": "Functional interface is not an identified purchasing MPN; 6V and 3.3V compatibility remain unverified."
+  }
+]
