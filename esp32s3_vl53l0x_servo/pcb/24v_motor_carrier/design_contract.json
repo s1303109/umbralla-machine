@@ -1,0 +1,1202 @@
+{
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "scope": "Independent low-voltage KiCad carrier; external ESP32 dev board, LCD, sensors and relays; no AC/L, AC/N, PE or mains contact copper on carrier",
+  "schema_version": 1,
+  "sources": {
+    "main/main.c": {
+      "sha256": "8f360c462ad7e9d464772f240f070539cb5ad8756e91b32f79ed1bc587c55580",
+      "lines": "19-49,187-243,425-485"
+    },
+    "main/lcd_display.c": {
+      "sha256": "11b77f5eed56cefd426d5624fbc4ba704eb35653d13947d163139757ac8d5472",
+      "lines": "19-41"
+    },
+    "esp32_symbol": "/workspace/My_Electronics_Library/Symbols/ESP32_Custom.kicad_sym",
+    "esp32_footprint": "/workspace/My_Electronics_Library/Footprints/ESP32_Custom.pretty/YD-ESP32-S3_2x22_P2.54mm_Row25.40mm.kicad_mod",
+    "power_connections": "docs/wiring/power_connections.json (historical servo-return field not used)"
+  },
+  "esp32": {
+    "symbol": "YD-ESP32-S3_Type-A_V1.5_N16R8",
+    "pitch_mm": 2.54,
+    "row_spacing_mm": 25.4,
+    "pad_numbering": "Both J1/J2 increase from antenna end to USB end; pad IDs are not GPIO numbers",
+    "pins": [
+      {
+        "pad": "J1.1",
+        "name": "3V3",
+        "gpio": null,
+        "net": "3V3",
+        "use": "on-board regulator output; do not feed external 5V",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J1.2",
+        "name": "3V3",
+        "gpio": null,
+        "net": "3V3",
+        "use": "on-board regulator output; do not feed external 5V",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J1.3",
+        "name": "EN",
+        "gpio": null,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "input"
+      },
+      {
+        "pad": "J1.4",
+        "name": "GPIO4",
+        "gpio": 4,
+        "net": "LCD_RST",
+        "use": "LCD_RST",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.5",
+        "name": "GPIO5",
+        "gpio": 5,
+        "net": "HC_TRIG",
+        "use": "HC-SR04 TRIG",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.6",
+        "name": "GPIO6",
+        "gpio": 6,
+        "net": "HC_ECHO_DIV",
+        "use": "HC ECHO divider midpoint",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.7",
+        "name": "GPIO7",
+        "gpio": 7,
+        "net": "K1_IN_H",
+        "use": "K1 high-trigger input",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.8",
+        "name": "GPIO15",
+        "gpio": 15,
+        "net": "LCD_D2",
+        "use": "LCD data 2",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.9",
+        "name": "GPIO16",
+        "gpio": 16,
+        "net": "LCD_D3",
+        "use": "LCD data 3",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.10",
+        "name": "GPIO17",
+        "gpio": 17,
+        "net": "LCD_D4",
+        "use": "LCD data 4",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.11",
+        "name": "GPIO18",
+        "gpio": 18,
+        "net": "LCD_D5",
+        "use": "LCD data 5",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.12",
+        "name": "GPIO8",
+        "gpio": 8,
+        "net": "TOF1_SDA",
+        "use": "ToF1 SDA",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.13",
+        "name": "GPIO3",
+        "gpio": 3,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.14",
+        "name": "GPIO46",
+        "gpio": 46,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.15",
+        "name": "GPIO9",
+        "gpio": 9,
+        "net": "TOF1_SCL",
+        "use": "ToF1 SCL",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.16",
+        "name": "GPIO10",
+        "gpio": 10,
+        "net": "TOF1_XSHUT",
+        "use": "ToF1 XSHUT",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.17",
+        "name": "GPIO11",
+        "gpio": 11,
+        "net": "TOF2_SDA",
+        "use": "ToF2 SDA",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.18",
+        "name": "GPIO12",
+        "gpio": 12,
+        "net": "TOF2_SCL",
+        "use": "ToF2 SCL",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.19",
+        "name": "GPIO13",
+        "gpio": 13,
+        "net": "LCD_D0",
+        "use": "LCD data 0",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.20",
+        "name": "GPIO14",
+        "gpio": 14,
+        "net": "LCD_D1",
+        "use": "LCD data 1",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J1.21",
+        "name": "5V",
+        "gpio": null,
+        "net": "+5V_ESP",
+        "use": "external input after removable supply link JP1; downstream 5V tap",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J1.22",
+        "name": "GND",
+        "gpio": null,
+        "net": "GND",
+        "use": "DC common",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J2.1",
+        "name": "GND",
+        "gpio": null,
+        "net": "GND",
+        "use": "DC common",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J2.2",
+        "name": "GPIO43/TX",
+        "gpio": 43,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.3",
+        "name": "GPIO44/RX",
+        "gpio": 44,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.4",
+        "name": "GPIO1",
+        "gpio": 1,
+        "net": null,
+        "use": "servo signal left unconnected; current firmware still emits pulses",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.5",
+        "name": "GPIO2",
+        "gpio": 2,
+        "net": "GPIO2_K2_DRIVE",
+        "use": "K2 NPN base drive",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.6",
+        "name": "GPIO42",
+        "gpio": 42,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.7",
+        "name": "GPIO41",
+        "gpio": 41,
+        "net": "LCD_RD",
+        "use": "LCD_RD",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.8",
+        "name": "GPIO40",
+        "gpio": 40,
+        "net": "LCD_WR",
+        "use": "LCD_WR",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.9",
+        "name": "GPIO39",
+        "gpio": 39,
+        "net": "LCD_RS",
+        "use": "LCD_RS",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.10",
+        "name": "GPIO38",
+        "gpio": 38,
+        "net": "LCD_CS",
+        "use": "LCD_CS",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.11",
+        "name": "GPIO37/RESERVED",
+        "gpio": 37,
+        "net": null,
+        "use": "reserved-no-connect",
+        "library_pin_type": "no_connect"
+      },
+      {
+        "pad": "J2.12",
+        "name": "GPIO36/RESERVED",
+        "gpio": 36,
+        "net": null,
+        "use": "reserved-no-connect",
+        "library_pin_type": "no_connect"
+      },
+      {
+        "pad": "J2.13",
+        "name": "GPIO35/RESERVED",
+        "gpio": 35,
+        "net": null,
+        "use": "reserved-no-connect",
+        "library_pin_type": "no_connect"
+      },
+      {
+        "pad": "J2.14",
+        "name": "GPIO0",
+        "gpio": 0,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.15",
+        "name": "GPIO45",
+        "gpio": 45,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.16",
+        "name": "GPIO48/RGB",
+        "gpio": 48,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.17",
+        "name": "GPIO47",
+        "gpio": 47,
+        "net": "LCD_D7",
+        "use": "LCD data 7",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.18",
+        "name": "GPIO21",
+        "gpio": 21,
+        "net": "LCD_D6",
+        "use": "LCD data 6",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.19",
+        "name": "GPIO20/USB_D+",
+        "gpio": 20,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.20",
+        "name": "GPIO19/USB_D-",
+        "gpio": 19,
+        "net": null,
+        "use": "unused-no-connect",
+        "library_pin_type": "bidirectional"
+      },
+      {
+        "pad": "J2.21",
+        "name": "GND",
+        "gpio": null,
+        "net": "GND",
+        "use": "DC common",
+        "library_pin_type": "passive"
+      },
+      {
+        "pad": "J2.22",
+        "name": "GND",
+        "gpio": null,
+        "net": "GND",
+        "use": "DC common",
+        "library_pin_type": "passive"
+      }
+    ],
+    "gpio_to_pad": {
+      "0": "J2.14",
+      "1": "J2.4",
+      "2": "J2.5",
+      "3": "J1.13",
+      "4": "J1.4",
+      "5": "J1.5",
+      "6": "J1.6",
+      "7": "J1.7",
+      "8": "J1.12",
+      "9": "J1.15",
+      "10": "J1.16",
+      "11": "J1.17",
+      "12": "J1.18",
+      "13": "J1.19",
+      "14": "J1.20",
+      "15": "J1.8",
+      "16": "J1.9",
+      "17": "J1.10",
+      "18": "J1.11",
+      "19": "J2.20",
+      "20": "J2.19",
+      "21": "J2.18",
+      "35": "J2.13",
+      "36": "J2.12",
+      "37": "J2.11",
+      "38": "J2.10",
+      "39": "J2.9",
+      "40": "J2.8",
+      "41": "J2.7",
+      "42": "J2.6",
+      "43": "J2.2",
+      "44": "J2.3",
+      "45": "J2.15",
+      "46": "J1.14",
+      "47": "J2.17",
+      "48": "J2.16"
+    },
+    "firmware_used_gpio": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      21,
+      38,
+      39,
+      40,
+      41,
+      47
+    ],
+    "reserved_gpio": [
+      35,
+      36,
+      37
+    ],
+    "servo_gpio_1": "NC on carrier; firmware unchanged"
+  },
+  "components": {
+    "A1": {
+      "kind": "ESP32 development-board socket",
+      "value": "YD-ESP32-S3_Type-A_V1.5_N16R8",
+      "footprint": "ESP32_Custom:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm",
+      "pins": {
+        "J1.1": "3V3",
+        "J1.2": "3V3",
+        "J1.3": null,
+        "J1.4": "LCD_RST",
+        "J1.5": "HC_TRIG",
+        "J1.6": "HC_ECHO_DIV",
+        "J1.7": "K1_IN_H",
+        "J1.8": "LCD_D2",
+        "J1.9": "LCD_D3",
+        "J1.10": "LCD_D4",
+        "J1.11": "LCD_D5",
+        "J1.12": "TOF1_SDA",
+        "J1.13": null,
+        "J1.14": null,
+        "J1.15": "TOF1_SCL",
+        "J1.16": "TOF1_XSHUT",
+        "J1.17": "TOF2_SDA",
+        "J1.18": "TOF2_SCL",
+        "J1.19": "LCD_D0",
+        "J1.20": "LCD_D1",
+        "J1.21": "+5V_ESP",
+        "J1.22": "GND",
+        "J2.1": "GND",
+        "J2.2": null,
+        "J2.3": null,
+        "J2.4": null,
+        "J2.5": "GPIO2_K2_DRIVE",
+        "J2.6": null,
+        "J2.7": "LCD_RD",
+        "J2.8": "LCD_WR",
+        "J2.9": "LCD_RS",
+        "J2.10": "LCD_CS",
+        "J2.11": null,
+        "J2.12": null,
+        "J2.13": null,
+        "J2.14": null,
+        "J2.15": null,
+        "J2.16": null,
+        "J2.17": "LCD_D7",
+        "J2.18": "LCD_D6",
+        "J2.19": null,
+        "J2.20": null,
+        "J2.21": "GND",
+        "J2.22": "GND"
+      },
+      "verification": "V1.4 source mapping; V1.5 physical audit pending"
+    },
+    "J1": {
+      "kind": "DC input terminal",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "GND",
+        "3": "+24V"
+      },
+      "pin_labels": {
+        "1": "+5V",
+        "2": "COM",
+        "3": "+24V"
+      },
+      "verification": "project-defined pin order; terminal model/current rating pending"
+    },
+    "JP1": {
+      "kind": "removable external-5V supply link",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "+5V_ESP"
+      },
+      "verification": "remove before USB-powered operation; no automatic power ORing is claimed"
+    },
+    "J2": {
+      "kind": "LCD cable header 1x16",
+      "pins": {
+        "1": "GND",
+        "2": "+5V_ESP",
+        "3": "LCD_RST",
+        "4": "LCD_CS",
+        "5": "LCD_RS",
+        "6": "LCD_WR",
+        "7": "LCD_RD",
+        "8": "LCD_D0",
+        "9": "LCD_D1",
+        "10": "LCD_D2",
+        "11": "LCD_D3",
+        "12": "LCD_D4",
+        "13": "LCD_D5",
+        "14": "LCD_D6",
+        "15": "LCD_D7",
+        "16": null
+      },
+      "verification": "project-defined cable header; NOT native shield physical pin order; pin16 NC"
+    },
+    "J3": {
+      "kind": "ToF1 six-wire cable header",
+      "pins": {
+        "1": "TOF1_VIN",
+        "2": "GND",
+        "3": "TOF1_SCL",
+        "4": "TOF1_SDA",
+        "5": null,
+        "6": "TOF1_XSHUT"
+      },
+      "pin_labels": {
+        "1": "VIN",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA",
+        "5": "GPIO1_NC",
+        "6": "XSHUT"
+      },
+      "verification": "logical interface order only; actual connector/cable must be verified"
+    },
+    "J4": {
+      "kind": "ToF2 four-wire cable header",
+      "pins": {
+        "1": "TOF2_VIN",
+        "2": "GND",
+        "3": "TOF2_SCL",
+        "4": "TOF2_SDA"
+      },
+      "pin_labels": {
+        "1": "VIN",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA"
+      },
+      "verification": "logical interface order only; no XSHUT control configured"
+    },
+    "JP2": {
+      "kind": "ToF1 VIN selection jumper",
+      "pins": {
+        "1": "3V3",
+        "2": "TOF1_VIN",
+        "3": "+5V_ESP"
+      },
+      "assembly_default": "OPEN / no shunt",
+      "verification": "VIN and I2C pull-up levels unverified; choose rail only after actual module check"
+    },
+    "JP3": {
+      "kind": "ToF2 VIN selection jumper",
+      "pins": {
+        "1": "3V3",
+        "2": "TOF2_VIN",
+        "3": "+5V_ESP"
+      },
+      "assembly_default": "OPEN / no shunt",
+      "verification": "VIN and I2C pull-up levels unverified; choose rail only after actual module check"
+    },
+    "J5": {
+      "kind": "HC-SR04 four-wire cable header",
+      "pins": {
+        "1": "+5V_ESP",
+        "2": "HC_TRIG",
+        "3": "HC_ECHO_5V",
+        "4": "GND"
+      },
+      "pin_labels": {
+        "1": "VCC",
+        "2": "TRIG",
+        "3": "ECHO",
+        "4": "GND"
+      },
+      "verification": "project-defined header; cable to actual silk labels"
+    },
+    "J6": {
+      "kind": "K1 external relay CONTROL only",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "GND",
+        "3": "K1_IN_H"
+      },
+      "pin_labels": {
+        "1": "DC+",
+        "2": "DC-",
+        "3": "IN_H"
+      },
+      "verification": "no mains contact pads on carrier; actual relay module H trigger and 3.3V input compatibility pending"
+    },
+    "J7": {
+      "kind": "K2 external relay CONTROL only",
+      "pins": {
+        "1": "+5V_ESP",
+        "2": "GND",
+        "3": "K2_IN_L"
+      },
+      "pin_labels": {
+        "1": "VCC",
+        "2": "GND",
+        "3": "IN_LOW"
+      },
+      "verification": "actual IN sink current and VIH/VIL pending; intended Q2 collector total <=10mA"
+    },
+    "J8": {
+      "kind": "K2 external relay DC contact cable terminal",
+      "pins": {
+        "1": "+24V",
+        "2": "MOTOR_SW24"
+      },
+      "pin_labels": {
+        "1": "TO_K2_COM",
+        "2": "FROM_K2_NO"
+      },
+      "verification": "24V DC only; external NC unused; terminal and relay motor-current ratings pending"
+    },
+    "J9": {
+      "kind": "24V motor cable terminal",
+      "pins": {
+        "1": "MOTOR_SW24",
+        "2": "GND"
+      },
+      "pin_labels": {
+        "1": "MOTOR+",
+        "2": "MOTOR-"
+      },
+      "verification": "JGB37-555 24V/7rpm listing: 0.14A no load,0.65A rated,3A stall; not measured"
+    },
+    "Q2": {
+      "kind": "NPN interface",
+      "value": "S9014 / original 2N3904 / image CS9013 NOT interchangeable by assumed pin order",
+      "pins": {
+        "E": "GND",
+        "B": "Q2_BASE",
+        "C": "K2_IN_L"
+      },
+      "verification": "logical terminals only; vendor-specific physical pad order MUST be confirmed; generic footprint is candidate only"
+    },
+    "R1": {
+      "kind": "resistor",
+      "value": "1.5k",
+      "pins": {
+        "1": "GPIO2_K2_DRIVE",
+        "2": "Q2_BASE"
+      }
+    },
+    "R2": {
+      "kind": "resistor",
+      "value": "47k",
+      "pins": {
+        "1": "Q2_BASE",
+        "2": "GND"
+      }
+    },
+    "R3": {
+      "kind": "resistor",
+      "value": "4.7k",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "K2_IN_L"
+      }
+    },
+    "R4": {
+      "kind": "resistor",
+      "value": "10k",
+      "pins": {
+        "1": "HC_ECHO_5V",
+        "2": "HC_ECHO_DIV"
+      }
+    },
+    "R5": {
+      "kind": "resistor",
+      "value": "20k",
+      "pins": {
+        "1": "HC_ECHO_DIV",
+        "2": "GND"
+      }
+    },
+    "D1": {
+      "kind": "flyback diode candidate",
+      "value": "1N5408",
+      "pins": {
+        "K": "MOTOR_SW24",
+        "A": "GND"
+      },
+      "verification": "band K to switched motor+; pulse/thermal validation pending; 3A average rectifier rating does not alone prove suitability"
+    }
+  },
+  "nets": {
+    "3V3": [
+      [
+        "A1",
+        "J1.1"
+      ],
+      [
+        "A1",
+        "J1.2"
+      ],
+      [
+        "JP2",
+        "1"
+      ],
+      [
+        "JP3",
+        "1"
+      ]
+    ],
+    "LCD_RST": [
+      [
+        "A1",
+        "J1.4"
+      ],
+      [
+        "J2",
+        "3"
+      ]
+    ],
+    "HC_TRIG": [
+      [
+        "A1",
+        "J1.5"
+      ],
+      [
+        "J5",
+        "2"
+      ]
+    ],
+    "HC_ECHO_DIV": [
+      [
+        "A1",
+        "J1.6"
+      ],
+      [
+        "R4",
+        "2"
+      ],
+      [
+        "R5",
+        "1"
+      ]
+    ],
+    "K1_IN_H": [
+      [
+        "A1",
+        "J1.7"
+      ],
+      [
+        "J6",
+        "3"
+      ]
+    ],
+    "LCD_D2": [
+      [
+        "A1",
+        "J1.8"
+      ],
+      [
+        "J2",
+        "10"
+      ]
+    ],
+    "LCD_D3": [
+      [
+        "A1",
+        "J1.9"
+      ],
+      [
+        "J2",
+        "11"
+      ]
+    ],
+    "LCD_D4": [
+      [
+        "A1",
+        "J1.10"
+      ],
+      [
+        "J2",
+        "12"
+      ]
+    ],
+    "LCD_D5": [
+      [
+        "A1",
+        "J1.11"
+      ],
+      [
+        "J2",
+        "13"
+      ]
+    ],
+    "TOF1_SDA": [
+      [
+        "A1",
+        "J1.12"
+      ],
+      [
+        "J3",
+        "4"
+      ]
+    ],
+    "TOF1_SCL": [
+      [
+        "A1",
+        "J1.15"
+      ],
+      [
+        "J3",
+        "3"
+      ]
+    ],
+    "TOF1_XSHUT": [
+      [
+        "A1",
+        "J1.16"
+      ],
+      [
+        "J3",
+        "6"
+      ]
+    ],
+    "TOF2_SDA": [
+      [
+        "A1",
+        "J1.17"
+      ],
+      [
+        "J4",
+        "4"
+      ]
+    ],
+    "TOF2_SCL": [
+      [
+        "A1",
+        "J1.18"
+      ],
+      [
+        "J4",
+        "3"
+      ]
+    ],
+    "LCD_D0": [
+      [
+        "A1",
+        "J1.19"
+      ],
+      [
+        "J2",
+        "8"
+      ]
+    ],
+    "LCD_D1": [
+      [
+        "A1",
+        "J1.20"
+      ],
+      [
+        "J2",
+        "9"
+      ]
+    ],
+    "+5V_ESP": [
+      [
+        "A1",
+        "J1.21"
+      ],
+      [
+        "JP1",
+        "2"
+      ],
+      [
+        "J2",
+        "2"
+      ],
+      [
+        "JP2",
+        "3"
+      ],
+      [
+        "JP3",
+        "3"
+      ],
+      [
+        "J5",
+        "1"
+      ],
+      [
+        "J7",
+        "1"
+      ]
+    ],
+    "GND": [
+      [
+        "A1",
+        "J1.22"
+      ],
+      [
+        "A1",
+        "J2.1"
+      ],
+      [
+        "A1",
+        "J2.21"
+      ],
+      [
+        "A1",
+        "J2.22"
+      ],
+      [
+        "J1",
+        "2"
+      ],
+      [
+        "J2",
+        "1"
+      ],
+      [
+        "J3",
+        "2"
+      ],
+      [
+        "J4",
+        "2"
+      ],
+      [
+        "J5",
+        "4"
+      ],
+      [
+        "J6",
+        "2"
+      ],
+      [
+        "J7",
+        "2"
+      ],
+      [
+        "J9",
+        "2"
+      ],
+      [
+        "Q2",
+        "E"
+      ],
+      [
+        "R2",
+        "2"
+      ],
+      [
+        "R5",
+        "2"
+      ],
+      [
+        "D1",
+        "A"
+      ]
+    ],
+    "GPIO2_K2_DRIVE": [
+      [
+        "A1",
+        "J2.5"
+      ],
+      [
+        "R1",
+        "1"
+      ]
+    ],
+    "LCD_RD": [
+      [
+        "A1",
+        "J2.7"
+      ],
+      [
+        "J2",
+        "7"
+      ]
+    ],
+    "LCD_WR": [
+      [
+        "A1",
+        "J2.8"
+      ],
+      [
+        "J2",
+        "6"
+      ]
+    ],
+    "LCD_RS": [
+      [
+        "A1",
+        "J2.9"
+      ],
+      [
+        "J2",
+        "5"
+      ]
+    ],
+    "LCD_CS": [
+      [
+        "A1",
+        "J2.10"
+      ],
+      [
+        "J2",
+        "4"
+      ]
+    ],
+    "LCD_D7": [
+      [
+        "A1",
+        "J2.17"
+      ],
+      [
+        "J2",
+        "15"
+      ]
+    ],
+    "LCD_D6": [
+      [
+        "A1",
+        "J2.18"
+      ],
+      [
+        "J2",
+        "14"
+      ]
+    ],
+    "+5V_IN": [
+      [
+        "J1",
+        "1"
+      ],
+      [
+        "JP1",
+        "1"
+      ],
+      [
+        "J6",
+        "1"
+      ],
+      [
+        "R3",
+        "1"
+      ]
+    ],
+    "+24V": [
+      [
+        "J1",
+        "3"
+      ],
+      [
+        "J8",
+        "1"
+      ]
+    ],
+    "TOF1_VIN": [
+      [
+        "J3",
+        "1"
+      ],
+      [
+        "JP2",
+        "2"
+      ]
+    ],
+    "TOF2_VIN": [
+      [
+        "J4",
+        "1"
+      ],
+      [
+        "JP3",
+        "2"
+      ]
+    ],
+    "HC_ECHO_5V": [
+      [
+        "J5",
+        "3"
+      ],
+      [
+        "R4",
+        "1"
+      ]
+    ],
+    "K2_IN_L": [
+      [
+        "J7",
+        "3"
+      ],
+      [
+        "Q2",
+        "C"
+      ],
+      [
+        "R3",
+        "2"
+      ]
+    ],
+    "MOTOR_SW24": [
+      [
+        "J8",
+        "2"
+      ],
+      [
+        "J9",
+        "1"
+      ],
+      [
+        "D1",
+        "K"
+      ]
+    ],
+    "Q2_BASE": [
+      [
+        "Q2",
+        "B"
+      ],
+      [
+        "R1",
+        "2"
+      ],
+      [
+        "R2",
+        "1"
+      ]
+    ]
+  },
+  "behavior": {
+    "K1": "GPIO7 HIGH activates external K1 H-trigger module",
+    "K2": "GPIO2 HIGH drives Q2; collector pulls K2 IN LOW; low-trigger module activates",
+    "enable": "ToF1<101mm and ToF2<101mm and HC<65mm, all valid for three consecutive cycles",
+    "disable": "Any inactive/invalid reading forces both off; servo-service errors can still force both off",
+    "tof_buses": "ToF1 I2C0, ToF2 I2C1; both address0x29; XSHUT configured only for ToF1"
+  },
+  "power_topology": {
+    "direct_5v": [
+      "J6 K1 DC+",
+      "JP1 external supply link to A1 5V",
+      "R3 pull-up upper end"
+    ],
+    "esp32_5v_tap": [
+      "J2 LCD",
+      "J5 HC-SR04",
+      "J7 K2",
+      "optional JP2/JP3 +5V selection"
+    ],
+    "common": "One DC GND net; motor return must use direct low-impedance path to J1 COM, not ESP32 thin return",
+    "electrical_note": "+5V_IN and +5V_ESP intentionally connect only through removable JP1. Distinct net names preserve original physical branch description; they are same potential with shunt fitted.",
+    "supply_limit": "Existing D-50B 24V1A cannot be assumed to meet motor startup/stall demand; 5V6A does not add to24V capacity"
+  },
+  "pending_before_fabrication": [
+    "YD V1.5 individual pin verification and sockets/hole/height",
+    "Actual connector part numbers, pitch/current ratings and cable mapping",
+    "LCD module input-voltage/logic-level and native physical pin order",
+    "ToF1/2 VIN and pull-up voltage; JP2/JP3 default OPEN",
+    "Q2 actual vendor,type and E/B/C physical pad order",
+    "K1 input compatibility and K2 IN current/threshold verification",
+    "24V supply startup capability and motor current measurement",
+    "K2 DC motor load rating; D1 pulse/thermal validation",
+    "Copper weight,track widths,terminal capacities and overcurrent protection",
+    "Actual module/mechanical clearance,RF antenna and USB access"
+  ]
+}

@@ -1,0 +1,51 @@
+(footprint "MountingHole_2.7_GENERIC"
+  (version 20240108)
+  (generator pcbnew)
+  (layer "F.Cu")
+  (descr "DRAFT generic candidate; verify actual hardware before fabrication")
+  (attr through_hole)
+  (fp_text reference "REF**"
+    (at 0 -3.0)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 0.8 0.8)
+      )
+    )
+  )
+  (fp_text value "MountingHole_2.7_GENERIC"
+    (at 0 3.0)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 0.8 0.8)
+      )
+    )
+  )
+  (fp_rect
+    (start -1.6 -1.6)
+    (end 1.6 1.6)
+    (stroke
+      (width 0.05)
+      (type default)
+    )
+    (fill none)
+    (layer "F.CrtYd")
+  )
+  (fp_rect
+    (start -1.35 -1.35)
+    (end 1.35 1.35)
+    (stroke
+      (width 0.1)
+      (type default)
+    )
+    (fill none)
+    (layer "F.Fab")
+  )
+  (pad "" np_thru_hole circle
+    (at 0 0)
+    (size 2.7 2.7)
+    (drill 2.7)
+    (layers "*.Cu" "*.Mask")
+  )
+)

@@ -1,0 +1,73 @@
+(footprint "NPN_EBC_Wire_Form_VERIFY"
+  (version 20240108)
+  (generator pcbnew)
+  (layer "F.Cu")
+  (descr "DRAFT generic candidate; verify actual hardware before fabrication")
+  (attr through_hole)
+  (fp_text reference "REF**"
+    (at 0 -2.92)
+    (layer "F.SilkS")
+    (effects
+      (font
+        (size 0.8 0.8)
+      )
+    )
+  )
+  (fp_text value "NPN_EBC_Wire_Form_VERIFY"
+    (at 0 2.92)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 0.8 0.8)
+      )
+    )
+  )
+  (fp_rect
+    (start -3.8 -1.52)
+    (end 3.8 1.52)
+    (stroke
+      (width 0.05)
+      (type default)
+    )
+    (fill none)
+    (layer "F.CrtYd")
+  )
+  (fp_rect
+    (start -3.55 -1.27)
+    (end 3.55 1.27)
+    (stroke
+      (width 0.1)
+      (type default)
+    )
+    (fill none)
+    (layer "F.Fab")
+  )
+  (pad "E" thru_hole circle
+    (at -2.54 0)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+    (zone_connect 2)
+  )
+  (pad "B" thru_hole circle
+    (at 0 0)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+  )
+  (pad "C" thru_hole circle
+    (at 2.54 0)
+    (size 1.8 1.8)
+    (drill 1)
+    (layers "*.Cu" "*.Mask")
+  )
+  (fp_text user "E B C / VERIFY"
+    (at 0 2.5)
+    (layer "F.Fab")
+    (effects
+      (font
+        (size 0.7 0.7)
+      )
+    )
+  )
+)

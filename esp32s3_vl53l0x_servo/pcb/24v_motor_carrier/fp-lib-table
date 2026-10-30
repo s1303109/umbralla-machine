@@ -1,0 +1,3 @@
+(fp_lib_table
+ (lib (name "CarrierDraft")(type "KiCad")(uri "${KIPRJMOD}/CarrierDraft.pretty")(options "")(descr "Project-local verified-format draft parts"))
+)

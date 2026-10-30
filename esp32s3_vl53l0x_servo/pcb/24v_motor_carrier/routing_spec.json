@@ -1,0 +1,1276 @@
+{
+  "bounds": [
+    30.48,
+    30.48,
+    121.92,
+    106.68
+  ],
+  "grid": 0.254,
+  "pads": [
+    {
+      "id": "A1.J1.1",
+      "net": "3V3",
+      "x": 116.84,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "A1.J1.2",
+      "net": "3V3",
+      "x": 114.3,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.3",
+      "net": null,
+      "x": 111.76,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.4",
+      "net": "LCD_RST",
+      "x": 109.22,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.5",
+      "net": "HC_TRIG",
+      "x": 106.68,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.6",
+      "net": "HC_ECHO_DIV",
+      "x": 104.14,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.7",
+      "net": "K1_IN_H",
+      "x": 101.6,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.8",
+      "net": "LCD_D2",
+      "x": 99.06,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.9",
+      "net": "LCD_D3",
+      "x": 96.52,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.10",
+      "net": "LCD_D4",
+      "x": 93.98,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.11",
+      "net": "LCD_D5",
+      "x": 91.44,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.12",
+      "net": "TOF1_SDA",
+      "x": 88.9,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.13",
+      "net": null,
+      "x": 86.36,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.14",
+      "net": null,
+      "x": 83.82,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.15",
+      "net": "TOF1_SCL",
+      "x": 81.28,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.16",
+      "net": "TOF1_XSHUT",
+      "x": 78.74,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.17",
+      "net": "TOF2_SDA",
+      "x": 76.2,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.18",
+      "net": "TOF2_SCL",
+      "x": 73.66,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.19",
+      "net": "LCD_D0",
+      "x": 71.12,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.20",
+      "net": "LCD_D1",
+      "x": 68.58,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.21",
+      "net": "+5V_ESP",
+      "x": 66.04,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J1.22",
+      "net": "GND",
+      "x": 63.5,
+      "y": 54.61,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.1",
+      "net": "GND",
+      "x": 116.84,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "A1.J2.2",
+      "net": null,
+      "x": 114.3,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.3",
+      "net": null,
+      "x": 111.76,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.4",
+      "net": null,
+      "x": 109.22,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.5",
+      "net": "GPIO2_K2_DRIVE",
+      "x": 106.68,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.6",
+      "net": null,
+      "x": 104.14,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.7",
+      "net": "LCD_RD",
+      "x": 101.6,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.8",
+      "net": "LCD_WR",
+      "x": 99.06,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.9",
+      "net": "LCD_RS",
+      "x": 96.52,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.10",
+      "net": "LCD_CS",
+      "x": 93.98,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.11",
+      "net": null,
+      "x": 91.44,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.12",
+      "net": null,
+      "x": 88.9,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.13",
+      "net": null,
+      "x": 86.36,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.14",
+      "net": null,
+      "x": 83.82,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.15",
+      "net": null,
+      "x": 81.28,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.16",
+      "net": null,
+      "x": 78.74,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.17",
+      "net": "LCD_D7",
+      "x": 76.2,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.18",
+      "net": "LCD_D6",
+      "x": 73.66,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.19",
+      "net": null,
+      "x": 71.12,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.20",
+      "net": null,
+      "x": 68.58,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.21",
+      "net": "GND",
+      "x": 66.04,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "A1.J2.22",
+      "net": "GND",
+      "x": 63.5,
+      "y": 80.01,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J1.1",
+      "net": "+5V_IN",
+      "x": 106.68,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J1.2",
+      "net": "GND",
+      "x": 111.76,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J1.3",
+      "net": "+24V",
+      "x": 116.84,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "circle"
+    },
+    {
+      "id": "JP1.1",
+      "net": "+5V_IN",
+      "x": 45.72,
+      "y": 86.36,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "JP1.2",
+      "net": "+5V_ESP",
+      "x": 48.26,
+      "y": 86.36,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.1",
+      "net": "GND",
+      "x": 50.8,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J2.2",
+      "net": "+5V_ESP",
+      "x": 53.34,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.3",
+      "net": "LCD_RST",
+      "x": 55.88,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.4",
+      "net": "LCD_CS",
+      "x": 58.42,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.5",
+      "net": "LCD_RS",
+      "x": 60.96,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.6",
+      "net": "LCD_WR",
+      "x": 63.5,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.7",
+      "net": "LCD_RD",
+      "x": 66.04,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.8",
+      "net": "LCD_D0",
+      "x": 68.58,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.9",
+      "net": "LCD_D1",
+      "x": 71.12,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.10",
+      "net": "LCD_D2",
+      "x": 73.66,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.11",
+      "net": "LCD_D3",
+      "x": 76.2,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.12",
+      "net": "LCD_D4",
+      "x": 78.74,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.13",
+      "net": "LCD_D5",
+      "x": 81.28,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.14",
+      "net": "LCD_D6",
+      "x": 83.82,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.15",
+      "net": "LCD_D7",
+      "x": 86.36,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J2.16",
+      "net": null,
+      "x": 88.9,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J3.1",
+      "net": "TOF1_VIN",
+      "x": 58.42,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J3.2",
+      "net": "GND",
+      "x": 60.96,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J3.3",
+      "net": "TOF1_SCL",
+      "x": 63.5,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J3.4",
+      "net": "TOF1_SDA",
+      "x": 66.04,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J3.5",
+      "net": null,
+      "x": 68.58,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J3.6",
+      "net": "TOF1_XSHUT",
+      "x": 71.12,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J4.1",
+      "net": "TOF2_VIN",
+      "x": 76.2,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J4.2",
+      "net": "GND",
+      "x": 78.74,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J4.3",
+      "net": "TOF2_SCL",
+      "x": 81.28,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J4.4",
+      "net": "TOF2_SDA",
+      "x": 83.82,
+      "y": 97.79,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "JP2.1",
+      "net": "3V3",
+      "x": 58.42,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "JP2.2",
+      "net": "TOF1_VIN",
+      "x": 60.96,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "JP2.3",
+      "net": "+5V_ESP",
+      "x": 63.5,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "JP3.1",
+      "net": "3V3",
+      "x": 76.2,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "JP3.2",
+      "net": "TOF2_VIN",
+      "x": 78.74,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "JP3.3",
+      "net": "+5V_ESP",
+      "x": 81.28,
+      "y": 90.17,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J5.1",
+      "net": "+5V_ESP",
+      "x": 99.06,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J5.2",
+      "net": "HC_TRIG",
+      "x": 101.6,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J5.3",
+      "net": "HC_ECHO_5V",
+      "x": 104.14,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J5.4",
+      "net": "GND",
+      "x": 106.68,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J6.1",
+      "net": "+5V_IN",
+      "x": 38.1,
+      "y": 43.18,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J6.2",
+      "net": "GND",
+      "x": 38.1,
+      "y": 45.72,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J6.3",
+      "net": "K1_IN_H",
+      "x": 38.1,
+      "y": 48.26,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J7.1",
+      "net": "+5V_ESP",
+      "x": 109.22,
+      "y": 99.06,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J7.2",
+      "net": "GND",
+      "x": 111.76,
+      "y": 99.06,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J7.3",
+      "net": "K2_IN_L",
+      "x": 114.3,
+      "y": 99.06,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J8.1",
+      "net": "+24V",
+      "x": 86.36,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J8.2",
+      "net": "MOTOR_SW24",
+      "x": 91.44,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "circle"
+    },
+    {
+      "id": "J9.1",
+      "net": "MOTOR_SW24",
+      "x": 71.12,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "rect"
+    },
+    {
+      "id": "J9.2",
+      "net": "GND",
+      "x": 76.2,
+      "y": 35.56,
+      "diameter": 2.8,
+      "width": 2.8,
+      "height": 2.8,
+      "shape": "circle"
+    },
+    {
+      "id": "Q2.E",
+      "net": "GND",
+      "x": 106.68,
+      "y": 88.9,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "Q2.B",
+      "net": "Q2_BASE",
+      "x": 109.22,
+      "y": 88.9,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "Q2.C",
+      "net": "K2_IN_L",
+      "x": 111.76,
+      "y": 88.9,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R1.1",
+      "net": "GPIO2_K2_DRIVE",
+      "x": 99.06,
+      "y": 85.09,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R1.2",
+      "net": "Q2_BASE",
+      "x": 106.68,
+      "y": 85.09,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R2.1",
+      "net": "Q2_BASE",
+      "x": 99.06,
+      "y": 93.98,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R2.2",
+      "net": "GND",
+      "x": 106.68,
+      "y": 93.98,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R3.1",
+      "net": "+5V_IN",
+      "x": 109.22,
+      "y": 93.98,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R3.2",
+      "net": "K2_IN_L",
+      "x": 116.84,
+      "y": 93.98,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R4.1",
+      "net": "HC_ECHO_5V",
+      "x": 114.3,
+      "y": 49.53,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R4.2",
+      "net": "HC_ECHO_DIV",
+      "x": 106.68,
+      "y": 49.53,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R5.1",
+      "net": "HC_ECHO_DIV",
+      "x": 104.14,
+      "y": 49.53,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "R5.2",
+      "net": "GND",
+      "x": 96.52,
+      "y": 49.53,
+      "diameter": 1.8,
+      "width": 1.8,
+      "height": 1.8,
+      "shape": "circle"
+    },
+    {
+      "id": "D1.K",
+      "net": "MOTOR_SW24",
+      "x": 45.72,
+      "y": 35.56,
+      "diameter": 3.0,
+      "width": 3.0,
+      "height": 3.0,
+      "shape": "rect"
+    },
+    {
+      "id": "D1.A",
+      "net": "GND",
+      "x": 60.96,
+      "y": 35.56,
+      "diameter": 3.0,
+      "width": 3.0,
+      "height": 3.0,
+      "shape": "circle"
+    },
+    {
+      "id": "H1.",
+      "net": null,
+      "x": 33.02,
+      "y": 33.02,
+      "diameter": 2.7,
+      "width": 2.7,
+      "height": 2.7,
+      "shape": "circle"
+    },
+    {
+      "id": "H2.",
+      "net": null,
+      "x": 33.02,
+      "y": 104.14,
+      "diameter": 2.7,
+      "width": 2.7,
+      "height": 2.7,
+      "shape": "circle"
+    },
+    {
+      "id": "H3.",
+      "net": null,
+      "x": 119.38,
+      "y": 104.14,
+      "diameter": 2.7,
+      "width": 2.7,
+      "height": 2.7,
+      "shape": "circle"
+    }
+  ],
+  "fixed_tracks": [
+    {
+      "net": "+24V",
+      "layer": 0,
+      "x1": 116.84,
+      "y1": 35.56,
+      "x2": 116.84,
+      "y2": 32.258,
+      "width": 2.032
+    },
+    {
+      "net": "+24V",
+      "layer": 0,
+      "x1": 116.84,
+      "y1": 32.258,
+      "x2": 86.36,
+      "y2": 32.258,
+      "width": 2.032
+    },
+    {
+      "net": "+24V",
+      "layer": 0,
+      "x1": 86.36,
+      "y1": 32.258,
+      "x2": 86.36,
+      "y2": 35.56,
+      "width": 2.032
+    },
+    {
+      "net": "MOTOR_SW24",
+      "layer": 1,
+      "x1": 91.44,
+      "y1": 35.56,
+      "x2": 91.44,
+      "y2": 39.116,
+      "width": 2.032
+    },
+    {
+      "net": "MOTOR_SW24",
+      "layer": 1,
+      "x1": 91.44,
+      "y1": 39.116,
+      "x2": 45.72,
+      "y2": 39.116,
+      "width": 2.032
+    },
+    {
+      "net": "MOTOR_SW24",
+      "layer": 1,
+      "x1": 45.72,
+      "y1": 39.116,
+      "x2": 45.72,
+      "y2": 35.56,
+      "width": 2.032
+    },
+    {
+      "net": "MOTOR_SW24",
+      "layer": 1,
+      "x1": 71.12,
+      "y1": 35.56,
+      "x2": 71.12,
+      "y2": 39.116,
+      "width": 2.032
+    },
+    {
+      "net": "GND",
+      "layer": 0,
+      "x1": 60.96,
+      "y1": 35.56,
+      "x2": 60.96,
+      "y2": 39.624,
+      "width": 2.032
+    },
+    {
+      "net": "GND",
+      "layer": 0,
+      "x1": 60.96,
+      "y1": 39.624,
+      "x2": 111.76,
+      "y2": 39.624,
+      "width": 2.032
+    },
+    {
+      "net": "GND",
+      "layer": 0,
+      "x1": 111.76,
+      "y1": 39.624,
+      "x2": 111.76,
+      "y2": 35.56,
+      "width": 2.032
+    },
+    {
+      "net": "GND",
+      "layer": 0,
+      "x1": 76.2,
+      "y1": 35.56,
+      "x2": 76.2,
+      "y2": 39.624,
+      "width": 2.032
+    }
+  ],
+  "net_widths": {
+    "+24V": 2.032,
+    "MOTOR_SW24": 2.032,
+    "GND": 0.508,
+    "+5V_IN": 0.508,
+    "+5V_ESP": 0.508,
+    "3V3": 0.254
+  },
+  "clearance": 0.2,
+  "via_diameter": 0.7,
+  "via_drill": 0.3,
+  "edge_clearance": 0.25,
+  "keepouts": [
+    {
+      "xmin": 118.11,
+      "ymin": 55.88,
+      "xmax": 122.5,
+      "ymax": 78.74,
+      "layers": [
+        0,
+        1
+      ]
+    }
+  ],
+  "net_order": [
+    "+24V",
+    "MOTOR_SW24",
+    "GND",
+    "+5V_IN",
+    "+5V_ESP",
+    "3V3"
+  ],
+  "time_limit_s": 240,
+  "max_expansions": 700000
+}

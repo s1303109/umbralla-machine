@@ -1,0 +1,315 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="3210" viewBox="0 0 1800 3210"><defs>
+    <style>
+      .title { font: 700 34px sans-serif; fill: #102a43; }
+      .section { font: 700 25px sans-serif; fill: #102a43; }
+      .label { font: 600 18px sans-serif; fill: #102a43; }
+      .small { font: 15px sans-serif; fill: #243b53; }
+      .tiny { font: 13px sans-serif; fill: #334e68; }
+      .box { fill: #fff; stroke: #486581; stroke-width: 2; rx: 12; }
+      .hvbox { fill: #fff7ed; stroke: #c2410c; stroke-width: 3; rx: 14; }
+      .lvbox { fill: #eff6ff; stroke: #2563eb; stroke-width: 3; rx: 14; }
+      .warn { fill: #fff1f2; stroke: #be123c; stroke-width: 2; rx: 10; }
+      .lineL { stroke: #dc2626; stroke-width: 6; fill: none; }
+      .lineN { stroke: #2563eb; stroke-width: 6; fill: none; }
+      .linePE { stroke: #16a34a; stroke-width: 6; fill: none; }
+      .line5 { stroke: #f59e0b; stroke-width: 5; fill: none; }
+      .line0 { stroke: #111827; stroke-width: 5; fill: none; }
+      .signal { stroke: #7c3aed; stroke-width: 4; fill: none; }
+      .dash { stroke-dasharray: 9 7; }
+      .nodeL { fill: #dc2626; }
+      .nodeN { fill: #2563eb; }
+      .nodePE { fill: #16a34a; }
+      .node5 { fill: #f59e0b; }
+      .node0 { fill: #111827; }
+    </style>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7c3aed" />
+    </marker>
+  </defs>
+
+  <rect width="1800" height="3210" fill="#f8fafc" />
+  <text x="60" y="58" class="title">ESP32-S3：原 110V 鼓風機＋24V／7rpm 減速馬達</text>
+  <text x="60" y="88" class="small">無降壓器參考版｜D-50B 端子依原廠標示校正；24V 啟動容量尚待確認。程式未修改。</text>
+
+  
+  <rect x="40" y="115" width="1720" height="465" class="hvbox" />
+  <text x="65" y="150" class="section">A. 110V 市電區（與低壓區實體隔離；IP65 箱內、不可裸露）</text>
+
+  <rect x="75" y="190" width="180" height="160" class="box" />
+  <text x="105" y="225" class="label">X1 市電輸入</text>
+  <text x="105" y="265" class="label" fill="#dc2626">L</text>
+  <text x="105" y="305" class="label" fill="#2563eb">N</text>
+  <text x="105" y="340" class="label" fill="#16a34a">PE</text>
+
+  <rect x="320" y="190" width="230" height="160" class="box" />
+  <text x="350" y="225" class="label">Q1／S1</text>
+  <text x="350" y="255" class="small">上游 ≤30mA 漏電保護</text>
+  <text x="350" y="282" class="small">雙極總開關</text>
+  <text x="350" y="309" class="small">過流保護額定依實物核對</text>
+  <text x="350" y="336" class="small">PE 不經開關或保險絲</text>
+
+  <rect x="650" y="170" width="330" height="260" class="box" />
+  <text x="685" y="207" class="label">PS1：D-50B</text>
+  <text x="685" y="235" class="small">輸入切換器先固定在 110V</text>
+  <text x="685" y="273" class="label">1 L｜2 N｜3 FG｜4 +24V</text>
+  <line x1="690" y1="286" x2="946" y2="286" stroke="#94a3b8" stroke-width="2" />
+  <text x="685" y="324" class="small">5／6 COM（0V）｜7 +5V</text>
+  <text x="685" y="352" class="small">FG 接 PE；COM 接低壓 GND</text>
+  <text x="685" y="380" class="small">COM 共用；5V／24V 正極分開</text>
+  <text x="685" y="408" class="small">5V：6A；24V：1A</text>
+
+  <rect x="1090" y="175" width="260" height="245" class="box" />
+  <text x="1120" y="212" class="label">K1 繼電器接點側</text>
+  <text x="1120" y="250" class="label">上：NO（常開）</text>
+  <text x="1120" y="290" class="label">中：COM（公共）</text>
+  <text x="1120" y="330" class="label">下：NC（常閉）</text>
+  <text x="1120" y="370" class="small">只使用 COM、NO</text>
+  <text x="1120" y="398" class="small">NC 留空並加絕緣端蓋</text>
+
+  <rect x="1460" y="175" width="245" height="245" class="box" />
+  <text x="1490" y="212" class="label">M1 鼓風機</text>
+  <text x="1490" y="245" class="small">150FLJ7-1W2</text>
+  <text x="1490" y="272" class="small">110V / 330W / 60Hz</text>
+  <text x="1490" y="310" class="label">L　N　PE*</text>
+  <text x="1490" y="345" class="small">*只有原電纜確有 PE 才接</text>
+  <text x="1490" y="375" class="small">MOV：V150LA20AP</text>
+  <text x="1490" y="401" class="small">跨接於 M1 的 L–N</text>
+
+  
+  <path d="M150 263 H320" class="lineL" />
+  <path d="M550 263 H650" class="lineL" />
+  <circle cx="610" cy="263" r="7" class="nodeL" />
+  <path d="M610 263 V160 H1040 V290 H1090" class="lineL" />
+  <text x="1010" y="278" class="tiny" fill="#dc2626">經保險絲／總開關的 L → COM</text>
+  <path d="M1350 250 H1460" class="lineL" />
+  <text x="1360" y="238" class="tiny" fill="#dc2626">NO → 鼓風機 L</text>
+  
+  <path d="M150 303 H320" class="lineN" />
+  <path d="M550 303 H650" class="lineN" />
+  <circle cx="610" cy="303" r="7" class="nodeN" />
+  <path d="M610 303 V455 H1430 V310 H1460" class="lineN" />
+  <text x="1050" y="477" class="tiny" fill="#2563eb">N 直接到鼓風機，不經繼電器</text>
+  
+  <path d="M150 337 H610 V345 H650" class="linePE" />
+  <circle cx="610" cy="345" r="7" class="nodePE" />
+  <path d="M610 345 V515 H1435 V345 H1460" class="linePE" />
+  <text x="720" y="538" class="tiny" fill="#16a34a">PE 同時接 PSU 金屬殼、控制箱金屬件；若鼓風機有 PE 則直接接，永不經繼電器</text>
+
+  
+  <line x1="1415" y1="250" x2="1415" y2="263" stroke="#7c2d12" stroke-width="3" />
+  <rect x="1393" y="263" width="44" height="31" fill="#fef3c7" stroke="#7c2d12" stroke-width="2" rx="4" />
+  <text x="1399" y="284" class="tiny" fill="#7c2d12">MOV</text>
+  <line x1="1415" y1="294" x2="1430" y2="310" stroke="#7c2d12" stroke-width="3" />
+
+  <rect x="75" y="455" width="520" height="92" class="warn" />
+  <text x="95" y="484" class="label" fill="#be123c">K1 接點使用範圍</text>
+  <text x="95" y="512" class="small">K1 COM／NO 專供原 110V 鼓風機，維持原拓樸。</text>
+  <text x="95" y="538" class="small">24V 馬達使用獨立 K2；不得接入 K1 市電端。</text>
+
+  
+  <rect x="40" y="605" width="1720" height="665" class="lvbox" />
+  <text x="65" y="642" class="section">B. 5V／3.3V 控制區</text>
+
+  <rect x="90" y="690" width="300" height="210" class="box" />
+  <text x="120" y="728" class="label">低壓電源分配</text>
+  <text x="120" y="765" class="small">PS1:7 +5V → ESP32／K1／R3</text>
+  <text x="120" y="795" class="small">PS1:5／6 COM → GND 共地</text>
+  <text x="120" y="825" class="small">ESP32旁：470µF/10V + 0.1µF</text>
+  <text x="120" y="855" class="small">EXT-5V 可拔跳線串在 ESP32 前</text>
+  <text x="120" y="883" class="small">插電腦 USB 前先拔 EXT-5V</text>
+
+  <rect x="505" y="680" width="410" height="480" class="box" />
+  <text x="545" y="720" class="label">ESP32-S3（依板上絲印找腳）</text>
+  <text x="545" y="762" class="label">5V/VIN　← +5V BUS</text>
+  <text x="545" y="797" class="label">GND　　 ← 0V BUS</text>
+  <text x="545" y="842" class="label">GPIO7　 → K1 IN（H觸發）</text>
+  <text x="545" y="880" class="small">GPIO5　→ HC-SR04 TRIG</text>
+  <text x="545" y="908" class="small">GPIO6　← HC-SR04 ECHO 分壓節點</text>
+  <text x="545" y="946" class="small">GPIO8　↔ TOF1 SDA</text>
+  <text x="545" y="974" class="small">GPIO9　→ TOF1 SCL</text>
+  <text x="545" y="1002" class="small">GPIO10 → TOF1 XSHUT</text>
+  <text x="545" y="1040" class="small">GPIO11 ↔ TOF2 SDA</text>
+  <text x="545" y="1068" class="small">GPIO12 → TOF2 SCL</text>
+  <text x="545" y="1110" class="label" fill="#be123c">GPIO4：LCD RESET，維持原接線</text>
+  <text x="545" y="1142" class="tiny">GPIO1 不接；GPIO2 → Q2 → K2。</text>
+
+  <rect x="1040" y="690" width="330" height="270" class="box" />
+  <text x="1075" y="728" class="label">K1 模組控制側</text>
+  <text x="1075" y="766" class="label">DC+ ← +5V BUS</text>
+  <text x="1075" y="802" class="label">DC− ← 0V BUS</text>
+  <text x="1075" y="838" class="label">IN　← GPIO7</text>
+  <text x="1075" y="878" class="small">觸發選擇跳帽：H</text>
+  <text x="1075" y="906" class="small">原 K1 的 DC+↔JD+ 跳帽保留</text>
+  <text x="1075" y="934" class="small">原 K1 的 DC−↔JD− 跳帽保留</text>
+
+  <rect x="1450" y="690" width="265" height="270" class="warn" />
+  <text x="1480" y="728" class="label" fill="#be123c">模組上電前核對</text>
+  <text x="1480" y="765" class="small">1. H/L 跳帽確在 H</text>
+  <text x="1480" y="797" class="small">2. DC/JD 兩跳帽裝妥</text>
+  <text x="1480" y="829" class="small">3. GPIO7 HIGH 才吸合</text>
+  <text x="1480" y="861" class="small">4. 斷電時 COM–NO 開路</text>
+  <text x="1480" y="893" class="small">5. 先用導通檔，後接110V</text>
+  <text x="1480" y="925" class="small">6. NC 完全不用</text>
+
+  
+  <path d="M390 765 H470 V762 H505" class="line5" />
+  <path d="M470 762 V660 H1000 V766 H1040" class="line5" />
+  <path d="M390 795 H450 V797 H505" class="line0" />
+  <path d="M450 797 V645 H990 V802 H1040" class="line0" />
+  <path d="M915 842 H1040" class="signal" marker-end="url(#arrowPurple)" />
+
+  
+  <rect x="90" y="950" width="300" height="275" class="box" />
+  <text x="120" y="985" class="label">三顆感測器（保留目前供電線）</text>
+  <text x="120" y="1020" class="small">TOF1：SDA→8、SCL→9、XSHUT→10</text>
+  <text x="120" y="1052" class="small">TOF2：SDA→11、SCL→12</text>
+  <text x="120" y="1084" class="small">HC-SR04：TRIG→5</text>
+  <text x="120" y="1116" class="small">HC ECHO → 10kΩ → GPIO6節點</text>
+  <text x="120" y="1148" class="small">GPIO6節點 → 20kΩ → GND</text>
+  <text x="120" y="1180" class="small">HC VCC=5V；全部低壓 GND 共地</text>
+  <text x="120" y="1210" class="tiny">TOF供電未由照片確認：若目前已穩定讀值，不更動其電源線。</text>
+
+  <path d="M390 1020 H465 V946 H505" class="signal dash" />
+  <path d="M390 1052 H475 V1040 H505" class="signal dash" />
+  <path d="M390 1090 H485 V880 H505" class="signal dash" />
+  <path d="M390 1145 H495 V908 H505" class="signal dash" />
+
+  
+  <text x="1040" y="1025" class="section">線路圖例</text>
+  <line x1="1045" y1="1060" x2="1130" y2="1060" class="lineL" /><text x="1145" y="1066" class="small">110V L</text>
+  <line x1="1045" y1="1095" x2="1130" y2="1095" class="lineN" /><text x="1145" y="1101" class="small">110V N</text>
+  <line x1="1045" y1="1130" x2="1130" y2="1130" class="linePE" /><text x="1145" y="1136" class="small">PE 保護地</text>
+  <line x1="1320" y1="1060" x2="1405" y2="1060" class="line5" /><text x="1420" y="1066" class="small">+5V</text>
+  <line x1="1320" y1="1095" x2="1405" y2="1095" class="line0" /><text x="1420" y="1101" class="small">0V/GND</text>
+  <line x1="1320" y1="1130" x2="1405" y2="1130" class="signal" /><text x="1420" y="1136" class="small">GPIO／感測訊號</text>
+
+  <text x="1040" y="1190" class="small">K2／LCD／HC 的 5V 與 GND，由 ESP32 接點分接。</text>
+  <text x="1040" y="1218" class="small">禁止以照片方向、導線顏色或商品頁文字取代現場確認。</text>
+<style>text{font-family:"Noto Sans CJK TC",sans-serif}</style><g transform="translate(0,1320)"><style>text{font-family:"Noto Sans CJK TC",sans-serif}</style><text x="60" y="48" font-size="29" font-weight="700" fill="#102a43">24V 減速馬達參考接線｜無降壓器、無伺服訊號；GPIO2 控制 K2</text>
+<text x="60" y="82" font-size="18" font-weight="400" fill="#be123c">依商品表：JGB37-555-2460，空載 7rpm／0.14A，額定負載 5.5rpm／0.65A，堵轉 3A；非實測。</text>
+<rect x="40" y="110" width="1720" height="570" rx="12" fill="#f0fdf4" stroke="#15803d" stroke-width="2" />
+<text x="65" y="150" font-size="26" font-weight="700" fill="#102a43">C. 馬達電源：24V 直接經 K2 COM／NO，供給兩線式直流馬達</text>
+<text x="65" y="184" font-size="19" font-weight="700" fill="#be123c">D-50B 的 24V 僅額定 1A：尚未證實可可靠啟動此馬達；本圖說明接線關係，不表示容量已足夠。</text>
+<rect x="75" y="230" width="310" height="240" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="95" y="268" font-size="21" font-weight="700" fill="#102a43">PS1：D-50B 直流輸出</text>
+<text x="95" y="307" font-size="20" font-weight="700" fill="#be123c">4：+24V（額定 1A）</text>
+<text x="95" y="350" font-size="19" font-weight="400" fill="#102a43">7：+5V（額定 6A）</text>
+<text x="95" y="385" font-size="18" font-weight="400" fill="#102a43">5V 供電支路見 B、D 區</text>
+<text x="95" y="427" font-size="20" font-weight="700" fill="#102a43">5／6：COM（0V）</text>
+<rect x="620" y="230" width="350" height="240" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="640" y="268" font-size="21" font-weight="700" fill="#102a43">K2：馬達電源接點側</text>
+<text x="640" y="340" font-size="19" font-weight="700" fill="#102a43">COM</text>
+<text x="880" y="340" font-size="19" font-weight="700" fill="#102a43">NO</text>
+<path d="M385 300 H700" fill="none" stroke="#be123c" stroke-width="5" stroke-linejoin="round" />
+<path d="M700 300 L820 275" fill="none" stroke="#111827" stroke-width="3" stroke-linejoin="round" />
+<circle cx="850" cy="300" r="6" fill="white" stroke="#111827" stroke-width="2" />
+<path d="M856 300 H1410" fill="none" stroke="#be123c" stroke-width="5" stroke-linejoin="round" />
+<text x="640" y="380" font-size="18" font-weight="400" fill="#102a43">NC 留空；馬達電流經接點</text>
+<text x="640" y="415" font-size="18" font-weight="700" fill="#be123c">K2 的 VCC 仍然使用 5V</text>
+<text x="640" y="448" font-size="18" font-weight="400" fill="#102a43">直流馬達接點能力待核對</text>
+<rect x="1410" y="230" width="320" height="240" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="1430" y="268" font-size="20" font-weight="700" fill="#102a43">M2：JGB37-555-2460</text>
+<text x="1430" y="307" font-size="20" font-weight="700" fill="#102a43">＋ ← K2 NO</text>
+<text x="1430" y="350" font-size="20" font-weight="700" fill="#102a43">DC 24V／空載 7rpm</text>
+<text x="1430" y="385" font-size="18" font-weight="400" fill="#102a43">兩線式；單方向啟停</text>
+<text x="1430" y="427" font-size="20" font-weight="700" fill="#102a43">－ → PS1 COM</text>
+<path d="M385 420 H450 V520 H1360 V420 H1410" fill="none" stroke="#111827" stroke-width="5" stroke-linejoin="round" />
+<path d="M450 520 V605 H515" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<circle cx="450" cy="520" r="6" fill="#111827" />
+<text x="530" y="613" font-size="19" font-weight="700" fill="#102a43">G：COM → ESP32 GND／Q2 E／模組低壓 GND</text>
+<path d="M1240 300 V355" fill="none" stroke="#be123c" stroke-width="4" stroke-linejoin="round" />
+<path d="M1222 355 H1258" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<path d="M1240 363 L1222 397 H1258 Z" fill="white" stroke="#111827" stroke-width="3" />
+<path d="M1240 397 V520" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<circle cx="1240" cy="300" r="6" fill="#111827" />
+<circle cx="1240" cy="520" r="6" fill="#111827" />
+<text x="1000" y="555" font-size="19" font-weight="700" fill="#102a43">D1：1N5408；跨馬達兩端</text>
+<text x="1000" y="582" font-size="17" font-weight="400" fill="#102a43">有環 K → 馬達＋；無環 A → 馬達－</text>
+<text x="75" y="555" font-size="19" font-weight="700" fill="#102a43">馬達負極用獨立線回 COM。</text>
+<text x="75" y="582" font-size="18" font-weight="400" fill="#be123c">馬達電流不經 ESP32 GND 細線。</text>
+<text x="75" y="655" font-size="18" font-weight="700" fill="#102a43">G＝直流 COM；FG＝保護地 PE。此圖沒有 COM–FG 短接；保護元件符號省略不表示可拆除實物。</text>
+<g><rect x="40" y="710" width="1720" height="680" rx="12" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+<text x="65" y="750" font-size="26" font-weight="700" fill="#102a43">D. 5V 控制介面：GPIO2 → Q2 → K2 IN；Q2 不承受馬達電流</text>
+<text x="65" y="785" font-size="19" font-weight="400" fill="#102a43">K2 低電位觸發、VCC 使用 5V；馬達的 24V 只接 K2 COM／NO。Q2 與 R1／R2／R3 沿用。</text>
+<text x="85" y="851" font-size="18" font-weight="700" fill="#be123c">PS1:7 +5V 直接分支</text>
+<path d="M75 900 H350" fill="none" stroke="#c27100" stroke-width="4" stroke-linejoin="round" />
+<rect x="350" y="820" width="350" height="240" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="375" y="858" font-size="21" font-weight="700" fill="#102a43">D-50B：電晶體 5V 分支</text>
+<text x="375" y="907" font-size="18" font-weight="700" fill="#102a43">+5V</text>
+<text x="615" y="907" font-size="18" font-weight="700" fill="#102a43">+5V</text>
+<text x="375" y="956" font-size="18" font-weight="400" fill="#be123c">此分支只接 R3 上端</text>
+<text x="375" y="1007" font-size="18" font-weight="700" fill="#102a43">0V</text>
+<text x="615" y="1007" font-size="18" font-weight="700" fill="#102a43">0V</text>
+<text x="375" y="1042" font-size="16" font-weight="400" fill="#102a43">K2 VCC 由 ESP32 的 5V 接點分接</text>
+<path d="M700 900 H1160" fill="none" stroke="#c27100" stroke-width="5" stroke-linejoin="round" />
+<text x="770" y="879" font-size="17" font-weight="700" fill="#c27100">+5V → R3；不能上拉到 24V</text>
+<path d="M350 1000 H270 V1320" fill="none" stroke="#111827" stroke-width="5" stroke-linejoin="round" />
+<path d="M700 1000 H730" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<text x="738" y="1007" font-size="16" font-weight="400" fill="#102a43">G（接共地排）</text>
+<rect x="1320" y="820" width="390" height="280" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="1345" y="858" font-size="21" font-weight="700" fill="#102a43">K2 模組控制側：5V 供電</text>
+<text x="1345" y="907" font-size="19" font-weight="700" fill="#102a43">VCC ← ESP32 5V 分接</text>
+<text x="1345" y="946" font-size="20" font-weight="700" fill="#be123c">低電位觸發；無可見 H/L 跳帽</text>
+<text x="1345" y="1007" font-size="19" font-weight="700" fill="#102a43">IN ← Q2 集電極 C</text>
+<text x="1345" y="1067" font-size="19" font-weight="700" fill="#102a43">GND ← G（0V）</text>
+<path d="M1320 1060 H1290 V1320" fill="none" stroke="#111827" stroke-width="5" stroke-linejoin="round" />
+<rect x="75" y="1100" width="325" height="170" rx="12" fill="#fff" stroke="#486581" stroke-width="2" />
+<text x="100" y="1138" font-size="22" font-weight="700" fill="#102a43">ESP32：GPIO2</text>
+<text x="100" y="1173" font-size="18" font-weight="400" fill="#102a43">HIGH 啟動／LOW 關閉</text>
+<text x="100" y="1208" font-size="18" font-weight="400" fill="#102a43">LCD 與感測器線全部保留</text>
+<text x="100" y="1243" font-size="18" font-weight="400" fill="#102a43">GND → G 共地端子排</text>
+<path d="M400 1160 H600" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round" />
+<text x="85" y="962" font-size="17" font-weight="700" fill="#7c3aed">原 GPIO7 → K1 IN</text>
+<text x="85" y="991" font-size="17" font-weight="400" fill="#7c3aed">保持原 H 觸發接線</text>
+<rect x="600" y="1145" width="120" height="30" rx="2" fill="#fff" stroke="#7c3aed" stroke-width="2" />
+<text x="592" y="1126" font-size="18" font-weight="700" fill="#102a43">R1：1.5kΩ</text>
+<text x="592" y="1102" font-size="16" font-weight="400" fill="#102a43">0.25W／±5%</text>
+<path d="M720 1160 H955" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linejoin="round" />
+<circle cx="820" cy="1160" r="6" fill="#7c3aed" />
+<path d="M820 1160 V1210" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linejoin="round" />
+<rect x="809" y="1210" width="22" height="55" rx="2" fill="#fff" stroke="#486581" stroke-width="2" />
+<path d="M820 1265 V1320" fill="none" stroke="#111827" stroke-width="3" stroke-linejoin="round" />
+<text x="575" y="1233" font-size="18" font-weight="400" fill="#102a43">R2：47kΩ</text>
+<text x="575" y="1260" font-size="16" font-weight="400" fill="#102a43">0.25W／±5%</text>
+<circle cx="990" cy="1160" r="64" fill="none" stroke="#486581" stroke-width="2" />
+<path d="M955 1123 V1198" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<path d="M955 1141 L1015 1100 V1000 H1320" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<path d="M955 1180 L1015 1220 V1320" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<path d="M993 1194 L1010 1216 L984 1209 Z" fill="#111827" />
+<text x="916" y="1141" font-size="18" font-weight="700" fill="#102a43">B</text>
+<text x="1035" y="1090" font-size="18" font-weight="700" fill="#102a43">C</text>
+<text x="1035" y="1250" font-size="18" font-weight="700" fill="#102a43">E</text>
+<text x="1050" y="1230" font-size="17" font-weight="700" fill="#102a43">Q2：S9014（C331）</text>
+<text x="1050" y="1262" font-size="17" font-weight="700" fill="#102a43">或 2N3904；NPN</text>
+<circle cx="1160" cy="900" r="6" fill="#c27100" />
+<path d="M1160 900 V930" fill="none" stroke="#c27100" stroke-width="3" stroke-linejoin="round" />
+<rect x="1149" y="930" width="22" height="40" rx="2" fill="#fff" stroke="#486581" stroke-width="2" />
+<path d="M1160 970 V1000" fill="none" stroke="#111827" stroke-width="3" stroke-linejoin="round" />
+<circle cx="1160" cy="1000" r="6" fill="#111827" />
+<circle cx="1015" cy="1000" r="6" fill="#111827" />
+<text x="1183" y="957" font-size="17" font-weight="400" fill="#102a43">R3：4.7kΩ</text>
+<text x="1183" y="983" font-size="15" font-weight="400" fill="#102a43">¼W ±5%</text>
+<path d="M400 1250 H430 V1320" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" />
+<path d="M75 1320 H1550" fill="none" stroke="#111827" stroke-width="5" stroke-linejoin="round" />
+<circle cx="270" cy="1320" r="6" fill="#111827" />
+<circle cx="430" cy="1320" r="6" fill="#111827" />
+<circle cx="820" cy="1320" r="6" fill="#111827" />
+<circle cx="1015" cy="1320" r="6" fill="#111827" />
+<circle cx="1290" cy="1320" r="6" fill="#111827" />
+<text x="85" y="1347" font-size="17" font-weight="700" fill="#102a43">G：PS1 COM、ESP32 GND、Q2 E 共地；K2／LCD／HC 的 GND 由 ESP32 接點分接。</text>
+<text x="85" y="1377" font-size="18" font-weight="700" fill="#102a43">共同判斷：GPIO7 → K1；GPIO2 → Q2 → K2。啟動時兩路 HIGH，停止時兩路 LOW（須先驗證）。</text>
+<text x="60" y="1424" font-size="19" font-weight="400" fill="#be123c">介面驗證目標：IN ≤0.3V 且吸合、IN ≥4.5V 且釋放；Q2 集電極總電流 ≤10mA，須實測。</text>
+<text x="60" y="1458" font-size="18" font-weight="400" fill="#102a43">同名端點相接；交叉有圓點才相接。電源啟動容量、線徑、保護、D1 與 K2 馬達接點能力仍待確認。</text>
+</g>
+<path d="M120 1100 V1070 H55 V815 H1260 V900 H1320" fill="none" stroke="#c27100" stroke-width="4" stroke-linejoin="round" />
+<circle cx="120" cy="1100" r="5" fill="#c27100" />
+<text x="140" y="1090" font-size="16" font-weight="700" fill="#c27100">5V 分接</text>
+<text x="1060" y="850" font-size="17" font-weight="700" fill="#c27100">ESP32 5V 分接</text>
+<rect x="40" y="1495" width="1720" height="360" rx="12" fill="#fff7ed" stroke="#c27100" stroke-width="2" />
+<text x="65" y="1535" font-size="26" font-weight="700" fill="#102a43">E. 接地與規劃狀態</text>
+<text x="75" y="1580" font-size="22" font-weight="700" fill="#102a43">PS1 COM（5／6）→ ESP32 GND；PS1 FG（3）→ PE 保護地。市電 N 不接低壓 G。</text>
+<text x="75" y="1625" font-size="21" font-weight="400" fill="#102a43">移除伺服、其 SIG 線與專用 10kΩ 下拉；GPIO1 留空。GPIO4 仍是 LCD RESET。</text>
+<text x="75" y="1670" font-size="20" font-weight="400" fill="#102a43">D1 為續流候選，依 3A 斷電電流、啟停頻率與溫升再核對；不能單靠「3A」標示定案。</text>
+<text x="75" y="1715" font-size="20" font-weight="400" fill="#102a43">24V 電源需有足夠啟動能力；若改用另一台電源，其端子與共地方式須依新型號確認。</text>
+<text x="75" y="1760" font-size="20" font-weight="700" fill="#be123c">本次只新增參考圖：原 main/main.c 仍含伺服測試流程，未改程式、未燒錄、未實機驗證。</text>
+<text x="75" y="1810" font-size="18" font-weight="400" fill="#102a43">原市電區沿用原圖作辨識參考；線色代表網路功能，不代表現場電纜。保護額定仍須依實物核對。</text></g></svg>

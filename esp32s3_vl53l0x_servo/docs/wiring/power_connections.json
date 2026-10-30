@@ -1,0 +1,28 @@
+{
+  "source": "使用者回報現有接法，非本次新增實體配線",
+  "dc_supply": "MEAN WELL D-50B",
+  "direct_5v_branches": [
+    "K1 DC+",
+    "ESP32 5V/VIN 接點",
+    "Q2 介面 R3 上拉電阻上端"
+  ],
+  "esp32_5v_distribution": [
+    "LCD 5V",
+    "HC-SR04 VCC",
+    "K2 VCC"
+  ],
+  "esp32_gnd_distribution": [
+    "LCD GND",
+    "HC-SR04 GND",
+    "K2 GND"
+  ],
+  "servo_return": "保留伺服 GND → LM2596 OUT− 獨立回流；共地 G 作訊號參考",
+  "fuse_symbols": "使用者要求從目前圖表省略；不表示建議拆除實體保護元件",
+  "remaining_unknowns": [
+    "ToF1 VIN",
+    "ToF2 VIN",
+    "伺服完整型號與供電/訊號相容性",
+    "S9014 實物腳序",
+    "市電線芯身分/PE及實體保護設計"
+  ]
+}

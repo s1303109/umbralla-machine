@@ -7,7 +7,8 @@ PNG export: rsvg-convert -z 1.5 -o OUTPUT.png INPUT.svg
 from html import escape
 from pathlib import Path
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[1] / 'docs/wiring/archive/legacy'
+root.mkdir(parents=True, exist_ok=True)
 parts = []
 red, orange, black, purple = '#be123c', '#c27100', '#111827', '#7c3aed'
 

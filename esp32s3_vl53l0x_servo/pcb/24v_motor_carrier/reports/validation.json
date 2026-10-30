@@ -1,0 +1,40 @@
+{
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "kicad_version": "8.0.9",
+  "functional_nets": 33,
+  "firmware_used_gpio": 22,
+  "footprints": 23,
+  "board_bbox_mm": [
+    91.44,
+    76.2
+  ],
+  "routed_segments": 336,
+  "vias": 51,
+  "ground_zones": 1,
+  "erc_violations": 0,
+  "drc_violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity_issues": 0,
+  "rules_excluded": 0,
+  "netlist_exact_match": true,
+  "pcb_pad_net_match": true,
+  "firmware_unchanged_sha256": {
+    "main/main.c": "8f360c462ad7e9d464772f240f070539cb5ad8756e91b32f79ed1bc587c55580",
+    "main/lcd_display.c": "11b77f5eed56cefd426d5624fbc4ba704eb35653d13947d163139757ac8d5472"
+  },
+  "hardware_verified": false,
+  "manufacturing_files_generated": false,
+  "pending_hardware_checks": [
+    "YD V1.5 individual pin verification and sockets/hole/height",
+    "Actual connector part numbers, pitch/current ratings and cable mapping",
+    "LCD module input-voltage/logic-level and native physical pin order",
+    "ToF1/2 VIN and pull-up voltage; JP2/JP3 default OPEN",
+    "Q2 actual vendor,type and E/B/C physical pad order",
+    "K1 input compatibility and K2 IN current/threshold verification",
+    "24V supply startup capability and motor current measurement",
+    "K2 DC motor load rating; D1 pulse/thermal validation",
+    "Copper weight,track widths,terminal capacities and overcurrent protection",
+    "Actual module/mechanical clearance,RF antenna and USB access"
+  ],
+  "portable_rebuild_without_original_library_sources": true
+}

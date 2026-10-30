@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/workspace/esp32s3_vl53l0x_servo/pcb/24v_motor_carrier/esp32s3_24v_carrier.kicad_sch</source>
+    <date>2026-10-30T17:42:33+0000</date>
+    <tool>Eeschema 8.0.9-8.0.9-0~ubuntu24.04.1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>esp32s3_24v_carrier.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="A1">
+      <value>YD-ESP32-S3 N16R8 SOCKET</value>
+      <footprint>CarrierDraft:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="YD-ESP32-S3_Type-A_V1.5_N16R8" description="Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <property name="ki_keywords" value="ESP32 S3 YD N16R8 development board Type-C 44 pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79dea19d-b868-57a8-9452-48e8df25ddcd</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N5408</value>
+      <footprint>CarrierDraft:D_DO201_P15.24</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:D_DO201_P15.24</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="D_KA" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>12a9f13e-5ca0-5ae9-ba2c-a1ab76edf372</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>M2.5 clearance - verify case</value>
+      <footprint>CarrierDraft:MountingHole_2.7_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:MountingHole_2.7_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="MountingHole" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c6fa5dc7-7108-5862-9617-fa9521c2e975</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>M2.5 clearance - verify case</value>
+      <footprint>CarrierDraft:MountingHole_2.7_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:MountingHole_2.7_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="MountingHole" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d5e2140a-c7fa-5c0c-ada9-331ee7e368a7</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>M2.5 clearance - verify case</value>
+      <footprint>CarrierDraft:MountingHole_2.7_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:MountingHole_2.7_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="MountingHole" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>37c97886-39d9-5b8b-98d5-a9321e2099f3</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>DC input terminal</value>
+      <footprint>CarrierDraft:Terminal_1x3_P5.08_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Terminal_1x3_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9152d4e6-6fab-5801-a8e5-52616ac6cb21</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>LCD cable header 1x16</value>
+      <footprint>CarrierDraft:Header_1x16_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x16_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>243ee33e-044a-555c-8a7f-81a12efdc134</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>ToF1 six-wire cable header</value>
+      <footprint>CarrierDraft:Header_1x6_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x6_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7de659e5-e067-5017-8f95-01d2aaeb69f3</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>ToF2 four-wire cable header</value>
+      <footprint>CarrierDraft:Header_1x4_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x4_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J4" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8fe37d87-fff7-5a1c-aeab-597671ff92e1</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>HC-SR04 four-wire cable header</value>
+      <footprint>CarrierDraft:Header_1x4_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x4_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J5" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc3b232a-900e-5f5c-9b7b-0eea0f2eb22b</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>K1 external relay CONTROL only</value>
+      <footprint>CarrierDraft:Header_1x3_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J6" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>20dda1d0-f678-5c47-a980-ccf758f820eb</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>K2 external relay CONTROL only</value>
+      <footprint>CarrierDraft:Header_1x3_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J7" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bafe19ee-801d-50d5-a3f6-5ef0b513fd66</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>K2 external relay DC contact cable terminal</value>
+      <footprint>CarrierDraft:Terminal_1x2_P5.08_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Terminal_1x2_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J8" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a1ce560-f9ed-5efe-af13-1d190a58160b</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>24V motor cable terminal</value>
+      <footprint>CarrierDraft:Terminal_1x2_P5.08_GENERIC</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Terminal_1x2_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_J9" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0a1a376f-a9f0-5384-9b78-450d80cce5d8</tstamps>
+    </comp>
+    <comp ref="JP1">
+      <value>removable external-5V supply link</value>
+      <footprint>CarrierDraft:Header_1x2_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x2_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_JP1" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>979ac72d-ccb9-5845-87a2-c015df75b0bf</tstamps>
+    </comp>
+    <comp ref="JP2">
+      <value>ToF1 VIN selection jumper</value>
+      <footprint>CarrierDraft:Header_1x3_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_JP2" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>78c482cf-ab03-573d-93a4-1c1d2d4f71d9</tstamps>
+    </comp>
+    <comp ref="JP3">
+      <value>ToF2 VIN selection jumper</value>
+      <footprint>CarrierDraft:Header_1x3_P2.54</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="Connector_JP3" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>234bdadc-669f-598e-87b5-3b329ad9ad14</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>NPN E/B/C VERIFY PART</value>
+      <footprint>CarrierDraft:NPN_EBC_Wire_Form_VERIFY</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:NPN_EBC_Wire_Form_VERIFY</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="NPN_EBC" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1259c733-2c69-5dad-a75c-1236422a4b17</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>1.5k</value>
+      <footprint>CarrierDraft:R_Axial_P7.62</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:R_Axial_P7.62</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4e38ce8-d2d4-5f3f-bb69-188d846a7554</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>47k</value>
+      <footprint>CarrierDraft:R_Axial_P7.62</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:R_Axial_P7.62</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8dfb21f-8c12-5be2-8b16-761a101169d8</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>4.7k</value>
+      <footprint>CarrierDraft:R_Axial_P7.62</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:R_Axial_P7.62</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7fcbccd7-9990-5ac9-b85b-1b7448896769</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>CarrierDraft:R_Axial_P7.62</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:R_Axial_P7.62</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bb6df560-f8f1-5f3a-8a19-8368788cd5e8</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>20k</value>
+      <footprint>CarrierDraft:R_Axial_P7.62</footprint>
+      <fields>
+        <field name="Footprint">CarrierDraft:R_Axial_P7.62</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="CarrierDraft" part="R" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="esp32s3_24v_carrier.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8ccc8af5-91df-55a0-9c99-68122e0aae55</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="CarrierDraft" part="Connector_J1">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J1</field>
+        <field name="Footprint">CarrierDraft:Terminal_1x3_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+5V" type="passive"/>
+        <pin num="2" name="COM" type="passive"/>
+        <pin num="3" name="+24V" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J2</field>
+        <field name="Footprint">CarrierDraft:Header_1x16_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="+5V_ESP" type="passive"/>
+        <pin num="3" name="LCD_RST" type="passive"/>
+        <pin num="4" name="LCD_CS" type="passive"/>
+        <pin num="5" name="LCD_RS" type="passive"/>
+        <pin num="6" name="LCD_WR" type="passive"/>
+        <pin num="7" name="LCD_RD" type="passive"/>
+        <pin num="8" name="LCD_D0" type="passive"/>
+        <pin num="9" name="LCD_D1" type="passive"/>
+        <pin num="10" name="LCD_D2" type="passive"/>
+        <pin num="11" name="LCD_D3" type="passive"/>
+        <pin num="12" name="LCD_D4" type="passive"/>
+        <pin num="13" name="LCD_D5" type="passive"/>
+        <pin num="14" name="LCD_D6" type="passive"/>
+        <pin num="15" name="LCD_D7" type="passive"/>
+        <pin num="16" name="NC" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J3">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J3</field>
+        <field name="Footprint">CarrierDraft:Header_1x6_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="SCL" type="passive"/>
+        <pin num="4" name="SDA" type="passive"/>
+        <pin num="5" name="GPIO1_NC" type="passive"/>
+        <pin num="6" name="XSHUT" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J4">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J4</field>
+        <field name="Footprint">CarrierDraft:Header_1x4_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="SCL" type="passive"/>
+        <pin num="4" name="SDA" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J5">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J5</field>
+        <field name="Footprint">CarrierDraft:Header_1x4_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="passive"/>
+        <pin num="2" name="TRIG" type="passive"/>
+        <pin num="3" name="ECHO" type="passive"/>
+        <pin num="4" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J6">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J6</field>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="DC+" type="passive"/>
+        <pin num="2" name="DC-" type="passive"/>
+        <pin num="3" name="IN_H" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J7">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J7</field>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="passive"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="IN_LOW" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J8">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J8</field>
+        <field name="Footprint">CarrierDraft:Terminal_1x2_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="TO_K2_COM" type="passive"/>
+        <pin num="2" name="FROM_K2_NO" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_J9">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_J9</field>
+        <field name="Footprint">CarrierDraft:Terminal_1x2_P5.08_GENERIC</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="MOTOR+" type="passive"/>
+        <pin num="2" name="MOTOR-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_JP1">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_JP1</field>
+        <field name="Footprint">CarrierDraft:Header_1x2_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="+5V_IN" type="passive"/>
+        <pin num="2" name="+5V_ESP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_JP2">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_JP2</field>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="TOF1_VIN" type="passive"/>
+        <pin num="3" name="+5V_ESP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="Connector_JP3">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_JP3</field>
+        <field name="Footprint">CarrierDraft:Header_1x3_P2.54</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="3V3" type="passive"/>
+        <pin num="2" name="TOF2_VIN" type="passive"/>
+        <pin num="3" name="+5V_ESP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="D_KA">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">D_KA</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="K" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="MountingHole">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+    </libpart>
+    <libpart lib="CarrierDraft" part="NPN_EBC">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">NPN_EBC</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="B" name="B" type="passive"/>
+        <pin num="C" name="C" type="passive"/>
+        <pin num="E" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="R">
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="CarrierDraft" part="YD-ESP32-S3_Type-A_V1.5_N16R8">
+      <description>Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8</description>
+      <docs>https://github.com/vcc-gnd/YD-ESP32-S3</docs>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">YD-ESP32-S3_Type-A_V1.5_N16R8</field>
+        <field name="Footprint">CarrierDraft:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm</field>
+        <field name="Datasheet">https://github.com/vcc-gnd/YD-ESP32-S3</field>
+        <field name="Description">Dual USB-C development board; V1.4 source mapping, V1.5 physical audit pending; N16R8</field>
+        <field name="Mounting">Two 1x22 sockets, 25.40 mm row spacing</field>
+        <field name="Source">https://github.com/vcc-gnd/YD-ESP32-S3</field>
+        <field name="Verification">Partially Verified</field>
+        <field name="MPN">YD-ESP32-S3 Type-A V1.5 / ESP32-S3-WROOM-1-N16R8</field>
+        <field name="Manufacturer">VCC-GND Studio</field>
+      </fields>
+      <pins>
+        <pin num="J1.1" name="3V3" type="passive"/>
+        <pin num="J1.2" name="3V3" type="passive"/>
+        <pin num="J1.3" name="EN" type="input"/>
+        <pin num="J1.4" name="GPIO4" type="bidirectional"/>
+        <pin num="J1.5" name="GPIO5" type="bidirectional"/>
+        <pin num="J1.6" name="GPIO6" type="bidirectional"/>
+        <pin num="J1.7" name="GPIO7" type="bidirectional"/>
+        <pin num="J1.8" name="GPIO15" type="bidirectional"/>
+        <pin num="J1.9" name="GPIO16" type="bidirectional"/>
+        <pin num="J1.10" name="GPIO17" type="bidirectional"/>
+        <pin num="J1.11" name="GPIO18" type="bidirectional"/>
+        <pin num="J1.12" name="GPIO8" type="bidirectional"/>
+        <pin num="J1.13" name="GPIO3" type="bidirectional"/>
+        <pin num="J1.14" name="GPIO46" type="bidirectional"/>
+        <pin num="J1.15" name="GPIO9" type="bidirectional"/>
+        <pin num="J1.16" name="GPIO10" type="bidirectional"/>
+        <pin num="J1.17" name="GPIO11" type="bidirectional"/>
+        <pin num="J1.18" name="GPIO12" type="bidirectional"/>
+        <pin num="J1.19" name="GPIO13" type="bidirectional"/>
+        <pin num="J1.20" name="GPIO14" type="bidirectional"/>
+        <pin num="J1.21" name="5V" type="passive"/>
+        <pin num="J1.22" name="GND" type="passive"/>
+        <pin num="J2.1" name="GND" type="passive"/>
+        <pin num="J2.2" name="GPIO43/TX" type="bidirectional"/>
+        <pin num="J2.3" name="GPIO44/RX" type="bidirectional"/>
+        <pin num="J2.4" name="GPIO1" type="bidirectional"/>
+        <pin num="J2.5" name="GPIO2" type="bidirectional"/>
+        <pin num="J2.6" name="GPIO42" type="bidirectional"/>
+        <pin num="J2.7" name="GPIO41" type="bidirectional"/>
+        <pin num="J2.8" name="GPIO40" type="bidirectional"/>
+        <pin num="J2.9" name="GPIO39" type="bidirectional"/>
+        <pin num="J2.10" name="GPIO38" type="bidirectional"/>
+        <pin num="J2.11" name="GPIO37/RESERVED" type="no_connect"/>
+        <pin num="J2.12" name="GPIO36/RESERVED" type="no_connect"/>
+        <pin num="J2.13" name="GPIO35/RESERVED" type="no_connect"/>
+        <pin num="J2.14" name="GPIO0" type="bidirectional"/>
+        <pin num="J2.15" name="GPIO45" type="bidirectional"/>
+        <pin num="J2.16" name="GPIO48/RGB" type="bidirectional"/>
+        <pin num="J2.17" name="GPIO47" type="bidirectional"/>
+        <pin num="J2.18" name="GPIO21" type="bidirectional"/>
+        <pin num="J2.19" name="GPIO20/USB_D+" type="bidirectional"/>
+        <pin num="J2.20" name="GPIO19/USB_D-" type="bidirectional"/>
+        <pin num="J2.21" name="GND" type="passive"/>
+        <pin num="J2.22" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="CarrierDraft">
+      <uri>/workspace/esp32s3_vl53l0x_servo/pcb/24v_motor_carrier/CarrierDraft.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V_ESP">
+      <node ref="A1" pin="J1.21" pinfunction="5V" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="+5V_ESP" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="VCC" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="VCC" pintype="passive"/>
+      <node ref="JP1" pin="2" pinfunction="+5V_ESP" pintype="passive"/>
+      <node ref="JP2" pin="3" pinfunction="+5V_ESP" pintype="passive"/>
+      <node ref="JP3" pin="3" pinfunction="+5V_ESP" pintype="passive"/>
+    </net>
+    <net code="2" name="+5V_IN">
+      <node ref="J1" pin="1" pinfunction="+5V" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="DC+" pintype="passive"/>
+      <node ref="JP1" pin="1" pinfunction="+5V_IN" pintype="passive"/>
+      <node ref="R3" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="3" name="+24V">
+      <node ref="J1" pin="3" pinfunction="+24V" pintype="passive"/>
+      <node ref="J8" pin="1" pinfunction="TO_K2_COM" pintype="passive"/>
+    </net>
+    <net code="4" name="3V3">
+      <node ref="A1" pin="J1.1" pinfunction="3V3" pintype="passive"/>
+      <node ref="A1" pin="J1.2" pinfunction="3V3" pintype="passive"/>
+      <node ref="JP2" pin="1" pinfunction="3V3" pintype="passive"/>
+      <node ref="JP3" pin="1" pinfunction="3V3" pintype="passive"/>
+    </net>
+    <net code="5" name="GND">
+      <node ref="A1" pin="J1.22" pinfunction="GND" pintype="passive"/>
+      <node ref="A1" pin="J2.1" pinfunction="GND" pintype="passive"/>
+      <node ref="A1" pin="J2.21" pinfunction="GND" pintype="passive"/>
+      <node ref="A1" pin="J2.22" pinfunction="GND" pintype="passive"/>
+      <node ref="D1" pin="A" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="COM" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J5" pin="4" pinfunction="GND" pintype="passive"/>
+      <node ref="J6" pin="2" pinfunction="DC-" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="GND" pintype="passive"/>
+      <node ref="J9" pin="2" pinfunction="MOTOR-" pintype="passive"/>
+      <node ref="Q2" pin="E" pinfunction="E" pintype="passive"/>
+      <node ref="R2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R5" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="6" name="GPIO2_K2_DRIVE">
+      <node ref="A1" pin="J2.5" pinfunction="GPIO2" pintype="bidirectional"/>
+      <node ref="R1" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="7" name="HC_ECHO_5V">
+      <node ref="J5" pin="3" pinfunction="ECHO" pintype="passive"/>
+      <node ref="R4" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="8" name="HC_ECHO_DIV">
+      <node ref="A1" pin="J1.6" pinfunction="GPIO6" pintype="bidirectional"/>
+      <node ref="R4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R5" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="9" name="HC_TRIG">
+      <node ref="A1" pin="J1.5" pinfunction="GPIO5" pintype="bidirectional"/>
+      <node ref="J5" pin="2" pinfunction="TRIG" pintype="passive"/>
+    </net>
+    <net code="10" name="K1_IN_H">
+      <node ref="A1" pin="J1.7" pinfunction="GPIO7" pintype="bidirectional"/>
+      <node ref="J6" pin="3" pinfunction="IN_H" pintype="passive"/>
+    </net>
+    <net code="11" name="K2_IN_L">
+      <node ref="J7" pin="3" pinfunction="IN_LOW" pintype="passive"/>
+      <node ref="Q2" pin="C" pinfunction="C" pintype="passive"/>
+      <node ref="R3" pin="2" pinfunction="2" pintype="passive"/>
+    </net>
+    <net code="12" name="LCD_CS">
+      <node ref="A1" pin="J2.10" pinfunction="GPIO38" pintype="bidirectional"/>
+      <node ref="J2" pin="4" pinfunction="LCD_CS" pintype="passive"/>
+    </net>
+    <net code="13" name="LCD_D0">
+      <node ref="A1" pin="J1.19" pinfunction="GPIO13" pintype="bidirectional"/>
+      <node ref="J2" pin="8" pinfunction="LCD_D0" pintype="passive"/>
+    </net>
+    <net code="14" name="LCD_D1">
+      <node ref="A1" pin="J1.20" pinfunction="GPIO14" pintype="bidirectional"/>
+      <node ref="J2" pin="9" pinfunction="LCD_D1" pintype="passive"/>
+    </net>
+    <net code="15" name="LCD_D2">
+      <node ref="A1" pin="J1.8" pinfunction="GPIO15" pintype="bidirectional"/>
+      <node ref="J2" pin="10" pinfunction="LCD_D2" pintype="passive"/>
+    </net>
+    <net code="16" name="LCD_D3">
+      <node ref="A1" pin="J1.9" pinfunction="GPIO16" pintype="bidirectional"/>
+      <node ref="J2" pin="11" pinfunction="LCD_D3" pintype="passive"/>
+    </net>
+    <net code="17" name="LCD_D4">
+      <node ref="A1" pin="J1.10" pinfunction="GPIO17" pintype="bidirectional"/>
+      <node ref="J2" pin="12" pinfunction="LCD_D4" pintype="passive"/>
+    </net>
+    <net code="18" name="LCD_D5">
+      <node ref="A1" pin="J1.11" pinfunction="GPIO18" pintype="bidirectional"/>
+      <node ref="J2" pin="13" pinfunction="LCD_D5" pintype="passive"/>
+    </net>
+    <net code="19" name="LCD_D6">
+      <node ref="A1" pin="J2.18" pinfunction="GPIO21" pintype="bidirectional"/>
+      <node ref="J2" pin="14" pinfunction="LCD_D6" pintype="passive"/>
+    </net>
+    <net code="20" name="LCD_D7">
+      <node ref="A1" pin="J2.17" pinfunction="GPIO47" pintype="bidirectional"/>
+      <node ref="J2" pin="15" pinfunction="LCD_D7" pintype="passive"/>
+    </net>
+    <net code="21" name="LCD_RD">
+      <node ref="A1" pin="J2.7" pinfunction="GPIO41" pintype="bidirectional"/>
+      <node ref="J2" pin="7" pinfunction="LCD_RD" pintype="passive"/>
+    </net>
+    <net code="22" name="LCD_RS">
+      <node ref="A1" pin="J2.9" pinfunction="GPIO39" pintype="bidirectional"/>
+      <node ref="J2" pin="5" pinfunction="LCD_RS" pintype="passive"/>
+    </net>
+    <net code="23" name="LCD_RST">
+      <node ref="A1" pin="J1.4" pinfunction="GPIO4" pintype="bidirectional"/>
+      <node ref="J2" pin="3" pinfunction="LCD_RST" pintype="passive"/>
+    </net>
+    <net code="24" name="LCD_WR">
+      <node ref="A1" pin="J2.8" pinfunction="GPIO40" pintype="bidirectional"/>
+      <node ref="J2" pin="6" pinfunction="LCD_WR" pintype="passive"/>
+    </net>
+    <net code="25" name="MOTOR_SW24">
+      <node ref="D1" pin="K" pinfunction="K" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="FROM_K2_NO" pintype="passive"/>
+      <node ref="J9" pin="1" pinfunction="MOTOR+" pintype="passive"/>
+    </net>
+    <net code="26" name="Q2_BASE">
+      <node ref="Q2" pin="B" pinfunction="B" pintype="passive"/>
+      <node ref="R1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="R2" pin="1" pinfunction="1" pintype="passive"/>
+    </net>
+    <net code="27" name="TOF1_SCL">
+      <node ref="A1" pin="J1.15" pinfunction="GPIO9" pintype="bidirectional"/>
+      <node ref="J3" pin="3" pinfunction="SCL" pintype="passive"/>
+    </net>
+    <net code="28" name="TOF1_SDA">
+      <node ref="A1" pin="J1.12" pinfunction="GPIO8" pintype="bidirectional"/>
+      <node ref="J3" pin="4" pinfunction="SDA" pintype="passive"/>
+    </net>
+    <net code="29" name="TOF1_VIN">
+      <node ref="J3" pin="1" pinfunction="VIN" pintype="passive"/>
+      <node ref="JP2" pin="2" pinfunction="TOF1_VIN" pintype="passive"/>
+    </net>
+    <net code="30" name="TOF1_XSHUT">
+      <node ref="A1" pin="J1.16" pinfunction="GPIO10" pintype="bidirectional"/>
+      <node ref="J3" pin="6" pinfunction="XSHUT" pintype="passive"/>
+    </net>
+    <net code="31" name="TOF2_SCL">
+      <node ref="A1" pin="J1.18" pinfunction="GPIO12" pintype="bidirectional"/>
+      <node ref="J4" pin="3" pinfunction="SCL" pintype="passive"/>
+    </net>
+    <net code="32" name="TOF2_SDA">
+      <node ref="A1" pin="J1.17" pinfunction="GPIO11" pintype="bidirectional"/>
+      <node ref="J4" pin="4" pinfunction="SDA" pintype="passive"/>
+    </net>
+    <net code="33" name="TOF2_VIN">
+      <node ref="J4" pin="1" pinfunction="VIN" pintype="passive"/>
+      <node ref="JP3" pin="2" pinfunction="TOF2_VIN" pintype="passive"/>
+    </net>
+    <net code="34" name="unconnected-(A1-EN-PadJ1.3)">
+      <node ref="A1" pin="J1.3" pinfunction="EN" pintype="input+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(A1-GPIO0-PadJ2.14)">
+      <node ref="A1" pin="J2.14" pinfunction="GPIO0" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(A1-GPIO1-PadJ2.4)">
+      <node ref="A1" pin="J2.4" pinfunction="GPIO1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(A1-GPIO3-PadJ1.13)">
+      <node ref="A1" pin="J1.13" pinfunction="GPIO3" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(A1-GPIO19{slash}USB_D--PadJ2.20)">
+      <node ref="A1" pin="J2.20" pinfunction="GPIO19/USB_D-" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(A1-GPIO20{slash}USB_D+-PadJ2.19)">
+      <node ref="A1" pin="J2.19" pinfunction="GPIO20/USB_D+" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(A1-GPIO35{slash}RESERVED-PadJ2.13)">
+      <node ref="A1" pin="J2.13" pinfunction="GPIO35/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(A1-GPIO36{slash}RESERVED-PadJ2.12)">
+      <node ref="A1" pin="J2.12" pinfunction="GPIO36/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(A1-GPIO37{slash}RESERVED-PadJ2.11)">
+      <node ref="A1" pin="J2.11" pinfunction="GPIO37/RESERVED" pintype="no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(A1-GPIO42-PadJ2.6)">
+      <node ref="A1" pin="J2.6" pinfunction="GPIO42" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(A1-GPIO43{slash}TX-PadJ2.2)">
+      <node ref="A1" pin="J2.2" pinfunction="GPIO43/TX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(A1-GPIO44{slash}RX-PadJ2.3)">
+      <node ref="A1" pin="J2.3" pinfunction="GPIO44/RX" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(A1-GPIO45-PadJ2.15)">
+      <node ref="A1" pin="J2.15" pinfunction="GPIO45" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(A1-GPIO46-PadJ1.14)">
+      <node ref="A1" pin="J1.14" pinfunction="GPIO46" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(A1-GPIO48{slash}RGB-PadJ2.16)">
+      <node ref="A1" pin="J2.16" pinfunction="GPIO48/RGB" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(J2-NC-Pad16)">
+      <node ref="J2" pin="16" pinfunction="NC" pintype="passive+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(J3-GPIO1_NC-Pad5)">
+      <node ref="J3" pin="5" pinfunction="GPIO1_NC" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>

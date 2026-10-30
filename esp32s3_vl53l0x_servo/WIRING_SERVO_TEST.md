@@ -1,13 +1,17 @@
+> 歷史版本：目前 24V／7rpm 馬達方案請看 [新版接線圖索引](WIRING_INDEX.md)。本文件保留舊版資料，舊圖片已集中封存。
+
 # 三線伺服辨識測試：GPIO1 訊號，保留 K2 電源控制
 
 本版供之後拿到伺服時，辨識「定位型」與「連續旋轉型」。**不是已校正的 40rpm 控制器，也尚未確認你手上的伺服型號、電流、6V 供電及 3.3V 訊號相容性。** 不因斷電時能手轉 360° 就判定為連續旋轉型。
 
+目前實際供電分接已由使用者補充：**D-50B 的 5V 直接接 K1、ESP32、電晶體介面 R3 上端；LCD 5V、HC-SR04 VCC、K2 VCC 再從 ESP32 的 5V 接點分接，這三個模組的 GND 也從 ESP32 GND 分接。** 最新圖為 [黑白原理圖](./docs/wiring/archive/legacy/wiring_electrical_bw.png) 與 [互動逐線圖](./wiring_connected_current.html)。最新圖省略保護元件符號，僅簡化顯示，不表示建議拆除實物；下列舊版圖片保留作歷史參考。
+
 > **目前狀態：編譯成功、主機控制測試通過、已燒錄並讀到本版開機紀錄。** USB 重新連接後寫入雜湊驗證通過，開機確認 GPIO1 伺服訊號初始化、K1/K2 初始 OFF、LCD 與兩顆 ToF 啟動。下次上電即可使用本辨識測試版；仍需按圖確認實物供電與接線、滿足三顆感測器條件，尚未實測伺服或校正 40rpm。
 
-- [新增伺服接線詳圖 PNG](./wiring_servo_test_detail.png)
-- [新增伺服接線詳圖 SVG](./wiring_servo_test_detail.svg)
-- [包含原鼓風機與感測器的完整圖 PNG](./wiring_110v_blower_servo_test.png)
-- [完整圖 SVG](./wiring_110v_blower_servo_test.svg)
+- [新增伺服接線詳圖 PNG](./docs/wiring/archive/legacy/wiring_servo_test_detail.png)
+- [新增伺服接線詳圖 SVG](./docs/wiring/archive/legacy/wiring_servo_test_detail.svg)
+- [包含原鼓風機與感測器的完整圖 PNG](./docs/wiring/archive/legacy/wiring_110v_blower_servo_test.png)
+- [完整圖 SVG](./docs/wiring/archive/legacy/wiring_110v_blower_servo_test.svg)
 - [圖面產生程式](./tools/make_servo_wiring_diagram.py)
 - [控制狀態機主機檢查](./tools/test_servo_control.py)
 
@@ -17,12 +21,12 @@
 
 | 伺服 SV1 端子 | 接到哪裡 | 說明 |
 |---|---|---|
-| **V+** | **K2 NO** | U1 OUT+ → F5 → K2 COM → NO → SV1 V+；不直接接 24V |
+| **V+** | **K2 NO** | U1 OUT+ → K2 COM → NO → SV1 V+；不直接接 24V；圖面省略保護元件 |
 | **GND** | **U1 OUT−**，並連低壓共地排 G | 電源回流線直接回模組，不經 ESP32 GND 細線 |
 | **SIG** | **ESP32 GPIO1** | 新增 RC 伺服控制訊號；不接 GPIO2、K2 IN 或 Q2 |
 | R4 ×1 | **10kΩ／0.25W／±5%，SIG → G** | 開機訊號下拉，靠近伺服訊號介面；3.3V 時負載約 0.33mA、1.09mW |
 
-K2 的 **VCC 仍接 5V**，K2 接點切換的則是 U1 提供的伺服電源；兩者不能混淆。伺服正負極不可像裸直流馬達那樣反接換方向。
+K2 的 **VCC 從 ESP32 5V 接點分接**，K2 接點切換的則是 U1 提供的伺服電源；兩者不能混淆。LCD 5V、HC-SR04 VCC 亦由 ESP32 5V 接點分接，不是接到 3V3；本處表示 5V 電源分配節點，不是從 ESP32 的 3.3V 穩壓器取得 5V。伺服正負極不可像裸直流馬達那樣反接換方向。
 
 原裸馬達的 D1 在本版移除，不照搬到伺服 V+／GND。伺服是內建驅動電路的完整負載，若需要供電端去耦或浪湧抑制，應依所選伺服與電源規格設計，不把它當成兩線馬達處理。
 
@@ -30,13 +34,13 @@ K2 的 **VCC 仍接 5V**，K2 接點切換的則是 U1 提供的伺服電源；�
 
 | 元件／端點 | 接線 |
 |---|---|
-| K2 VCC | 原 +5V BUS → F4 → K2 VCC |
-| K2 GND | G |
+| K2 VCC | D-50B 5V → ESP32 5V 接點 → K2 VCC |
+| K2 GND | ESP32 GND 分接點，與 G 同網路 |
 | GPIO2 | R1 **1.5kΩ／¼W／±5%** → Q2 B |
 | Q2 E | G |
 | Q2 C | K2 IN |
 | R2 | **47kΩ／¼W／±5%**，Q2 B → E/G |
-| R3 | **4.7kΩ／¼W／±5%**，F4 後與 K2 VCC 相同的 +5V → IN/C |
+| R3 | **4.7kΩ／¼W／±5%**，D-50B 5V 的電晶體分支 → R3 → IN/C；與 ESP32 的 5V 屬同一電源，但實體分支分開畫 |
 | Q2 | 手上 S9014 或原 2N3904；B/C/E 依實物廠牌核對 |
 
 Q2 只處理 K2 IN，不承受伺服電流。原介面設計 IC≤10mA、IN 低電位及釋放條件仍需實測；原計算見 [6V 馬達文件](./WIRING_6V_MOTOR.md)。
@@ -68,7 +72,7 @@ Q2 只處理 K2 IN，不承受伺服電流。原介面設計 IC≤10mA、IN 低�
 
 伺服啟動、堵轉及動態電流要重新核對，**原 JGB37-520 的 1.5A 不能沿用**。未知 LM2596 模組不能只看晶片標稱 3A 就當成足夠。若所選伺服在 6V 下需要約 3A 峰值，需確認模組的實際輸出、掉壓、溫升及啟動裕量，不足時另換供電。
 
-F3／F4／F5 的 DC 額定電壓至少 32V，安培值仍待電源、伺服電流、線徑和保護協調確認。所有低壓正極分開，市電 N 不接低壓 G。完整圖原 110V 區只是沿用拓樸，本次沒有重新驗收。
+最新圖依使用者要求省略保護元件符號，並未將省略圖符視為拆除實體保護元件的建議；實際保護設計仍須另行驗證。5V、6V、24V 正極分開，市電 N 不接低壓 G。完整圖原 110V 區只是沿用拓樸，本次沒有重新驗收。
 
 ## 5. 編譯版的動作流程
 
@@ -117,8 +121,8 @@ F3／F4／F5 的 DC 額定電壓至少 32V，安培值仍待電源、伺服電�
 ```sh
 python tools/test_servo_control.py
 python tools/make_servo_wiring_diagram.py
-rsvg-convert -z 1.5 -o wiring_servo_test_detail.png wiring_servo_test_detail.svg
-rsvg-convert -z 1.5 -o wiring_110v_blower_servo_test.png wiring_110v_blower_servo_test.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_servo_test_detail.png docs/wiring/archive/legacy/wiring_servo_test_detail.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_110v_blower_servo_test.png docs/wiring/archive/legacy/wiring_110v_blower_servo_test.svg
 . /opt/esp/idf/export.sh
 idf.py build
 ```

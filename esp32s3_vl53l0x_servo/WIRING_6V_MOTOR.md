@@ -1,3 +1,5 @@
+> 歷史版本：目前 24V／7rpm 馬達方案請看 [新版接線圖索引](WIRING_INDEX.md)。本文件保留舊版資料，舊圖片已集中封存。
+
 # 6V JGB37-520：24V → LM2596 → 6V，保留原 5V 繼電器控制
 
 > **新增伺服替換／辨識測試版：請見 [伺服接線圖與 GPIO1 測試說明](./WIRING_SERVO_TEST.md)。本頁保留兩線減速馬達設計供對照；伺服的電流及控制方式另行確認，不直接套用本頁馬達數據。**
@@ -6,10 +8,10 @@
 
 你已確認馬達改為 **JGB37-520、6V、200rpm**，後續提供商品數據：6V 堵轉電流約 **1.5A**、堵轉轉矩約 **1.3kgf·cm**、額定轉矩約 **0.34kgf·cm**。本頁新增第 4.1 節，依這些數字作條件重算；商品數據尚未確認與手上實物完全相同。**目前仍不能保證手上 LM2596 模組能啟動馬達，也不能完成 D1 的熱驗證或決定保險絲安培值**。同型號的不同電壓繞組不能假設電流相同，亦不能按 6/24 比例推算。
 
-- [完整接線圖 PNG](./wiring_110v_blower_6v_motor.png)
-- [完整接線圖 SVG，可放大](./wiring_110v_blower_6v_motor.svg)
-- [6V 馬達與控制介面詳圖 PNG](./wiring_6v_motor_detail.png)
-- [詳圖 SVG，可放大](./wiring_6v_motor_detail.svg)
+- [完整接線圖 PNG](./docs/wiring/archive/legacy/wiring_110v_blower_6v_motor.png)
+- [完整接線圖 SVG，可放大](./docs/wiring/archive/legacy/wiring_110v_blower_6v_motor.svg)
+- [6V 馬達與控制介面詳圖 PNG](./docs/wiring/archive/legacy/wiring_6v_motor_detail.png)
+- [詳圖 SVG，可放大](./docs/wiring/archive/legacy/wiring_6v_motor_detail.svg)
 - [圖面產生程式](./tools/make_motor_wiring_diagram.py)
 
 ## 1. 哪些元件需要更換
@@ -207,6 +209,6 @@ TI LM2596 可調晶片的工作範圍涵蓋此電壓轉換，資料表列 3A 輸
 
 ```sh
 python tools/make_motor_wiring_diagram.py
-rsvg-convert -z 1.5 -o wiring_110v_blower_6v_motor.png wiring_110v_blower_6v_motor.svg
-rsvg-convert -z 1.5 -o wiring_6v_motor_detail.png wiring_6v_motor_detail.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_110v_blower_6v_motor.png docs/wiring/archive/legacy/wiring_110v_blower_6v_motor.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_6v_motor_detail.png docs/wiring/archive/legacy/wiring_6v_motor_detail.svg
 ```

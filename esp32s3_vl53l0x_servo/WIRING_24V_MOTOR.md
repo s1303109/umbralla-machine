@@ -1,13 +1,15 @@
+> 歷史版本：目前 24V／7rpm 馬達方案請看 [新版接線圖索引](WIRING_INDEX.md)。本文件保留舊版資料，舊圖片已集中封存。
+
 # 保留 110V 鼓風機，新增 24V 馬達：5V 低電位繼電器版
 
 > **馬達已改為 6V：目前請使用 [24V → LM2596 → 6V 新版接線圖與計算](./WIRING_6V_MOTOR.md)。以下保留昨天的 24V 馬達設計供對照，勿把 6V 馬達接到本頁的 24V 接點。** 圖面產生工具現已輸出新版 6V 圖；本頁末尾的 24V 重產生指令屬舊版本紀錄。
 
 本版使用你更換的 **HW-307／JQC3F-05VDC-C、5V 低電位觸發模組**，由既有 5V 輸出供電，接點切換 24V 馬達。原 GPIO7、感測器、LCD 與鼓風機接線保留；GPIO2 經 Q2 控制新 K2。**本版不使用 12V 電源或降壓模組。**
 
-- [完整接線圖 PNG](./wiring_110v_blower_24v_motor.png)
-- [完整接線圖 SVG，可放大](./wiring_110v_blower_24v_motor.svg)
-- [新增馬達與控制介面詳圖 PNG](./wiring_24v_motor_detail.png)
-- [新增詳圖 SVG](./wiring_24v_motor_detail.svg)
+- [完整接線圖 PNG](./docs/wiring/archive/legacy/wiring_110v_blower_24v_motor.png)
+- [完整接線圖 SVG，可放大](./docs/wiring/archive/legacy/wiring_110v_blower_24v_motor.svg)
+- [新增馬達與控制介面詳圖 PNG](./docs/wiring/archive/legacy/wiring_24v_motor_detail.png)
+- [新增詳圖 SVG](./docs/wiring/archive/legacy/wiring_24v_motor_detail.svg)
 - [圖面產生程式](./tools/make_motor_wiring_diagram.py)
 
 圖中 E 區直接列出零件型號、數量、阻值、瓦數、誤差、封裝及腳位。這是待接線驗證的設計圖；馬達電流、電源可用電流、F3/F4 安培值及接點馬達負載能力尚未確認。D1 以最大斷電電流 ≤2A 為前提選型，2A 不是馬達的已測數值。
@@ -198,6 +200,6 @@ Q2 在 IC=10mA、VCE=0.2V 與上述標稱基極驅動下，總耗散估算約 **
 
 ```sh
 python tools/make_motor_wiring_diagram.py
-rsvg-convert -z 1.5 -o wiring_110v_blower_24v_motor.png wiring_110v_blower_24v_motor.svg
-rsvg-convert -z 1.5 -o wiring_24v_motor_detail.png wiring_24v_motor_detail.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_110v_blower_24v_motor.png docs/wiring/archive/legacy/wiring_110v_blower_24v_motor.svg
+rsvg-convert -z 1.5 -o docs/wiring/archive/legacy/wiring_24v_motor_detail.png docs/wiring/archive/legacy/wiring_24v_motor_detail.svg
 ```

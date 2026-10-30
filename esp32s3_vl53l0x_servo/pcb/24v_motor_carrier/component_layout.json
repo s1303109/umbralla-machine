@@ -1,0 +1,425 @@
+{
+  "board_bbox_mm": [
+    91.44,
+    76.2
+  ],
+  "outline_mm": [
+    [
+      30.48,
+      30.48
+    ],
+    [
+      121.92,
+      30.48
+    ],
+    [
+      121.92,
+      55.88
+    ],
+    [
+      118.11,
+      55.88
+    ],
+    [
+      118.11,
+      78.74
+    ],
+    [
+      121.92,
+      78.74
+    ],
+    [
+      121.92,
+      106.68
+    ],
+    [
+      30.48,
+      106.68
+    ]
+  ],
+  "components": {
+    "A1": {
+      "position_mm": [
+        116.84,
+        67.31
+      ],
+      "rotation": 270,
+      "footprint": "CarrierDraft:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm",
+      "pins": {
+        "J1.1": "3V3",
+        "J1.2": "3V3",
+        "J1.3": null,
+        "J1.4": "LCD_RST",
+        "J1.5": "HC_TRIG",
+        "J1.6": "HC_ECHO_DIV",
+        "J1.7": "K1_IN_H",
+        "J1.8": "LCD_D2",
+        "J1.9": "LCD_D3",
+        "J1.10": "LCD_D4",
+        "J1.11": "LCD_D5",
+        "J1.12": "TOF1_SDA",
+        "J1.13": null,
+        "J1.14": null,
+        "J1.15": "TOF1_SCL",
+        "J1.16": "TOF1_XSHUT",
+        "J1.17": "TOF2_SDA",
+        "J1.18": "TOF2_SCL",
+        "J1.19": "LCD_D0",
+        "J1.20": "LCD_D1",
+        "J1.21": "+5V_ESP",
+        "J1.22": "GND",
+        "J2.1": "GND",
+        "J2.2": null,
+        "J2.3": null,
+        "J2.4": null,
+        "J2.5": "GPIO2_K2_DRIVE",
+        "J2.6": null,
+        "J2.7": "LCD_RD",
+        "J2.8": "LCD_WR",
+        "J2.9": "LCD_RS",
+        "J2.10": "LCD_CS",
+        "J2.11": null,
+        "J2.12": null,
+        "J2.13": null,
+        "J2.14": null,
+        "J2.15": null,
+        "J2.16": null,
+        "J2.17": "LCD_D7",
+        "J2.18": "LCD_D6",
+        "J2.19": null,
+        "J2.20": null,
+        "J2.21": "GND",
+        "J2.22": "GND"
+      },
+      "kind": "ESP32 development-board socket",
+      "value": "YD-ESP32-S3 N16R8 SOCKET"
+    },
+    "J1": {
+      "position_mm": [
+        106.68,
+        35.56
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Terminal_1x3_P5.08_GENERIC",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "GND",
+        "3": "+24V"
+      },
+      "kind": "DC input terminal",
+      "value": "DC input terminal"
+    },
+    "JP1": {
+      "position_mm": [
+        45.72,
+        86.36
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x2_P2.54",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "+5V_ESP"
+      },
+      "kind": "removable external-5V supply link",
+      "value": "removable external-5V supply link"
+    },
+    "J2": {
+      "position_mm": [
+        50.8,
+        43.18
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x16_P2.54",
+      "pins": {
+        "1": "GND",
+        "2": "+5V_ESP",
+        "3": "LCD_RST",
+        "4": "LCD_CS",
+        "5": "LCD_RS",
+        "6": "LCD_WR",
+        "7": "LCD_RD",
+        "8": "LCD_D0",
+        "9": "LCD_D1",
+        "10": "LCD_D2",
+        "11": "LCD_D3",
+        "12": "LCD_D4",
+        "13": "LCD_D5",
+        "14": "LCD_D6",
+        "15": "LCD_D7",
+        "16": null
+      },
+      "kind": "LCD cable header 1x16",
+      "value": "LCD cable header 1x16"
+    },
+    "J3": {
+      "position_mm": [
+        58.42,
+        97.79
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x6_P2.54",
+      "pins": {
+        "1": "TOF1_VIN",
+        "2": "GND",
+        "3": "TOF1_SCL",
+        "4": "TOF1_SDA",
+        "5": null,
+        "6": "TOF1_XSHUT"
+      },
+      "kind": "ToF1 six-wire cable header",
+      "value": "ToF1 six-wire cable header"
+    },
+    "J4": {
+      "position_mm": [
+        76.2,
+        97.79
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x4_P2.54",
+      "pins": {
+        "1": "TOF2_VIN",
+        "2": "GND",
+        "3": "TOF2_SCL",
+        "4": "TOF2_SDA"
+      },
+      "kind": "ToF2 four-wire cable header",
+      "value": "ToF2 four-wire cable header"
+    },
+    "JP2": {
+      "position_mm": [
+        58.42,
+        90.17
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x3_P2.54",
+      "pins": {
+        "1": "3V3",
+        "2": "TOF1_VIN",
+        "3": "+5V_ESP"
+      },
+      "kind": "ToF1 VIN selection jumper",
+      "value": "ToF1 VIN selection jumper"
+    },
+    "JP3": {
+      "position_mm": [
+        76.2,
+        90.17
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x3_P2.54",
+      "pins": {
+        "1": "3V3",
+        "2": "TOF2_VIN",
+        "3": "+5V_ESP"
+      },
+      "kind": "ToF2 VIN selection jumper",
+      "value": "ToF2 VIN selection jumper"
+    },
+    "J5": {
+      "position_mm": [
+        99.06,
+        43.18
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x4_P2.54",
+      "pins": {
+        "1": "+5V_ESP",
+        "2": "HC_TRIG",
+        "3": "HC_ECHO_5V",
+        "4": "GND"
+      },
+      "kind": "HC-SR04 four-wire cable header",
+      "value": "HC-SR04 four-wire cable header"
+    },
+    "J6": {
+      "position_mm": [
+        38.1,
+        43.18
+      ],
+      "rotation": 270,
+      "footprint": "CarrierDraft:Header_1x3_P2.54",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "GND",
+        "3": "K1_IN_H"
+      },
+      "kind": "K1 external relay CONTROL only",
+      "value": "K1 external relay CONTROL only"
+    },
+    "J7": {
+      "position_mm": [
+        109.22,
+        99.06
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Header_1x3_P2.54",
+      "pins": {
+        "1": "+5V_ESP",
+        "2": "GND",
+        "3": "K2_IN_L"
+      },
+      "kind": "K2 external relay CONTROL only",
+      "value": "K2 external relay CONTROL only"
+    },
+    "J8": {
+      "position_mm": [
+        86.36,
+        35.56
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Terminal_1x2_P5.08_GENERIC",
+      "pins": {
+        "1": "+24V",
+        "2": "MOTOR_SW24"
+      },
+      "kind": "K2 external relay DC contact cable terminal",
+      "value": "K2 external relay DC contact cable terminal"
+    },
+    "J9": {
+      "position_mm": [
+        71.12,
+        35.56
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:Terminal_1x2_P5.08_GENERIC",
+      "pins": {
+        "1": "MOTOR_SW24",
+        "2": "GND"
+      },
+      "kind": "24V motor cable terminal",
+      "value": "24V motor cable terminal"
+    },
+    "Q2": {
+      "position_mm": [
+        109.22,
+        88.9
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:NPN_EBC_Wire_Form_VERIFY",
+      "pins": {
+        "E": "GND",
+        "B": "Q2_BASE",
+        "C": "K2_IN_L"
+      },
+      "kind": "NPN interface",
+      "value": "NPN E/B/C VERIFY PART"
+    },
+    "R1": {
+      "position_mm": [
+        99.06,
+        85.09
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:R_Axial_P7.62",
+      "pins": {
+        "1": "GPIO2_K2_DRIVE",
+        "2": "Q2_BASE"
+      },
+      "kind": "resistor",
+      "value": "1.5k"
+    },
+    "R2": {
+      "position_mm": [
+        99.06,
+        93.98
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:R_Axial_P7.62",
+      "pins": {
+        "1": "Q2_BASE",
+        "2": "GND"
+      },
+      "kind": "resistor",
+      "value": "47k"
+    },
+    "R3": {
+      "position_mm": [
+        109.22,
+        93.98
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:R_Axial_P7.62",
+      "pins": {
+        "1": "+5V_IN",
+        "2": "K2_IN_L"
+      },
+      "kind": "resistor",
+      "value": "4.7k"
+    },
+    "R4": {
+      "position_mm": [
+        114.3,
+        49.53
+      ],
+      "rotation": 180,
+      "footprint": "CarrierDraft:R_Axial_P7.62",
+      "pins": {
+        "1": "HC_ECHO_5V",
+        "2": "HC_ECHO_DIV"
+      },
+      "kind": "resistor",
+      "value": "10k"
+    },
+    "R5": {
+      "position_mm": [
+        104.14,
+        49.53
+      ],
+      "rotation": 180,
+      "footprint": "CarrierDraft:R_Axial_P7.62",
+      "pins": {
+        "1": "HC_ECHO_DIV",
+        "2": "GND"
+      },
+      "kind": "resistor",
+      "value": "20k"
+    },
+    "D1": {
+      "position_mm": [
+        45.72,
+        35.56
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:D_DO201_P15.24",
+      "pins": {
+        "K": "MOTOR_SW24",
+        "A": "GND"
+      },
+      "kind": "flyback diode candidate",
+      "value": "1N5408"
+    },
+    "H1": {
+      "position_mm": [
+        33.02,
+        33.02
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:MountingHole_2.7_GENERIC",
+      "pins": {},
+      "kind": "mount",
+      "value": "M2.5 clearance - verify case"
+    },
+    "H2": {
+      "position_mm": [
+        33.02,
+        104.14
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:MountingHole_2.7_GENERIC",
+      "pins": {},
+      "kind": "mount",
+      "value": "M2.5 clearance - verify case"
+    },
+    "H3": {
+      "position_mm": [
+        119.38,
+        104.14
+      ],
+      "rotation": 0,
+      "footprint": "CarrierDraft:MountingHole_2.7_GENERIC",
+      "pins": {},
+      "kind": "mount",
+      "value": "M2.5 clearance - verify case"
+    }
+  }
+}

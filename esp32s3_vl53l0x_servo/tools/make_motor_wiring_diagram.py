@@ -5,7 +5,8 @@ PNG export: rsvg-convert -z 1.5 -o OUTPUT.png INPUT.svg
 from pathlib import Path
 from html import escape
 
-root = Path(__file__).resolve().parents[1]
+root = Path(__file__).resolve().parents[1] / 'docs/wiring/archive/legacy'
+root.mkdir(parents=True, exist_ok=True)
 p = []
 def text(x,y,s,size=20,bold=False,color='#102a43'):
     p.append(f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{700 if bold else 400}" fill="{color}">{escape(s)}</text>')

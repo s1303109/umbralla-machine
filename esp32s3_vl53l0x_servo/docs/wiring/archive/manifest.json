@@ -1,0 +1,116 @@
+[
+  {
+    "original": "wiring_110v_blower.png",
+    "archived": "legacy/wiring_110v_blower.png",
+    "sha256": "1823d9974a4276435a4f300508630a12bcc679e5b051b452628e80a13303668e",
+    "bytes": 641481
+  },
+  {
+    "original": "wiring_110v_blower.svg",
+    "archived": "legacy/wiring_110v_blower.svg",
+    "sha256": "f7060d9743b5bb1e555d0588f5676a30d880852dd99fdc02febc92fcbc69d3a9",
+    "bytes": 11438
+  },
+  {
+    "original": "wiring_110v_blower_24v_motor.png",
+    "archived": "legacy/wiring_110v_blower_24v_motor.png",
+    "sha256": "efa507c749a53a0986911180d7a7fe86ed3e1c91c24d4c7f9fee2d81006162e6",
+    "bytes": 1663834
+  },
+  {
+    "original": "wiring_110v_blower_24v_motor.svg",
+    "archived": "legacy/wiring_110v_blower_24v_motor.svg",
+    "sha256": "03a039dbc53756d2ca6e24de59b2e16e998a5bb1fc5385401665453037169d58",
+    "bytes": 27439
+  },
+  {
+    "original": "wiring_110v_blower_6v_motor.png",
+    "archived": "legacy/wiring_110v_blower_6v_motor.png",
+    "sha256": "65e5e86c9f4d1b2c12b193272d729c73ed1108a46d6eed9b539ff79966ecf6dc",
+    "bytes": 1669281
+  },
+  {
+    "original": "wiring_110v_blower_6v_motor.svg",
+    "archived": "legacy/wiring_110v_blower_6v_motor.svg",
+    "sha256": "899513446f03500dbb101bb2eba3ed62a8b16bdb2f0962f3831b3ec37c70b0fd",
+    "bytes": 29040
+  },
+  {
+    "original": "wiring_110v_blower_servo_test.png",
+    "archived": "legacy/wiring_110v_blower_servo_test.png",
+    "sha256": "c43f29e7bd8cb7ba1f757868d30a052cf3f4ad719f6780f6c96b3f6bf89ee594",
+    "bytes": 1720366
+  },
+  {
+    "original": "wiring_110v_blower_servo_test.svg",
+    "archived": "legacy/wiring_110v_blower_servo_test.svg",
+    "sha256": "9a6dd9e561d34ed245078d36d44a1db059d9fb13fbe82b4a141b3e75f09145c6",
+    "bytes": 30045
+  },
+  {
+    "original": "wiring_24v_motor_detail.png",
+    "archived": "legacy/wiring_24v_motor_detail.png",
+    "sha256": "9eef9a3ee1b843978c3cb713099722de78e8794ee47ba5c3fac7835b4273a7ae",
+    "bytes": 1036994
+  },
+  {
+    "original": "wiring_24v_motor_detail.svg",
+    "archived": "legacy/wiring_24v_motor_detail.svg",
+    "sha256": "bfe79001cde300a230a123010dc17c1ee34a8fa6ed152665eb58fd87e791f366",
+    "bytes": 16424
+  },
+  {
+    "original": "wiring_6v_motor_detail.png",
+    "archived": "legacy/wiring_6v_motor_detail.png",
+    "sha256": "9d9c17c9d1a16dc4964b7b51f8e4423507c966e3f043749d63e538a35348c0f1",
+    "bytes": 1036860
+  },
+  {
+    "original": "wiring_6v_motor_detail.svg",
+    "archived": "legacy/wiring_6v_motor_detail.svg",
+    "sha256": "2a90991fa164420a1d61a57990782ef2edf630c6136d6ad6469d326796c0d364",
+    "bytes": 18011
+  },
+  {
+    "original": "wiring_connected_current.png",
+    "archived": "legacy/wiring_connected_current.png",
+    "sha256": "38b0acc63615c432bb2bd85a681a5d4a74aae79bee437c6e33447d6761c94284",
+    "bytes": 939737
+  },
+  {
+    "original": "wiring_connected_current.svg",
+    "archived": "legacy/wiring_connected_current.svg",
+    "sha256": "44f564d45f75e059ef8e3c3d78a6994b1fafe3f80c244faca0b2c0c621ef64b2",
+    "bytes": 52136
+  },
+  {
+    "original": "wiring_electrical_bw.pdf",
+    "archived": "legacy/wiring_electrical_bw.pdf",
+    "sha256": "66b3a8c8f983c9ea3ec223dfbc1f9ce01e33af900cc36904c5f7f34ec3238dac",
+    "bytes": 1789986
+  },
+  {
+    "original": "wiring_electrical_bw.png",
+    "archived": "legacy/wiring_electrical_bw.png",
+    "sha256": "f2ae180d599755444baf1ec1a329fe01f772d6be52e0da2791557c6d4c3dac8d",
+    "bytes": 602276
+  },
+  {
+    "original": "wiring_electrical_bw.svg",
+    "archived": "legacy/wiring_electrical_bw.svg",
+    "sha256": "9ec017149e1831ca6af5cf97d4744ec80c217268811299af4e6b8a834881b8ab",
+    "bytes": 36146
+  },
+  {
+    "original": "wiring_servo_test_detail.png",
+    "archived": "legacy/wiring_servo_test_detail.png",
+    "sha256": "de58be2697182d619ac255d9bd2c10bdad84b59bd1dd77a38522de99b790452d",
+    "bytes": 1094237
+  },
+  {
+    "original": "wiring_servo_test_detail.svg",
+    "archived": "legacy/wiring_servo_test_detail.svg",
+    "sha256": "a9e5fc8b0066c1a42bbf13d3bf46b008c737dac5c963a3ede35771d4806aa885",
+    "bytes": 19074
+  }
+]

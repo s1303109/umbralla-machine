@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-30T17:37:49+0000",
+    "kicad_version": "8.0.9",
+    "schematic_parity": [],
+    "source": "esp32s3_24v_carrier.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen overlap",
+            "items": [
+                {
+                    "description": "PCB Text 'B' on F.Silkscreen",
+                    "pos": {
+                        "x": 109.22,
+                        "y": 91.0
+                    },
+                    "uuid": "4358b2b1-fb9f-4a4c-858c-93c830bc7ede"
+                },
+                {
+                    "description": "Reference 'R3'",
+                    "pos": {
+                        "x": 109.22,
+                        "y": 91.28
+                    },
+                    "uuid": "eb34b5a3-3f77-4b87-8787-841329d7ebb3"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Thermal relief connection to zone incomplete (layer B.Cu; zone min spoke count 2; actual 1)",
+            "items": [
+                {
+                    "description": "Zone [GND] on B.Cu",
+                    "pos": {
+                        "x": 30.48,
+                        "y": 30.48
+                    },
+                    "uuid": "9678fb9e-2577-428b-a547-ccb2cf509a53"
+                },
+                {
+                    "description": "PTH pad E [GND] of Q2",
+                    "pos": {
+                        "x": 106.68,
+                        "y": 88.9
+                    },
+                    "uuid": "d65c53ad-8f89-4d8e-9ec8-dae377ee0d4e"
+                }
+            ],
+            "severity": "error",
+            "type": "starved_thermal"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'A' on F.Silkscreen",
+                    "pos": {
+                        "x": 60.96,
+                        "y": 32.799999
+                    },
+                    "uuid": "2107bcef-cfa5-414b-9e66-c3719a3f6e8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'K' on F.Silkscreen",
+                    "pos": {
+                        "x": 45.72,
+                        "y": 32.799999
+                    },
+                    "uuid": "39e132ed-1d0f-4f90-9e34-35d78e13c98c"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'B' on F.Silkscreen",
+                    "pos": {
+                        "x": 109.22,
+                        "y": 91.0
+                    },
+                    "uuid": "4358b2b1-fb9f-4a4c-858c-93c830bc7ede"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'E' on F.Silkscreen",
+                    "pos": {
+                        "x": 106.68,
+                        "y": 91.0
+                    },
+                    "uuid": "73fa707a-507b-42cd-82bc-97ad8cba419e"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'ToF VIN: CHECK / JP OPEN' on F.Silkscreen",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 86.5
+                    },
+                    "uuid": "8c639ce6-5497-4354-a98c-802260e7a222"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)",
+            "items": [
+                {
+                    "description": "PCB Text 'C' on F.Silkscreen",
+                    "pos": {
+                        "x": 111.76,
+                        "y": 91.0
+                    },
+                    "uuid": "9c64c4e2-7b3d-4e24-8fad-b2bfefb27978"
+                }
+            ],
+            "severity": "warning",
+            "type": "text_height"
+        },
+        {
+            "description": "Footprint 'YD-ESP32-S3_2x22_P2.54mm_Row25.40mm' does not match copy in library 'CarrierDraft'.",
+            "items": [
+                {
+                    "description": "Footprint A1",
+                    "pos": {
+                        "x": 116.84,
+                        "y": 67.31
+                    },
+                    "uuid": "9c7a4fcf-7f19-4ef4-87e1-c66fda6b5814"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

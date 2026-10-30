@@ -1,0 +1,24 @@
+﻿Reference,Value,Kind,Footprint,Verification
+A1,YD-ESP32-S3 N16R8 SOCKET,ESP32 development-board socket,CarrierDraft:YD-ESP32-S3_2x22_P2.54mm_Row25.40mm,V1.4 source mapping; V1.5 physical audit pending
+J1,DC input terminal,DC input terminal,CarrierDraft:Terminal_1x3_P5.08_GENERIC,project-defined pin order; terminal model/current rating pending
+JP1,removable external-5V supply link,removable external-5V supply link,CarrierDraft:Header_1x2_P2.54,remove before USB-powered operation; no automatic power ORing is claimed
+J2,LCD cable header 1x16,LCD cable header 1x16,CarrierDraft:Header_1x16_P2.54,project-defined cable header; NOT native shield physical pin order; pin16 NC
+J3,ToF1 six-wire cable header,ToF1 six-wire cable header,CarrierDraft:Header_1x6_P2.54,logical interface order only; actual connector/cable must be verified
+J4,ToF2 four-wire cable header,ToF2 four-wire cable header,CarrierDraft:Header_1x4_P2.54,logical interface order only; no XSHUT control configured
+JP2,ToF1 VIN selection jumper,ToF1 VIN selection jumper,CarrierDraft:Header_1x3_P2.54,VIN and I2C pull-up levels unverified; choose rail only after actual module check
+JP3,ToF2 VIN selection jumper,ToF2 VIN selection jumper,CarrierDraft:Header_1x3_P2.54,VIN and I2C pull-up levels unverified; choose rail only after actual module check
+J5,HC-SR04 four-wire cable header,HC-SR04 four-wire cable header,CarrierDraft:Header_1x4_P2.54,project-defined header; cable to actual silk labels
+J6,K1 external relay CONTROL only,K1 external relay CONTROL only,CarrierDraft:Header_1x3_P2.54,no mains contact pads on carrier; actual relay module H trigger and 3.3V input compatibility pending
+J7,K2 external relay CONTROL only,K2 external relay CONTROL only,CarrierDraft:Header_1x3_P2.54,actual IN sink current and VIH/VIL pending; intended Q2 collector total <=10mA
+J8,K2 external relay DC contact cable terminal,K2 external relay DC contact cable terminal,CarrierDraft:Terminal_1x2_P5.08_GENERIC,24V DC only; external NC unused; terminal and relay motor-current ratings pending
+J9,24V motor cable terminal,24V motor cable terminal,CarrierDraft:Terminal_1x2_P5.08_GENERIC,"JGB37-555 24V/7rpm listing: 0.14A no load,0.65A rated,3A stall; not measured"
+Q2,NPN E/B/C VERIFY PART,NPN interface,CarrierDraft:NPN_EBC_Wire_Form_VERIFY,logical terminals only; vendor-specific physical pad order MUST be confirmed; generic footprint is candidate only
+R1,1.5k,resistor,CarrierDraft:R_Axial_P7.62,Generic candidate; verify hardware/mechanics
+R2,47k,resistor,CarrierDraft:R_Axial_P7.62,Generic candidate; verify hardware/mechanics
+R3,4.7k,resistor,CarrierDraft:R_Axial_P7.62,Generic candidate; verify hardware/mechanics
+R4,10k,resistor,CarrierDraft:R_Axial_P7.62,Generic candidate; verify hardware/mechanics
+R5,20k,resistor,CarrierDraft:R_Axial_P7.62,Generic candidate; verify hardware/mechanics
+D1,1N5408,flyback diode candidate,CarrierDraft:D_DO201_P15.24,band K to switched motor+; pulse/thermal validation pending; 3A average rectifier rating does not alone prove suitability
+H1,M2.5 clearance - verify case,mount,CarrierDraft:MountingHole_2.7_GENERIC,Generic candidate; verify hardware/mechanics
+H2,M2.5 clearance - verify case,mount,CarrierDraft:MountingHole_2.7_GENERIC,Generic candidate; verify hardware/mechanics
+H3,M2.5 clearance - verify case,mount,CarrierDraft:MountingHole_2.7_GENERIC,Generic candidate; verify hardware/mechanics

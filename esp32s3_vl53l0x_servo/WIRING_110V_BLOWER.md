@@ -1,6 +1,8 @@
+> 歷史版本：目前 24V／7rpm 馬達方案請看 [新版接線圖索引](WIRING_INDEX.md)。本文件保留舊版資料，舊圖片已集中封存。
+
 # ESP32-S3 三感測器控制 110V 鼓風機：施工接線表
 
-本文件對應 [高解析PNG接線圖](./wiring_110v_blower.png) 與 [可縮放SVG原圖](./wiring_110v_blower.svg)。它是端子級原理圖，不是假設 ESP32 開發板實體排針位置的「照片式接線圖」。施工時只依板上絲印、端子名稱和 GPIO 編號。
+本文件對應 [高解析PNG接線圖](./docs/wiring/archive/legacy/wiring_110v_blower.png) 與 [可縮放SVG原圖](./docs/wiring/archive/legacy/wiring_110v_blower.svg)。它是端子級原理圖，不是假設 ESP32 開發板實體排針位置的「照片式接線圖」。施工時只依板上絲印、端子名稱和 GPIO 編號。
 
 ## 1. 已確認與尚未確認
 
